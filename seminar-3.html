@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seminář 3 — Kovy v praxi a toxicita kovů</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1 cover -->
+    <section class="cover-slide">
+      <div>
+        <div class="eyebrow">Chemické principy a udržitelnost · Blok 2</div>
+        <h1>Kovy v praxi a toxicita kovů</h1>
+        <p class="sub">Kvíz, data o elektromobilech, výpočty k oceli, jak kovy působí v těle, skupinové úlohy</p>
+      </div>
+      <div class="foot"><div class="bar"></div><span>Seminář 3 · Zdroje prvků na Zemi</span></div>
+      <aside class="notes">Navazuje na prednaska-3.html. Rozvržení (90 min): 8 min kvíz, 12 min datová úloha (OWID), 15 min výpočty, 20 min toxicita kovů (výklad + PubChem), 25 min skupinová práce (zkrácená verze: každá skupina jen body 1–2), 8 min prezentace skupin, 2 min shrnutí. Když je málo času, vynechte PubChem nebo jeden scénář. Připomeňte T3 a T4 odevzdání podkladů 2 dny před Přednáškou 4 (25. 11.). Zdroj výpočtů a toxikologie: Fojtíková, 09_ocel_toxikologie.</aside>
+    </section>
+
+    <!-- 2 quiz1 -->
+    <section>
+      <div class="quiz-block" data-answer="b">
+        <div class="quiz-q"><span class="qn">1</span>Proč nelze vysokou pec dekarbonizovat jen náhradou paliva obnovitelnou elektřinou?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Elektřina nedosáhne teploty 2000 °C</button>
+          <button class="quiz-opt3" data-key="b">Uhlík (CO) je redukční činidlo. CO₂ vzniká redukcí oxidů železa, ne jen spalováním</button>
+          <button class="quiz-opt3" data-key="c">Elektřina by železo znovu zoxidovala</button>
+        </div>
+        <div class="quiz-feedback3" hidden>FeO + CO → Fe + CO₂. Bez náhrady redukčního činidla (např. H₂ v procesu DRI) CO₂ vznikat nepřestane.</div>
+      </div>
+    </section>
+
+    <!-- 3 quiz2 -->
+    <section>
+      <div class="quiz-block" data-answer="c">
+        <div class="quiz-q"><span class="qn">2</span>Obsah mědi v chilských rudách klesl z 1,0 % na 0,8 %. Co se stalo se spotřebou energie na koncentraci?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Klesla, rudy jsou měkčí</button>
+          <button class="quiz-opt3" data-key="b">Zůstala stejná</button>
+          <button class="quiz-opt3" data-key="c">Vzrostla přibližně o 50 %</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Na stejné množství kovu se musí vytěžit, rozemlít a vyflotovat víc horniny (Cochilco 2008–2017).</div>
+      </div>
+    </section>
+
+    <!-- 4 quiz3 -->
+    <section>
+      <div class="quiz-block" data-answer="a">
+        <div class="quiz-q"><span class="qn">3</span>Proč se vzácné zeminy obtížně oddělují jedna od druhé?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Mají téměř shodnou chemii (Ln³⁺, nepatrné rozdíly poloměru), proto se vyskytují a reagují společně</button>
+          <button class="quiz-opt3" data-key="b">Vyskytují se jen jako sulfidy, které jsou nerozpustné</button>
+          <button class="quiz-opt3" data-key="c">Jsou všechny radioaktivní</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Lanthanoidová kontrakce a „chemická koherence“. Sulfidy REE v přírodě netvoří; radioaktivní je jen Pm a příměsi Th/U v rudách.</div>
+      </div>
+    </section>
+
+    <!-- 5 quiz4 -->
+    <section>
+      <div class="quiz-block" data-answer="b">
+        <div class="quiz-q"><span class="qn">4</span>Která katodová chemie baterií neobsahuje nikl ani kobalt?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">NMC 811</button>
+          <button class="quiz-opt3" data-key="b">LFP (LiFePO₄)</button>
+          <button class="quiz-opt3" data-key="c">NCA</button>
+        </div>
+        <div class="quiz-feedback3" hidden>LFP nahrazuje Ni a Co železem a fosforem. Riziko se přesouvá na lithium, grafit a zpracování.</div>
+      </div>
+    </section>
+
+    <!-- 6 quiz5 -->
+    <section>
+      <div class="quiz-block" data-answer="ne">
+        <div class="quiz-q"><span class="qn">5</span>Tvrzení: „Titan je drahý, protože je v zemské kůře vzácný.“</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="ano">Pravda</button>
+          <button class="quiz-opt3" data-key="ne">Nepravda</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Nepravda. Ti je ~9. nejhojnější prvek kůry. Cenu dělá vsádkový Krollův proces (chlorace na TiCl₄, redukce Mg v argonu).</div>
+      </div>
+    </section>
+
+    <!-- 7 quiz6 -->
+    <section>
+      <div class="quiz-block" data-answer="c">
+        <div class="quiz-q"><span class="qn">6</span>Jaký prvek našli výzkumníci ÚOCHB v magnetech současných elektromobilů jako náhradu Dy/Tb?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Samarium</button>
+          <button class="quiz-opt3" data-key="b">Europium</button>
+          <button class="quiz-opt3" data-key="c">Holmium</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Holmium bylo ve všech osmi vzorcích (Jones et al., JACS 2025). Recyklace proto musí počítat i s párem Tb/Ho.</div>
+      </div>
+    </section>
+
+    <!-- 8a data task EV -->
+    <section>
+      <div class="tag-label data">Datová úloha · 12 min · ve dvojicích</div>
+      <div class="row">
+        <div class="col" style="flex:1.4">
+          <iframe class="owid-frame short" data-src="https://ourworldindata.org/grapher/electric-car-sales-share?tab=chart&country=OWID_WRL~CHN~CZE~European+Union+%2827%29" loading="lazy" allow="web-share; clipboard-write" title="OWID: podíl elektromobilů na prodejích nových aut"></iframe>
+          <p class="owid-link"><a href="https://ourworldindata.org/grapher/electric-car-sales-share" target="_blank">electric-car-sales-share ↗</a></p>
+        </div>
+        <div class="col">
+          <div class="data-task" style="padding:22px 26px;">
+            <ol style="font-size:23px;">
+              <li>Jaký byl podíl elektromobilů na prodejích nových aut v roce 2024 ve světě, v Číně, v EU a v Česku?</li>
+              <li>Kdo data vytvořil (Sources)? Zahrnují i plug-in hybridy?</li>
+              <li>Co to znamená pro poptávku po Li, Ni, Co a grafitu? Spojte s daty z přednášky.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Řešení (OWID, IEA Global EV Outlook): 2024 svět 21 %, Čína 48 %, EU 21 %, Česko 6,8 %. Zdroj IEA; „electric“ zahrnuje bateriové (BEV) i plug-in hybridy (PHEV). Pozor na rozdíl podíl na prodejích (nová auta) vs. podíl na vozovém parku (všechna auta na silnicích, OWID: electric-car-stocks). Čína zároveň přechází na baterie LFP, což tlumí poptávku po Co a Ni. Navazuje na T2.</aside>
+    </section>
+
+    <!-- 8 divider calc -->
+    <section class="divider-slide">
+      <div class="num">∑</div>
+      <h2>Výpočty</h2>
+      <p>Stechiometrie výroby oceli</p>
+      <aside class="notes">Pracujte ve dvojicích, 7–8 min na příklad. Molární hmotnosti dejte na tabuli: Fe 55,85; O 16,00; C 12,01; Ca 40,08; Fe₂O₃ 159,69; CaCO₃ 100,09; CaO 56,08; CO 28,01; CO₂ 44,01 g/mol.</aside>
+    </section>
+
+    <!-- 9 calc 1 -->
+    <section>
+      <div class="tag-label calc">Příklad 1</div>
+      <h3 style="font-size:32px; margin-bottom:12px;">Bilance na 1 tunu oceli</h3>
+      <div class="row">
+        <div class="col">
+          <div class="calc-panel">
+            <ul style="font-size:24px; margin:0;">
+              <li>Redukce Fe₂O₃ ve vysoké peci s účinností 90 %</li>
+              <li>BOF: obsah uhlíku z 4,2 % na 0,1 %</li>
+              <li>Koks 450 kg/t surového železa</li>
+              <li>Vápenec 270 kg/t oceli</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="data-task">
+            <ol>
+              <li>Kolik Fe₂O₃ je potřeba na 1 t oceli s 98 % Fe?</li>
+              <li>Kolik uhlíku se odstraní v BOF?</li>
+              <li>Kolik CaO (a CO₂) vznikne z vápence?</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">
+        Řešení:
+        a) 980 kg Fe; podíl Fe ve Fe₂O₃ = 111,69/159,69 = 0,699 → 980/0,699 = 1401 kg; při 90% účinnosti 1401/0,9 ≈ 1560 kg Fe₂O₃ (čistého; skutečné rudy je víc, srovnej s 1370–1600 kg rudy z přednášky).
+        b) Zjednodušeně 1000 kg × (0,042 − 0,001) ≈ 41 kg C na tunu; pokud by celý odešel jako CO₂: 41 × 44,01/12,01 ≈ 150 kg CO₂ (ve skutečnosti převážně jako CO, které se dále využije jako konvertorový plyn).
+        c) 270 × 56,08/100,09 ≈ 151 kg CaO a 270 − 151 ≈ 119 kg CO₂. Procesní emise, stejně jako u cementu (Přednáška 4).
+      </aside>
+    </section>
+
+    <!-- 10 calc 2 -->
+    <section>
+      <div class="tag-label calc">Příklad 2</div>
+      <h3 style="font-size:32px; margin-bottom:12px;">Kolik CO potřebuje redukce oxidu železitého?</h3>
+      <div class="formula" style="font-size:30px;">Fe₂O₃ + 3CO → 2Fe + 3CO₂</div>
+      <div class="data-task">
+        <ol>
+          <li>Kolik molů CO je potřeba na 1 mol Fe₂O₃?</li>
+          <li>Kolik kilogramů (a m³ za normálních podmínek) CO je potřeba na redukci 500 kg Fe₂O₃?</li>
+          <li>Bonus: kolik kg H₂ by stejné množství Fe₂O₃ zredukovalo místo CO?</li>
+        </ol>
+      </div>
+      <aside class="notes">
+        Řešení: a) 3 mol CO. b) 500 000/159,69 = 3131 mol Fe₂O₃ → 9393 mol CO × 28,01 = 263 kg CO; objem 9393 × 22,41 dm³ ≈ 210 m³ (0 °C, 101,3 kPa).
+        c) Fe₂O₃ + 3H₂ → 2Fe + 3H₂O: 9393 mol H₂ × 2,016 = 18,9 kg H₂. Pro diskusi: vodíku je hmotnostně 14× méně, ale jeho výroba elektrolýzou spotřebuje ~1 MWh. Navazuje na výpočet „zelené oceli“ z přednášky.
+      </aside>
+    </section>
+
+    <!-- 11 divider tox -->
+    <section class="divider-slide">
+      <div class="num">☠</div>
+      <h2>Toxicita kovů</h2>
+      <p>Jak jedy působí na molekulární úrovni</p>
+      <aside class="notes">Krátký výklad (10 min) podle přednášky 09, snímky 18–40, pak práce s PubChem (15 min).</aside>
+    </section>
+
+    <!-- 12 levels and terms -->
+    <section>
+      <div class="kicker">Toxikodynamika · klíčové pojmy</div>
+      <div class="row">
+        <div class="col">
+          <div class="goal-list tight">
+            <div class="item"><span class="dot"></span><span><b>Xenobiotikum:</b> cizorodá látka zasahující do biochemických procesů</span></div>
+            <div class="item"><span class="dot"></span><span><b>Úrovně působení:</b> molekula → organela → buňka → tkáň → orgán → organismus</span></div>
+            <div class="item"><span class="dot"></span><span><b>Akutní × chronická</b> toxicita; <b>lokální × systémový</b> účinek; <b>cílový orgán</b></span></div>
+            <div class="item"><span class="dot"></span><span><b>Vratné × nevratné</b> poškození (játra regenerují, neurony prakticky ne)</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="chem-slide-panel">
+            <p class="prose tight"><b>Agonista</b> se váže na receptor a aktivuje ho.</p>
+            <p class="prose tight"><b>Kompetitivní antagonista</b> soutěží s agonistou o stejné vazebné místo.</p>
+            <p class="prose tight" style="margin:0;"><b>Nekompetitivní antagonista</b> se váže jinde a mění tvar vazebného místa.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Metafora z přednášky 09: receptor = ruka, ligandy = kliky. Kompetitivní antagonista je klika, kterou ruka chytí, ale dveře neotevře. Nekompetitivní je, jako by někdo ruce ohnul prsty.</aside>
+    </section>
+
+    <!-- 13 flip: competitive -->
+    <section>
+      <div class="kicker">Rozhodněte: kompetitivní, nebo nekompetitivní?</div>
+      <div class="flip-row">
+        <div class="flip-card" style="height:300px;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><p>CO se váže na aktivní místo hemoglobinu (tam, kam O₂).</p><div class="hint">klikněte ↻</div></div>
+            <div class="flip-card-back"><p><b>Kompetitivní.</b> Soutěží s O₂ o stejné místo (hem Fe²⁺), afinita ~200× vyšší.</p></div>
+          </div>
+        </div>
+        <div class="flip-card" style="height:300px;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><p>Cd²⁺ nebo Hg²⁺ se vážou na –SH skupiny proteinu a mění prostorové uspořádání enzymu.</p><div class="hint">klikněte ↻</div></div>
+            <div class="flip-card-back"><p><b>Nekompetitivní.</b> Vazba mimo aktivní místo, deformace struktury, často nevratná.</p></div>
+          </div>
+        </div>
+        <div class="flip-card" style="height:300px;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><p>Li⁺ (léčba bipolární poruchy) je podobný Mg²⁺ a soutěží o jeho vazebné místo.</p><div class="hint">klikněte ↻</div></div>
+            <div class="flip-card-back"><p><b>Kompetitivní.</b> Úzké terapeutické okno: z léku se snadno stane jed.</p></div>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Úkol ze snímku 29 přednášky 09. Nechte studenty hlasovat zvednutím ruky, než kartu otočíte. Lithium je i most k T7 (lithium ze solanek).</aside>
+    </section>
+
+    <!-- 14 metals + GSH -->
+    <section>
+      <div class="kicker">Kationty kovů jako elektrofily</div>
+      <div class="row">
+        <div class="col">
+          <div class="chem-slide-panel">
+            <div class="formula" style="font-size:21px;">M²⁺ + 2 protein–Cys–SH<br>→ protein–Cys–S–M–S–Cys–protein + 2H⁺</div>
+            <p class="prose tight">Hg²⁺, Cd²⁺, Pb²⁺, Cu²⁺, Ni²⁺ vytvářejí stabilní metalosulfidické můstky. Terciární struktura proteinu se naruší, mění se i propustnost membrán.</p>
+            <p class="prose tight" style="margin:0;"><b>Detoxikace:</b> glutathion (γ-Glu-Cys-Gly) váže kov svou –SH skupinou, konjugát se vyloučí.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="example-panel">
+            <p class="prose tight"><b>Environmentální zdroje:</b></p>
+            <ul style="font-size:23px; margin:0;">
+              <li>CH₃Hg⁺ v rybách</li>
+              <li>Cd v rýži (kontaminované půdy, hnojiva)</li>
+              <li>Co a Ni v prachu z dolů a zpracování</li>
+              <li>kovy v hlušině a loužicích roztocích</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Zdroj: přednáška 09, snímky 31–39 (Chem. Res. Toxicol. 2017, 30, 203). Propojte s Přednáškou 3: environmentální dopady těžby Co (DR Kongo, i artisanální těžba) a Ni nejsou jen CO₂.</aside>
+    </section>
+
+    <!-- 15 PubChem task -->
+    <section>
+      <div class="task-slide-head">
+        <div class="task-swatch" style="background:var(--water)"></div>
+        <div><div class="task-kind">Dvojice · 15 min · PubChem a bezpečnostní listy</div><h3 style="font-size:34px;">Toxikologický profil jedné sloučeniny kovu</h3></div>
+      </div>
+      <p class="scenario-text">Každá dvojice dostane jednu látku: <b>CoCl₂</b>, <b>NiSO₄</b>, <b>CdCl₂</b>, <b>K₂Cr₂O₇</b> (Cr(VI)).</p>
+      <ol class="task-steps">
+        <li>Název (čj/aj), CAS, SMILES, klasifikace GHS (H-věty).</li>
+        <li>Kde se s látkou setkáme: výroba, laboratoř, životní prostředí. Je záměrně vyráběná, nebo vzniká jako vedlejší produkt?</li>
+        <li>Mechanismus toxicity a cílový orgán. Na co dbát při práci s látkou?</li>
+      </ol>
+      <div class="data-hint2">Zdroje: PubChem (pubchem.ncbi.nlm.nih.gov), bezpečnostní listy výrobců, Integrovaný registr znečišťování (IRZ), Arnika.</div>
+      <aside class="notes">Navazuje na zadání ze snímku 41 přednášky 09. Všechny čtyři látky jsou zároveň CMR látky (karcinogenní, mutagenní, toxické pro reprodukci) se vztahem k bateriím, galvanizaci a metalurgii, tedy přímé propojení s přednáškou. Výstup: 1 minuta na dvojici.</aside>
+    </section>
+
+    <!-- 16 divider group -->
+    <section class="divider-slide">
+      <div class="num">→</div>
+      <h2>Skupinová práce</h2>
+      <p>1 scénář na skupinu</p>
+      <aside class="notes">Časté úskalí: studenti zůstávají u obecných doporučení („recyklovat víc“). Ptejte se na chemii (proč to jde nebo nejde) a na čísla (kolik, odkud data).</aside>
+    </section>
+
+    <!-- 17 task steel -->
+    <section>
+      <div class="task-slide-head">
+        <div class="task-swatch" style="background:var(--danger)"></div>
+        <div><div class="task-kind">Skupina · Ocel</div><h3 style="font-size:34px;">Zelená ocel v Moravskoslezském kraji?</h3></div>
+      </div>
+      <p class="scenario-text">Integrovaná ocelárna (vysoká pec + BOF) zvažuje přechod na DRI s vodíkem a elektrickou obloukovou pec. Ročně vyrábí 2,5 Mt oceli.</p>
+      <ol class="task-steps">
+        <li>Odhadněte roční spotřebu H₂ a elektřiny na jeho výrobu (stechiometrie z přednášky, ~55 kWh/kg H₂). Porovnejte s roční výrobou elektřiny v ČR.</li>
+        <li>Vysvětlete, co se stane s emisemi a proč závisí na zdroji elektřiny.</li>
+        <li>Navrhněte postup v etapách (šrot, zemní plyn, vodík) a rizika každé etapy.</li>
+      </ol>
+      <div class="data-hint2">Podklad: výpočet z přednášky (~54 kg H₂/t Fe); výroba elektřiny v ČR (ERÚ, roční zpráva); Fakta o klimatu: ocel = 29 % průmyslových emisí ČR.</div>
+      <aside class="notes">Řádově: 2,5 Mt × 0,054 t H₂ ≈ 135 kt H₂ × 55 MWh/t ≈ 7,4 TWh, tedy přibližně 10 % roční výroby elektřiny v ČR (~70 TWh). Dobrá ilustrace měřítka.</aside>
+    </section>
+
+    <!-- 18 task cobalt -->
+    <section>
+      <div class="task-slide-head">
+        <div class="task-swatch" style="background:var(--accent)"></div>
+        <div><div class="task-kind">Skupina · Kobalt</div><h3 style="font-size:34px;">Odkud je kobalt v našich bateriích?</h3></div>
+      </div>
+      <p class="scenario-text">Český výrobce bateriových úložišť nakupuje články NMC. Od zákazníků dostává dotazy na původ kobaltu a pracovní podmínky v dolech. Nařízení EU o bateriích zavádí povinnou náležitou péči (due diligence) v dodavatelském řetězci.</p>
+      <ol class="task-steps">
+        <li>Popište cestu kobaltu od dolu po katodu: kde a jak se zpracovává (chemicky).</li>
+        <li>Jaká rizika (environmentální, zdravotní, sociální, geopolitická) nese a kde v řetězci vznikají?</li>
+        <li>Porovnejte dvě strategie: certifikovaný kobalt vs. přechod na LFP. Co každá řeší a co ne?</li>
+      </ol>
+      <div class="data-hint2">Podklad: přednáška 08 a 3; Nařízení (EU) 2023/1542 o bateriích; USGS MCS (Cobalt).</div>
+    </section>
+
+    <!-- 19 task PGM -->
+    <section>
+      <div class="task-slide-head">
+        <div class="task-swatch" style="background:var(--water)"></div>
+        <div><div class="task-kind">Skupina · Platinové kovy</div><h3 style="font-size:34px;">Byznys plán pro recyklaci autokatalyzátorů</h3></div>
+      </div>
+      <p class="scenario-text">Firma vykupující autovraky zvažuje vlastní linku na předúpravu katalyzátorů (drcení, vzorkování, prodej koncentrátu rafinerii PGM). S nástupem elektromobilů ale budou vozy s katalyzátorem ubývat.</p>
+      <ol class="task-steps">
+        <li>Proč je katalyzátor „bohatší ruda“ než přírodní ruda? Které kovy obsahuje a k čemu slouží?</li>
+        <li>Jak se na poptávku po PGM projeví elektromobilita a vodíková ekonomika (PEM elektrolyzéry)?</li>
+        <li>Doporučte: investovat, nebo ne? Jaká data byste potřebovali?</li>
+      </ol>
+      <div class="data-hint2">Podklad: přednáška 3 (PGM); Johnson Matthey PGM Market Report; počty registrovaných vozidel podle pohonu (SDA, ČSÚ).</div>
+    </section>
+
+    <!-- 20 task magnets -->
+    <section>
+      <div class="task-slide-head">
+        <div class="task-swatch" style="background:var(--primary)"></div>
+        <div><div class="task-kind">Skupina · Vzácné zeminy</div><h3 style="font-size:34px;">Recyklace magnetů: od laboratoře k provozu</h3></div>
+      </div>
+      <p class="scenario-text">Investor zvažuje pilotní provoz recyklace magnetů NdFeB podle srážecí metody ÚOCHB. Zdrojem mají být motory vyřazených elektromobilů a generátory větrných elektráren.</p>
+      <ol class="task-steps">
+        <li>Popište princip metody a v čem je šetrnější než extrakce rozpouštědly.</li>
+        <li>Proč komplikuje recyklaci neznámé a měnící se složení magnetů (holmium)? Co by pomohlo?</li>
+        <li>Odhadněte, kdy bude k dispozici dost vyřazených magnetů. Co z toho plyne pro načasování investice?</li>
+      </ol>
+      <div class="data-hint2">Podklad: Jones et al., JACS 2025, 147, 22666 (open access); přednáška 08; životnost elektromobilu (~15 let) a větrné turbíny (~20–25 let).</div>
+    </section>
+
+    <!-- 21 presentations -->
+    <section>
+      <div class="kicker">Prezentace a diskuse</div>
+      <div class="prose">
+        <p>Každá skupina představí řešení v cca 5 minutách, včetně odkud čerpala data.</p>
+        <p style="margin-top:14px;">Společné téma všech čtyř scénářů: <b>strategie (diverzifikace, substituce, recyklace) působí v různých časových měřítcích</b>. Recyklace je nejpomalejší, protože kovy jsou dlouho vázané ve výrobcích.</p>
+      </div>
+    </section>
+
+    <!-- 22 summary + project -->
+    <section>
+      <div class="kicker">Shrnutí a projekt</div>
+      <div class="row">
+        <div class="col">
+          <div class="prose tight">
+            <p>Chemie procesu určuje emise (uhlík jako redukční činidlo), energetickou náročnost (obsah kovu v rudě) i rizika (koncentrace zpracování).</p>
+            <p style="margin:0;">Kovy, které stavějí energetickou transformaci, jsou zároveň toxické. Rizika vznikají v celém řetězci, nejen u konečného uživatele.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="slot-card">
+            <div class="slot-id">Příště · Přednáška 4 · 25. 11.</div>
+            <h4>T3 Cement · T4 Zachytávání CO₂</h4>
+            <p>Podklady (PDF a data) odevzdejte nejpozději 2 dny před přednáškou.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Připomeňte i T5–T8 termín osnovy, pokud ještě nepřišla.</aside>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    width: 1280,
+    height: 720,
+    margin: 0.04,
+    minScale: 0.2,
+    maxScale: 2,
+    controls: true,
+    progress: true,
+    slideNumber: 'c/t',
+    plugins: [ RevealNotes ]
+  });
+
+  document.querySelectorAll('.flip-card').forEach(function (card) {
+    card.addEventListener('click', function () { card.classList.toggle('flipped'); });
+  });
+
+  // ---- Quiz v2: click-to-answer, instant feedback ----
+  document.querySelectorAll('.quiz-block').forEach(function (block) {
+    var answer = block.dataset.answer;
+    var feedback = block.querySelector('.quiz-feedback3');
+    var buttons = block.querySelectorAll('.quiz-opt3');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (block.classList.contains('answered')) return;
+        block.classList.add('answered');
+        var chosen = btn.dataset.key;
+        buttons.forEach(function (b) {
+          b.disabled = true;
+          if (b.dataset.key === answer) b.classList.add('correct');
+          else if (b.dataset.key === chosen) b.classList.add('incorrect');
+          else b.classList.add('dim');
+        });
+        if (feedback) feedback.hidden = false;
+      });
+    });
+  });
+</script>
+</body>
+</html>

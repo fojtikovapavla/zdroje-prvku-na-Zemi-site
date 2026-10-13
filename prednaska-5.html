@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Přednáška 5 — Od ropy k plastům a zpět</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1 cover -->
+    <section class="cover-slide">
+      <div>
+        <div class="eyebrow">Chemické principy a udržitelnost · Blok 2</div>
+        <h1>Od ropy k plastům a zpět</h1>
+        <p class="sub">Petrochemie · typy a syntéza polymerů · plastový odpad · recyklace · bioplasty</p>
+      </div>
+      <div class="foot"><div class="bar"></div><span>Přednáška 5 · Zdroje prvků na Zemi</span></div>
+      <aside class="notes">
+        Výklad ~60 min, pak prezentace T5 (recyklace plastů) a T6 (bioplasty). Uhlík a vodík jako stavební prvky: odkud se berou a kam se vracejí.
+        Zdroje: podklad 10 (Zdroje a výroba organických látek, loňská přednáška); Peer, Najser, Chlond (2013), Syntéza kapalných paliv; Petrochemicals Europe, Flowchart (2023); Our World in Data, Plastic Pollution (Geyer et al. 2017; OECD Global Plastics Outlook 2022); Ramirez-Corredores (2024).
+      </aside>
+    </section>
+
+    <!-- 2 goals -->
+    <section>
+      <div class="kicker">Cíle přednášky</div>
+      <div class="goal-list">
+        <div class="item"><span class="dot"></span><span>Popsat cestu od ropy a zemního plynu k monomerům (parní krakování, reformování, syntézní plyn)</span></div>
+        <div class="item"><span class="dot"></span><span>Rozlišit adiční a kondenzační polymery, termoplasty a reaktoplasty</span></div>
+        <div class="item"><span class="dot"></span><span>Z dat popsat, co se děje s plastovým odpadem, a proč se recykluje tak málo</span></div>
+        <div class="item"><span class="dot"></span><span>Rozlišit „biologicky založený“ a „biologicky rozložitelný“ plast</span></div>
+      </div>
+    </section>
+
+    <!-- 3 production chart -->
+    <section>
+      <div class="tag-label data">Data · světová výroba plastů</div>
+      <div class="row middle">
+        <div class="col" style="flex:1.4">
+          <div class="diagram-wrap">
+            <svg viewBox="0 0 600 320" role="img" aria-label="Výroba plastů: 2 Mt v roce 1950, 120 Mt v 1990, 460 Mt v 2019">
+              <line x1="70" y1="280" x2="580" y2="280" stroke="var(--line)" stroke-width="2"/>
+              <line x1="70" y1="184" x2="580" y2="184" stroke="var(--line)" stroke-dasharray="4 6"/>
+              <line x1="70" y1="88" x2="580" y2="88" stroke="var(--line)" stroke-dasharray="4 6"/>
+              <g font-family="var(--font-mono)" font-size="18" fill="var(--ink-muted)">
+                <text x="50" y="286" text-anchor="end">0</text>
+                <text x="50" y="190" text-anchor="end">200</text>
+                <text x="50" y="94" text-anchor="end">400</text>
+                <text x="70" y="312" text-anchor="middle">1950</text>
+                <text x="212" y="312" text-anchor="middle">1970</text>
+                <text x="354" y="312" text-anchor="middle">1990</text>
+                <text x="496" y="312" text-anchor="middle">2010</text>
+              </g>
+              <polyline points="70,279 141,276.2 212,263.2 283,246.4 354,222.4 425.1,177.8 496.1,129.8 531.6,97.1 560,59.3" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linejoin="round"/>
+              <circle cx="560" cy="59.3" r="6" fill="var(--accent)"/>
+              <text x="550" y="42" text-anchor="end" font-size="20" font-weight="700" fill="var(--accent)" font-family="var(--font-body)">460 Mt (2019)</text>
+              <text x="80" y="262" font-size="18" fill="var(--ink-soft)" font-family="var(--font-body)">2 Mt</text>
+              <text x="58" y="30" text-anchor="end" font-size="16" fill="var(--ink-muted)" font-family="var(--font-mono)">Mt/rok</text>
+            </svg>
+          </div>
+          <p class="src-line">Zdroj: Geyer et al. (2017), OECD (2022) via Our World in Data. <a href="https://ourworldindata.org/grapher/global-plastics-production" target="_blank">otevřít ↗</a></p>
+        </div>
+        <div class="col">
+          <div class="stat-row" style="flex-direction:column;">
+            <div class="stat"><b>230×</b><span>víc plastů než v roce 1950</span></div>
+            <div class="stat acc"><b>~57 kg</b><span>na každého člověka za rok (2019)</span></div>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Data OWID (global-plastics-production): 1950 2 Mt, 1970 35 Mt, 1990 120 Mt, 2000 213 Mt, 2010 313 Mt, 2019 460 Mt. 460 Mt / 7,7 mld. ≈ 60 kg. Novější odhady (Plastics Europe) jsou přes 400 Mt bez vláken. Pozor na definici (vlákna, aditiva ano/ne): různé zdroje uvádějí různá čísla. Dobrá ukázka pro studenty.</aside>
+    </section>
+
+    <!-- 4 divider -->
+    <section class="divider-slide">
+      <div class="num">01</div>
+      <h2>Od ropy k monomerům</h2>
+      <p>Petrochemie v kostce</p>
+      <aside class="notes">Čas: cca 15 minut. Z podkladu 10 jen principy, technické parametry v poznámkách.</aside>
+    </section>
+
+    <!-- 5 refinery and cracking -->
+    <section>
+      <div class="kicker">Z ropy na stavební kameny plastů</div>
+      <div class="diagram-wrap" style="padding:18px 24px;">
+        <svg viewBox="0 0 1080 230" role="img" aria-label="Ropa, destilace, primární benzín, parní krakování, ethylen a propylen, polymery">
+          <defs><marker id="c5" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker></defs>
+          <g font-family="var(--font-body)">
+            <rect x="10" y="60" width="150" height="90" rx="12" fill="#3a3a3a"/><text x="85" y="100" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">Ropa</text><text x="85" y="126" text-anchor="middle" font-size="16" fill="#ddd">zemní plyn</text>
+            <rect x="200" y="60" width="180" height="90" rx="12" fill="var(--surface-2)"/><text x="290" y="100" text-anchor="middle" font-size="21" font-weight="700" fill="var(--ink)">Destilace</text><text x="290" y="126" text-anchor="middle" font-size="16" fill="var(--ink-muted)">dělení podle varu</text>
+            <rect x="420" y="60" width="180" height="90" rx="12" fill="var(--surface-2)"/><text x="510" y="100" text-anchor="middle" font-size="21" font-weight="700" fill="var(--ink)">Nafta, ethan</text><text x="510" y="126" text-anchor="middle" font-size="16" fill="var(--ink-muted)">surovina</text>
+            <rect x="640" y="50" width="200" height="110" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/><text x="740" y="92" text-anchor="middle" font-size="21" font-weight="700" fill="var(--ink)">Parní krakování</text><text x="740" y="118" text-anchor="middle" font-size="16" fill="var(--ink-muted)">~850 °C, zlomek sekundy</text><text x="740" y="140" text-anchor="middle" font-size="16" fill="var(--ink-muted)">molekuly se „lámou“</text>
+            <rect x="880" y="20" width="190" height="70" rx="12" fill="var(--primary)"/><text x="975" y="62" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">ethylen C₂H₄</text>
+            <rect x="880" y="120" width="190" height="70" rx="12" fill="var(--primary)"/><text x="975" y="162" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">propylen C₃H₆</text>
+            <path d="M160,105 L195,105 M380,105 L415,105 M600,105 L635,105" stroke="var(--primary)" stroke-width="3" marker-end="url(#c5)"/>
+            <path d="M840,90 L875,62 M840,120 L875,150" stroke="var(--primary)" stroke-width="3" marker-end="url(#c5)"/>
+            <text x="540" y="215" text-anchor="middle" font-size="18" fill="var(--ink-soft)">Krakování je silně endotermní: teplo ze spalování paliva → velké emise CO₂</text>
+          </g>
+        </svg>
+      </div>
+      <div class="row" style="margin-top:16px;">
+        <div class="col"><div class="panel soft"><p class="prose tight" style="margin:0;"><b>Katalytické reformování:</b> z benzínu vznikají <b>aromáty</b> (benzen, toluen, xyleny) a vodík. Katalyzátor Pt–Re.</p></div></div>
+        <div class="col"><div class="panel soft"><p class="prose tight" style="margin:0;"><b>Fischer–Tropschova syntéza:</b> ze směsi CO + H₂ (syntézní plyn z uhlí, plynu nebo biomasy) se „staví“ uhlovodíky. Katalyzátor Co nebo Fe.</p></div></div>
+      </div>
+      <aside class="notes">Podklad 10: parní krakování 800–850 °C (až 1100 °C), milisekundy, pára snižuje tvorbu koksu; radikálový mechanismus; lehké suroviny (ethan) dávají hlavně ethylen, těžší i aromáty. Reformování: dehydrogenace cyklohexanů, cyklizace alkanů, izomerace; vedlejší produkt vodík. FT: (2n+1)H₂ + nCO → CₙH₂ₙ₊₂ + nH₂O, 150–350 °C, 2–3 MPa, silně exotermní. Historie (Peer et al. 2013): Německo za 2. světové války vyrobilo syntézou 23,4 Mt benzínu, ~1/3 válečné spotřeby; SASOL v JAR dodnes. FT je základ syntetických paliv (e-paliva, letecká paliva SAF). Chemický průmysl tvoří ~3 % antropogenních emisí CO₂ (podklad 10).</aside>
+    </section>
+
+    <!-- 6 monomers to products -->
+    <section>
+      <div class="kicker">Z monomerů ke každodenním výrobkům</div>
+      <table class="data-table">
+        <thead><tr><th>Základní látka</th><th>Polymer</th><th>Typické výrobky</th></tr></thead>
+        <tbody>
+          <tr><td><b>ethylen</b></td><td>PE (polyethylen), PVC, PET (přes ethylenglykol)</td><td>fólie, sáčky, trubky, okna, lahve</td></tr>
+          <tr><td><b>propylen</b></td><td>PP (polypropylen)</td><td>kelímky, nárazníky, víčka, rouška</td></tr>
+          <tr><td><b>benzen</b></td><td>PS (polystyren), polykarbonát, nylon</td><td>izolace, obaly, brýle, textil</td></tr>
+          <tr><td><b>butadien</b></td><td>syntetický kaučuk</td><td>pneumatiky</td></tr>
+          <tr><td><b>methanol</b></td><td>formaldehydové pryskyřice</td><td>lepidla do dřevotřísky</td></tr>
+        </tbody>
+      </table>
+      <p class="caption">Podle diagramu Petrochemicals Europe (2023). Na spodním okraji diagramu jsou nové suroviny: bio-ethanol, bio-nafta, pyrolýzní olej z recyklace, CO₂ + vodík.</p>
+      <aside class="notes">Ukažte poster Petrochemicals Europe (PDF Flowchart 2023). Upozorněte na spodní lištu se surovinami budoucnosti: bio ethanol, bio naphtha, pyrolysis oil / chemical recycling, CO₂ + hydrogen, bio methane. Stejný chemický průmysl, jiný zdroj uhlíku. Spojení s Přednáškou 4 (methanol z CO₂).</aside>
+    </section>
+
+    <!-- 7 critical claim -->
+    <section class="think-slide">
+      <div class="tag-label think">Ověř to</div>
+      <p class="question">„Petrochemikálie jsou obsaženy v 95 % všech vyráběných produktů.“ Komu tato věta slouží a jak byste ji ověřili?</p>
+      <p class="facilitate">Kdo to tvrdí (průmyslové sdružení)? Co znamená „obsaženy“ (stačí lepidlo, barva, obal)? Existuje primární zdroj s metodikou? Pravdivé tvrzení může být zároveň zavádějící.</p>
+      <aside class="notes">Citát z posteru Petrochemicals Europe. Tvrzení je pravděpodobně pravdivé v širokém smyslu (barvy, lepidla, obaly), ale bez metodiky ho ověřit nelze. Slouží k podpoře odvětví („jsme nepostradatelní“). Přesně tento postup (kdo, co přesně, primární zdroj, verdikt) chceme v projektu.</aside>
+    </section>
+
+    <!-- 8 divider -->
+    <section class="divider-slide">
+      <div class="num">02</div>
+      <h2>Polymery</h2>
+      <p>Dlouhé řetězce z malých molekul</p>
+      <aside class="notes">Čas: cca 12 minut.</aside>
+    </section>
+
+    <!-- 9 addition vs condensation -->
+    <section>
+      <div class="kicker">Jak se z monomerů staví řetězec</div>
+      <div class="row">
+        <div class="col">
+          <div class="chem-slide-panel">
+            <p class="prose tight"><b>Adiční polymerace</b>: dvojná vazba se „otevře“ a molekuly se spojí. Nic se neuvolní.</p>
+            <div class="formula" style="font-size:24px;">n CH₂=CH₂ → –[CH₂–CH₂]ₙ–</div>
+            <p class="prose tight" style="margin:0;">PE, PP, PVC, PS</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="chem-slide-panel" style="border-left-color:var(--accent);">
+            <p class="prose tight"><b>Kondenzační polymerace</b>: dvě různé molekuly se spojí a uvolní se malá molekula (voda).</p>
+            <div class="formula" style="font-size:22px;">kyselina + alkohol → ester + H₂O</div>
+            <p class="prose tight" style="margin:0;">PET, polyamidy (nylon), polyuretany</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel soft" style="margin-top:20px;">
+        <p class="prose tight" style="margin:0;"><b>Proč to záleží pro recyklaci:</b> kondenzační polymery jdou chemicky „rozpojit“ zpět na monomery (např. PET). Řetězce PE a PP se rozpojit takto nedají, lze je jen roztavit, nebo tepelně rozložit (pyrolýza).</p>
+      </div>
+      <aside class="notes">PET: kyselina tereftalová + ethylenglykol → polyester + voda. Depolymerace PET (glykolýza, methanolýza, enzymaticky) je jedna z nejslibnějších cest chemické recyklace.</aside>
+    </section>
+
+    <!-- 10 types + codes -->
+    <section>
+      <div class="kicker">Typy plastů a recyklační kódy</div>
+      <div class="row">
+        <div class="col">
+          <div class="goal-list tight">
+            <div class="item"><span class="dot"></span><span><b>Termoplasty</b> (PE, PP, PET, PVC, PS): zahřátím měknou, dají se přetavit → recyklovatelné</span></div>
+            <div class="item"><span class="dot" style="background:var(--danger)"></span><span><b>Reaktoplasty</b> (epoxidy, polyuretanová pěna, pryskyřice): síťovaná struktura, nedají se přetavit</span></div>
+            <div class="item"><span class="dot" style="background:var(--accent)"></span><span><b>Elastomery</b> (pneumatiky): pružné, síťované vulkanizací</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <table class="data-table" style="font-size:22px;">
+            <thead><tr><th>Kód</th><th>Plast</th><th>Příklad</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>PET</td><td>lahve</td></tr>
+              <tr><td>2</td><td>HDPE</td><td>kanystry, lahve od drogerie</td></tr>
+              <tr><td>3</td><td>PVC</td><td>okna, trubky</td></tr>
+              <tr><td>4</td><td>LDPE</td><td>fólie, sáčky</td></tr>
+              <tr><td>5</td><td>PP</td><td>kelímky, víčka</td></tr>
+              <tr><td>6</td><td>PS</td><td>polystyren, tácky</td></tr>
+              <tr><td>7</td><td>ostatní</td><td>směsi, vrstvené obaly</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <aside class="notes">Kód říká, z čeho výrobek je, ne že se recykluje. V Semináři 5 studenti třídí vlastní obaly podle kódů. Přineste jich pár do výuky.</aside>
+    </section>
+
+    <!-- 11 polymer mix data -->
+    <section>
+      <div class="tag-label data">Data · výroba podle druhu polymeru (2019, Mt)</div>
+      <div class="hbars" style="grid-template-columns:330px 1fr 90px; margin-top:12px;">
+        <div class="lbl2">PP</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val2">73</div>
+        <div class="lbl2">vlákna (polyester, nylon…)</div><div class="track"><div class="fill" style="width:83%"></div></div><div class="val2">60</div>
+        <div class="lbl2">HDPE</div><div class="track"><div class="fill" style="width:76%"></div></div><div class="val2">56</div>
+        <div class="lbl2">LDPE, LLDPE</div><div class="track"><div class="fill" style="width:75%"></div></div><div class="val2">54</div>
+        <div class="lbl2">PVC</div><div class="track"><div class="fill" style="width:71%"></div></div><div class="val2">51</div>
+        <div class="lbl2">PET</div><div class="track"><div class="fill" style="width:34%"></div></div><div class="val2">25</div>
+        <div class="lbl2">PS</div><div class="track"><div class="fill" style="width:29%"></div></div><div class="val2">21</div>
+        <div class="lbl2">PUR</div><div class="track"><div class="fill" style="width:25%"></div></div><div class="val2">18</div>
+        <div class="lbl2">bioplasty</div><div class="track"><div class="fill" style="width:3.2%; background:var(--accent)"></div></div><div class="val2">2,3</div>
+      </div>
+      <p class="src-line">Zdroj: OECD Global Plastics Outlook via Our World in Data (plastic-production-polymer). Bez kategorie „ostatní“ (81 Mt).</p>
+      <aside class="notes">Bioplasty: 2,3 Mt z ~460 Mt, tedy přibližně 0,5 %. Navazuje T6. Polyolefiny (PE + PP) tvoří skoro polovinu všech plastů, a právě ty se nedají chemicky snadno depolymerovat.</aside>
+    </section>
+
+    <!-- 12 divider -->
+    <section class="divider-slide">
+      <div class="num">03</div>
+      <h2>Odpad a recyklace</h2>
+      <p>Kam plasty odcházejí</p>
+      <aside class="notes">Čas: cca 15 minut. Navazuje T5.</aside>
+    </section>
+
+    <!-- 13 fate -->
+    <section>
+      <div class="tag-label data">Data · co se stalo s plastovým odpadem světa (2019)</div>
+      <div class="stackbar" style="margin-top:14px;">
+        <div style="flex:49.2; background:var(--ink-muted)"><span class="sv">skládka 49 %</span></div>
+        <div style="flex:22.5; background:var(--danger)"><span class="sv">špatně nakládáno 22 %</span></div>
+        <div style="flex:19; background:var(--accent)"><span class="sv">spáleno 19 %</span></div>
+        <div style="flex:9.3; background:var(--primary)"><span class="sv">9 %</span></div>
+      </div>
+      <div class="stack-legend">
+        <div class="li2"><span class="sw" style="background:var(--primary)"></span>recyklováno 9 %</div>
+        <div class="li2"><span class="sw" style="background:var(--danger)"></span>volně v prostředí, otevřené skládky, pálení</div>
+      </div>
+      <div class="row" style="margin-top:24px;">
+        <div class="col">
+          <div class="hbars" style="grid-template-columns:200px 1fr 80px;">
+            <div class="lbl2">Čína</div><div class="track"><div class="fill" style="width:100%; background:var(--primary)"></div></div><div class="val2">12,8 %</div>
+            <div class="lbl2">Evropa</div><div class="track"><div class="fill" style="width:97%; background:var(--primary)"></div></div><div class="val2">12,4 %</div>
+            <div class="lbl2">svět</div><div class="track"><div class="fill" style="width:73%; background:var(--ink-muted)"></div></div><div class="val2">9,3 %</div>
+            <div class="lbl2">USA</div><div class="track"><div class="fill" style="width:35%; background:var(--ink-muted)"></div></div><div class="val2">4,5 %</div>
+          </div>
+          <p class="caption">Podíl recyklovaného odpadu podle regionu (2019).</p>
+        </div>
+        <div class="col">
+          <p class="src-line" style="margin-top:0;">353 Mt plastového odpadu. Zdroj: OECD Global Plastics Outlook via Our World in Data (plastic-fate, share-plastic-waste-recycled).</p>
+          <p class="prose tight">„Recyklováno“ = odesláno k recyklaci. Ztráty při třídění a zpracování se tu neodečítají.</p>
+        </div>
+      </div>
+      <aside class="notes">Data OWID (OECD): 2019 skládka 174 Mt, špatně nakládáno 79 Mt, spáleno 67 Mt, recyklováno 33 Mt. Evropa 12 %, tedy daleko od představy „u nás se všechno recykluje“. České statistiky třídění (EKO-KOM) měří, co se vytřídí, ne co se skutečně stane novým výrobkem. Přesně tohle rozlišení má T5 ověřit.</aside>
+    </section>
+
+    <!-- 14 routes -->
+    <section>
+      <div class="kicker">Tři cesty pro plastový odpad</div>
+      <div class="row">
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Mechanická recyklace</h4><p style="font-size:21px; line-height:1.45; margin:0;">Třídění → mytí → drcení → tavení → granulát.</p><p style="font-size:21px; line-height:1.45; margin:10px 0 0;"><b class="minus">−</b> každým přetavením se řetězce zkracují, vadí směsi a barviva. Často vzniká horší výrobek (downcycling).</p></div></div>
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Chemická recyklace</h4><p style="font-size:21px; line-height:1.45; margin:0;"><b>Depolymerace</b> (PET → monomery) nebo <b>pyrolýza</b> (bez kyslíku, ~500 °C → olej → parní krakování).</p><p style="font-size:21px; line-height:1.45; margin:10px 0 0;"><b class="minus">−</b> energie, zatím malé kapacity, výpočty „hmotnostní bilance“.</p></div></div>
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Energetické využití</h4><p style="font-size:21px; line-height:1.45; margin:0;">Spálení ve spalovně s výrobou tepla a elektřiny (ZEVO).</p><p style="font-size:21px; line-height:1.45; margin:10px 0 0;"><b class="minus">−</b> 1 kg PE → ~3 kg CO₂. Materiál je ztracen.</p></div></div>
+      </div>
+      <aside class="notes">CH₂ jednotka (14 g) → CO₂ (44 g), tedy 44/14 = 3,14 kg CO₂ na kg PE. V Semináři 5 se to počítá. Hmotnostní bilance (mass balance): pyrolýzní olej se smíchá s ropou v krakovací jednotce a výrobce pak „přiřadí“ recyklovaný podíl některým výrobkům. Fyzicky v nich recyklát být nemusí. Spalovny: od roku 2024 monitoring v EU ETS, o povinných povolenkách od 2028 rozhoduje EU (Blok 1, Přednáška 3).</aside>
+    </section>
+
+    <!-- 15 EU rules -->
+    <section>
+      <div class="kicker">Pravidla EU, která mění trh s plasty</div>
+      <div class="stat-row">
+        <div class="stat"><b>2024</b><span>víčka připevněná k lahvím (směrnice o jednorázových plastech)</span></div>
+        <div class="stat"><b>25 %</b><span>recyklátu v PET lahvích od 2025</span></div>
+        <div class="stat acc"><b>90 %</b><span>lahví má být odděleně sebráno do 2029</span></div>
+        <div class="stat"><b>2030</b><span>povinný podíl recyklátu ve všech plastových obalech (nařízení o obalech PPWR)</span></div>
+      </div>
+      <p class="prose tight" style="margin-top:24px;">Poptávka po kvalitním recyklátu roste rychleji než nabídka. Proto se o „recyklovaný obsah“ vedou spory a vznikají zálohové systémy.</p>
+      <aside class="notes">Směrnice (EU) 2019/904 (SUP): připevněná víčka od července 2024; 25 % recyklátu v PET lahvích od 2025, 30 % ve všech lahvích od 2030; odděleného sběru 77 % do 2025, 90 % do 2029. Nařízení (EU) 2025/40 (PPWR): minimální podíly recyklátu v plastových obalech od 2030 (např. 30 % u PET obalů citlivých na kontakt s potravinami, 35 % u ostatních). Ověřte aktuální podrobnosti, implementace probíhá.</aside>
+    </section>
+
+    <!-- 16 divider -->
+    <section class="divider-slide">
+      <div class="num">04</div>
+      <h2>Bioplasty a CO₂</h2>
+      <p>Jiný zdroj uhlíku</p>
+      <aside class="notes">Čas: cca 8 minut. Navazuje T6.</aside>
+    </section>
+
+    <!-- 17 bioplastics matrix -->
+    <section>
+      <div class="kicker">„Bio“ znamená dvě různé věci</div>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 900 380" role="img" aria-label="Matice: původ suroviny (fosilní, biologický) a rozložitelnost">
+          <g font-family="var(--font-body)">
+            <rect x="200" y="40" width="330" height="140" fill="var(--surface-2)"/>
+            <rect x="540" y="40" width="330" height="140" fill="var(--water-soft)"/>
+            <rect x="200" y="190" width="330" height="140" fill="var(--accent-soft)"/>
+            <rect x="540" y="190" width="330" height="140" fill="#DCEFE3"/>
+            <text x="365" y="25" text-anchor="middle" font-size="20" font-weight="700" fill="var(--ink-muted)">z ropy / plynu</text>
+            <text x="705" y="25" text-anchor="middle" font-size="20" font-weight="700" fill="var(--ink-muted)">z biomasy (bio-based)</text>
+            <text x="185" y="115" text-anchor="end" font-size="20" font-weight="700" fill="var(--ink-muted)">nerozložitelné</text>
+            <text x="185" y="265" text-anchor="end" font-size="20" font-weight="700" fill="var(--ink-muted)">rozložitelné</text>
+            <text x="365" y="105" text-anchor="middle" font-size="30" font-weight="700" fill="var(--ink)">PE, PP, PET</text>
+            <text x="365" y="140" text-anchor="middle" font-size="18" fill="var(--ink-soft)">běžné plasty</text>
+            <text x="705" y="105" text-anchor="middle" font-size="30" font-weight="700" fill="var(--ink)">bio-PE, bio-PET</text>
+            <text x="705" y="140" text-anchor="middle" font-size="18" fill="var(--ink-soft)">chemicky stejné jako běžné</text>
+            <text x="365" y="255" text-anchor="middle" font-size="30" font-weight="700" fill="var(--ink)">PBAT, PCL</text>
+            <text x="365" y="290" text-anchor="middle" font-size="18" fill="var(--ink-soft)">fosilní, ale rozložitelné</text>
+            <text x="705" y="255" text-anchor="middle" font-size="30" font-weight="700" fill="var(--ink)">PLA, PHA, škrob</text>
+            <text x="705" y="290" text-anchor="middle" font-size="18" fill="var(--ink-soft)">PLA jen v průmyslové kompostárně</text>
+          </g>
+        </svg>
+      </div>
+      <aside class="notes">PLA (kyselina polymléčná) se vyrábí fermentací cukru nebo škrobu na kyselinu mléčnou a její polykondenzací. Rozkládá se v průmyslovém kompostu (~58 °C, norma EN 13432), ne na zahradě ani v moři. Bio-PE z cukrové třtiny (ethanol → ethylen) je chemicky totožný s PE: recykluje se s ním, nerozloží se. Tvrzení k ověření pro T6: „kompostovatelný sáček se v přírodě rozloží“.</aside>
+    </section>
+
+    <!-- 18 CO2 polymers -->
+    <section>
+      <div class="kicker">Polymery z CO₂</div>
+      <div class="row">
+        <div class="col">
+          <div class="chem-slide-panel">
+            <p class="prose tight">CO₂ + epoxid → <b>polykarbonátové polyoly</b> → polyuretanové pěny (matrace, izolace).</p>
+            <p class="prose tight" style="margin:0;">Část fosilní suroviny nahradí CO₂ (u některých produktů do ~20 % hmotnosti). Vyrábí se průmyslově v Německu.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="example-panel">
+            <p class="prose tight">Uhlík zůstává v produktu <b>10–100 let</b>, déle než v palivech (Přednáška 4).</p>
+            <p class="prose tight" style="margin:0;">Ale: objemy jsou malé a na konci života pěna často skončí ve spalovně.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Ramirez-Corredores (2024): Bayer/Covestro kopolymerace epoxidů a CO₂ (zinkové katalyzátory). Obchodní název cardyon. Spojení s Přednáškou 4 a s cirkulární ekonomikou: CCU má smysl hlavně u dlouho žijících materiálů, a jen pokud se materiál na konci života recykluje.</aside>
+    </section>
+
+    <!-- 19 summary -->
+    <section>
+      <div class="kicker">Shrnutí</div>
+      <div class="goal-list tight">
+        <div class="item"><span class="dot"></span><span>Plasty vznikají hlavně z ropy a plynu. Parní krakování láme velké molekuly na ethylen a propylen.</span></div>
+        <div class="item"><span class="dot"></span><span>Adiční polymery (PE, PP) lze přetavit, kondenzační (PET) i chemicky rozpojit.</span></div>
+        <div class="item"><span class="dot"></span><span>Z plastového odpadu světa se recykluje ~9 %, v Evropě ~12 %.</span></div>
+        <div class="item"><span class="dot"></span><span>„Bio-based“ ≠ „biodegradable“. Bioplasty jsou ~0,5 % trhu.</span></div>
+        <div class="item"><span class="dot"></span><span>Nové zdroje uhlíku (biomasa, recyklát, CO₂) používají stejné chemické procesy.</span></div>
+      </div>
+    </section>
+
+    <!-- 20 sources -->
+    <section>
+      <div class="kicker">Zdroje dat dne</div>
+      <div class="src-grid">
+        <div class="src-item"><b>OWID · Plastic Pollution</b><span>Výroba, osud odpadu, recyklace podle regionů, odpad na obyvatele. Data OECD.</span><div class="use">seminář 5, T5, T6</div></div>
+        <div class="src-item"><b>Eurostat</b><span>Obalové odpady a míra recyklace podle zemí EU.</span><div class="use">EU, ČR</div></div>
+        <div class="src-item"><b>Plastics Europe · European Bioplastics</b><span>Data průmyslových sdružení. Užitečná, ale čtěte je kriticky: kdo je vydává a proč.</span><div class="use">T6</div></div>
+        <div class="src-item"><b>EUR-Lex</b><span>Znění směrnice o jednorázových plastech a nařízení o obalech.</span><div class="use">pravidla</div></div>
+      </div>
+    </section>
+
+    <!-- 21 presentations -->
+    <section>
+      <div class="kicker">Studentské prezentace · 2. 12.</div>
+      <div class="slot-grid">
+        <div class="slot-card">
+          <div class="slot-id">T5 · 10 + 5 min</div>
+          <h4>Recyklace plastů: kolik se jich opravdu recykluje?</h4>
+          <p>Svět, EU, Česko. Vytříděno vs. recyklováno.</p>
+          <div class="who">prezentuje: ____________</div>
+        </div>
+        <div class="slot-card">
+          <div class="slot-id">T6 · 10 + 5 min</div>
+          <h4>Bioplasty: řešení, nebo marketing?</h4>
+          <p>Podíl na trhu, typy, ověření tvrzení o rozložitelnosti.</p>
+          <div class="who">prezentuje: ____________</div>
+        </div>
+      </div>
+      <p class="caption" style="margin-top:22px;">Zadání a hodnocení: <a href="zadani-projektu.html">zadani-projektu.html</a></p>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.04, minScale: 0.2, maxScale: 2, controls: true, progress: true, slideNumber: 'c/t', plugins: [ RevealNotes ] });
+</script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ověř to v datech — zadání projektu</title>
+<meta name="description" content="Zadání semestrálního projektu Bloku 2: prezentace se dvěma grafy z veřejných dat a ověřením jednoho tvrzení. 8 témat, prezentace 18. 11. – 9. 12.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#F3F4EE; --surface:#FFFFFF; --surface-2:#EAEDE2; --ink:#182620; --ink-soft:#46564C; --ink-muted:#6E7B72;
+    --primary:#2F5D50; --primary-strong:#1B3931; --accent:#B96A2C; --accent-soft:#F1E3D3;
+    --water:#2E6684; --water-soft:#DCEAF0; --line:#D8DCCD; --danger:#A03A2C;
+    --font-display:'Fraunces',Georgia,serif; --font-body:'Public Sans',-apple-system,sans-serif;
+    --font-mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--font-body); padding:48px 16px 80px; line-height:1.6;}
+  .wrap{max-width:920px; margin:0 auto; display:flex; flex-direction:column; gap:44px;}
+  a{color:var(--primary);}
+  .back{font-family:var(--font-mono); font-size:13px; text-decoration:none; color:var(--ink-muted);}
+  .back:hover{color:var(--primary);}
+  .eyebrow{font-family:var(--font-mono); font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-muted);}
+  h1{font-family:var(--font-display); font-size:clamp(34px,5vw,50px); margin:10px 0 0; line-height:1.1;}
+  h2{font-family:var(--font-display); font-size:28px; margin:0 0 14px; line-height:1.2;}
+  h3{font-family:var(--font-display); font-size:21px; margin:0 0 6px; line-height:1.25;}
+  .lede{font-size:18px; color:var(--ink-soft); max-width:64ch; margin-top:14px;}
+  p{margin:0 0 12px;}
+  ul,ol{margin:0 0 12px; padding-left:22px;}
+  li{margin-bottom:6px;}
+  .kicker{font-family:var(--font-mono); font-size:12.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--primary-strong); background:var(--surface-2); display:inline-block; padding:5px 12px; border-radius:999px; margin-bottom:12px;}
+  .panel{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:22px 24px;}
+  .panel.soft{background:var(--surface-2); border:none;}
+  .panel.accent{background:var(--accent-soft); border:none;}
+  .facts{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px;}
+  .fact{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px 16px;}
+  .fact b{display:block; font-family:var(--font-display); font-size:26px; color:var(--primary-strong); line-height:1.1;}
+  .fact span{font-size:14px; color:var(--ink-soft);}
+  .pillars{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px;}
+  .pillar{background:var(--surface); border:1px solid var(--line); border-top:6px solid var(--primary); border-radius:12px; padding:18px 20px;}
+  .pillar.data{border-top-color:var(--accent);}
+  .pillar.crit{border-top-color:var(--water);}
+  .pillar ul{font-size:15px;}
+  table{width:100%; border-collapse:collapse; font-size:15px; background:var(--surface);}
+  th,td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top;}
+  th{font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-muted); background:var(--surface-2);}
+  td.num{font-family:var(--font-mono); white-space:nowrap; color:var(--accent);}
+  .table-scroll{overflow-x:auto; border:1px solid var(--line); border-radius:12px;}
+  .topic{background:var(--surface); border:1px solid var(--line); border-left:8px solid var(--accent); border-radius:0 14px 14px 0; padding:20px 24px;}
+  .topic-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 14px; margin-bottom:6px;}
+  .tid{font-family:var(--font-mono); font-size:13px; color:#fff; background:var(--accent); border-radius:6px; padding:2px 8px;}
+  .stars{font-family:var(--font-mono); font-size:13px; color:var(--accent); margin-left:auto;}
+  .q{font-family:var(--font-display); font-size:18px; color:var(--ink); margin:4px 0 12px;}
+  dl{display:grid; grid-template-columns:150px 1fr; gap:8px 16px; margin:0; font-size:15px;}
+  dt{font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-muted); padding-top:3px;}
+  dd{margin:0; color:var(--ink-soft);}
+  dd ul{margin:0; padding-left:18px;}
+  .topics{display:flex; flex-direction:column; gap:16px;}
+  .block-sep{font-family:var(--font-mono); font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-muted); margin-top:10px;}
+  .steps{counter-reset:s; list-style:none; padding:0;}
+  .steps > li{counter-increment:s; position:relative; padding-left:44px; margin-bottom:14px;}
+  .steps > li::before{content:counter(s); position:absolute; left:0; top:0; width:30px; height:30px; border-radius:50%; background:var(--primary); color:#fff; font-family:var(--font-mono); font-size:14px; display:flex; align-items:center; justify-content:center;}
+  .steps ul{list-style:disc; padding-left:22px; margin-top:6px;}
+  .slides-outline{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px;}
+  .sl{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:12px 14px; font-size:14.5px; color:var(--ink-soft);}
+  .sl b{display:block; font-family:var(--font-mono); font-size:12px; color:var(--accent); text-transform:uppercase; letter-spacing:.04em; margin-bottom:2px;}
+  .sl strong{color:var(--ink);}
+  .verify{display:grid; grid-template-columns:40px 1fr; gap:10px 12px; font-size:15px;}
+  .verify .n{font-family:var(--font-mono); color:#fff; background:var(--water); border-radius:8px; text-align:center; padding:4px 0; height:30px;}
+  .muted{color:var(--ink-muted); font-size:14px;}
+  .ext{font-size:14px; color:var(--ink-muted); border-top:1px dashed var(--line); margin-top:12px; padding-top:10px;}
+  footer{border-top:1px solid var(--line); padding-top:18px; font-size:13px; color:var(--ink-muted);}
+  @media (max-width:640px){ dl{grid-template-columns:1fr;} dt{padding-top:8px;} .stars{margin-left:0;} }
+  @media print{ body{background:#fff; padding:0;} .back{display:none;} .topic,.panel,.pillar,.sl{break-inside:avoid;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div>
+    <a class="back" href="index.html">← rozcestník Bloku 2</a>
+    <div class="eyebrow" style="margin-top:18px;">Chemické principy a udržitelnost · Blok 2 · semestrální projekt</div>
+    <h1>Ověř to v datech</h1>
+    <p class="lede">Místo dvou odpadlých setkání zpracuje každý z vás jedno téma. Najdete k němu veřejná data, vytvoříte dva grafy a ověříte jedno tvrzení, které o tématu koluje v médiích, reklamě nebo ve firemní komunikaci. Výsledek představíte ostatním v přednášce, ke které téma patří. Přesně tohle bude manažer udržitelnosti dělat v práci: rozlišit, co je doložené a co ne.</p>
+  </div>
+
+  <div class="facts">
+    <div class="fact"><b>1 téma</b><span>každý student jiné</span></div>
+    <div class="fact"><b>2 grafy</b><span>z veřejných dat, s titulkem se sdělením</span></div>
+    <div class="fact"><b>1 tvrzení</b><span>ověřené podle šablony</span></div>
+    <div class="fact"><b>10 + 5 min</b><span>prezentace + diskuse</span></div>
+    <div class="fact"><b>20 bodů</b><span>hodnocení podle rubriky</span></div>
+  </div>
+
+  <!-- Rozpis -->
+  <section>
+    <div class="kicker">Kdy</div>
+    <h2>Témata a termíny</h2>
+    <p>Prezentace zazní na konci přednášky, dvě k tématu dne. Výklad před vámi dodá základ, vy přinesete aktuální data a vlastní pohled.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Kdy</th><th>Téma</th><th>Student/ka</th></tr></thead>
+        <tbody>
+          <tr><td class="num">18. 11.</td><td><b>T1</b> Vzácné zeminy: ovládá Čína těžbu, nebo zpracování?</td><td class="muted">doplní se</td></tr>
+          <tr><td class="num">18. 11.</td><td><b>T2</b> Kobalt a nikl: baterie elektromobilů a dvě země</td><td class="muted">doplní se</td></tr>
+          <tr><td class="num">25. 11.</td><td><b>T3</b> Cement: je opravdu za 8 % světových emisí?</td><td class="muted">doplní se</td></tr>
+          <tr><td class="num">25. 11.</td><td><b>T4</b> Zachytávání CO₂: kolik ho umíme zachytit a využít?</td><td class="muted">doplní se</td></tr>
+          <tr><td class="num">2. 12.</td><td><b>T5</b> Recyklace plastů: kolik se jich opravdu recykluje?</td><td class="muted">doplní se</td></tr>
+          <tr><td class="num">2. 12.</td><td><b>T6</b> Bioplasty: řešení, nebo marketing?</td><td class="muted">doplní se</td></tr>
+          <tr><td class="num">9. 12.</td><td><b>T7</b> Lithium a voda: solanky vs. horniny</td><td class="muted">doplní se</td></tr>
+          <tr><td class="num">9. 12.</td><td><b>T8</b> PFAS v pitné vodě: „věčné chemikálie“ a nové limity</td><td class="muted">doplní se</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Postup -->
+  <section>
+    <div class="kicker">Jak</div>
+    <h2>Postup</h2>
+    <ol class="steps">
+      <li><b>Rozdělení témat na semináři 13. 10.</b> Nejdřív dobrovolníci na T1 a T2, pak dohodou, při shodě losem.</li>
+      <li><b>Osnova e-mailem do 23. 10.</b> (všichni). Stačí čtyři řádky:
+        <ul>
+          <li>klíčová otázka vlastními slovy,</li>
+          <li>odkazy na data pro oba grafy,</li>
+          <li>tvrzení, které budete ověřovat (s odkazem, kde se objevilo),</li>
+          <li>s čím si nevíte rady.</li>
+        </ul>
+        Do týdne dostanete odpověď. Kdo chce, může přijít na 15minutovou konzultaci.</li>
+      <li><b>Odevzdání nejpozději 2 dny před prezentací:</b> prezentace v PDF a data, ze kterých jsou grafy (CSV/XLSX, nebo odkaz na graf v OWID s vaším nastavením).</li>
+      <li><b>Prezentace 10 minut + 5 minut diskuse.</b> Diskusi otevřete vlastní otázkou pro publikum. Po 11 minutách prezentaci ukončím.</li>
+    </ol>
+  </section>
+
+  <!-- Tři pilíře -->
+  <section>
+    <div class="kicker">Co musí prezentace obsahovat</div>
+    <h2>Tři části</h2>
+    <div class="pillars">
+      <div class="pillar data">
+        <h3>1 · Dva grafy z dat</h3>
+        <ul>
+          <li><b>Graf A z Our World in Data</b> (nebo podobného nástroje) s vaším nastavením: země, roky, metrika. Do prezentace PNG + odkaz.</li>
+          <li><b>Graf B vytvořený vámi</b> v Excelu, Google Sheets nebo Datawrapperu ze stažených dat. Může něco porovnat, spočítat podíl nebo spojit dva zdroje.</li>
+          <li>U obou: <b>titulek se sdělením</b>, jednotky, zdroj a rok dat.</li>
+        </ul>
+      </div>
+      <div class="pillar crit">
+        <h3>2 · Ověření tvrzení</h3>
+        <ul>
+          <li>Jedno konkrétní tvrzení z médií, reklamy, firemní zprávy nebo z přednášky.</li>
+          <li>Projděte ho šablonou níže a dejte <b>verdikt</b>.</li>
+          <li>Na závěr: co z toho plyne pro firmu, obec, stát nebo spotřebitele.</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <h3>3 · Chemie v kostce</h3>
+        <ul>
+          <li>Jedna klíčová reakce nebo proces, vysvětlený tak, aby mu rozuměl spolužák (ne opsaný z učebnice).</li>
+          <li>Jeden jednoduchý výpočet podle zadání u tématu (podíl, přepočet jednotek, stechiometrie).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kostra -->
+  <section>
+    <div class="kicker">Kostra prezentace</div>
+    <h2>8 snímků, které stačí</h2>
+    <div class="slides-outline">
+      <div class="sl"><b>1</b><strong>Titul a klíčová otázka</strong></div>
+      <div class="sl"><b>2</b><strong>Proč na tom záleží</strong>: pro koho, kolik peněz, lidí, emisí</div>
+      <div class="sl"><b>3</b><strong>Chemie v kostce</strong>: reakce nebo proces, obrázek</div>
+      <div class="sl"><b>4</b><strong>Graf A</strong> s titulkem se sdělením</div>
+      <div class="sl"><b>5</b><strong>Graf B</strong> + váš výpočet</div>
+      <div class="sl"><b>6</b><strong>Ověření tvrzení</strong> podle šablony, verdikt</div>
+      <div class="sl"><b>7</b><strong>Co víme jistě, co ne</strong> + závěr pro praxi</div>
+      <div class="sl"><b>8</b><strong>Takeaway message</strong>: hlavní sdělení a 2–3 klíčová čísla, otázka do diskuse, zdroje</div>
+    </div>
+    <p class="muted" style="margin-top:10px;">Snímek 8 poslouží spolužákům jako studijní materiál ke zkoušce. Takeaway messages všech prezentací spojím do jednoho přehledu.</p>
+  </section>
+
+  <!-- Šablona ověření -->
+  <section class="panel">
+    <h3>Šablona: jak ověřit tvrzení</h3>
+    <div class="verify" style="margin-top:12px;">
+      <div class="n">1</div><div><b>Tvrzení</b> doslova, s odkazem, kde a kdy zaznělo.</div>
+      <div class="n">2</div><div><b>Kdo to tvrdí a proč?</b> Novinář, firma, průmyslové sdružení, nevládní organizace, vědec? Má zájem na určitém výsledku?</div>
+      <div class="n">3</div><div><b>Primární zdroj.</b> Odkud číslo původně pochází (USGS, OECD, IEA, ČHMÚ, odborný článek)? Pokud ho nenajdete, je to také výsledek.</div>
+      <div class="n">4</div><div><b>Co v něm skutečně je.</b> Číslo, rok, jednotka, definice (co se počítá a co ne).</div>
+      <div class="n">5</div><div><b>Verdikt:</b> platí · platí částečně · pravdivé, ale zavádějící · neplatí · nelze ověřit.</div>
+      <div class="n">6</div><div><b>Proč</b>, jednou nebo dvěma větami.</div>
+    </div>
+  </section>
+
+  <!-- OWID návod -->
+  <section class="panel soft">
+    <h3>Our World in Data</h3>
+    <ol style="margin-bottom:0;">
+      <li>Na <a href="https://ourworldindata.org" target="_blank">ourworldindata.org</a> vyhledejte téma, nebo použijte odkazy u svého tématu níže.</li>
+      <li><b>Edit countries</b> = vyberte země. Posuvník pod grafem = vyberte roky. U surovin přepínač <b>Share of global</b> = podíl na světě.</li>
+      <li>Záložka <b>Sources</b>: kdo data vytvořil. Primární zdroj uveďte v prezentaci (např. „USGS via Our World in Data“).</li>
+      <li><b>Download</b> → obrázek (PNG) pro graf A, data (CSV) pro graf B.</li>
+      <li>Tlačítko <b>Share / Copy link</b> uloží odkaz i s vaším nastavením. Pošlete ho s prezentací.</li>
+    </ol>
+  </section>
+
+  <!-- Témata -->
+  <section>
+    <div class="kicker">Témata</div>
+    <h2>Osm témat podrobně</h2>
+    <p>U každého tématu najdete klíčovou otázku, data s odkazy, tvrzení k ověření (vyberte jedno, nebo si najděte vlastní) a zadání výpočtu. „Pro zájemce“ jsou nepovinná rozšíření.</p>
+
+    <div class="topics">
+      <div class="block-sep">18. 11. · Od minerálů k materiálům II</div>
+
+      <div class="topic">
+        <div class="topic-head"><span class="tid">T1</span><h3>Vzácné zeminy: ovládá Čína těžbu, nebo zpracování?</h3></div>
+        <p class="q">Jak se změnil podíl Číny na vzácných zeminách od roku 2009 a proč nestačí dívat se jen na těžbu?</p>
+        <dl>
+          <dt>Chemie</dt><dd>Proč jsou si vzácné zeminy chemicky tak podobné, že je těžké je oddělit, a k čemu jsou v magnetech (Nd, Dy, Ho).</dd>
+          <dt>Data</dt><dd><ul>
+            <li><a href="https://ourworldindata.org/explorers/minerals?Mineral=Rare+earths&Metric=Production&Type=Mine&Share+of+global=true" target="_blank">OWID: podíl zemí na těžbě REE</a> (2020–2024) a přepínač na <i>Reserves</i></li>
+            <li>Briefing Geological Society of London (2011): podíl Číny ~97 % v roce 2009</li>
+            <li>IEA Global Critical Minerals Outlook: podíl Číny na zpracování (rafinaci)</li></ul></dd>
+          <dt>Tvrzení</dt><dd><ul>
+            <li>„Čína ovládá 90 % vzácných zemin.“ (Těžbu, zpracování, nebo výrobu magnetů?)</li>
+            <li>GSL 2011: „Do roku 2020 se předpovídá nedostatek Nd, Dy, Eu, Tb a Y.“ Nastal?</li></ul></dd>
+          <dt>Výpočet</dt><dd>Elektromobil má ~1,5 kg magnetů, z toho ~30 % tvoří vzácné zeminy. Kolik tun REE spotřebuje 1 milion elektromobilů? Jaký je to podíl světové těžby (390 kt)?</dd>
+        </dl>
+        <p class="ext"><b>Pro zájemce:</b> české řešení recyklace magnetů (Jones et al., JACS 2025) a čínská exportní omezení z roku 2025.</p>
+      </div>
+
+      <div class="topic">
+        <div class="topic-head"><span class="tid">T2</span><h3>Kobalt a nikl: baterie elektromobilů a dvě země</h3></div>
+        <p class="q">Jak rychle roste závislost na DR Kongu (kobalt) a Indonésii (nikl) a co s tím dělá změna chemie baterií?</p>
+        <dl>
+          <dt>Chemie</dt><dd>Katody NMC (nikl, mangan, kobalt) vs. LFP (železo, fosfát). Proč je kobalt vedlejším produktem těžby mědi a niklu.</dd>
+          <dt>Data</dt><dd><ul>
+            <li><a href="https://ourworldindata.org/explorers/minerals?Mineral=Cobalt&Metric=Production&Type=Mine&Share+of+global=true" target="_blank">OWID: kobalt, těžba</a> a stejný graf pro <i>Refinery</i></li>
+            <li><a href="https://ourworldindata.org/explorers/minerals?Mineral=Nickel&Metric=Production&Type=Mine&Share+of+global=true" target="_blank">OWID: nikl, těžba</a></li>
+            <li><a href="https://ourworldindata.org/grapher/electric-car-sales-share" target="_blank">OWID: podíl elektromobilů na prodejích</a></li></ul></dd>
+          <dt>Tvrzení</dt><dd><ul>
+            <li>„Většina niklu se spotřebuje v bateriích elektromobilů.“</li>
+            <li>„Indonéské zpracování niklu emituje 40–60 t CO₂ na tunu niklu“ (přednáška z loňska). Odkud číslo pochází?</li></ul></dd>
+          <dt>Výpočet</dt><dd>Ze stažených dat (tuny) spočítejte podíl Indonésie na těžbě niklu v letech 2020 a 2024 a o kolik procent vzrostla její těžba.</dd>
+        </dl>
+        <p class="ext"><b>Pro zájemce:</b> Nařízení EU o bateriích (2023/1542) a povinná náležitá péče v dodavatelském řetězci.</p>
+      </div>
+
+      <div class="block-sep">25. 11. · Sklo, cement a CO₂</div>
+
+      <div class="topic">
+        <div class="topic-head"><span class="tid">T3</span><h3>Cement: je opravdu za 8 % světových emisí?</h3></div>
+        <p class="q">Kolik emisí cement skutečně způsobuje a proč se různá čísla liší?</p>
+        <dl>
+          <dt>Chemie</dt><dd>Rozklad vápence CaCO₃ → CaO + CO₂ při výrobě slínku. Rozdíl mezi emisemi z reakce a ze spalování paliva.</dd>
+          <dt>Data</dt><dd><ul>
+            <li><a href="https://ourworldindata.org/grapher/annual-co2-cement" target="_blank">OWID: CO₂ z cementu podle zemí</a></li>
+            <li><a href="https://ourworldindata.org/grapher/co2-emissions-by-fuel-line" target="_blank">OWID: CO₂ podle zdroje</a> (uhlí, ropa, plyn, cement)</li>
+            <li><a href="https://ourworldindata.org/explorers/minerals?Mineral=Cement&Metric=Production&Type=Processing&Share+of+global=true" target="_blank">OWID: výroba cementu podle zemí</a></li></ul></dd>
+          <dt>Tvrzení</dt><dd>„Výroba cementu způsobuje 8 % světových emisí CO₂.“ (Data OWID ukazují ~4 %. Co zahrnuje které číslo?)</dd>
+          <dt>Výpočet</dt><dd>Slínek obsahuje ~65 % CaO. Kolik CO₂ se uvolní z vápence na 1 t slínku? A jaký podíl světových fosilních emisí tvoří „cementový“ řádek v OWID?</dd>
+        </dl>
+        <p class="ext"><b>Pro zájemce:</b> cementárna Brevik (Norsko) se zachytáváním CO₂: kolik procent emisí závodu zachytí?</p>
+      </div>
+
+      <div class="topic">
+        <div class="topic-head"><span class="tid">T4</span><h3>Zachytávání CO₂: kolik ho umíme zachytit a využít?</h3></div>
+        <p class="q">Jak velké jsou dnes projekty zachytávání (CCS) a využití (CCU) CO₂ ve srovnání s emisemi?</p>
+        <dl>
+          <dt>Chemie</dt><dd>Jak se CO₂ zachytává ze spalin a co se s ním děje dál (uložení pod zem, výroba močoviny nebo methanolu).</dd>
+          <dt>Data</dt><dd><ul>
+            <li><a href="https://ourworldindata.org/grapher/annual-co2-emissions-per-country" target="_blank">OWID: světové emise CO₂</a></li>
+            <li>IEA CCUS Projects Explorer: kapacita provozovaných a plánovaných projektů</li>
+            <li>Fakta o klimatu: rešerše „Zachytávání, ukládání a využití uhlíku“</li></ul></dd>
+          <dt>Tvrzení</dt><dd><ul>
+            <li>„Technologie CCS zachytí 90 % emisí elektrárny.“ (Projektovaná vs. skutečná míra zachycení?)</li>
+            <li>Tvrzení firmy nebo politika, že CCS „vyřeší“ emise určitého odvětví.</li></ul></dd>
+          <dt>Výpočet</dt><dd>Kolik t CO₂ spotřebuje výroba 1 t močoviny (2NH₃ + CO₂ → CO(NH₂)₂ + H₂O)? Kolik procent světových emisí představuje ~130 Mt CO₂, které ročně spotřebuje výroba močoviny?</dd>
+        </dl>
+        <p class="ext"><b>Pro zájemce:</b> doba, po kterou uhlík zůstane v produktu (Ramirez-Corredores 2024, Tab. 1).</p>
+      </div>
+
+      <div class="block-sep">2. 12. · Polymery</div>
+
+      <div class="topic">
+        <div class="topic-head"><span class="tid">T5</span><h3>Recyklace plastů: kolik se jich opravdu recykluje?</h3></div>
+        <p class="q">Jaký podíl plastů se recykluje ve světě, v EU a v Česku a co přesně ta čísla měří?</p>
+        <dl>
+          <dt>Chemie</dt><dd>Proč jde PET recyklovat dobře a směsné plasty špatně. Mechanická vs. chemická recyklace.</dd>
+          <dt>Data</dt><dd><ul>
+            <li><a href="https://ourworldindata.org/grapher/plastic-fate" target="_blank">OWID: osud plastového odpadu</a> a <a href="https://ourworldindata.org/grapher/share-plastic-waste-recycled" target="_blank">podíl recyklace podle regionů</a></li>
+            <li>Eurostat: míra recyklace plastových obalů v zemích EU</li>
+            <li>EKO-KOM: výroční zpráva o třídění obalů v ČR</li></ul></dd>
+          <dt>Tvrzení</dt><dd>„Česko patří v třídění odpadu k evropské špičce.“ Nebo číslo o recyklaci plastových obalů z výroční zprávy EKO-KOM. Je to vytříděno, nebo recyklováno?</dd>
+          <dt>Výpočet</dt><dd>Z dat OWID spočítejte podíl recyklace ve světě v roce 2000 a 2019. Kolik procent by zbylo, kdyby se při zpracování ztratilo 30 % materiálu?</dd>
+        </dl>
+        <p class="ext"><b>Pro zájemce:</b> cíle EU pro recyklovaný obsah v obalech (nařízení PPWR) a zálohové systémy.</p>
+      </div>
+
+      <div class="topic">
+        <div class="topic-head"><span class="tid">T6</span><h3>Bioplasty: řešení, nebo marketing?</h3></div>
+        <p class="q">Jak velký podíl trhu bioplasty mají a co skutečně znamenají slova „bio“, „kompostovatelný“ a „rozložitelný“?</p>
+        <dl>
+          <dt>Chemie</dt><dd>PLA z kyseliny mléčné (z cukru nebo škrobu), bio-PE (chemicky stejný jako PE). Rozdíl mezi „biologicky založený“ a „biologicky rozložitelný“.</dd>
+          <dt>Data</dt><dd><ul>
+            <li><a href="https://ourworldindata.org/grapher/plastic-production-polymer" target="_blank">OWID: výroba plastů podle druhu polymeru</a> (včetně bioplastů)</li>
+            <li>European Bioplastics: tržní data (pozor, průmyslové sdružení)</li>
+            <li>Norma EN 13432 (průmyslová kompostovatelnost)</li></ul></dd>
+          <dt>Tvrzení</dt><dd>Konkrétní nápis na obalu nebo v reklamě, např. „kompostovatelný sáček“, „100% rozložitelný kelímek“. Za jakých podmínek se opravdu rozloží?</dd>
+          <dt>Výpočet</dt><dd>Jaký podíl světové výroby plastů tvořily v roce 2019 bioplasty? Kolik let by trvalo dosáhnout 10 %, kdyby jejich výroba rostla o 15 % ročně a ostatní plasty se nezměnily?</dd>
+        </dl>
+        <p class="ext"><b>Pro zájemce:</b> pravidla EU proti greenwashingu (zelená tvrzení) a jak se týkají slova „bio“.</p>
+      </div>
+
+      <div class="block-sep">9. 12. · Voda a SSbD</div>
+
+      <div class="topic">
+        <div class="topic-head"><span class="tid">T7</span><h3>Lithium a voda: solanky vs. horniny</h3></div>
+        <p class="q">Odkud se lithium bere, kolik vody a energie jeho výroba stojí a jak spolehlivá jsou čísla, která se o tom říkají?</p>
+        <dl>
+          <dt>Chemie</dt><dd>Odpařování solanky a srážení Li₂CO₃ vs. pražení a loužení spodumenu. Voda jako zdroj prvků.</dd>
+          <dt>Data</dt><dd><ul>
+            <li><a href="https://ourworldindata.org/explorers/minerals?Mineral=Lithium&Metric=Production&Type=Mine&Share+of+global=true" target="_blank">OWID: lithium, těžba</a> a přepínač na <i>Reserves</i></li>
+            <li><a href="https://ourworldindata.org/grapher/freshwater-withdrawals-as-a-share-of-internal-resources" target="_blank">OWID: vodní stres</a> (Chile, Austrálie, Argentina)</li>
+            <li>Studie životního cyklu (LCA) výroby lithia, projekt Cínovec</li></ul></dd>
+          <dt>Tvrzení</dt><dd>„Na 1 t lithia se odpaří přibližně 2 miliony litrů vody.“ Je to sladká voda, nebo solanka? Proč na tom záleží?</dd>
+          <dt>Výpočet</dt><dd>Li₂CO₃ obsahuje kolik % lithia? Kolik t Li₂CO₃ odpovídá 1 t Li? Kolik litrů vody by podle tvrzení „připadlo“ na baterii elektromobilu s 8 kg Li?</dd>
+        </dl>
+        <p class="ext"><b>Pro zájemce:</b> přímá extrakce lithia (DLE) a proč národní průměr vodního stresu nevypovídá o poušti Atacama.</p>
+      </div>
+
+      <div class="topic">
+        <div class="topic-head"><span class="tid">T8</span><h3>PFAS v pitné vodě: „věčné chemikálie“ a nové limity</h3></div>
+        <p class="q">Co znamenají nové limity EU pro PFAS v pitné vodě a co z nich plyne pro vodárny, obce a firmy?</p>
+        <dl>
+          <dt>Chemie</dt><dd>Proč je vazba C–F tak stabilní a co to znamená pro přírodu a pro úpravu vody (aktivní uhlí, membrány).</dd>
+          <dt>Data</dt><dd><ul>
+            <li>Směrnice (EU) 2020/2184 o pitné vodě: limity platné od 12. 1. 2026 (EUR-Lex)</li>
+            <li>Mapa Forever Pollution Project (naměřené koncentrace v Evropě, data ke stažení)</li>
+            <li>ECHA: návrh omezení PFAS (2023); EEA: PFAS v Evropě</li></ul></dd>
+          <dt>Tvrzení</dt><dd>Mediální titulek o PFAS v české pitné vodě, nebo nápis „PFAS-free“ na výrobku. Co přesně je měřeno a s čím se to srovnává?</dd>
+          <dt>Výpočet</dt><dd>Převod jednotek: 0,1 µg/l = ? ng/l. Porovnejte s naměřenými hodnotami z mapy pro vybrané místo v ČR nebo v sousední zemi.</dd>
+        </dl>
+        <p class="ext"><b>Pro zájemce:</b> projděte jeden výrobek s PFAS pěti kroky rámce SSbD (Doporučení Komise 2022/2510).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hodnocení -->
+  <section>
+    <div class="kicker">Hodnocení</div>
+    <h2>Rubrika (20 bodů)</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Kritérium</th><th>Body</th><th>Plný počet bodů</th><th>Typické chyby</th></tr></thead>
+        <tbody>
+          <tr><td><b>Grafy a data</b></td><td class="num">0–6</td><td>Dva grafy (A z OWID s vlastním nastavením, B vlastní), titulek se sdělením, jednotky, zdroj a rok. Data odevzdána.</td><td>převzatý obrázek bez úprav; popisný titulek; chybí rok nebo jednotka; podíl zaměněný za množství</td></tr>
+          <tr><td><b>Ověření tvrzení</b></td><td class="num">0–6</td><td>Šablona prošlá celá, nalezen primární zdroj, zdůvodněný verdikt, závěr pro praxi z dat skutečně vyplývá.</td><td>tvrzení bez odkazu; „ověřeno“ jiným sekundárním zdrojem; verdikt bez zdůvodnění</td></tr>
+          <tr><td><b>Chemie a výpočet</b></td><td class="num">0–4</td><td>Reakce nebo proces správně a srozumitelně, výpočet správně a s jednotkami.</td><td>opsaná rovnice bez vysvětlení; chybí jednotky</td></tr>
+          <tr><td><b>Prezentace a diskuse</b></td><td class="num">0–4</td><td>Dodržený čas, srozumitelný projev, otázka pro publikum, zdroje uvedené, snímek s takeaway message.</td><td>přetažení času; čtení ze snímků; chybí zdroje</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="margin-top:10px;">Na správnost chemie se díváme s ohledem na to, že jste první ročník. Důležitější je, abyste ji vysvětlili vlastními slovy, než aby byla úplná.</p>
+  </section>
+
+  <section class="panel accent">
+    <h3>Nástroje umělé inteligence</h3>
+    <p style="margin-bottom:0;">AI můžete používat (hledání zdrojů, pomoc s Excelem, jazyková úprava). Na posledním snímku uveďte k čemu. <b>Každé číslo musí mít primární zdroj, který jste sami otevřeli.</b> Číslo, které „řekla AI“, zdrojem není. Ověřování tvrzení je jádro úkolu. Klidně jako tvrzení k ověření použijte odpověď AI.</p>
+  </section>
+
+  <section>
+    <div class="kicker">Časté otázky</div>
+    <h2>Než se zeptáte</h2>
+    <dl style="grid-template-columns:240px 1fr;">
+      <dt>Nemůžu najít data</dt><dd>Napište mi hned, ne den před termínem. Hledání a „nenalezení“ dat je také výsledek, který můžete prezentovat.</dd>
+      <dt>Můžu ověřit jiné tvrzení?</dt><dd>Ano, když se týká vašeho tématu a uvedete, kde zaznělo. Napište ho do osnovy.</dd>
+      <dt>Musím použít OWID?</dt><dd>Pro graf A je to nejjednodušší cesta. Rovnocenné jsou Eurostat, ČSÚ, IEA data explorery nebo Datawrapper. T8 data v OWID nemá.</dd>
+      <dt>Kolik zdrojů?</dt><dd>Kvalita je důležitější než počet. Typicky 3–6 zdrojů, z toho aspoň 2 primární.</dd>
+      <dt>V jakém jazyce?</dt><dd>Prezentace česky, zdroje mohou být anglicky.</dd>
+    </dl>
+  </section>
+
+  <footer>Ing. Pavla Fojtíková, Ph.D. · Laboratoř environmentální a analytické chemie, Přírodovědecká fakulta JU · dotazy e-mailem nebo na konzultaci</footer>
+</div>
+</body>
+</html>

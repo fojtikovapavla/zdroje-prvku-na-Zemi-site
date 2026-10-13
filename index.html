@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zdroje prvků na Zemi — studijní materiály</title>
+<meta name="description" content="Blok 2 kurzu Chemické principy a udržitelnost: zdroje prvků, od minerálů k materiálům, CO₂, polymery, voda a bezpečné chemikálie. Přednášky, semináře a semestrální projekt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#F3F4EE; --surface:#FFFFFF; --surface-2:#EAEDE2; --ink:#182620; --ink-soft:#46564C; --ink-muted:#6E7B72;
+    --primary:#2F5D50; --primary-strong:#1B3931; --accent:#B96A2C; --accent-soft:#F1E3D3; --line:#D8DCCD;
+    --font-display:'Fraunces',Georgia,serif; --font-body:'Public Sans',-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--font-body); padding:56px 16px 80px;}
+  .wrap{max-width:920px; margin:0 auto; display:flex; flex-direction:column; gap:36px;}
+  .eyebrow{font-family:ui-monospace,monospace; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-muted);}
+  h1{font-family:var(--font-display); font-size:clamp(32px,5vw,48px); margin:10px 0 0; line-height:1.1;}
+  .lede{font-size:18px; color:var(--ink-soft); max-width:62ch; line-height:1.6; margin-top:14px;}
+  .block-group{display:flex; flex-direction:column; gap:14px;}
+  .block-title{font-family:ui-monospace,monospace; font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-muted); margin-top:8px;}
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px;}
+  a.card{display:flex; flex-direction:column; gap:6px; text-decoration:none; color:inherit; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px 22px; transition:border-color .15s;}
+  a.card:hover{border-color:var(--primary);}
+  a.card.project{background:var(--accent-soft); border-color:var(--accent);}
+  .kind{font-family:ui-monospace,monospace; font-size:11.5px; text-transform:uppercase; color:var(--ink-muted);}
+  .card h3{font-size:17px; margin:0;}
+  .card p{font-size:14px; color:var(--ink-soft); margin:0; line-height:1.5;}
+  .pres{font-family:ui-monospace,monospace; font-size:11.5px; color:var(--accent); margin-top:4px;}
+  .note{font-size:14px; color:var(--ink-soft); line-height:1.6; background:var(--surface-2); border-radius:12px; padding:14px 18px;}
+  footer{border-top:1px solid var(--line); padding-top:18px; font-size:13px; color:var(--ink-muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div>
+    <div class="eyebrow">Chemické principy a udržitelnost · Blok 2 · Ing. Pavla Fojtíková, Ph.D. · PřF JU</div>
+    <h1>Zdroje prvků na Zemi</h1>
+    <p class="lede">Odkud se berou prvky, ze kterých vyrábíme oceli, baterie, sklo, plasty a čistou vodu, kolik to stojí energie a emisí a kdo o tom rozhoduje. Celým blokem prochází práce s daty: v každém semináři pracujeme s grafy Our World in Data a dalšími veřejnými zdroji.</p>
+  </div>
+
+  <div class="block-group">
+    <div class="block-title">Semestrální projekt</div>
+    <div class="cards">
+      <a class="card project" href="zadani-projektu.html">
+        <div class="kind">Zadání</div>
+        <h3>Ověř to v datech</h3>
+        <p>8 témat, každý student jedno. Prezentace s vlastními grafy a ověřením jednoho tvrzení. Zazní v Přednáškách 3–6.</p>
+      </a>
+    </div>
+  </div>
+<!--
+  <div class="block-group">
+    <div class="block-title">1 · Chemické prvky a jejich dostupnost na Zemi</div>
+    <div class="cards">
+      <a class="card" href="prednaska-1.html">
+        <div class="kind">Přednáška 1</div>
+        <h3>Prvky na Zemi</h3>
+        <p>Původ prvků a transmutace, složení Země, periodická soustava, zdroje vs. zásoby, kritické suroviny EU.</p>
+      </a>
+      <a class="card" href="seminar-1.html">
+        <div class="kind">Seminář 1</div>
+        <h3>Jak pracovat s daty o surovinách</h3>
+        <p>Our World in Data a USGS krok za krokem. Rozdělení témat projektu.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="block-group">
+    <div class="block-title">2 · Od minerálů k materiálům I</div>
+    <div class="cards">
+      <a class="card" href="prednaska-2.html">
+        <div class="kind">Přednáška 2</div>
+        <h3>Li, C, Al, Si, Ge, In, Te</h3>
+        <p>Materiály pro baterie, fotovoltaiku a elektroniku. Hliník jako „zamražená elektřina“, kovy jako vedlejší produkty.</p>
+      </a>
+      <a class="card" href="seminar-2.html">
+        <div class="kind">Seminář 2</div>
+        <h3>Kdo ovládá suroviny?</h3>
+        <p>Geografická koncentrace v datech, výpočet energie hliníku, skupinové úlohy.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="block-group">
+    <div class="block-title">3 · Od minerálů k materiálům II</div>
+    <div class="cards">
+      <a class="card" href="prednaska-3.html">
+        <div class="kind">Přednáška 3</div>
+        <h3>Fe, Ti, Cu, Co, Ni, platinové kovy, vzácné zeminy</h3>
+        <p>Ocel a zelená ocel, klesající obsah kovu v rudách, baterie a magnety.</p>
+        <div class="pres">Prezentace T1 · T2 · 18. 11.</div>
+      </a>
+      <a class="card" href="seminar-3.html">
+        <div class="kind">Seminář 3</div>
+        <h3>Kovy v praxi a toxicita kovů</h3>
+        <p>Těžba vs. zpracování v datech, výpočty k oceli, jak kovy působí v těle.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="block-group">
+    <div class="block-title">4 · Sklo, cement, těkavé prvky a oxidy uhlíku</div>
+    <div class="cards">
+      <a class="card" href="prednaska-4.html">
+        <div class="kind">Přednáška 4</div>
+        <h3>Sklo, cement a CO₂</h3>
+        <p>Procesní emise, čištění odpadních plynů, zachytávání, ukládání a využití CO₂.</p>
+        <div class="pres">Prezentace T3 · T4 · 25. 11.</div>
+      </a>
+      <a class="card" href="seminar-4.html">
+        <div class="kind">Seminář 4</div>
+        <h3>Uhlíkový rozpočet v datech</h3>
+        <p>Emise ČR z výroby vs. spotřeby, výpočet močoviny, skupinové úlohy.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="block-group">
+    <div class="block-title">5 · Polymery</div>
+    <div class="cards">
+      <a class="card" href="prednaska-5.html">
+        <div class="kind">Přednáška 5</div>
+        <h3>Od ropy k plastům a zpět</h3>
+        <p>Petrochemie, typy a syntéza polymerů, osud plastového odpadu, recyklace, bioplasty.</p>
+        <div class="pres">Prezentace T5 · T6 · 2. 12.</div>
+      </a>
+      <a class="card" href="seminar-5.html">
+        <div class="kind">Seminář 5</div>
+        <h3>Plasty v praxi</h3>
+        <p>Recyklační kódy na obalech, data o osudu plastů, skupinové úlohy.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="block-group">
+    <div class="block-title">6 · Voda a bezpečné chemikálie</div>
+    <div class="cards">
+      <a class="card" href="prednaska-6.html">
+        <div class="kind">Přednáška 6</div>
+        <h3>Voda a Safe and Sustainable by Design</h3>
+        <p>Zdroje vody, voda jako zdroj prvků a součást technologií, strategie EU pro chemické látky, SSbD, PFAS.</p>
+        <div class="pres">Prezentace T7 · T8 · 9. 12.</div>
+      </a>
+      <a class="card" href="seminar-6.html">
+        <div class="kind">Seminář 6</div>
+        <h3>Voda, SSbD a závěr bloku</h3>
+        <p>Vodní stres v datech, hodnocení výrobku podle SSbD, shrnutí bloku.</p>
+      </a>
+    </div>
+  </div>
+-->
+  <div class="note"><b>Ovládání prezentací:</b> šipky nebo mezerník = další snímek, <b>F</b> = celá obrazovka, <b>S</b> = poznámky pro přednášející. Některé snímky obsahují živé grafy z Our World in Data. Potřebují připojení k internetu, pod každým je odkaz pro otevření v nové záložce.</div>
+
+  <footer>Ing. Pavla Fojtíková, Ph.D. · Laboratoř environmentální a analytické chemie, Přírodovědecká fakulta JU</footer>
+</div>
+</body>
+</html>

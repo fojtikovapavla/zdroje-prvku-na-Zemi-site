@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seminář 2 — Kdo ovládá suroviny?</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <section class="cover-slide">
+      <div>
+        <div class="eyebrow">Chemické principy a udržitelnost · Blok 2</div>
+        <h1>Kdo ovládá suroviny?</h1>
+        <p class="sub">Kvíz, koncentrace těžby a zpracování v datech, energie v plechovce, skupinové úlohy</p>
+      </div>
+      <div class="foot"><div class="bar"></div><span>Seminář 2 · Zdroje prvků na Zemi</span></div>
+      <aside class="notes">Navazuje na prednaska-2.html. Rozvržení (90 min): 8 min kvíz, 25 min datová úloha (OWID, skupiny podle surovin), 12 min výpočty, 30 min skupinové scénáře, 10 min prezentace, 5 min shrnutí. Studenti potřebují notebooky. Připomeňte T1/T2 termín osnovy.</aside>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="b">
+        <div class="quiz-q"><span class="qn">1</span>Proč se lithium ze solanek získává pomalu (12–18 měsíců)?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Solanka se musí nejdřív zmrazit</button>
+          <button class="quiz-opt3" data-key="b">Voda se odpařuje sluncem v nádržích, dokud se soli nezakoncentrují</button>
+          <button class="quiz-opt3" data-key="c">Lithium v solance je radioaktivní a musí se nechat „vyzářit“</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Odpařování je levné na energii, ale pomalé a spotřebovává vodu v suchých oblastech.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="c">
+        <div class="quiz-q"><span class="qn">2</span>Kolik energie ušetří recyklace hliníku oproti výrobě z bauxitu?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Asi 10 %</button>
+          <button class="quiz-opt3" data-key="b">Asi 50 %</button>
+          <button class="quiz-opt3" data-key="c">Asi 95 %</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Přetavení šrotu nevyžaduje elektrolýzu oxidu hlinitého, tedy rozbití vazby Al–O.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="a">
+        <div class="quiz-q"><span class="qn">3</span>Co znamená, že indium je „vedlejší produkt“?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Získává se při zpracování zinkových rud, nikdo ho netěží samostatně</button>
+          <button class="quiz-opt3" data-key="b">Je to odpad, který nemá využití</button>
+          <button class="quiz-opt3" data-key="c">Vzniká jako vedlejší produkt v jaderných reaktorech</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Nabídka india proto závisí na trhu se zinkem, ne na poptávce po displejích.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="b">
+        <div class="quiz-q"><span class="qn">4</span>Proč se křemík pro solární panely čistí přes trichlorsilan SiHCl₃?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Trichlorsilan je levnější než písek</button>
+          <button class="quiz-opt3" data-key="b">Je to kapalina, kterou lze vyčistit destilací a pak rozložit na velmi čistý Si</button>
+          <button class="quiz-opt3" data-key="c">Chlor zvyšuje účinnost panelu</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Pevný křemík vyčistit nejde, těkavou sloučeninu ano. Princip „přes těkavou látku“ využívá i výroba titanu (Přednáška 3).</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="ne">
+        <div class="quiz-q"><span class="qn">5</span>Tvrzení: „Čína vyrábí 60 % hliníku, protože má 60 % světového bauxitu.“</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="ano">Pravda</button>
+          <button class="quiz-opt3" data-key="ne">Nepravda</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Nepravda. Čína těží ~21 % bauxitu. Zbytek dováží (Guinea, Austrálie). Výhodou je zpracování: levná elektřina, kapacity, know-how.</div>
+      </div>
+    </section>
+
+    <section class="divider-slide">
+      <div class="num">→</div>
+      <h2>Datová úloha</h2>
+      <p>Těžba, nebo zpracování: kde je moc?</p>
+      <aside class="notes">Rozdělte třídu do 4 skupin, každá jedna surovina: (A) bauxit vs. hliník, (B) měď těžba vs. rafinace, (C) kobalt těžba vs. rafinace, (D) grafit + gallium. Nástroj: OWID Minerals explorer, „Share of global“.</aside>
+    </section>
+
+    <section>
+      <div class="tag-label data">Our World in Data · Minerals explorer</div>
+      <iframe class="owid-frame" data-src="https://ourworldindata.org/explorers/minerals?Mineral=Aluminum&Metric=Production&Type=Smelter&Share+of+global=true" loading="lazy" allow="web-share; clipboard-write" title="OWID Minerals explorer: aluminium"></iframe>
+      <p class="owid-link">Otevřít: <a href="https://ourworldindata.org/explorers/minerals?Mineral=Aluminum&Metric=Production&Type=Smelter&Share+of+global=true" target="_blank">ourworldindata.org/explorers/minerals ↗</a></p>
+      <aside class="notes">Ukázka pro skupinu A: přepínejte Mineral = Bauxite (Type Mine) a Aluminum (Type Smelter), Share of global = zaškrtnuto. Nahoře graf, záložka Map pro mapu.</aside>
+    </section>
+
+    <section>
+      <div class="tag-label data">Úkol pro skupiny · 20 min</div>
+      <div class="data-task">
+        <ol>
+          <li>Najděte podíl tří největších zemí (top 3) na <b>těžbě</b> a na <b>zpracování</b> vaší suroviny v posledním roce.</li>
+          <li>Která země vede v těžbě a která ve zpracování? Je to stejná země?</li>
+          <li>Jak se podíl hlavní země změnil od nejstaršího dostupného roku?</li>
+          <li>Napište jednu větu se sdělením („titulek grafu“) a zdroj.</li>
+        </ol>
+      </div>
+      <table class="data-table" style="margin-top:14px; font-size:21px;">
+        <thead><tr><th>Skupina</th><th>Těžba</th><th>Zpracování</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>Bauxite · Mine</td><td>Aluminum · Smelter</td></tr>
+          <tr><td>B</td><td>Copper · Mine</td><td>Copper · Refinery</td></tr>
+          <tr><td>C</td><td>Cobalt · Mine</td><td>Cobalt · Refinery</td></tr>
+          <tr><td>D</td><td>Graphite · Mine</td><td>Gallium · Processing</td></tr>
+        </tbody>
+      </table>
+      <aside class="notes">Řešení (OWID, 2024 nebo poslední rok): A bauxit Guinea 29 %, Austrálie 22 %, Čína 21 % (top 3 = 72 %); hliník Čína 60 %, Indie 6 %, Rusko 5 %. B měď těžba Chile 23 %, DR Kongo 14 %, Peru 11 %; rafinace Čína 44 %. C kobalt těžba DR Kongo 76 %; rafinace Čína 76 % (2021, novější data chybí, i to je zjištění o datech!). D grafit Čína 79 %; gallium Čína 99 %. Pointa: těží se v různých zemích, zpracovává převážně v Číně. Proto EU v CRMA stanovuje cíl 40 % zpracování v EU.</aside>
+    </section>
+
+    <section class="divider-slide">
+      <div class="num">∑</div>
+      <h2>Výpočty</h2>
+      <p>Kolik energie je v plechovce</p>
+      <aside class="notes">Ve dvojicích. Molární hmotnosti na tabuli: Al 26,98; O 16,00; Al₂O₃ 101,96; Li 6,94; C 12,01; Li₂CO₃ 73,89 g/mol.</aside>
+    </section>
+
+    <section>
+      <div class="tag-label calc">Příklad 1 · hliník</div>
+      <div class="row">
+        <div class="col">
+          <div class="calc-panel">
+            <div class="formula" style="background:var(--surface); font-size:24px;">2Al₂O₃ → 4Al + 3O₂ <span style="color:var(--ink-muted)">(zjednodušeně)</span></div>
+            <ul style="font-size:23px; margin:0;">
+              <li>Elektrolýza: ~14 kWh na 1 kg Al</li>
+              <li>Recyklace: ~5 % této energie</li>
+              <li>Plechovka: ~13 g hliníku</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="data-task">
+            <ol>
+              <li>Kolik tun Al₂O₃ je potřeba na 1 t hliníku?</li>
+              <li>Kolik kWh je „schováno“ v jedné plechovce z primárního a z recyklovaného hliníku?</li>
+              <li>Nabití mobilu ≈ 0,015 kWh. Kolikrát byste ho nabili energií jedné plechovky?</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Řešení: 1) (2 × 101,96) / (4 × 26,98) = 203,9 / 107,9 = 1,89 t Al₂O₃ (odpovídá „2 t oxidu“ z přednášky). 2) 0,013 kg × 14 kWh/kg ≈ 0,18 kWh primární; recyklovaná ≈ 0,009 kWh. 3) 0,18 / 0,015 ≈ 12 nabití mobilu (recyklovaná ≈ 0,6). Pointa pro komunikaci: čísla na úrovni plechovky si lidé představí lépe než MWh na tunu.</aside>
+    </section>
+
+    <section>
+      <div class="tag-label calc">Příklad 2 · lithium a uhlíková stopa</div>
+      <div class="row">
+        <div class="col">
+          <div class="data-task">
+            <ol>
+              <li>Lithium se obchoduje jako Li₂CO₃. Kolik procent Li obsahuje? Kolik tun Li₂CO₃ odpovídá 1 t lithia?</li>
+              <li>Hliník vyrobený z elektřiny z uhlí (~1 kg CO₂/kWh) vs. z vodní elektrárny (~0,02 kg CO₂/kWh): kolik kg CO₂ připadá jen na elektřinu pro 1 kg Al?</li>
+            </ol>
+          </div>
+        </div>
+        <div class="col">
+          <div class="panel">
+            <p class="prose tight">Proč na tom záleží? Mezinárodní statistiky lithia se uvádějí jednou v tunách Li, jindy v tunách LCE (uhličitan). Rozdíl je víc než pětinásobný.</p>
+            <p class="prose tight" style="margin:0;"><b>Vždy zkontrolujte jednotku.</b></p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Řešení: 1) 2 × 6,94 / 73,89 = 0,188 → 18,8 % Li; 1 / 0,188 = 5,3 t Li₂CO₃. USGS i OWID uvádějí lithium v tunách Li (obsah prvku). Firmy a média často v LCE. 2) uhlí: 14 kWh × 1 = ~14 kg CO₂/kg Al; voda: 14 × 0,02 = ~0,3 kg CO₂/kg Al. K tomu přičtěte anody, oxid hlinitý a dopravu. Pointa: „stejný“ hliník má podle původu velmi rozdílnou uhlíkovou stopu. Proto CBAM a požadavky zákazníků na data o emisích dodavatelů.</aside>
+    </section>
+
+    <section class="divider-slide">
+      <div class="num">→</div>
+      <h2>Skupinová práce</h2>
+      <p>1 scénář na skupinu · 25 min</p>
+      <aside class="notes">Ptejte se na chemii (proč) a data (odkud víte). Každá skupina musí uvést aspoň jeden konkrétní zdroj dat.</aside>
+    </section>
+
+    <section>
+      <div class="task-slide-head">
+        <div class="task-swatch" style="background:var(--water)"></div>
+        <div><div class="task-kind">Skupina · Lithium</div><h3 style="font-size:34px;">Cínovec: těžit lithium v Česku?</h3></div>
+      </div>
+      <p class="scenario-text">Obec v Krušných horách diskutuje o plánovaném dole a zpracovatelském závodě na lithium. Zastánci mluví o surovinové bezpečnosti EU a pracovních místech, odpůrci o vodě, dopravě a krajině.</p>
+      <ol class="task-steps">
+        <li>Vysvětlete, jak se z horniny stane uhličitan nebo hydroxid lithný a co se při tom spotřebuje (energie, chemikálie, voda).</li>
+        <li>Jak by projekt přispěl k cílům EU (10 % těžby, 40 % zpracování)?</li>
+        <li>Navrhněte tři podmínky, za kterých by projekt mohl být přijatelný pro obec.</li>
+      </ol>
+      <div class="data-hint2">Podklad: přednáška 2; OWID Minerals explorer (Lithium); Nařízení (EU) 2024/1252; web projektu Geomet.</div>
+    </section>
+
+    <section>
+      <div class="task-slide-head">
+        <div class="task-swatch" style="background:var(--danger)"></div>
+        <div><div class="task-kind">Skupina · Hliník</div><h3 style="font-size:34px;">Od koho kupovat hliník?</h3></div>
+      </div>
+      <p class="scenario-text">Výrobce kol nakupuje hliníkové trubky. Nabídky: (A) levný primární hliník z Číny, (B) dražší primární hliník z Norska, (C) slitina s 75 % recyklátu z Německa. Zákazníci se ptají na uhlíkovou stopu.</p>
+      <ol class="task-steps">
+        <li>Seřaďte nabídky podle pravděpodobné uhlíkové stopy a zdůvodněte to chemií a energetikou výroby.</li>
+        <li>Jaká data byste po dodavatelích chtěli, abyste tvrzení „nízkouhlíkový hliník“ mohli ověřit?</li>
+        <li>Jakou roli hraje CBAM (uhlíkové clo EU)?</li>
+      </ol>
+      <div class="data-hint2">Podklad: příklad 2 ze semináře; OWID: Electricity mix (podíl uhlí v Číně a Norsku); výpočet ~14 kWh/kg Al.</div>
+    </section>
+
+    <section>
+      <div class="task-slide-head">
+        <div class="task-swatch" style="background:var(--accent)"></div>
+        <div><div class="task-kind">Skupina · Gallium a germanium</div><h3 style="font-size:34px;">Vývozní omezení: co teď?</h3></div>
+      </div>
+      <p class="scenario-text">Evropský výrobce LED osvětlení a infračervených kamer se dozvěděl, že Čína omezila vývoz gallia a germania. Zásoby materiálu vystačí na 4 měsíce.</p>
+      <ol class="task-steps">
+        <li>Vysvětlete, proč nelze rychle najít jiného dodavatele (vedlejší produkt, koncentrace).</li>
+        <li>Navrhněte krátkodobá (měsíce) a dlouhodobá (roky) opatření.</li>
+        <li>Které z opatření by snížilo riziko i pro konkurenci, a proto by ho měla podpořit EU?</li>
+      </ol>
+      <div class="data-hint2">Podklad: OWID Minerals explorer (Gallium, Germanium); přednáška 2, vedlejší produkty.</div>
+    </section>
+
+    <section>
+      <div class="task-slide-head">
+        <div class="task-swatch" style="background:var(--primary)"></div>
+        <div><div class="task-kind">Skupina · Grafit</div><h3 style="font-size:34px;">Továrna na baterie a grafit</h3></div>
+      </div>
+      <p class="scenario-text">Investor plánuje v ČR továrnu na bateriové články. Anody potřebují grafit. Na výběr je přírodní grafit z Mosambiku, syntetický grafit z Číny, nebo syntetický grafit vyrobený v Evropě (dražší).</p>
+      <ol class="task-steps">
+        <li>Čím se liší přírodní a syntetický grafit z hlediska energie a emisí?</li>
+        <li>Jaké riziko nese každá varianta (dodávky, cena, emise, sociální)?</li>
+        <li>Doporučte variantu nebo jejich kombinaci a zdůvodněte.</li>
+      </ol>
+      <div class="data-hint2">Podklad: OWID Minerals explorer (Graphite); přednáška 2; IEA Global Critical Minerals Outlook.</div>
+    </section>
+
+    <section>
+      <div class="kicker">Prezentace a diskuse · 2 min na skupinu</div>
+      <div class="prose">
+        <p>Společné téma: <b>riziko se často neskrývá v dole, ale ve zpracování</b>, a o uhlíkové stopě materiálu rozhoduje hlavně elektřina použitá při výrobě.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="kicker">Shrnutí a projekt</div>
+      <div class="row">
+        <div class="col">
+          <div class="goal-list tight">
+            <div class="item"><span class="dot"></span><span>Koncentrace zpracování bývá vyšší než koncentrace těžby.</span></div>
+            <div class="item"><span class="dot"></span><span>Kontrolujte jednotky (t Li vs. t LCE) a rok dat (kobalt: rafinace jen do 2021).</span></div>
+            <div class="item"><span class="dot"></span><span>Stejný materiál může mít několikanásobně jinou uhlíkovou stopu.</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="slot-card">
+            <div class="slot-id">Příště · Přednáška 3 · 18. 11.</div>
+            <h4>T1 Vzácné zeminy · T2 Kobalt a nikl</h4>
+            <p>Podklady odevzdejte nejpozději 2 dny před přednáškou. Osnovy všech témat: do 23. 10.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.04, minScale: 0.2, maxScale: 2, controls: true, progress: true, slideNumber: 'c/t', plugins: [ RevealNotes ] });
+  document.querySelectorAll('.quiz-block').forEach(function (block) {
+    var answer = block.dataset.answer, feedback = block.querySelector('.quiz-feedback3'), buttons = block.querySelectorAll('.quiz-opt3');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (block.classList.contains('answered')) return;
+        block.classList.add('answered');
+        var chosen = btn.dataset.key;
+        buttons.forEach(function (b) {
+          b.disabled = true;
+          if (b.dataset.key === answer) b.classList.add('correct');
+          else if (b.dataset.key === chosen) b.classList.add('incorrect');
+          else b.classList.add('dim');
+        });
+        if (feedback) feedback.hidden = false;
+      });
+    });
+  });
+</script>
+</body>
+</html>

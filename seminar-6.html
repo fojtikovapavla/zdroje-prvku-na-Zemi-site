@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seminář 6 — Voda, SSbD a závěr bloku</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <section class="cover-slide">
+      <div>
+        <div class="eyebrow">Chemické principy a udržitelnost · Blok 2</div>
+        <h1>Voda, SSbD a závěr bloku</h1>
+        <p class="sub">Kvíz, vodní stres v datech, výpočty s jednotkami, hodnocení výrobku podle SSbD, shrnutí</p>
+      </div>
+      <div class="foot"><div class="bar"></div><span>Seminář 6 · Zdroje prvků na Zemi</span></div>
+      <aside class="notes">Navazuje na prednaska-6.html. Rozvržení (90 min): 8 min kvíz, 15 min datová úloha, 12 min výpočty, 35 min SSbD ve skupinách včetně prezentací, 15 min závěr bloku (mapa pojmů, zpětná vazba k projektu), 5 min rezerva.</aside>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="c">
+        <div class="quiz-q"><span class="qn">1</span>Na co se v Česku odebírá nejméně sladké vody?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Průmysl a chlazení elektráren</button>
+          <button class="quiz-opt3" data-key="b">Veřejné vodovody</button>
+          <button class="quiz-opt3" data-key="c">Zemědělství (~3 %)</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Ve světě je to naopak: zemědělství ~71 %. Česko málo zavlažuje.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="b">
+        <div class="quiz-q"><span class="qn">2</span>Proč se uran z mořské vody běžně nezískává, i když je ho v oceánech obrovské množství?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Je v mořské vodě radioaktivně neaktivní</button>
+          <button class="quiz-opt3" data-key="b">Koncentrace je tak nízká (~3 µg/l), že získání stojí příliš mnoho energie a peněz</button>
+          <button class="quiz-opt3" data-key="c">Je to zakázáno mezinárodní úmluvou</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Zdroj ≠ zásoba (Přednáška 1). Rozhoduje koncentrace.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="a">
+        <div class="quiz-q"><span class="qn">3</span>Riziko látky je…</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">nebezpečnost × expozice</button>
+          <button class="quiz-opt3" data-key="b">totéž co nebezpečnost</button>
+          <button class="quiz-opt3" data-key="c">množství látky vyrobené za rok</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Velmi nebezpečná látka v uzavřeném systému může mít malé riziko, málo nebezpečná ve velkých dávkách velké.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="c">
+        <div class="quiz-q"><span class="qn">4</span>Proč se PFAS v přírodě prakticky nerozkládají?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Jsou radioaktivní</button>
+          <button class="quiz-opt3" data-key="b">Jsou nerozpustné ve vodě</button>
+          <button class="quiz-opt3" data-key="c">Vazba uhlík–fluor je extrémně pevná a mikroorganismy ji nedokážou rozštěpit</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Právě ta stabilita je důvod, proč jsou užitečné (nepromokavost, odolnost) i problematické.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="b">
+        <div class="quiz-q"><span class="qn">5</span>Který krok rámce SSbD hodnotí uhlíkovou stopu a spotřebu surovin?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Krok 1: nebezpečnost</button>
+          <button class="quiz-opt3" data-key="b">Krok 4: environmentální udržitelnost (LCA)</button>
+          <button class="quiz-opt3" data-key="c">Krok 2: bezpečnost při výrobě</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Krok 4 je posouzení životního cyklu. Přesně to, co jsme v bloku dělali u oceli, hliníku, cementu a plastů.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="tag-label data">Our World in Data · vodní stres</div>
+      <iframe class="owid-frame" data-src="https://ourworldindata.org/grapher/freshwater-withdrawals-as-a-share-of-internal-resources?tab=map" loading="lazy" allow="web-share; clipboard-write" title="OWID: vodní stres"></iframe>
+      <p class="owid-link"><a href="https://ourworldindata.org/grapher/freshwater-withdrawals-as-a-share-of-internal-resources" target="_blank">water stress ↗</a> · <a href="https://ourworldindata.org/grapher/agricultural-water-as-a-share-of-total-water-withdrawals" target="_blank">zemědělství ↗</a> · <a href="https://ourworldindata.org/grapher/proportion-using-safely-managed-drinking-water" target="_blank">pitná voda ↗</a></p>
+    </section>
+
+    <section>
+      <div class="tag-label data">Úkoly ve dvojicích · 15 min</div>
+      <div class="data-task">
+        <ol>
+          <li>Jaký je vodní stres Česka, Chile, Austrálie a Saúdské Arábie? Co přesně ukazatel měří (Sources)?</li>
+          <li>Proč má Chile nízký vodní stres, když tam leží poušť Atacama? Co národní průměr skrývá?</li>
+          <li>Najděte česká data o suchu pro váš kraj (např. intersucho.cz nebo ČHMÚ). Liší se obrázek od národního průměru?</li>
+          <li>Jedna věta se sdělením + zdroj.</li>
+        </ol>
+      </div>
+      <aside class="notes">Řešení (OWID, 2023): Česko ~20 %, Chile ~9 %, Austrálie ~4 % (!), svět ~18 %, Saúdská Arábie ~970 % (odebírá téměř desetkrát víc, než se obnovuje: čerpá fosilní podzemní vodu a odsoluje mořskou vodu). Ukazatel = odběry sladké vody / obnovitelné vnitřní zdroje (SDG 6.4.2, FAO AQUASTAT). Chile: obrovské zdroje na jihu (Patagonie), sucho na severu. Národní průměr je pro hodnocení místního projektu (důl, továrna) nepoužitelný. Pointa pro projekt T7 a pro hodnocení vodního rizika firem (např. WRI Aqueduct mapuje riziko na úrovni povodí).</aside>
+    </section>
+
+    <section>
+      <div class="tag-label calc">Výpočty · 12 min</div>
+      <div class="row">
+        <div class="col">
+          <div class="calc-panel">
+            <p class="prose tight"><b>1 · PFAS a jednotky</b></p>
+            <p class="prose tight" style="margin:0;">Laboratoř naměřila ve vodovodu součet 20 PFAS = 0,045 µg/l. (a) Kolik je to ng/l? (b) Splňuje limit 0,1 µg/l? (c) Člověk vypije 2 l denně. Kolik ng PFAS tak přijme za rok?</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="calc-panel">
+            <p class="prose tight"><b>2 · Lithium a voda</b></p>
+            <p class="prose tight" style="margin:0;">Často se uvádí, že na 1 t lithia se odpaří ~2 000 000 l vody. Baterie elektromobilu obsahuje ~8 kg Li. (a) Kolik litrů vody „připadá“ na baterii? (b) Je to sladká voda, nebo solanka? Proč na tom záleží?</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Řešení: 1) (a) 45 ng/l; (b) ano, 45 < 100 ng/l; (c) 45 × 2 × 365 ≈ 33 000 ng ≈ 33 µg ročně. Dávejte pozor, aby to neznělo uklidňujícím ani poplašným tónem: zdravotní hodnocení dělá EFSA přes tolerovatelný týdenní příjem vztažený na kg tělesné hmotnosti. 2) (a) 8 kg × 2 000 l/kg = 16 000 l na baterii. (b) Většina odpařené vody je solanka (nepitná), ale čerpání solanky může ovlivnit sladkou vodu v okolí (snižuje hladiny a ovlivňuje mokřady a laguny). Tvrzení je tedy „pravdivé, ale zavádějící“. Detail patří do T7. Číslo o 2 mil. l je samo o sobě sporné, proto je dobré na něm ukázat, jak se ověřuje.</aside>
+    </section>
+
+    <section class="divider-slide">
+      <div class="num">→</div>
+      <h2>SSbD ve skupinách</h2>
+      <p>1 výrobek na skupinu · 25 min</p>
+      <aside class="notes">Každá skupina vyplní tabulku 5 kroků (na papír nebo do sdíleného dokumentu): co víme, co nevíme, verdikt (zelená / oranžová / červená). Pak 2 min prezentace.</aside>
+    </section>
+
+    <section>
+      <div class="kicker">Šablona hodnocení · pro každou skupinu</div>
+      <table class="data-table" style="font-size:22px;">
+        <thead><tr><th>Krok SSbD</th><th>Otázka</th><th>Co víme / nevíme</th><th>Verdikt</th></tr></thead>
+        <tbody>
+          <tr><td><b>1</b> Nebezpečnost</td><td>Obsahuje výrobek látky toxické, perzistentní, karcinogenní?</td><td></td><td>🟢🟠🔴</td></tr>
+          <tr><td><b>2</b> Výroba</td><td>Jsou ohroženi pracovníci (prach, páry, horké procesy)?</td><td></td><td>🟢🟠🔴</td></tr>
+          <tr><td><b>3</b> Použití</td><td>Uvolňuje se něco při používání, praní, likvidaci?</td><td></td><td>🟢🟠🔴</td></tr>
+          <tr><td><b>4</b> Prostředí</td><td>Energie, CO₂, kritické suroviny, recyklovatelnost?</td><td></td><td>🟢🟠🔴</td></tr>
+          <tr><td><b>5</b> Společnost</td><td>Cena, pracovní podmínky v řetězci, přínos?</td><td></td><td>🟢🟠🔴</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <div class="kicker">Výrobky k hodnocení · porovnejte dvě varianty</div>
+      <div class="row">
+        <div class="col"><div class="compare-panel" style="height:100%"><h4><span class="badge-dot" style="background:var(--water); margin-right:10px;">A</span>Outdoorová bunda</h4><p style="font-size:21px; line-height:1.4; margin:0;">s úpravou PFAS × s úpravou bez PFAS (vosk, silikon)</p></div></div>
+        <div class="col"><div class="compare-panel" style="height:100%"><h4><span class="badge-dot" style="background:var(--accent); margin-right:10px;">B</span>Pánev</h4><p style="font-size:21px; line-height:1.4; margin:0;">s nepřilnavým povrchem PTFE × keramický povrch × litina</p></div></div>
+      </div>
+      <div class="row" style="margin-top:18px;">
+        <div class="col"><div class="compare-panel" style="height:100%"><h4><span class="badge-dot" style="background:var(--primary); margin-right:10px;">C</span>Baterie do domácího úložiště</h4><p style="font-size:21px; line-height:1.4; margin:0;">NMC × LFP (Přednášky 2 a 3)</p></div></div>
+        <div class="col"><div class="compare-panel" style="height:100%"><h4><span class="badge-dot" style="background:var(--danger); margin-right:10px;">D</span>Nápojový kelímek</h4><p style="font-size:21px; line-height:1.4; margin:0;">jednorázový PLA × vratný PP × papírový s PE vrstvou (Přednáška 5)</p></div></div>
+      </div>
+      <aside class="notes">Kde studenti neznají data, mají napsat „nevíme“ a navrhnout, kde by je hledali (bezpečnostní list, ECHA, EPD = environmentální prohlášení o produktu, LCA studie). Pointa: SSbD neříká jednoduché „dobré / špatné“, ale ukazuje kompromisy a mezery v datech. To je realistická zkušenost pro manažera udržitelnosti.</aside>
+    </section>
+
+    <section>
+      <div class="kicker">Závěr bloku · tři otázky na rozloučenou</div>
+      <div class="goal-list">
+        <div class="item"><span class="dot"></span><span>Který graf nebo číslo z bloku vás nejvíc překvapilo?</span></div>
+        <div class="item"><span class="dot"></span><span>Které tvrzení z médií nebo reklamy teď budete číst jinak?</span></div>
+        <div class="item"><span class="dot"></span><span>Co byste na semestrálním projektu příště změnili (téma, rozsah, data)?</span></div>
+      </div>
+      <aside class="notes">Lístečky nebo anonymní formulář. Třetí otázka slouží jako zpětná vazba k nové podobě projektu. Zapište si ji do příprav na příští rok.</aside>
+    </section>
+
+    <section>
+      <div class="kicker">Shrnutí bloku</div>
+      <div class="prose tight">
+        <p>Prvky nemizí, ale rozptylují se. Jejich dostupnost určuje <b>chemie</b> (jak těžké je je získat), <b>energie</b> (kolik to stojí a odkud je) a <b>geopolitika</b> (kdo je zpracovává).</p>
+        <p>Každé tvrzení o udržitelnosti se dá ověřit: <b>kdo to tvrdí, co přesně, jaký je primární zdroj, co v něm skutečně je.</b></p>
+        <p style="margin:0;">A veřejná data, která jsme používali (OWID, USGS, ČHMÚ, Eurostat), máte k dispozici i po kurzu.</p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.04, minScale: 0.2, maxScale: 2, controls: true, progress: true, slideNumber: 'c/t', plugins: [ RevealNotes ] });
+  document.querySelectorAll('.quiz-block').forEach(function (block) {
+    var answer = block.dataset.answer, feedback = block.querySelector('.quiz-feedback3'), buttons = block.querySelectorAll('.quiz-opt3');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (block.classList.contains('answered')) return;
+        block.classList.add('answered');
+        var chosen = btn.dataset.key;
+        buttons.forEach(function (b) {
+          b.disabled = true;
+          if (b.dataset.key === answer) b.classList.add('correct');
+          else if (b.dataset.key === chosen) b.classList.add('incorrect');
+          else b.classList.add('dim');
+        });
+        if (feedback) feedback.hidden = false;
+      });
+    });
+  });
+</script>
+</body>
+</html>

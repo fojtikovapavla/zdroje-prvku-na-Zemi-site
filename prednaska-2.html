@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Přednáška 2 — Od minerálů k materiálům I</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1 cover -->
+    <section class="cover-slide">
+      <div>
+        <div class="eyebrow">Chemické principy a udržitelnost · Blok 2</div>
+        <h1>Od minerálů k materiálům I</h1>
+        <p class="sub">Lithium · uhlík · hliník · křemík · germanium, indium, telur</p>
+      </div>
+      <div class="foot"><div class="bar"></div><span>Přednáška 2 · Zdroje prvků na Zemi</span></div>
+      <aside class="notes">
+        Dnešní prvky spojuje energetická a digitální transformace: baterie (Li, grafit), lehké konstrukce a vedení (Al), fotovoltaika a čipy (Si, Ge, In, Te, Ga). U každého prvku stejná kostra: kde je → jak se z něj stane materiál → kolik to stojí energie → kdo ho ovládá.
+        Data: Our World in Data, Minerals explorer (USGS/BGS, 2024). Další zdroje: IEA Global Critical Minerals Outlook; IEA Solar PV Global Supply Chains; Evropská komise, RMIS.
+      </aside>
+    </section>
+
+    <!-- 2 goals -->
+    <section>
+      <div class="kicker">Cíle přednášky</div>
+      <div class="goal-list">
+        <div class="item"><span class="dot"></span><span>Popsat dvě cesty k lithiu: z hornin a ze solanek</span></div>
+        <div class="item"><span class="dot"></span><span>Vysvětlit, proč je výroba hliníku a křemíku tak náročná na elektřinu a proč se vyplatí recyklace</span></div>
+        <div class="item"><span class="dot"></span><span>Pochopit pojem <b>vedlejší produkt</b> (Ge, In, Te, Ga) a proč u nich nabídka nereaguje na poptávku</span></div>
+        <div class="item"><span class="dot"></span><span>Číst z dat, jak se během 30 let přesunula výroba materiálů do Číny</span></div>
+      </div>
+    </section>
+
+    <!-- 3 chain -->
+    <section>
+      <div class="kicker">Od horniny k materiálu · společná kostra</div>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 1080 200" role="img" aria-label="Těžba, úprava, chemická přeměna, čištění, materiál">
+          <defs><marker id="c2" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker></defs>
+          <g font-family="var(--font-body)">
+            <rect x="10" y="30" width="180" height="100" rx="12" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+            <text x="100" y="72" text-anchor="middle" font-size="22" font-weight="700" fill="var(--ink)">Těžba</text>
+            <text x="100" y="100" text-anchor="middle" font-size="16" fill="var(--ink-muted)">hornina, solanka</text>
+            <rect x="230" y="30" width="190" height="100" rx="12" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+            <text x="325" y="72" text-anchor="middle" font-size="22" font-weight="700" fill="var(--ink)">Úprava</text>
+            <text x="325" y="100" text-anchor="middle" font-size="16" fill="var(--ink-muted)">drcení, koncentrát</text>
+            <rect x="460" y="30" width="200" height="100" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="560" y="72" text-anchor="middle" font-size="22" font-weight="700" fill="var(--ink)">Chemie</text>
+            <text x="560" y="100" text-anchor="middle" font-size="16" fill="var(--ink-muted)">redukce, elektrolýza</text>
+            <rect x="700" y="30" width="180" height="100" rx="12" fill="var(--water-soft)" stroke="var(--water)" stroke-width="2"/>
+            <text x="790" y="72" text-anchor="middle" font-size="22" font-weight="700" fill="var(--ink)">Čištění</text>
+            <text x="790" y="100" text-anchor="middle" font-size="16" fill="var(--ink-muted)">99 % → 99,9999 %</text>
+            <rect x="920" y="30" width="150" height="100" rx="12" fill="var(--primary)"/>
+            <text x="995" y="72" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">Materiál</text>
+            <text x="995" y="100" text-anchor="middle" font-size="16" fill="#D8E6DC">baterie, čip</text>
+            <path d="M190,80 L225,80 M420,80 L455,80 M660,80 L695,80 M880,80 L915,80" stroke="var(--primary)" stroke-width="3" marker-end="url(#c2)"/>
+            <text x="540" y="180" text-anchor="middle" font-size="20" fill="var(--ink-soft)">Nejvíc energie a nejvíc geopolitiky bývá v prostředních krocích, ne v těžbě.</text>
+          </g>
+        </svg>
+      </div>
+      <aside class="notes">Opakování z Přednášky 1 a příprava na dnešní pointu: u Al, Si a grafitu je „úzkým hrdlem“ zpracování (energie, know-how, chemické závody), ne geologie.</aside>
+    </section>
+
+    <!-- 4 divider Li -->
+    <section class="divider-slide">
+      <div class="num">01</div>
+      <h2>Lithium</h2>
+      <p>Nejlehčí kov a srdce baterií</p>
+      <aside class="notes">Čas: cca 12 minut.</aside>
+    </section>
+
+    <!-- 5 Li routes -->
+    <section>
+      <div class="kicker">Dvě cesty k lithiu</div>
+      <div class="row">
+        <div class="col">
+          <div class="compare-panel" style="height:100%">
+            <h4>⛏ Z horniny (spodumen)</h4>
+            <p style="font-size:21px; line-height:1.4; margin:0 0 10px;">Austrálie, Čína, Zimbabwe. Povrchová těžba, koncentrát se praží (~1000 °C) a louží kyselinou sírovou.</p>
+            <p style="font-size:21px; line-height:1.4; margin:0;"><b>+</b> rychlé otevření dolu<br><b>−</b> energie, CO₂, odpad</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="compare-panel" style="height:100%">
+            <h4>💧 Ze solanky</h4>
+            <p style="font-size:21px; line-height:1.4; margin:0 0 10px;">Chile, Argentina, Bolívie. Slaná podzemní voda se nechá 12–18 měsíců odpařovat na slunci, pak se lithium vysráží.</p>
+            <p style="font-size:21px; line-height:1.4; margin:0;"><b>+</b> málo energie<br><b>−</b> pomalé, odpar vody v poušti</p>
+          </div>
+        </div>
+      </div>
+      <div class="formula" style="margin-top:20px;">2LiCl + Na₂CO₃ → Li₂CO₃↓ + 2NaCl &nbsp;&nbsp;<span style="color:var(--ink-muted)">(uhličitan lithný, výchozí látka pro katody)</span></div>
+      <aside class="notes">Lithium se obchoduje jako uhličitan (LCE, lithium carbonate equivalent) nebo hydroxid LiOH. Li₂CO₃ obsahuje 18,8 % Li (2 × 6,94 / 73,89), takže 1 t Li ≈ 5,3 t LCE. Tento výpočet je součástí tématu T7. Nové technologie: přímá extrakce lithia (DLE) sorbenty nebo membránami, bez velkých odpařovacích nádrží. Spory o vodu v poušti Atacama: T7.</aside>
+    </section>
+
+    <!-- 6 Li data -->
+    <section>
+      <div class="tag-label data">Data · těžba lithia</div>
+      <div class="row middle">
+        <div class="col" style="flex:1.2">
+          <div class="stat-row">
+            <div class="stat"><b>82 kt</b><span>2020</span></div>
+            <div class="stat acc"><b>240 kt</b><span>2024 (~3×)</span></div>
+          </div>
+          <div class="hbars" style="grid-template-columns:170px 1fr 90px; margin-top:22px;">
+            <div class="lbl2">Austrálie</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val2">37 %</div>
+            <div class="lbl2">Chile</div><div class="track"><div class="fill" style="width:55%; background:var(--ink-muted)"></div></div><div class="val2">20 %</div>
+            <div class="lbl2">Čína</div><div class="track"><div class="fill" style="width:47%; background:var(--ink-muted)"></div></div><div class="val2">17 %</div>
+            <div class="lbl2">Zimbabwe</div><div class="track"><div class="fill" style="width:25%; background:var(--ink-muted)"></div></div><div class="val2">9 %</div>
+          </div>
+          <p class="src-line">Podíl na těžbě 2024. Zdroj: USGS via Our World in Data.</p>
+        </div>
+        <div class="col">
+          <div class="example-panel">
+            <p class="prose tight"><b>Česko: Cínovec</b> v Krušných horách, jedno z největších známých ložisek lithia v Evropě (minerál cinvaldit).</p>
+            <p class="prose tight" style="margin:0;">Projekt připravuje společnost Geomet (skupina ČEZ). Těžba ani zpracování zatím neběží.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Zásoby (reserves) 2024: Chile 31 %, Austrálie 23 %, Argentina 13 %, Čína 10 %. Těžba lithia v Číně rychle roste. Velká část zpracování na lithiové chemikálie probíhá v Číně, i když se surovina těží jinde (IEA). Cínovec: ověřte stav projektu před přednáškou. Hodí se do diskuse o cíli EU „10 % těžby v EU“.</aside>
+    </section>
+
+    <!-- 7 divider C -->
+    <section class="divider-slide">
+      <div class="num">02</div>
+      <h2>Uhlík</h2>
+      <p>Grafit pro baterie, koks pro ocel</p>
+      <aside class="notes">Čas: cca 8 minut.</aside>
+    </section>
+
+    <!-- 8 graphite -->
+    <section>
+      <div class="kicker">Jeden prvek, mnoho materiálů</div>
+      <div class="row">
+        <div class="col">
+          <div class="panel">
+            <p class="prose tight"><b>Grafit</b>: vrstvy uhlíkových šestiúhelníků. Mezi vrstvy se při nabíjení „schovávají“ ionty Li⁺, proto je grafit <b>anodou</b> téměř každé lithiové baterie.</p>
+            <p class="prose tight" style="margin:0;">Baterie elektromobilu obsahuje řádově desítky kg grafitu, víc než lithia.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="compare-panel">
+            <h4>Přírodní × syntetický</h4>
+            <p style="font-size:21px; line-height:1.4; margin:0 0 10px;"><b>Přírodní</b> se těží: Čína <b>79 %</b> (2024).</p>
+            <p style="font-size:21px; line-height:1.4; margin:0;"><b>Syntetický</b> se vyrábí z ropného koksu zahřátím na ~3000 °C, takže je energeticky velmi náročný. Výroba anod je také převážně v Číně.</p>
+          </div>
+        </div>
+      </div>
+      <p class="prose tight" style="margin-top:20px;">Uhlík jako <b>koks</b> redukuje železnou rudu (Přednáška 3), jako <b>CO₂</b> je emise i surovina (Přednáška 4), jako <b>uhlovodíky</b> stavební kámen plastů (Přednáška 5).</p>
+      <aside class="notes">Data: OWID Minerals explorer, Graphite, mine production 2024: svět 1,6 Mt, Čína 1,27 Mt. Čína od prosince 2023 vyžaduje vývozní licence na některé druhy grafitu. Uhlík je „příběh“ celého bloku, proto ho tady ukazujeme jako most.</aside>
+    </section>
+
+    <!-- 9 divider Al -->
+    <section class="divider-slide">
+      <div class="num">03</div>
+      <h2>Hliník</h2>
+      <p>Zamražená elektřina</p>
+      <aside class="notes">Čas: cca 15 minut. Hliník je nejlepší příklad, jak energie určuje uhlíkovou stopu materiálu a smysl recyklace.</aside>
+    </section>
+
+    <!-- 10 Al process -->
+    <section>
+      <div class="kicker">Od bauxitu k hliníku</div>
+      <div class="diagram-wrap" style="padding:18px 24px;">
+        <svg viewBox="0 0 1080 150" role="img" aria-label="4 až 5 tun bauxitu, 2 tuny oxidu hlinitého, 1 tuna hliníku">
+          <defs><marker id="c3" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker></defs>
+          <g font-family="var(--font-body)">
+            <rect x="10" y="20" width="260" height="90" rx="12" fill="#E9D9CF"/>
+            <text x="140" y="58" text-anchor="middle" font-size="24" font-weight="700" fill="var(--ink)">4–5 t bauxitu</text>
+            <text x="140" y="88" text-anchor="middle" font-size="17" fill="var(--ink-soft)">Guinea, Austrálie, Čína</text>
+            <rect x="400" y="20" width="260" height="90" rx="12" fill="var(--surface-2)"/>
+            <text x="530" y="58" text-anchor="middle" font-size="24" font-weight="700" fill="var(--ink)">2 t Al₂O₃</text>
+            <text x="530" y="88" text-anchor="middle" font-size="17" fill="var(--ink-soft)">Bayerův proces (NaOH)</text>
+            <rect x="790" y="20" width="280" height="90" rx="12" fill="var(--primary)"/>
+            <text x="930" y="58" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">1 t hliníku</text>
+            <text x="930" y="88" text-anchor="middle" font-size="17" fill="#D8E6DC">elektrolýza, ~14–15 MWh</text>
+            <path d="M270,65 L395,65" stroke="var(--primary)" stroke-width="3" marker-end="url(#c3)"/>
+            <path d="M660,65 L785,65" stroke="var(--primary)" stroke-width="3" marker-end="url(#c3)"/>
+            <text x="333" y="140" text-anchor="middle" font-size="17" fill="var(--danger)">odpad: červený kal</text>
+            <text x="723" y="140" text-anchor="middle" font-size="17" fill="var(--danger)">CO₂ z anod</text>
+          </g>
+        </svg>
+      </div>
+      <div class="row" style="margin-top:16px;">
+        <div class="col">
+          <div class="formula" style="font-size:24px;">2Al₂O₃ + 3C → 4Al + 3CO₂</div>
+          <p class="prose tight">Oxid hlinitý rozpuštěný v roztaveném kryolitu (~960 °C), proud ~stovky tisíc ampér. Uhlíkové anody se spalují.</p>
+        </div>
+        <div class="col">
+          <div class="example-panel">
+            <p class="prose tight" style="margin:0;"><b>Ajka (Maďarsko), 2010:</b> protržení hráze odkaliště s červeným kalem (silně zásaditý, pH ~13) zaplavilo obce. Zemřelo 10 lidí.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Hallův–Héroultův proces (1886). Spotřeba elektřiny moderních elektrolyzérů je řádově 13–15 MWh/t Al. Pro představu: roční spotřeba elektřiny české domácnosti je kolem 3–4 MWh. Hliníkárna je tedy „baterie z elektřiny“. Červený kal: zbytek bauxitu po rozpuštění Al₂O₃ v NaOH (oxidy Fe, Ti, Si), řádově tuna na tunu oxidu hlinitého. Bez skladování v odkalištích se nedá obejít, proto jsou rizikem.</aside>
+    </section>
+
+    <!-- 11 Al data chart -->
+    <section>
+      <div class="tag-label data">Data · podíl Číny na světové výrobě hliníku</div>
+      <div class="row middle">
+        <div class="col" style="flex:1.3">
+          <div class="diagram-wrap">
+            <svg viewBox="0 0 600 320" role="img" aria-label="Podíl Číny na výrobě hliníku: 4 % v roce 1990, 39 % v 2010, 60 % v 2024">
+              <line x1="70" y1="280" x2="580" y2="280" stroke="var(--line)" stroke-width="2"/>
+              <line x1="70" y1="208.6" x2="580" y2="208.6" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 6"/>
+              <line x1="70" y1="137.1" x2="580" y2="137.1" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 6"/>
+              <line x1="70" y1="65.7" x2="580" y2="65.7" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 6"/>
+              <g font-family="var(--font-mono)" font-size="18" fill="var(--ink-muted)">
+                <text x="50" y="286" text-anchor="end">0 %</text>
+                <text x="50" y="214" text-anchor="end">20 %</text>
+                <text x="50" y="143" text-anchor="end">40 %</text>
+                <text x="50" y="72" text-anchor="end">60 %</text>
+                <text x="70" y="312" text-anchor="middle">1990</text>
+                <text x="214" y="312" text-anchor="middle">2000</text>
+                <text x="358" y="312" text-anchor="middle">2010</text>
+                <text x="502" y="312" text-anchor="middle">2020</text>
+              </g>
+              <polyline points="70,264.3 214.1,236.1 286.2,192.5 358.2,141.1 430.3,85.4 502.4,76.4 560,66.8" fill="none" stroke="var(--danger)" stroke-width="5" stroke-linejoin="round"/>
+              <circle cx="70" cy="264.3" r="6" fill="var(--danger)"/>
+              <circle cx="560" cy="66.8" r="6" fill="var(--danger)"/>
+              <text x="88" y="255" font-size="20" font-weight="700" fill="var(--danger)" font-family="var(--font-body)">4 %</text>
+              <text x="548" y="50" text-anchor="end" font-size="20" font-weight="700" fill="var(--danger)" font-family="var(--font-body)">60 %</text>
+            </svg>
+          </div>
+          <p class="src-line">Výroba primárního hliníku (huti). Zdroj: USGS/BGS via Our World in Data.</p>
+        </div>
+        <div class="col">
+          <div class="data-task">
+            <ol>
+              <li>Čína má jen ~21 % světové těžby bauxitu, ale vyrábí 60 % hliníku. Jak je to možné?</li>
+              <li>Z jaké elektřiny se v Číně hliník převážně vyrábí? Co to znamená pro uhlíkovou stopu hliníku v našich výrobcích?</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Data (OWID, Aluminum, Smelter, share of global): 1990 4,4 %; 2000 12,3 %; 2005 24,5 %; 2010 38,9 %; 2015 54,5 %; 2020 57 %; 2024 59,7 %. Svět 2024: 72 Mt. Řešení: bauxit se dováží (hlavně z Guiney a Austrálie). Hodnota je ve zpracování a to rozhoduje levná elektřina, v Číně dlouho převážně z uhlí. Uhlíková stopa hliníku proto silně závisí na zemi původu: huti na Islandu nebo v Norsku jedou na vodní a geotermální elektřinu. Pro firmy: CBAM (uhlíkové clo EU) se na hliník vztahuje.</aside>
+    </section>
+
+    <!-- 12 recycling -->
+    <section>
+      <div class="kicker">Recyklace hliníku</div>
+      <div class="row middle">
+        <div class="col">
+          <div class="stat-row">
+            <div class="stat"><b>100 %</b><span>energie na primární hliník</span></div>
+            <div class="stat acc"><b>~5 %</b><span>energie na přetavení šrotu</span></div>
+          </div>
+          <p class="prose tight" style="margin-top:20px;">Chemickou vazbu Al–O už nemusíme rozbíjet znovu. Recyklace jen přetaví kov.</p>
+        </div>
+        <div class="col">
+          <div class="panel">
+            <p class="prose tight"><b>Háček:</b> slitiny. Plechovka, okenní rám a blok motoru mají jiné složení. Smícháním vzniká horší slitina (<b>downcycling</b>).</p>
+            <p class="prose tight" style="margin:0;">Hodnota šrotu proto závisí na <b>třídění</b>, stejně jako u oceli a plastů.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Úspora energie při recyklaci hliníku se běžně uvádí kolem 95 % (International Aluminium Institute, European Aluminium). Téma třídění a kvality recyklátu se vrátí u oceli (Přednáška 3) a plastů (Přednáška 5).</aside>
+    </section>
+
+    <!-- 13 divider Si -->
+    <section class="divider-slide">
+      <div class="num">04</div>
+      <h2>Křemík</h2>
+      <p>Z písku do solárních panelů a čipů</p>
+      <aside class="notes">Čas: cca 10 minut.</aside>
+    </section>
+
+    <!-- 14 Si -->
+    <section>
+      <div class="kicker">Křemík · čistota je všechno</div>
+      <div class="row">
+        <div class="col">
+          <div class="tag-label chem">1 · Metalurgický křemík (~99 %)</div>
+          <div class="formula" style="font-size:24px;">SiO₂ + 2C → Si + 2CO <span style="color:var(--ink-muted)">(~2000 °C)</span></div>
+          <p class="prose tight">Křemen + uhlík v elektrické obloukové peci. Použití: slitiny hliníku, silikony.</p>
+          <div class="tag-label chem" style="margin-top:8px;">2 · Polykrystalický křemík (99,9999 %+)</div>
+          <div class="formula" style="font-size:22px;">Si + 3HCl → SiHCl₃ + H₂<br>SiHCl₃ + H₂ → Si + 3HCl</div>
+          <p class="prose tight" style="margin:0;">Přes těkavou sloučeninu, kterou lze destilací vyčistit.</p>
+        </div>
+        <div class="col">
+          <div class="stat-row" style="flex-direction:column;">
+            <div class="stat"><b>68 %</b><span>křemíku vyrábí Čína (2022, OWID)</span></div>
+            <div class="stat warn"><b>&gt; 80 %</b><span>podíl Číny v každém kroku výroby FV panelů (IEA)</span></div>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Princip čištění přes těkavou látku: Si převedeme na kapalný trichlorsilan (var ~32 °C), vyčistíme ho destilací jako alkohol a zpátky rozložíme na velmi čistý Si (Siemensův proces). Je to energeticky velmi náročné, proto se polysilikon vyrábí tam, kde je levná elektřina. IEA (Solar PV Global Supply Chains, 2022) uvádí podíl Číny přes 80 % ve všech výrobních krocích, u polysilikonu a waferů ještě výš. Ověřte aktuální vydání.</aside>
+    </section>
+
+    <!-- 15 divider byproducts -->
+    <section class="divider-slide">
+      <div class="num">05</div>
+      <h2>Ge, In, Te, Ga</h2>
+      <p>Kovy, které nikdo netěží kvůli nim samotným</p>
+      <aside class="notes">Čas: cca 10 minut. Klíčový koncept: vedlejší produkt.</aside>
+    </section>
+
+    <!-- 16 byproduct table -->
+    <section>
+      <div class="kicker">Vedlejší produkty · „pasažéři“ jiných kovů</div>
+      <table class="data-table">
+        <thead><tr><th>Prvek</th><th>Získává se z…</th><th>K čemu</th></tr></thead>
+        <tbody>
+          <tr><td><b>Gallium</b> Ga</td><td>výroby oxidu hlinitého z bauxitu</td><td>LED, výkonová elektronika (GaN), čipy</td></tr>
+          <tr><td><b>Germanium</b> Ge</td><td>zinkových rud, uhelného popílku</td><td>optická vlákna, infračervená optika, satelitní FV</td></tr>
+          <tr><td><b>Indium</b> In</td><td>zinkových rud (sfalerit ZnS)</td><td>průhledná vodivá vrstva ITO v displejích</td></tr>
+          <tr><td><b>Telur</b> Te</td><td>kalů po elektrolytické rafinaci mědi</td><td>tenkovrstvé FV panely CdTe</td></tr>
+        </tbody>
+      </table>
+      <div class="panel soft" style="margin-top:20px;">
+        <p class="prose tight" style="margin:0;"><b>Důsledek:</b> když stoupne poptávka po india, nikdo neotevře nový zinkový důl kvůli indiu. Nabídka závisí na trhu se zinkem, ne s indiem.</p>
+      </div>
+      <aside class="notes">Čína v srpnu 2023 zavedla vývozní licence na Ga a Ge, v prosinci 2024 zákaz vývozu do USA. Gallium: Čína ~99 % (OWID 2024), germanium ~68 % (2021). Navázání na Goldschmidtovu klasifikaci z Přednášky 1: In, Ge, Ga, Te se vyskytují s „hostitelskými“ kovy (Zn, Cu, Al), protože mají podobnou chemii.</aside>
+    </section>
+
+    <!-- 17 think -->
+    <section class="think-slide">
+      <div class="tag-label think">Zamyšlení</div>
+      <p class="question">Cena germania se za rok zdvojnásobila. Proč se ho nezačne hned těžit víc, a co může udělat výrobce optiky?</p>
+      <p class="facilitate">Zkuste najít alespoň tři strategie: zásoby (skladování), recyklace výrobního odpadu, náhrada materiálu, nové zdroje (popílek, zinkové huti v EU).</p>
+      <aside class="notes">Diskuse ve dvojicích (3 min). Dobré odpovědi: dlouhodobé kontrakty, strategické zásoby, recyklace výrobního odpadu (u germania se recykluje velká část odpadu z výroby), alternativní zdroje (popílek z uhelných elektráren, zinkové huti mimo Čínu), substituce. Navazuje na Seminář 2.</aside>
+    </section>
+
+    <!-- 18 summary -->
+    <section>
+      <div class="kicker">Shrnutí</div>
+      <div class="goal-list tight">
+        <div class="item"><span class="dot"></span><span><b>Lithium:</b> z hornin (rychle, energeticky náročně) nebo ze solanek (pomalu, s odparem vody). Těžba se za 4 roky ztrojnásobila.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Grafit:</b> anoda baterií. Přírodní i syntetický je převážně z Číny.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Hliník:</b> „zamražená elektřina“. Uhlíková stopa závisí na zdroji elektřiny, recyklace ušetří ~95 % energie.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Křemík:</b> drahá je čistota, ne surovina. Písku je dost, polysilikonu z jiných zemí než z Číny málo.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Ge, In, Te, Ga:</b> vedlejší produkty. Jejich nabídka nereaguje na poptávku.</span></div>
+      </div>
+    </section>
+
+    <!-- 19 sources -->
+    <section>
+      <div class="kicker">Zdroje dat dne</div>
+      <div class="src-grid">
+        <div class="src-item"><b>OWID · Minerals explorer</b><span>Těžba a zpracování Li, Al, bauxitu, grafitu, Si, Ga, Ge podle zemí. Přepínač „Share of global“.</span><div class="use">seminář 2</div></div>
+        <div class="src-item"><b>IEA · Global Critical Minerals Outlook</b><span>Podíly zemí na těžbě i zpracování, výhled poptávky.</span><div class="use">zpracování</div></div>
+        <div class="src-item"><b>IEA · Solar PV Global Supply Chains</b><span>Kdo vyrábí polysilikon, wafery, články a moduly.</span><div class="use">fotovoltaika</div></div>
+        <div class="src-item"><b>International Aluminium Institute</b><span>Statistiky výroby, spotřeby energie a recyklace hliníku.</span><div class="use">hliník</div></div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.04, minScale: 0.2, maxScale: 2, controls: true, progress: true, slideNumber: 'c/t', plugins: [ RevealNotes ] });
+</script>
+</body>
+</html>

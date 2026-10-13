@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Přednáška 4 — Sklo, cement a CO₂</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1 cover -->
+    <section class="cover-slide">
+      <div>
+        <div class="eyebrow">Chemické principy a udržitelnost · Blok 2</div>
+        <h1>Sklo, cement a CO₂</h1>
+        <p class="sub">Procesní emise, čištění odpadních plynů, zachytávání, ukládání a využití oxidu uhličitého</p>
+      </div>
+      <div class="foot"><div class="bar"></div><span>Přednáška 4 · Zdroje prvků na Zemi</span></div>
+      <aside class="notes">
+        Výklad ~60 min, pak prezentace T3 (cement) a T4 (zachytávání CO₂). Spojující myšlenka: u skla a cementu vzniká CO₂ z chemické reakce suroviny, ne jen ze spalování. Těkavé prvky (S, N, C) odcházejí s plyny a musíme je zachytit.
+        Zdroje: podklad 11 (Oxid uhličitý, loňská přednáška); Ramirez-Corredores, npj Mater. Sustain. 2024, 2:35; Our World in Data (Global Carbon Project): CO₂ podle zdroje, CO₂ z cementu; Fakta o klimatu (ČHMÚ, NIR 2024); Our World in Data, uhlíkový rozpočet (IPCC AR6, Forster et al. 2025).
+      </aside>
+    </section>
+
+    <!-- 2 goals -->
+    <section>
+      <div class="kicker">Cíle přednášky</div>
+      <div class="goal-list">
+        <div class="item"><span class="dot"></span><span>Vysvětlit rozdíl mezi emisemi ze spalování a <b>procesními emisemi</b></span></div>
+        <div class="item"><span class="dot"></span><span>Popsat chemii výroby skla a cementu a jak se dají dekarbonizovat</span></div>
+        <div class="item"><span class="dot"></span><span>Vysvětlit, jak se z odpadních plynů odstraňuje SO₂ a NOₓ</span></div>
+        <div class="item"><span class="dot"></span><span>Rozlišit CCS a CCU a kriticky posoudit jejich potenciál podle dat</span></div>
+      </div>
+    </section>
+
+    <!-- 3 CZ industry -->
+    <section>
+      <div class="tag-label data">Data · kde vznikají emise českého průmyslu (2022)</div>
+      <div class="row">
+        <div class="col">
+          <p style="font-size:22px; color:var(--ink-muted); margin-bottom:6px;">Podle odvětví</p>
+          <div class="hbars" style="grid-template-columns:270px 1fr 70px;">
+            <div class="lbl2">ocel</div><div class="track"><div class="fill" style="width:100%; background:var(--ink-muted)"></div></div><div class="val2">29 %</div>
+            <div class="lbl2">cement, cihly, vápno, sklo</div><div class="track"><div class="fill" style="width:65%; background:var(--accent)"></div></div><div class="val2">19 %</div>
+            <div class="lbl2">chemický průmysl</div><div class="track"><div class="fill" style="width:65%; background:var(--ink-muted)"></div></div><div class="val2">19 %</div>
+            <div class="lbl2">F-plyny</div><div class="track"><div class="fill" style="width:41%; background:var(--ink-muted)"></div></div><div class="val2">12 %</div>
+            <div class="lbl2">ostatní</div><div class="track"><div class="fill" style="width:72%; background:var(--line)"></div></div><div class="val2">21 %</div>
+          </div>
+        </div>
+        <div class="col">
+          <p style="font-size:22px; color:var(--ink-muted); margin-bottom:6px;">Podle původu</p>
+          <div class="stackbar" style="flex-direction:column; min-height:auto;">
+            <div style="background:var(--water); padding:14px;"><span class="sv">37 % z chemických reakcí ve výrobě</span></div>
+            <div style="background:var(--danger); padding:14px;"><span class="sv">43 % ze spalování paliv na teplo</span></div>
+            <div style="background:var(--ink-muted); padding:10px;"><span class="sv">8 % úniky metanu · 12 % F-plyny</span></div>
+          </div>
+          <p class="prose tight" style="margin-top:14px;">Více než třetinu emisí <b>nelze odstranit změnou paliva</b>.</p>
+        </div>
+      </div>
+      <p class="src-line">Zdroj: Fakta o klimatu, z dat ČHMÚ (Národní inventarizační zpráva 2024, data 2022). „Ostatní“ = těžba a doprava paliv, potravinářský, papírenský a ostatní průmysl.</p>
+      <aside class="notes">Infografika Fakta o klimatu „Kde vznikají emise v českém průmyslu?“. Odvětví náročná na dekarbonizaci (ocel, cement, chemie) tvoří přes 65 % průmyslových emisí ČR, ale jen ~4 % HDP. Dnešní přednáška se zabývá hlavně modrým blokem: emisemi z chemických reakcí.</aside>
+    </section>
+
+    <!-- 4 divider glass -->
+    <section class="divider-slide">
+      <div class="num">01</div>
+      <h2>Sklo</h2>
+      <p>Písek, soda, vápenec a 1500 °C</p>
+      <aside class="notes">Čas: cca 8 minut.</aside>
+    </section>
+
+    <!-- 5 glass -->
+    <section>
+      <div class="kicker">Sklo · chemie a recyklace</div>
+      <div class="row">
+        <div class="col">
+          <div class="chem-slide-panel">
+            <p class="prose tight"><b>Sodnovápenaté sklo</b> (lahve, okna): ~72 % SiO₂, ~14 % Na₂O, ~10 % CaO.</p>
+            <div class="formula" style="font-size:22px;">Na₂CO₃ → Na₂O + CO₂<br>CaCO₃ → CaO + CO₂</div>
+            <p class="prose tight" style="margin:0;">Soda a vápenec snižují teplotu tavení křemene (z ~1700 °C na ~1500 °C), ale uvolňují CO₂ z uhličitanů.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="example-panel">
+            <p class="prose tight"><b>Střepy</b> (recyklované sklo) se taví snáz a neobsahují uhličitany.</p>
+            <p class="prose tight">Každých 10 % střepů ve vsázce ušetří zhruba 2–3 % energie a ~5 % CO₂.</p>
+            <p class="prose tight" style="margin:0;">Sklo se dá recyklovat donekonečna, ale jen <b>roztříděné podle barvy</b> a bez keramiky.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Údaje o úsporách ze střepů: běžně citované odvětvím obalového skla (FEVE), řádové. Česko: silná sklářská tradice (užitkové a obalové sklo, ploché sklo, bižuterie). Proč keramika vadí: neroztaví se a vytváří vady. Proto „nevhazujte hrnky do kontejneru na sklo“.</aside>
+    </section>
+
+    <!-- 6 divider cement -->
+    <section class="divider-slide">
+      <div class="num">02</div>
+      <h2>Cement</h2>
+      <p>Nejpoužívanější materiál po vodě</p>
+      <aside class="notes">Čas: cca 15 minut. Navazuje T3.</aside>
+    </section>
+
+    <!-- 7 cement chemistry -->
+    <section>
+      <div class="kicker">Cement · odkud se bere CO₂</div>
+      <div class="row middle">
+        <div class="col">
+          <div class="formula" style="font-size:28px;">CaCO₃ → CaO + CO₂ <span style="color:var(--ink-muted)">(~900 °C)</span></div>
+          <p class="prose tight">Vápenec + jíl se v rotační peci při ~1450 °C spečou na <b>slínek</b>. Rozemletý slínek + sádrovec = cement. Cement + písek + štěrk + voda = beton.</p>
+          <div class="calc-panel" style="padding:20px 28px;">
+            <p class="prose tight" style="margin:0;">Ze 100 g CaCO₃ vznikne 56 g CaO a <b>44 g CO₂</b>. Na tunu slínku se tak jen z reakce uvolní ~0,5 t CO₂.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="stackbar" style="flex-direction:column; min-height:auto;">
+            <div style="background:var(--water); padding:30px 14px;"><span class="sv">~60 % CO₂ z rozkladu vápence</span></div>
+            <div style="background:var(--danger); padding:20px 14px;"><span class="sv">~40 % z paliva pro pec</span></div>
+          </div>
+          <p class="caption">Orientační rozdělení emisí výroby slínku.</p>
+        </div>
+      </div>
+      <aside class="notes">Molární hmotnosti: CaCO₃ 100, CaO 56, CO₂ 44 g/mol. Slínek obsahuje ~65 % CaO → 0,65 × 44/56 ≈ 0,51 t CO₂/t slínku. Studenti si to přepočítají v projektu T3. Poměr 60:40 je obvyklý řádový údaj (IEA, GCCA). Beton je po vodě nejpoužívanější látka na světě, proto má i malá emise na tunu obrovský celkový dopad.</aside>
+    </section>
+
+    <!-- 8 CO2 by source -->
+    <section>
+      <div class="tag-label data">Data · světové fosilní emise CO₂ podle zdroje (2024)</div>
+      <div class="row middle">
+        <div class="col" style="flex:1.3">
+          <div class="hbars" style="grid-template-columns:200px 1fr 120px;">
+            <div class="lbl2">uhlí</div><div class="track"><div class="fill" style="width:100%; background:var(--ink-muted)"></div></div><div class="val2">15,8 Gt</div>
+            <div class="lbl2">ropa</div><div class="track"><div class="fill" style="width:79%; background:var(--ink-muted)"></div></div><div class="val2">12,5 Gt</div>
+            <div class="lbl2">zemní plyn</div><div class="track"><div class="fill" style="width:51%; background:var(--ink-muted)"></div></div><div class="val2">8,0 Gt</div>
+            <div class="lbl2">cement (reakce)</div><div class="track"><div class="fill" style="width:9.3%; background:var(--accent)"></div></div><div class="val2">1,47 Gt</div>
+            <div class="lbl2">flaring a ostatní</div><div class="track"><div class="fill" style="width:5.3%; background:var(--line)"></div></div><div class="val2">0,84 Gt</div>
+          </div>
+          <p class="src-line">Zdroj: Global Carbon Project via Our World in Data (co2-emissions-by-fuel-line). <a href="https://ourworldindata.org/grapher/annual-co2-cement" target="_blank">CO₂ z cementu ↗</a></p>
+        </div>
+        <div class="col">
+          <div class="stat-row" style="flex-direction:column;">
+            <div class="stat acc"><b>3,8 %</b><span>fosilních emisí CO₂ jen z reakce v cementu</span></div>
+            <div class="stat"><b>42 %</b><span>z toho připadá na Čínu (Čína vyrábí ~48 % cementu)</span></div>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Řádek „cement“ v datech Global Carbon Project zahrnuje jen procesní emise z rozkladu vápence. Emise z paliv v cementárnách jsou schované v řádku „uhlí“ a „plyn“. Proto se v médiích uvádí „cement = 7–8 % emisí“ (včetně paliv a elektřiny). Které číslo je „správné“, záleží na hranici systému. To ověřuje T3. CO₂ z cementu: svět 2024 1,47 Gt (maximum 2021, pak pokles s útlumem čínského stavebnictví), Čína 0,62 Gt, Česko 1,5 Mt.</aside>
+    </section>
+
+    <!-- 9 cement decarbonisation -->
+    <section>
+      <div class="kicker">Jak snížit emise cementu</div>
+      <div class="row">
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Méně slínku</h4><p style="font-size:21px; line-height:1.4; margin:0;">Část slínku nahradí vysokopecní struska, popílek nebo kalcinovaný jíl s vápencem (cement LC3).</p></div></div>
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Jiné palivo</h4><p style="font-size:21px; line-height:1.4; margin:0;">Odpady, biomasa, elektřina. Řeší jen ~40 % emisí.</p></div></div>
+      </div>
+      <div class="row" style="margin-top:18px;">
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Zachytit CO₂</h4><p style="font-size:21px; line-height:1.4; margin:0;">Jediná cesta pro emise z reakce. Brevik (Norsko, 2025): první cementárna se zachytáváním CO₂ v průmyslovém měřítku.</p></div></div>
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Méně cementu</h4><p style="font-size:21px; line-height:1.4; margin:0;">Úspornější návrh staveb, dřevo, recyklace betonu. Beton navíc během života část CO₂ pomalu zpětně váže.</p></div></div>
+      </div>
+      <aside class="notes">Brevik (Heidelberg Materials): zachytávání ~400 kt CO₂ ročně, přibližně polovina emisí závodu; CO₂ se lodí převáží do úložiště Northern Lights pod Severním mořem. Ověřte provozní stav. „Rekarbonatace“: Ca(OH)₂ v betonu reaguje se vzdušným CO₂ zpět na CaCO₃, pomalu a jen v povrchové vrstvě.</aside>
+    </section>
+
+    <!-- 10 divider gases -->
+    <section class="divider-slide">
+      <div class="num">03</div>
+      <h2>Těkavé prvky a odpadní plyny</h2>
+      <p>Síra, dusík, prach</p>
+      <aside class="notes">Čas: cca 8 minut. Navazuje na Blok 1 (kyselé deště, Plešné jezero).</aside>
+    </section>
+
+    <!-- 11 flue gas -->
+    <section>
+      <div class="kicker">Čištění spalin · příběh, který se povedl</div>
+      <div class="row">
+        <div class="col">
+          <div class="chem-slide-panel">
+            <p class="prose tight"><b>Odsíření</b> (SO₂): spaliny se sprchují suspenzí vápence.</p>
+            <div class="formula" style="font-size:21px;">CaCO₃ + SO₂ + ½O₂ + 2H₂O<br>→ CaSO₄·2H₂O + CO₂</div>
+            <p class="prose tight">Vzniká <b>energosádrovec</b> → sádrokartonové desky.</p>
+            <p class="prose tight" style="margin:0;"><b>Denitrifikace</b> (NOₓ): reakce s amoniakem na katalyzátoru na dusík a vodu.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="stat-row" style="flex-direction:column;">
+            <div class="stat"><b>&gt; 90 %</b><span>pokles emisí SO₂ v Česku od roku 1990</span></div>
+          </div>
+          <div class="example-panel" style="margin-top:16px;">
+            <p class="prose tight" style="margin:0;">Výsledek: konec kyselých dešťů a postupné zotavení jezer i lesů (Plešné jezero, Blok 1).</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">4NO + 4NH₃ + O₂ → 4N₂ + 6H₂O (selektivní katalytická redukce). Prach: elektrostatické odlučovače, tkaninové filtry. Pokles SO₂: data ČHMÚ (z ~1,9 Mt v roce 1990 na méně než 0,1 Mt). Ověřte aktuální číslo. Paradox: odsíření vápencem uvolní CO₂. Malé množství, ale ukazuje, že každé řešení má vedlejší účinky.</aside>
+    </section>
+
+    <!-- 12 think -->
+    <section class="think-slide">
+      <div class="tag-label think">Zamyšlení</div>
+      <p class="question">SO₂ jsme z komínů dostali téměř úplně. Proč to s CO₂ nejde stejně snadno?</p>
+      <p class="facilitate">Porovnejte množství (SO₂ jsou procenta paliva, CO₂ je skoro všechen uhlík), reaktivitu (SO₂ je kyselý a ochotně reaguje s vápencem) a co s produktem (sádra je užitečná, CO₂ se musí někam uložit).</p>
+      <aside class="notes">Spalováním 1 t uhlí vznikne ~2–3 t CO₂, ale jen desítky kg SO₂. CO₂ je stabilní a málo reaktivní molekula. Odpověď vede k CCS a CCU.</aside>
+    </section>
+
+    <!-- 13 divider CO2 -->
+    <section class="divider-slide">
+      <div class="num">04</div>
+      <h2>Oxid uhličitý</h2>
+      <p>Zachytit, uložit, nebo využít?</p>
+      <aside class="notes">Čas: cca 20 minut. Navazuje T4.</aside>
+    </section>
+
+    <!-- 14 CO2 properties -->
+    <section>
+      <div class="kicker">CO₂ · vlastnosti, které potřebujeme znát</div>
+      <div class="row middle">
+        <div class="col" style="flex:1.1">
+          <div class="diagram-wrap">
+            <svg viewBox="0 0 520 330" role="img" aria-label="Zjednodušený fázový diagram CO₂ s kritickým bodem 31 °C a 7,4 MPa">
+              <line x1="60" y1="290" x2="500" y2="290" stroke="var(--ink-muted)" stroke-width="2"/>
+              <line x1="60" y1="290" x2="60" y2="20" stroke="var(--ink-muted)" stroke-width="2"/>
+              <path d="M90,280 C150,240 230,180 300,130" fill="none" stroke="var(--ink)" stroke-width="3"/>
+              <path d="M150,245 C165,180 185,100 200,25" fill="none" stroke="var(--ink)" stroke-width="3"/>
+              <circle cx="300" cy="130" r="8" fill="var(--danger)"/>
+              <rect x="300" y="20" width="200" height="110" fill="var(--water-soft)" opacity=".8"/>
+              <g font-family="var(--font-body)" font-size="19" fill="var(--ink)">
+                <text x="76" y="120">pevná</text>
+                <text x="76" y="144" font-size="16">(suchý led)</text>
+                <text x="212" y="118">kapalina</text>
+                <text x="330" y="70" font-weight="700" fill="var(--water)">nadkritická</text>
+                <text x="330" y="94" font-weight="700" fill="var(--water)">tekutina</text>
+                <text x="330" y="230">plyn</text>
+                <text x="310" y="160" font-size="16" fill="var(--danger)">kritický bod 31 °C, 7,4 MPa</text>
+              </g>
+              <text x="280" y="316" text-anchor="middle" font-size="16" fill="var(--ink-muted)" font-family="var(--font-mono)">teplota →</text>
+              <text x="40" y="160" text-anchor="middle" font-size="16" fill="var(--ink-muted)" font-family="var(--font-mono)" transform="rotate(-90 40 160)">tlak →</text>
+            </svg>
+          </div>
+        </div>
+        <div class="col">
+          <div class="goal-list tight">
+            <div class="item"><span class="dot"></span><span><b>Suchý led</b> (−78 °C) přechází přímo v plyn (sublimuje)</span></div>
+            <div class="item"><span class="dot" style="background:var(--water)"></span><span><b>Nadkritický CO₂</b>: hustý jako kapalina, proudí jako plyn. V tomto stavu se převáží potrubím a ukládá pod zem</span></div>
+            <div class="item"><span class="dot" style="background:var(--accent)"></span><span>Jako rozpouštědlo: <b>bezkofeinová káva</b>, extrakce aromat</span></div>
+            <div class="item"><span class="dot" style="background:var(--danger)"></span><span>S vodou tvoří kyselinu → korozní, musí být suchý</span></div>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Podklad 11: fázový diagram, přeprava (nad 7,5 MPa a 31,1 °C), extrakce superkritickým CO₂. Zajímavost: sCO₂ jako pracovní médium turbín (projekt SOFIA v ČR, časopis Vesmír). Úkol z loňské přednášky „popište fázový diagram“ je teď v Semináři 4.</aside>
+    </section>
+
+    <!-- 15 CCS chain -->
+    <section>
+      <div class="kicker">CCS · zachytit, převézt, uložit</div>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 1080 210" role="img" aria-label="Zdroj, zachycení, komprese, přeprava, uložení nebo využití">
+          <defs><marker id="c4" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker></defs>
+          <g font-family="var(--font-body)">
+            <rect x="10" y="40" width="170" height="90" rx="12" fill="var(--surface-2)"/><text x="95" y="80" text-anchor="middle" font-size="21" font-weight="700" fill="var(--ink)">Zdroj</text><text x="95" y="106" text-anchor="middle" font-size="16" fill="var(--ink-muted)">cementárna, elektrárna</text>
+            <rect x="220" y="40" width="190" height="90" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/><text x="315" y="80" text-anchor="middle" font-size="21" font-weight="700" fill="var(--ink)">Zachycení</text><text x="315" y="106" text-anchor="middle" font-size="16" fill="var(--ink-muted)">70–85 % nákladů</text>
+            <rect x="450" y="40" width="170" height="90" rx="12" fill="var(--surface-2)"/><text x="535" y="80" text-anchor="middle" font-size="21" font-weight="700" fill="var(--ink)">Komprese</text><text x="535" y="106" text-anchor="middle" font-size="16" fill="var(--ink-muted)">8–15 MPa</text>
+            <rect x="660" y="40" width="170" height="90" rx="12" fill="var(--surface-2)"/><text x="745" y="80" text-anchor="middle" font-size="21" font-weight="700" fill="var(--ink)">Přeprava</text><text x="745" y="106" text-anchor="middle" font-size="16" fill="var(--ink-muted)">potrubí, lodě</text>
+            <rect x="870" y="10" width="200" height="70" rx="12" fill="var(--primary)"/><text x="970" y="52" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">Uložení (CCS)</text>
+            <rect x="870" y="100" width="200" height="70" rx="12" fill="var(--water)"/><text x="970" y="142" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">Využití (CCU)</text>
+            <path d="M180,85 L215,85 M410,85 L445,85 M620,85 L655,85" stroke="var(--primary)" stroke-width="3" marker-end="url(#c4)"/>
+            <path d="M830,75 L865,50 M830,95 L865,130" stroke="var(--primary)" stroke-width="3" marker-end="url(#c4)"/>
+            <text x="540" y="198" text-anchor="middle" font-size="18" fill="var(--ink-soft)">Zachycení: ze spalin (aminy), před spalováním (z syntézního plynu), spalování v čistém kyslíku</text>
+          </g>
+        </svg>
+      </div>
+      <div class="row" style="margin-top:18px;">
+        <div class="col"><div class="panel soft"><p class="prose tight" style="margin:0;"><b>Kam uložit:</b> hluboko (&gt; 800 m) do solných zvodní nebo vytěžených ložisek ropy a plynu. Norsko ukládá pod mořské dno od roku 1996 (Sleipner).</p></div></div>
+        <div class="col"><div class="panel soft"><p class="prose tight" style="margin:0;"><b>Postupně se CO₂ váže pevněji:</b> pod nepropustnou vrstvou → v pórech → rozpuštěný → jako uhličitany.</p></div></div>
+      </div>
+      <aside class="notes">Podklad 11 podrobně: post-combustion (aminy, ~10–15 % CO₂ ve spalinách, energeticky náročná regenerace), pre-combustion (zplyňování, shift reakce CO + H₂O → CO₂ + H₂), oxy-fuel. CCS snižuje emise zdroje o 80–90 %, za cenu vyšší spotřeby energie. Studentům stačí princip „zachytit je nejdražší, uložit je otázka geologie a důvěry“.</aside>
+    </section>
+
+    <!-- 16 scale -->
+    <section>
+      <div class="tag-label data">Data · měřítko</div>
+      <div class="stat-row">
+        <div class="stat warn"><b>38,6 Gt</b><span>fosilní emise CO₂ za rok 2024</span></div>
+        <div class="stat"><b>~0,05 Gt</b><span>zachytí za rok všechny provozované projekty CCS (řádově)</span></div>
+        <div class="stat acc"><b>~0,13 Gt</b><span>CO₂ spotřebuje výroba močoviny, největší průmyslové využití</span></div>
+      </div>
+      <p class="prose tight" style="margin-top:24px;">Emise jsou v <b>gigatunách</b>, zachytávání a využití v <b>megatunách</b>. Rozdíl je zhruba tisícinásobný.</p>
+      <p class="src-line">Zdroje: Global Carbon Project via OWID; IEA (CCUS projects); Ramirez-Corredores (2024); IEA, Putting CO₂ to Use.</p>
+      <aside class="notes">Kapacita provozovaných projektů zachytávání je podle IEA řádově desítky Mt CO₂ ročně (přes 50 Mt), plánovaných projektů je výrazně víc. Ověřte aktuální číslo v databázi IEA CCUS Projects Explorer. Toto srovnání je jádrem tématu T4. Neprozrazujte závěr, nechte ho na studentovi.</aside>
+    </section>
+
+    <!-- 17 CCU products -->
+    <section>
+      <div class="kicker">CCU · na co se dá CO₂ použít a na jak dlouho v produktu zůstane</div>
+      <table class="data-table">
+        <thead><tr><th>Produkt</th><th>Jak vzniká</th><th>Uhlík vázán</th></tr></thead>
+        <tbody>
+          <tr><td><b>Močovina</b> (hnojivo)</td><td>2NH₃ + CO₂ → (NH₂)₂CO + H₂O</td><td>~0,5 roku</td></tr>
+          <tr><td><b>Methanol</b> (palivo, chemie)</td><td>CO₂ + 3H₂ → CH₃OH + H₂O</td><td>~0,5 roku</td></tr>
+          <tr><td><b>Polyuretany, polykarbonáty</b></td><td>CO₂ + epoxidy → polymery</td><td>10–100 let</td></tr>
+          <tr><td><b>Uhličitany, beton</b></td><td>CaO/MgO + CO₂ → CaCO₃/MgCO₃</td><td>staletí</td></tr>
+        </tbody>
+      </table>
+      <p class="prose tight" style="margin-top:18px;">Pokud produkt CO₂ za půl roku zase uvolní (hnojivo, palivo), jde o <b>recyklaci uhlíku, ne o jeho trvalé odstranění</b>.</p>
+      <aside class="notes">Tab. 1 z Ramirez-Corredores (2024). Močovina je největší průmyslové využití CO₂ (~130 Mt/rok), ale CO₂ se uvolní při hydrolýze v půdě. A pozor: CO₂ pro výrobu močoviny obvykle pochází z výroby amoniaku z plynu ve stejném závodě, nejde tedy o „zachráněné“ emise. Mineralizace: CO₂ + oxidy/odpady (struska, popílek) → stabilní uhličitany. Je to nejtrvalejší, ale pomalé a vyžaduje velké objemy materiálu (2–3 t horniny na t CO₂).</aside>
+    </section>
+
+    <!-- 18 methanol -->
+    <section>
+      <div class="kicker">Methanol z CO₂ · kde je háček</div>
+      <div class="row">
+        <div class="col">
+          <div class="formula" style="font-size:28px;">CO₂ + 3H₂ → CH₃OH + H₂O</div>
+          <div class="example-panel">
+            <p class="prose tight"><b>Island</b> (Carbon Recycling International): CO₂ z geotermální elektrárny + vodík z elektrolýzy na geotermální elektřinu.</p>
+            <p class="prose tight" style="margin:0;"><b>Čína, Anyang (2024)</b>: ~160 kt CO₂/rok → ~110 kt methanolu.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="calc-panel">
+            <p class="prose tight">Na 1 molekulu CO₂ <b>3 molekuly H₂</b>. Jedna z nich skončí ve vodě, ne v produktu.</p>
+            <p class="prose tight" style="margin:0;">Bez levné nízkouhlíkové elektřiny na vodík nemá CCU smysl. Vodík z plynu by emise jen přesunul.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Ramirez-Corredores (2024), oddíl Methanol: technologie EtL (CRI), problém nízké konverze a selektivity, „vodíkové dilema“. Studie hodnotí výrobu methanolu z CO₂ často jako ekonomicky nerentabilní (vysoká cena elektřiny a záchytu). Odhad pro T4: ~1,4 t CO₂ a ~0,19 t H₂ na 1 t methanolu (stechiometrie).</aside>
+    </section>
+
+    <!-- 19 BECCS DAC -->
+    <section>
+      <div class="kicker">Záporné emise · BECCS a DAC</div>
+      <div class="row">
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>BECCS</h4><p style="font-size:21px; line-height:1.45; margin:0;">Biomasa váže CO₂ ze vzduchu, při spalování se CO₂ zachytí a uloží. Výsledek může být záporný.</p><p style="font-size:21px; line-height:1.45; margin:10px 0 0;"><b>Limity:</b> půda (konkurence s potravinami), biodiverzita, ověřitelnost.</p></div></div>
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Přímé zachytávání ze vzduchu (DAC)</h4><p style="font-size:21px; line-height:1.45; margin:0;">Ventilátory a sorbenty zachytí CO₂ přímo ze vzduchu (0,04 %).</p><p style="font-size:21px; line-height:1.45; margin:10px 0 0;"><b>Limity:</b> velmi nízká koncentrace = hodně energie a vysoká cena za tunu. Zatím tisíce až desítky tisíc tun ročně.</p></div></div>
+      </div>
+      <aside class="notes">IPCC počítá v scénářích 1,5–2 °C s určitým odstraňováním CO₂ (CDR), ale jako doplněk, ne náhradu snižování emisí. DAC: projekty Climeworks na Islandu (Orca, Mammoth) mají kapacitu tisíce až desítky tisíc tun ročně. Ověřte aktuální čísla.</aside>
+    </section>
+
+    <!-- 20 budget + think -->
+    <section>
+      <div class="tag-label think">Zamyšlení · uhlíkový rozpočet</div>
+      <div class="row middle">
+        <div class="col">
+          <div class="hbars" style="grid-template-columns:150px 1fr 110px;">
+            <div class="lbl2">2025 emise</div><div class="track"><div class="fill" style="width:4%; background:var(--primary)"></div></div><div class="val2">42 Gt</div>
+            <div class="lbl2">do 1,5 °C</div><div class="track"><div class="fill" style="width:16%; background:var(--accent)"></div></div><div class="val2">170 Gt</div>
+            <div class="lbl2">do 1,7 °C</div><div class="track"><div class="fill" style="width:50%; background:var(--accent)"></div></div><div class="val2">525 Gt</div>
+            <div class="lbl2">do 2 °C</div><div class="track"><div class="fill" style="width:100%; background:var(--accent)"></div></div><div class="val2">1055 Gt</div>
+          </div>
+          <p class="src-line">Zbývající rozpočet CO₂ pro 50% pravděpodobnost. Our World in Data podle IPCC AR6, Forster et al. (2025), Global Carbon Project (2025).</p>
+        </div>
+        <div class="col">
+          <p class="question" style="font-family:var(--font-display); font-size:34px; line-height:1.3; margin:0;">Je CCS záchranou, nebo omluvou pro pokračování ve spalování fosilních paliv?</p>
+        </div>
+      </div>
+      <aside class="notes">Při současných emisích (~42 Gt CO₂ včetně změn využití půdy) vyčerpáme rozpočet pro 1,5 °C za ~4 roky. Moderujte diskusi k závěru z podkladu 11: CCS a CCU nejsou náhradou snižování emisí. Mají smysl tam, kde emise jinak odstranit nelze (procesní emise v cementu, vápnu, chemii), a pro odstraňování CO₂ (BECCS, DAC).</aside>
+    </section>
+
+    <!-- 21 summary -->
+    <section>
+      <div class="kicker">Shrnutí</div>
+      <div class="goal-list tight">
+        <div class="item"><span class="dot"></span><span>Sklo a cement uvolňují CO₂ z <b>rozkladu uhličitanů</b>. Tyto emise nezmizí změnou paliva.</span></div>
+        <div class="item"><span class="dot"></span><span>Recyklace (střepy, méně slínku) snižuje energii i procesní emise.</span></div>
+        <div class="item"><span class="dot"></span><span>SO₂ a NOₓ umíme ze spalin odstranit chemickými reakcemi. Příběh kyselých dešťů je úspěch.</span></div>
+        <div class="item"><span class="dot"></span><span>CCS ukládá, CCU recykluje. Obojí je dnes o tři řády menší než emise.</span></div>
+        <div class="item"><span class="dot"></span><span>U CCU rozhoduje doba vázání uhlíku a původ vodíku a energie.</span></div>
+      </div>
+    </section>
+
+    <!-- 22 sources -->
+    <section>
+      <div class="kicker">Zdroje dat dne</div>
+      <div class="src-grid">
+        <div class="src-item"><b>OWID · CO₂ and GHG emissions</b><span>Emise podle zemí, paliv a odvětví; CO₂ z cementu; uhlíkový rozpočet. Data Global Carbon Project.</span><div class="use">seminář 4, T3, T4</div></div>
+        <div class="src-item"><b>ČHMÚ · Národní inventarizační zpráva</b><span>Oficiální emise skleníkových plynů ČR podle odvětví.</span><div class="use">ČR</div></div>
+        <div class="src-item"><b>IEA · CCUS Projects Explorer</b><span>Databáze projektů zachytávání CO₂, jejich kapacit a stavu.</span><div class="use">T4</div></div>
+        <div class="src-item"><b>Fakta o klimatu · rešerše CCS</b><span>Česky psaný přehled zdrojů k zachytávání, ukládání a využití uhlíku.</span><div class="use">T4</div></div>
+      </div>
+    </section>
+
+    <!-- 23 presentations -->
+    <section>
+      <div class="kicker">Studentské prezentace · 25. 11.</div>
+      <div class="slot-grid">
+        <div class="slot-card">
+          <div class="slot-id">T3 · 10 + 5 min</div>
+          <h4>Cement: je opravdu za 8 % světových emisí?</h4>
+          <p>Procesní vs. palivové emise, data OWID, cesty k dekarbonizaci.</p>
+          <div class="who">prezentuje: ____________</div>
+        </div>
+        <div class="slot-card">
+          <div class="slot-id">T4 · 10 + 5 min</div>
+          <h4>Zachytávání CO₂: kolik ho umíme zachytit a využít?</h4>
+          <p>Měřítko CCS a CCU vůči emisím, výpočet pro močovinu.</p>
+          <div class="who">prezentuje: ____________</div>
+        </div>
+      </div>
+      <p class="caption" style="margin-top:22px;">Zadání a hodnocení: <a href="zadani-projektu.html">zadani-projektu.html</a></p>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.04, minScale: 0.2, maxScale: 2, controls: true, progress: true, slideNumber: 'c/t', plugins: [ RevealNotes ] });
+</script>
+</body>
+</html>

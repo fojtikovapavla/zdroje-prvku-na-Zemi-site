@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seminář 1 — Jak pracovat s daty o surovinách</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1 cover -->
+    <section class="cover-slide">
+      <div>
+        <div class="eyebrow">Chemické principy a udržitelnost · Blok 2</div>
+        <h1>Jak pracovat s daty o surovinách</h1>
+        <p class="sub">Kvíz, workshop Our World in Data, výpočet „na kolik let“, rozdělení témat projektu</p>
+      </div>
+      <div class="foot"><div class="bar"></div><span>Seminář 1 · Zdroje prvků na Zemi</span></div>
+      <aside class="notes">Navazuje na prednaska-1.html. Studenti potřebují notebook nebo tablet (stačí i telefon, ale hůř se pracuje s CSV). Rozvržení (90 min): 10 min kvíz, 30 min workshop OWID, 15 min výpočet statického indexu, 10 min čtení grafů, 20 min projekt a rozdělení témat, 5 min shrnutí. Živé grafy z OWID potřebují internet. Když nejde, použijte odkazy pod grafy na vlastním počítači.</aside>
+    </section>
+
+    <!-- 2-6 quiz -->
+    <section>
+      <div class="quiz-block" data-answer="c">
+        <div class="quiz-q"><span class="qn">1</span>Kde vzniká většina zlata ve vesmíru?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Při velkém třesku</button>
+          <button class="quiz-opt3" data-key="b">Jadernou fúzí v nitru Slunce</button>
+          <button class="quiz-opt3" data-key="c">Při extrémních událostech, např. srážkách neutronových hvězd</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Fúze ve hvězdách končí u železa. Těžší prvky vznikají záchytem neutronů, zlato hlavně při srážkách neutronových hvězd (pozorováno 2017).</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="a">
+        <div class="quiz-q"><span class="qn">2</span>Který prvek tvoří největší část zemské kůry (hmotnostně)?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Kyslík</button>
+          <button class="quiz-opt3" data-key="b">Křemík</button>
+          <button class="quiz-opt3" data-key="c">Železo</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Kyslík ~46 %, vázaný v křemičitanech a oxidech. Křemík je druhý (~28 %). Železo převládá v celé Zemi, ale hlavně v jádru.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="b">
+        <div class="quiz-q"><span class="qn">3</span>Co znamená „zásoby“ (reserves) suroviny?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Veškeré množství prvku v zemské kůře</button>
+          <button class="quiz-opt3" data-key="b">Známá ložiska, která se při dnešních cenách a technologiích vyplatí těžit</button>
+          <button class="quiz-opt3" data-key="c">Množství uložené ve státních skladech</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Zásoby jsou ekonomický údaj. Mění se s cenou, technologií, průzkumem i pravidly.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="c">
+        <div class="quiz-q"><span class="qn">4</span>Proč je v zemské kůře tak málo platiny a zlata?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Všechno jsme už vytěžili</button>
+          <button class="quiz-opt3" data-key="b">Rychle se rozpouštějí ve vodě</button>
+          <button class="quiz-opt3" data-key="c">Jsou „železomilné“: při vzniku Země klesly se železem do jádra</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Siderofilní prvky (Au, Pt, Ni, Co) se rozpouštějí v roztaveném železe. Většina skončila v jádru.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="a">
+        <div class="quiz-q"><span class="qn">5</span>U které suroviny vyrábí jedna země téměř celou světovou produkci?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Gallium (Čína, ~99 %)</button>
+          <button class="quiz-opt3" data-key="b">Měď (Chile)</button>
+          <button class="quiz-opt3" data-key="c">Lithium (Austrálie)</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Gallium: Čína ~99 % (2024). Měď: Chile ~23 %, lithium: Austrálie ~37 %. Zdroj: USGS via OWID.</div>
+      </div>
+    </section>
+
+    <!-- 7 divider -->
+    <section class="divider-slide">
+      <div class="num">→</div>
+      <h2>Workshop: Our World in Data</h2>
+      <p>Najít, přečíst, ověřit, stáhnout</p>
+      <aside class="notes">Pracujte ve dvojicích, jeden notebook na dvojici stačí. Vy promítáte a klikáte s nimi.</aside>
+    </section>
+
+    <!-- 8 OWID intro -->
+    <section>
+      <div class="kicker">Co je Our World in Data</div>
+      <div class="row">
+        <div class="col">
+          <div class="panel">
+            <p class="prose tight">Neziskový projekt Oxfordské univerzity. Sbírá data z primárních zdrojů (OSN, USGS, Světová banka, IEA…) a dává je do <b>interaktivních grafů</b>.</p>
+            <p class="prose tight" style="margin:0;">Vše zdarma, s licencí CC BY: můžete grafy použít, pokud uvedete zdroj.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="goal-list tight">
+            <div class="item"><span class="dot"></span><span><b>Chart</b>: graf v čase</span></div>
+            <div class="item"><span class="dot"></span><span><b>Map</b>: srovnání zemí na mapě</span></div>
+            <div class="item"><span class="dot"></span><span><b>Table</b>: čísla</span></div>
+            <div class="item"><span class="dot" style="background:var(--accent)"></span><span><b>Sources</b>: kdo data vytvořil. Vždy se podívejte!</span></div>
+            <div class="item"><span class="dot" style="background:var(--water)"></span><span><b>Download</b>: obrázek (PNG/SVG) nebo data (CSV)</span></div>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Upozorněte na výjimku: některá data OWID nesmí sdílet dál (např. ceny bateriových článků od BloombergNEF). Tlačítko pro CSV pak chybí. I to je informace o zdroji: komerční data.</aside>
+    </section>
+
+    <!-- 9 live explorer -->
+    <section>
+      <div class="tag-label data">Krok 1 · Najděte těžbu lithia</div>
+      <iframe class="owid-frame" data-src="https://ourworldindata.org/explorers/minerals?Mineral=Lithium&Metric=Production&Type=Mine&Share+of+global=false" loading="lazy" allow="web-share; clipboard-write" title="OWID Minerals explorer: lithium"></iframe>
+      <p class="owid-link">Minerals explorer: <a href="https://ourworldindata.org/explorers/minerals?Mineral=Lithium&Metric=Production&Type=Mine&Share+of+global=false" target="_blank">ourworldindata.org/explorers/minerals ↗</a></p>
+      <aside class="notes">Ukažte: výběr suroviny (Mineral), metriky (Production, Reserves, Unit value = cena), typu (Mine, Refinery), zaškrtávátko „Share of global“. Přidejte a odeberte země (Edit countries). Lithium: světová těžba 2024 = 240 kt, Austrálie 88 kt, Chile 49 kt, Čína 41 kt, Zimbabwe 22 kt. Upozorněte na prudký růst od roku 2020 (82 kt → 240 kt).</aside>
+    </section>
+
+    <!-- 10 tasks -->
+    <section>
+      <div class="tag-label data">Úkoly ve dvojicích · 15 min</div>
+      <div class="data-task">
+        <ol>
+          <li>Kolik lithia se vytěžilo v roce 2024 a které tři země vedou? Jak se pořadí změnilo od roku 2020?</li>
+          <li>Přepněte na <b>Share of global</b>. Jaký podíl mají tři největší země dohromady?</li>
+          <li>Otevřete záložku <b>Sources</b>: kdo data vytvořil a jak často se aktualizují?</li>
+          <li>Přepněte na <b>Reserves</b>. Má největší zásoby stejná země, která nejvíc těží?</li>
+          <li>Stáhněte <b>CSV</b> a otevřete ho v Excelu nebo Google Sheets.</li>
+        </ol>
+      </div>
+      <aside class="notes">Řešení: 1) 240 kt; Austrálie, Chile, Čína (2020: Austrálie 48 %, Chile 26 %, Čína 16 %). 2) 2024: 37 + 20 + 17 = 74 %. 3) USGS Mineral Commodity Summaries a BGS World Mineral Statistics, ročně. 4) Ne: zásoby má nejvíc Chile (31 %), pak Austrálie (23 %), Argentina (13 %). Pointa: kde se dnes těží ≠ kde je surovina. Solanky v Chile mají velké zásoby, horninová ložiska v Austrálii se rychleji otevírají. Navazuje na téma T7.</aside>
+    </section>
+
+    <!-- 11 chart message -->
+    <section>
+      <div class="kicker">Krok 2 · Graf musí mít sdělení</div>
+      <div class="row">
+        <div class="col">
+          <div class="compare-panel" style="height:100%">
+            <h4 class="minus" style="color:var(--danger)">✗ Popisný titulek</h4>
+            <p style="font-size:24px; margin:0;">„Těžba lithia podle zemí, 2020–2024“</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="compare-panel" style="height:100%">
+            <h4 style="color:var(--primary-strong)">✓ Titulek se sdělením</h4>
+            <p style="font-size:24px; margin:0;">„Těžba lithia se za čtyři roky ztrojnásobila. Nejvíc přidala Čína a Zimbabwe“</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel soft" style="margin-top:22px;">
+        <p class="prose tight" style="margin:0;"><b>Úkol:</b> napište ke svému grafu titulek se sdělením. Pod graf vždy: <b>zdroj, rok dat, jednotky</b>. Stejné pravidlo platí v semestrálním projektu.</p>
+      </div>
+      <aside class="notes">Nechte 3–4 dvojice přečíst svůj titulek. Ověřte, že je pravdivý podle dat (časté chyby: zaměnit podíl a absolutní hodnotu). Zimbabwe: z prakticky nuly na 22 kt.</aside>
+    </section>
+
+    <!-- 12 calc static index -->
+    <section>
+      <div class="tag-label calc">Výpočet · 10 min</div>
+      <h3 style="font-size:32px; margin-bottom:12px;">Statický index: na kolik let „vystačí“ zásoby?</h3>
+      <table class="data-table">
+        <thead><tr><th>Surovina</th><th>Zásoby 2024</th><th>Těžba 2024</th><th>Zásoby / těžba</th></tr></thead>
+        <tbody>
+          <tr><td><b>Měď</b></td><td>980 Mt</td><td>23 Mt</td><td>?</td></tr>
+          <tr><td><b>Lithium</b></td><td>30 Mt</td><td>0,24 Mt</td><td>?</td></tr>
+          <tr><td><b>Kobalt</b></td><td>11 Mt</td><td>0,29 Mt</td><td>?</td></tr>
+          <tr><td><b>Vzácné zeminy</b></td><td>90 Mt</td><td>0,39 Mt</td><td>?</td></tr>
+        </tbody>
+      </table>
+      <div class="data-task" style="margin-top:18px; padding:18px 30px;">
+        <ol style="font-size:24px; margin:0;"><li>Spočítejte. Která surovina vypadá „nejohroženěji“? Proč je to zavádějící závěr?</li></ol>
+      </div>
+      <p class="src-line">Zdroj: USGS MCS 2025 via Our World in Data.</p>
+      <aside class="notes">Řešení: měď ~43 let, lithium ~125 let, kobalt ~38 let, REE ~230 let. Kobalt a měď „nejkratší“, ale: (1) zásoby kobaltu vzrostly z 8,3 Mt (2022) na 11 Mt (2024); (2) těžba lithia roste o desítky procent ročně, takže při rostoucí spotřebě je index rychle neplatný; (3) u REE není problém množství, ale koncentrace zpracování v Číně. Skutečné riziko neukazuje statický index, ale koncentrace a rychlost růstu poptávky.</aside>
+    </section>
+
+    <!-- 13 reading pitfalls -->
+    <section>
+      <div class="kicker">Krok 3 · Tři pasti při čtení grafů</div>
+      <div class="flip-row">
+        <div class="flip-card" style="height:280px;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><p>Podíl Austrálie na těžbě lithia klesl z 48 % na 37 %. Těží Austrálie méně?</p><div class="hint">klikněte ↻</div></div>
+            <div class="flip-card-back"><p><b>Ne.</b> Těží víc (z ~40 kt na 88 kt), jen ostatní rostli rychleji. Podíl ≠ absolutní hodnota.</p></div>
+          </div>
+        </div>
+        <div class="flip-card" style="height:280px;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><p>Chile má podle OWID nízký vodní stres (~9 %). Je těžba lithia v poušti Atacama bez problému s vodou?</p><div class="hint">klikněte ↻</div></div>
+            <div class="flip-card-back"><p><b>Ne.</b> Národní průměr skrývá místní situaci. Atacama je jedno z nejsušších míst na Zemi.</p></div>
+          </div>
+        </div>
+        <div class="flip-card" style="height:280px;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><p>Sloupcový graf začíná na ose y od 90 %. Rozdíl 92 % vs. 96 % vypadá obrovsky. Je?</p><div class="hint">klikněte ↻</div></div>
+            <div class="flip-card-back"><p><b>Ne.</b> Sloupcový graf musí začínat od nuly, jinak opticky zveličuje rozdíly.</p></div>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Data: Austrálie 2020 ~40 kt (48 % z 82,5 kt) → 2024 88 kt. Vodní stres Chile (podíl odběrů na obnovitelných zdrojích) 9 % dle OWID (FAO AQUASTAT). Všechny tři pasti se objevují v semestrálních projektech, takže se na ně při hodnocení budu dívat.</aside>
+    </section>
+
+    <!-- 14 divider project -->
+    <section class="divider-slide">
+      <div class="num">→</div>
+      <h2>Semestrální projekt</h2>
+      <p>Ověř to v datech</p>
+      <aside class="notes">Podrobné zadání: zadani-projektu.html. Promítněte stránku nebo pošlete odkaz.</aside>
+    </section>
+
+    <!-- 15 project overview -->
+    <section>
+      <div class="kicker">Co máte udělat</div>
+      <div class="stat-row">
+        <div class="stat"><b>1 téma</b><span>každý jiné, navázané na Přednášky 3–6</span></div>
+        <div class="stat"><b>2 grafy</b><span>z OWID nebo jiného veřejného zdroje, vlastní titulek se sdělením</span></div>
+        <div class="stat acc"><b>1 tvrzení</b><span>ověřené proti primárnímu zdroji</span></div>
+        <div class="stat"><b>10 min</b><span>prezentace + 5 min diskuse</span></div>
+      </div>
+      <p class="prose tight" style="margin-top:24px;">Pomůcky: kostra prezentace (8 snímků), šablona ověření tvrzení, odkazy na data ke každému tématu. Vše na stránce se zadáním.</p>
+    </section>
+
+    <!-- 16 topics -->
+    <section>
+      <div class="kicker">Témata a termíny</div>
+      <table class="data-table" style="font-size:21px;">
+        <thead><tr><th>Kdy</th><th>Téma</th></tr></thead>
+        <tbody>
+          <tr><td>18. 11.</td><td><b>T1</b> Vzácné zeminy: ovládá Čína těžbu, nebo zpracování?</td></tr>
+          <tr><td>18. 11.</td><td><b>T2</b> Kobalt a nikl: baterie elektromobilů a dvě země</td></tr>
+          <tr><td>25. 11.</td><td><b>T3</b> Cement: je opravdu za 8 % světových emisí?</td></tr>
+          <tr><td>25. 11.</td><td><b>T4</b> Zachytávání CO₂: kolik ho umíme zachytit a využít?</td></tr>
+          <tr><td>2. 12.</td><td><b>T5</b> Recyklace plastů: kolik se jich opravdu recykluje?</td></tr>
+          <tr><td>2. 12.</td><td><b>T6</b> Bioplasty: řešení, nebo marketing?</td></tr>
+          <tr><td>9. 12.</td><td><b>T7</b> Lithium a voda: solanky vs. horniny</td></tr>
+          <tr><td>9. 12.</td><td><b>T8</b> PFAS v pitné vodě: „věčné chemikálie“ a nové limity</td></tr>
+        </tbody>
+      </table>
+      <aside class="notes">Rozdělení: nejdřív dobrovolníci na T1 a T2 (nejkratší příprava, data jsou hotová v OWID). Pak ostatní dohodou, při shodě los. Jména zapište do tabulky na stránce se zadáním. T8 (PFAS) doporučte studentovi, kterého téma opravdu zajímá: data nejsou v OWID, zato je to nejaktuálnější téma pro firmy i obce.</aside>
+    </section>
+
+    <!-- 17 summary -->
+    <section>
+      <div class="kicker">Shrnutí a úkol na příště</div>
+      <div class="row">
+        <div class="col">
+          <div class="goal-list tight">
+            <div class="item"><span class="dot"></span><span>OWID je rozcestník. Vždy zkontrolujte <b>Sources</b>.</span></div>
+            <div class="item"><span class="dot"></span><span>Graf potřebuje titulek se sdělením, zdroj, rok a jednotky.</span></div>
+            <div class="item"><span class="dot"></span><span>Podíl ≠ množství; národní průměr ≠ místní situace.</span></div>
+            <div class="item"><span class="dot"></span><span>Statický index zásob není předpověď konce.</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="slot-card">
+            <div class="slot-id">Do 23. 10. · e-mailem</div>
+            <h4>Osnova projektu</h4>
+            <p>Klíčová otázka vlastními slovy, odkaz na 2 grafy/data, tvrzení k ověření. Platí pro všechny.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.04, minScale: 0.2, maxScale: 2, controls: true, progress: true, slideNumber: 'c/t', plugins: [ RevealNotes ] });
+  document.querySelectorAll('.flip-card').forEach(function (card) {
+    card.addEventListener('click', function () { card.classList.toggle('flipped'); });
+  });
+  document.querySelectorAll('.quiz-block').forEach(function (block) {
+    var answer = block.dataset.answer, feedback = block.querySelector('.quiz-feedback3'), buttons = block.querySelectorAll('.quiz-opt3');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (block.classList.contains('answered')) return;
+        block.classList.add('answered');
+        var chosen = btn.dataset.key;
+        buttons.forEach(function (b) {
+          b.disabled = true;
+          if (b.dataset.key === answer) b.classList.add('correct');
+          else if (b.dataset.key === chosen) b.classList.add('incorrect');
+          else b.classList.add('dim');
+        });
+        if (feedback) feedback.hidden = false;
+      });
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Přednáška 1 — Prvky na Zemi</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1 cover -->
+    <section class="cover-slide">
+      <div>
+        <div class="eyebrow">Chemické principy a udržitelnost · Blok 2</div>
+        <h1>Prvky na Zemi</h1>
+        <p class="sub">Odkud se vzaly, kde jsou, kolik jich máme a proč na tom záleží</p>
+      </div>
+      <div class="foot"><div class="bar"></div><span>Přednáška 1 · Zdroje prvků na Zemi</span></div>
+      <aside class="notes">
+        Úvod do Bloku 2. Blok 1 (chemie ekosystémů) se zabýval cykly prvků v přírodě; teď se díváme na prvky jako na suroviny pro společnost. Úroveň: první ročník, chemie ze střední školy. Vysvětlujte pojmy, rovnice používejte jen tam, kde nesou pointu.
+        Prolínající se dovednost celého bloku: práce s daty. Na konci přednášky ukažte, odkud byla čísla (USGS, Our World in Data).
+        Zdroje: USGS Mineral Commodity Summaries 2025; Our World in Data, Minerals explorer (data USGS/BGS, 2024); EuChemS Periodic Table of Element Scarcity (2019); Nařízení (EU) 2024/1252 (Critical Raw Materials Act).
+      </aside>
+    </section>
+
+    <!-- 2 goals -->
+    <section>
+      <div class="kicker">Cíle přednášky</div>
+      <div class="goal-list">
+        <div class="item"><span class="dot"></span><span>Vysvětlit, odkud se prvky ve vesmíru vzaly a co je transmutace</span></div>
+        <div class="item"><span class="dot"></span><span>Popsat, proč jsou některé prvky v zemské kůře hojné a jiné vzácné</span></div>
+        <div class="item"><span class="dot"></span><span>Rozlišit <b>zdroj</b> (resource) a <b>zásobu</b> (reserve) a kriticky číst „vystačí na X let“</span></div>
+        <div class="item"><span class="dot"></span><span>Vysvětlit, co jsou kritické suroviny EU a proč je rizikem koncentrace, ne vzácnost</span></div>
+        <div class="item"><span class="dot"></span><span>Znát hlavní zdroje dat o surovinách (USGS, Our World in Data)</span></div>
+      </div>
+      <aside class="notes">Poslední cíl je společný pro celý blok. Řekněte studentům, že v každém semináři budou s daty pracovat sami a že na tom stojí i semestrální projekt.</aside>
+    </section>
+
+    <!-- 3 hook -->
+    <section class="think-slide">
+      <div class="tag-label think">Na úvod</div>
+      <p class="question">Kolik různých chemických prvků máte právě teď v kapse?</p>
+      <p class="facilitate">Chytrý telefon obsahuje kolem 30 prvků: Li a Co v baterii, In v displeji, Ta a Au v elektronice, Nd a Pr v reproduktoru a vibračním motorku, Si v čipech, Al a sklo v těle.</p>
+      <aside class="notes">Nechte studenty tipovat nahlas (typicky „5–10“). Pak odkryjte. EuChemS v roce 2019 vydala „periodickou tabulku vzácnosti prvků“ a vyznačila v ní prvky obsažené v chytrém telefonu. Je to dobrý obrázek k ukázání (vyhledejte „EuChemS periodic table element scarcity“).</aside>
+    </section>
+
+    <!-- 4 divider -->
+    <section class="divider-slide">
+      <div class="num">01</div>
+      <h2>Odkud se prvky vzaly</h2>
+      <p>Nukleosyntéza a transmutace</p>
+      <aside class="notes">Čas: cca 12 minut. Cíl: pochopit, že prvky nejsou „věčné a dané“, ale vznikají jadernými reakcemi. A že na Zemi probíhají dodnes (radioaktivní rozpad).</aside>
+    </section>
+
+    <!-- 5 nucleosynthesis -->
+    <section>
+      <div class="kicker">Nukleosyntéza · jak vznikly prvky</div>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 1080 330" role="img" aria-label="Časová osa vzniku prvků: velký třesk, hvězdy, výbuchy hvězd, srážky neutronových hvězd">
+          <defs><marker id="a1" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--ink-muted)"/></marker></defs>
+          <line x1="20" y1="60" x2="1060" y2="60" stroke="var(--line)" stroke-width="3" marker-end="url(#a1)"/>
+          <g font-family="var(--font-body)">
+            <circle cx="120" cy="60" r="12" fill="var(--water)"/>
+            <rect x="20" y="100" width="230" height="200" rx="14" fill="var(--water-soft)"/>
+            <text x="135" y="140" text-anchor="middle" font-size="24" font-weight="700" fill="var(--ink)">Velký třesk</text>
+            <text x="135" y="180" text-anchor="middle" font-size="40" font-weight="700" fill="var(--water)">H, He</text>
+            <text x="135" y="220" text-anchor="middle" font-size="18" fill="var(--ink-soft)">~75 % H, ~25 % He</text>
+            <text x="135" y="246" text-anchor="middle" font-size="18" fill="var(--ink-soft)">stopy Li</text>
+            <circle cx="390" cy="60" r="12" fill="var(--accent)"/>
+            <rect x="275" y="100" width="230" height="200" rx="14" fill="var(--accent-soft)"/>
+            <text x="390" y="140" text-anchor="middle" font-size="24" font-weight="700" fill="var(--ink)">Nitro hvězd</text>
+            <text x="390" y="180" text-anchor="middle" font-size="40" font-weight="700" fill="var(--accent)">C … Fe</text>
+            <text x="390" y="220" text-anchor="middle" font-size="18" fill="var(--ink-soft)">jaderná fúze</text>
+            <text x="390" y="246" text-anchor="middle" font-size="18" fill="var(--ink-soft)">končí u železa</text>
+            <circle cx="660" cy="60" r="12" fill="var(--danger)"/>
+            <rect x="530" y="100" width="260" height="200" rx="14" fill="#F6DCD6"/>
+            <text x="660" y="140" text-anchor="middle" font-size="24" font-weight="700" fill="var(--ink)">Supernovy</text>
+            <text x="660" y="180" text-anchor="middle" font-size="40" font-weight="700" fill="var(--danger)">Fe → Pb</text>
+            <text x="660" y="220" text-anchor="middle" font-size="18" fill="var(--ink-soft)">záchyt neutronů</text>
+            <text x="660" y="246" text-anchor="middle" font-size="18" fill="var(--ink-soft)">i v obřích hvězdách (Cu, Zn, Sn)</text>
+            <circle cx="930" cy="60" r="12" fill="var(--primary)"/>
+            <rect x="815" y="100" width="245" height="200" rx="14" fill="var(--surface-2)"/>
+            <text x="937" y="140" text-anchor="middle" font-size="22" font-weight="700" fill="var(--ink)">Neutronové hvězdy</text>
+            <text x="937" y="180" text-anchor="middle" font-size="40" font-weight="700" fill="var(--primary)">Au, Pt, U</text>
+            <text x="937" y="220" text-anchor="middle" font-size="18" fill="var(--ink-soft)">jejich srážky</text>
+            <text x="937" y="246" text-anchor="middle" font-size="18" fill="var(--ink-soft)">pozorováno 2017</text>
+          </g>
+        </svg>
+      </div>
+      <p class="caption">Zlato ve vašem prstenu vzniklo dávno před Sluncem. Zemi nikdo nedoplňuje: prvky, které máme, jsou všechny, které mít budeme.</p>
+      <aside class="notes">Proč fúze končí u železa: jádra Fe a Ni jsou nejstabilnější (nejvyšší vazebná energie na nukleon), další fúze energii spotřebovává. Těžší prvky vznikají záchytem neutronů: pomalu v obřích hvězdách (s-proces) a rychle při extrémních událostech (r-proces). Srážka neutronových hvězd GW170817 (2017) byla první přímo pozorovaná „továrna na zlato“. Pointa pro udržitelnost: Země je co do prvků uzavřený systém (meteority zanedbáme). Spotřebovat prvek nelze, lze ho ale rozptýlit tak, že už ho nedokážeme ekonomicky získat zpět.</aside>
+    </section>
+
+    <!-- 6 transmutation -->
+    <section>
+      <div class="kicker">Transmutace · přeměna prvků na Zemi</div>
+      <div class="row">
+        <div class="col">
+          <div class="chem-slide-panel">
+            <p class="prose tight"><b>Přirozená:</b> radioaktivní rozpad.</p>
+            <div class="formula" style="font-size:22px;">²³⁸U → … → ²⁰⁶Pb &nbsp;(poločas 4,5 mld. let)<br>⁴⁰K → ⁴⁰Ar</div>
+            <p class="prose tight" style="margin:0;">Helium v zemním plynu pochází z rozpadu uranu a thoria. Argon ve vzduchu (0,93 %) hlavně z rozpadu draslíku.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="example-panel">
+            <p class="prose tight"><b>Umělá:</b> jaderné reaktory a urychlovače.</p>
+            <ul style="font-size:23px; margin:0;">
+              <li><b>Technecium</b> (1937): první uměle připravený prvek, dnes ⁹⁹ᵐTc v nemocnicích</li>
+              <li><b>Plutonium</b> z uranu v reaktorech</li>
+              <li><b>Zlato z olova</b> umí CERN, ale jen pikogramy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="prose tight" style="margin-top:20px;">Sen alchymistů se splnil, ale ekonomicky to nedává smysl. <b>Suroviny musíme těžit, nebo recyklovat.</b></p>
+      <aside class="notes">Helium je hezký příklad neobnovitelného zdroje vzniklého transmutací: když unikne do atmosféry, odchází do vesmíru. ALICE (CERN) v roce 2025 popsal vznik zlata při těsných průletech jader olova v LHC. Za roky 2015–2018 šlo celkem o řádově desítky pikogramů. Promethium (Pm) nemá stabilní izotop, a proto mezi vzácnými zeminami „chybí“: vrátíme se k tomu v Přednášce 3.</aside>
+    </section>
+
+    <!-- 7 divider -->
+    <section class="divider-slide">
+      <div class="num">02</div>
+      <h2>Kde prvky na Zemi jsou</h2>
+      <p>Složení Země a proč není všude stejné</p>
+      <aside class="notes">Čas: cca 15 minut.</aside>
+    </section>
+
+    <!-- 8 composition -->
+    <section>
+      <div class="tag-label data">Data</div>
+      <h3 style="font-size:32px; margin-bottom:12px;">Země celá × zemská kůra (hmotnostní %)</h3>
+      <p style="font-size:22px; color:var(--ink-muted); margin-bottom:6px;">Celá Země</p>
+      <div class="stackbar">
+        <div style="flex:32; background:var(--danger)"><span class="sv">Fe 32</span></div>
+        <div style="flex:30; background:var(--water)"><span class="sv">O 30</span></div>
+        <div style="flex:15; background:var(--accent)"><span class="sv">Si 15</span></div>
+        <div style="flex:14; background:var(--primary)"><span class="sv">Mg 14</span></div>
+        <div style="flex:9; background:var(--ink-muted)"><span class="sv">ost.</span></div>
+      </div>
+      <p style="font-size:22px; color:var(--ink-muted); margin:22px 0 6px;">Zemská kůra (to, k čemu se dostaneme)</p>
+      <div class="stackbar">
+        <div style="flex:46.1; background:var(--water)"><span class="sv">O 46</span></div>
+        <div style="flex:28.2; background:var(--accent)"><span class="sv">Si 28</span></div>
+        <div style="flex:8.2; background:var(--chart-3)"><span class="sv">Al 8</span></div>
+        <div style="flex:5.6; background:var(--danger)"><span class="sv">Fe 6</span></div>
+        <div style="flex:4.2; background:var(--line)"><span class="sv" style="color:var(--ink)">Ca</span></div>
+        <div style="flex:7.7; background:var(--ink-muted)"><span class="sv">ost.</span></div>
+      </div>
+      <p class="prose tight" style="margin-top:22px;">Osm prvků tvoří 98 % kůry. <b>Všech ostatních ~80 prvků (Cu, Li, Ni, Au, REE…) jsou dohromady asi 2 %.</b></p>
+      <aside class="notes">Hodnoty orientační, podle běžně citovaných geochemických přehledů (např. Taylor; CRC Handbook). Ve zbytku kůry: Na ~2,4, Mg ~2,3, K ~2,1 %. Železo „zmizelo“ z kůry do jádra. Kyslík v kůře není plyn, ale vázaný v křemičitanech a oxidech: kůra je z velké části SiO₂ a jeho sloučeniny. Navázání na Blok 1: vzduch a voda jsou z hlediska hmotnosti Země zanedbatelné.</aside>
+    </section>
+
+    <!-- 9 goldschmidt -->
+    <section>
+      <div class="kicker">Prvky „mají své oblíbené společníky“</div>
+      <div class="row">
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Železomilné</h4><p style="font-size:21px; line-height:1.4; margin:0;">Fe, Ni, Co, <b>Au, Pt</b>. Při vzniku Země klesly s roztaveným železem do jádra. Proto je v kůře tak málo zlata a platiny.</p></div></div>
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Sírumilné</h4><p style="font-size:21px; line-height:1.4; margin:0;">Cu, Zn, Pb, Ag, Hg. Tvoří <b>sulfidy</b> (např. CuFeS₂). Často se těží spolu, takže jeden kov „přibalí“ druhý.</p></div></div>
+      </div>
+      <div class="row" style="margin-top:20px;">
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Horninomilné</h4><p style="font-size:21px; line-height:1.4; margin:0;">Si, Al, Na, K, Ca, Li, <b>REE</b>. Tvoří <b>oxidy a křemičitany</b>. Většina kůry.</p></div></div>
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Plynné / těkavé</h4><p style="font-size:21px; line-height:1.4; margin:0;">N, vzácné plyny, H, C (jako CO₂). V atmosféře a hydrosféře. Téma Přednášky 4.</p></div></div>
+      </div>
+      <aside class="notes">Goldschmidtova geochemická klasifikace, zjednodušeně (odborné názvy: siderofilní, chalkofilní, litofilní, atmofilní). Pro manažera z toho plynou dvě věci: (1) chemie určuje, v jakých rudách prvek najdeme a jak se zpracovává (sulfidy pražením a tavením, oxidy loužením); (2) prvky se vyskytují spolu, takže mnoho kovů je vedlejším produktem jiného kovu (Co z Cu a Ni, In z Zn, Te z Cu). To uvidíme v Přednášce 2.</aside>
+    </section>
+
+    <!-- 10 periodic table as resource map -->
+    <section>
+      <div class="kicker">Periodická soustava jako mapa surovin</div>
+      <table class="data-table">
+        <thead><tr><th>Oblast tabulky</th><th>Příklady</th><th>Kde je najdeme</th><th>K čemu je potřebujeme</th></tr></thead>
+        <tbody>
+          <tr><td><b>s-prvky</b> (1. a 2. skupina)</td><td>Li, Na, K, Mg, Ca</td><td>soli, solanky, vápenec</td><td>baterie, hnojiva, stavebnictví</td></tr>
+          <tr><td><b>přechodné kovy</b></td><td>Fe, Cu, Ni, Co, Ti, Pt</td><td>rudy: oxidy, sulfidy</td><td>konstrukce, elektřina, katalyzátory</td></tr>
+          <tr><td><b>lanthanoidy</b></td><td>Nd, Pr, Dy, Tb</td><td>monazit, bastnäsit</td><td>magnety, displeje</td></tr>
+          <tr><td><b>p-prvky: kovy a polokovy</b></td><td>Al, Si, Ga, Ge, In, Te</td><td>bauxit, křemen, vedlejší produkty</td><td>elektronika, fotovoltaika</td></tr>
+          <tr><td><b>p-prvky: nekovy</b></td><td>C, N, O, P, S, F</td><td>ropa, uhlí, vzduch, fosfáty</td><td>paliva, plasty, hnojiva</td></tr>
+        </tbody>
+      </table>
+      <p class="caption">Postavení v tabulce předpovídá chemii prvku, a tím i to, jak se těží a zpracovává.</p>
+      <aside class="notes">Tabulka slouží jako mapa celého bloku: Přednáška 2 (Li, C, Al, Si, Ge, In, Te), 3 (přechodné kovy, lanthanoidy), 4 (C, O, S, N jako plyny), 5 (C a H v polymerech), 6 (voda a látky z ní). Zeptejte se: „Co mají společného Li, Na, K?“ (jeden valenční elektron, tvoří ionty M⁺, soli jsou rozpustné, a proto je najdeme v solankách).</aside>
+    </section>
+
+    <!-- 11 divider -->
+    <section class="divider-slide">
+      <div class="num">03</div>
+      <h2>Zdroje a zásoby</h2>
+      <p>Proč „vystačí na 40 let“ neznamená, že za 40 let dojdou</p>
+      <aside class="notes">Čas: cca 15 minut. Klíčová část pro manažery, protože čísla o zásobách se často špatně citují.</aside>
+    </section>
+
+    <!-- 12 ore concentration -->
+    <section>
+      <div class="kicker">Co je ruda</div>
+      <div class="row middle">
+        <div class="col" style="flex:1.3">
+          <table class="data-table">
+            <thead><tr><th>Kov</th><th>Průměr v kůře</th><th>Těžená ruda</th><th>Koncentrace</th></tr></thead>
+            <tbody>
+              <tr><td><b>Fe</b></td><td>5,6 %</td><td>50–65 %</td><td>~10×</td></tr>
+              <tr><td><b>Cu</b></td><td>27 ppm</td><td>~0,8 %</td><td>~300×</td></tr>
+              <tr><td><b>Au</b></td><td>~0,001 ppm</td><td>1–5 g/t</td><td>~1 000×+</td></tr>
+            </tbody>
+          </table>
+          <p class="caption">ppm = gram na tunu. 0,8 % = 8 000 ppm.</p>
+        </div>
+        <div class="col">
+          <div class="panel">
+            <p class="prose tight"><b>Ruda</b> je hornina, ze které se kov <b>vyplatí</b> získávat. Je to ekonomický pojem, ne chemický.</p>
+            <p class="prose tight" style="margin:0;">Čím nižší obsah kovu, tím víc horniny se musí vytěžit a rozemlít, a tím víc energie, vody a odpadu připadá na tunu kovu.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Obsah Cu v kůře: přednáška 08 / GSL briefing (27 ppm). Obsah Cu v chilské rudě klesl z 1,0 % (2008) na 0,8 % (2017) (Moreno-Leiva et al.). Vrátíme se k tomu v Přednášce 3. Zlato: průměr v kůře se uvádí řádově jednotky ppb (miliardtin). Hodnoty jsou orientační, smyslem je pochopit řády.</aside>
+    </section>
+
+    <!-- 13 McKelvey -->
+    <section>
+      <div class="kicker">Zdroj × zásoba</div>
+      <div class="row middle">
+        <div class="col" style="flex:1.1">
+          <div class="diagram-wrap">
+            <svg viewBox="0 0 520 360" role="img" aria-label="Schéma: zásoby jsou malá část zdrojů, ohraničená ekonomikou a geologickou jistotou">
+              <rect x="60" y="20" width="440" height="290" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+              <rect x="60" y="20" width="230" height="140" fill="var(--primary)"/>
+              <text x="175" y="85" text-anchor="middle" font-size="28" font-weight="700" fill="#fff" font-family="var(--font-body)">ZÁSOBY</text>
+              <text x="175" y="115" text-anchor="middle" font-size="17" fill="#D8E6DC" font-family="var(--font-body)">známé + vyplatí se dnes</text>
+              <text x="395" y="85" text-anchor="middle" font-size="19" fill="var(--ink-soft)" font-family="var(--font-body)">předpokládané,</text>
+              <text x="395" y="108" text-anchor="middle" font-size="19" fill="var(--ink-soft)" font-family="var(--font-body)">neprozkoumané</text>
+              <text x="280" y="240" text-anchor="middle" font-size="21" fill="var(--ink-soft)" font-family="var(--font-body)">ZDROJE: dnes nevýnosné (chudé rudy, hlušina)</text>
+              <line x1="40" y1="310" x2="40" y2="20" stroke="var(--ink-muted)" stroke-width="2"/>
+              <text x="28" y="165" text-anchor="middle" font-size="16" fill="var(--ink-muted)" font-family="var(--font-mono)" transform="rotate(-90 28 165)">↑ ekonomičnost</text>
+              <line x1="60" y1="330" x2="500" y2="330" stroke="var(--ink-muted)" stroke-width="2"/>
+              <text x="280" y="352" text-anchor="middle" font-size="16" fill="var(--ink-muted)" font-family="var(--font-mono)">← jistota, že tam ložisko je</text>
+            </svg>
+          </div>
+        </div>
+        <div class="col">
+          <div class="goal-list tight">
+            <div class="item"><span class="dot"></span><span><b>Zásoby rostou,</b> když stoupne cena, zlepší se technologie nebo se najde nové ložisko</span></div>
+            <div class="item"><span class="dot" style="background:var(--danger)"></span><span><b>Zásoby klesají,</b> když se těží, klesne cena nebo se změní pravidla (ochrana přírody, zákaz těžby)</span></div>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Zjednodušený McKelveyho diagram (USGS). Definice USGS: „reserves“ = část identifikovaných zdrojů, kterou lze v době určení ekonomicky vytěžit. Zásoby nejsou geologická konstanta, ale ekonomický údaj. Pro managery: stejná logika jako „prokázané zásoby“ ropy ve výročních zprávách těžařů.</aside>
+    </section>
+
+    <!-- 14 R/P data -->
+    <section>
+      <div class="tag-label data">Práce s daty</div>
+      <h3 style="font-size:32px; margin-bottom:12px;">Na kolik let vystačí zásoby?</h3>
+      <div class="stat-row">
+        <div class="stat"><b>980 Mt</b><span>světové zásoby mědi (2024)</span></div>
+        <div class="stat"><b>23 Mt</b><span>vytěženo mědi za rok 2024</span></div>
+        <div class="stat acc"><b>≈ 43 let</b><span>„statický index“ = zásoby / těžba</span></div>
+      </div>
+      <div class="row" style="margin-top:22px;">
+        <div class="col">
+          <div class="example-panel">
+            <p class="prose tight" style="margin:0;">Statický index mědi se drží kolem 40 let už desítky let. Zásoby rostou stejně rychle jako těžba.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="data-task" style="padding:22px 30px;">
+            <p class="prose tight" style="margin:0;">Zásoby vzácných zemin podle USGS: <b>130 Mt (2022) → 90 Mt (2024)</b>. Znamená to, že se 40 Mt vytěžilo?</p>
+          </div>
+        </div>
+      </div>
+      <p class="src-line">Zdroj: USGS Mineral Commodity Summaries 2025, převzato přes Our World in Data (Minerals explorer).</p>
+      <aside class="notes">Řešení: ne. Těžba REE je ~0,4 Mt ročně. Pokles je přehodnocení (nová data, změna metodiky v některých zemích). Pointa: jedno číslo „vystačí na X let“ je snímek ekonomiky, ne předpověď konce. Skutečná rizika jsou jinde: energie a emise na tunu kovu rostou s klesajícím obsahem v rudě a těžba je soustředěna v několika zemích. K tomu následující sekce. V Semináři 1 si studenti spočítají statický index sami pro další suroviny.</aside>
+    </section>
+
+    <!-- 15 think -->
+    <section class="think-slide">
+      <div class="tag-label think">Zamyšlení</div>
+      <p class="question">Novinový titulek: „Měď dojde za 43 let.“ Co je na něm pravda a co ne?</p>
+      <p class="facilitate">Pravda je výpočet. Chybou je předpoklad, že zásoby se nezmění. Lepší otázka zní: za jakou cenu, s jakou energií a odkud budeme měď za 40 let brát?</p>
+      <aside class="notes">Krátká diskuse ve dvojicích (2 min), pak 2–3 odpovědi. Tento typ ověřování tvrzení je jádrem semestrálního projektu.</aside>
+    </section>
+
+    <!-- 16 divider -->
+    <section class="divider-slide">
+      <div class="num">04</div>
+      <h2>Kritické suroviny</h2>
+      <p>Riziko není vzácnost, ale koncentrace</p>
+      <aside class="notes">Čas: cca 12 minut.</aside>
+    </section>
+
+    <!-- 17 concentration chart -->
+    <section>
+      <div class="tag-label data">Data · podíl největšího producenta na světové výrobě (2024)</div>
+      <div class="hbars" style="grid-template-columns:330px 1fr 100px; margin-top:14px;">
+        <div class="lbl2">Gallium · Čína (zpracování)</div><div class="track"><div class="fill" style="width:98.7%; background:var(--danger)"></div></div><div class="val2">99 %</div>
+        <div class="lbl2">Grafit · Čína</div><div class="track"><div class="fill" style="width:79.4%; background:var(--danger)"></div></div><div class="val2">79 %</div>
+        <div class="lbl2">Kobalt · DR Kongo</div><div class="track"><div class="fill" style="width:75.9%; background:var(--danger)"></div></div><div class="val2">76 %</div>
+        <div class="lbl2">Vzácné zeminy · Čína</div><div class="track"><div class="fill" style="width:69.2%; background:var(--danger)"></div></div><div class="val2">69 %</div>
+        <div class="lbl2">Nikl · Indonésie</div><div class="track"><div class="fill" style="width:59.5%; background:var(--accent)"></div></div><div class="val2">59 %</div>
+        <div class="lbl2">Ocel · Čína</div><div class="track"><div class="fill" style="width:52.1%; background:var(--accent)"></div></div><div class="val2">52 %</div>
+        <div class="lbl2">Lithium · Austrálie</div><div class="track"><div class="fill" style="width:36.7%; background:var(--ink-muted)"></div></div><div class="val2">37 %</div>
+        <div class="lbl2">Měď · Chile</div><div class="track"><div class="fill" style="width:23%; background:var(--ink-muted)"></div></div><div class="val2">23 %</div>
+      </div>
+      <p class="src-line">Těžba, u gallia zpracování. Zdroj: USGS via Our World in Data, Minerals explorer. <a href="https://ourworldindata.org/explorers/minerals?Mineral=Rare+earths&Metric=Production&Type=Mine&Share+of+global=true" target="_blank">otevřít v OWID ↗</a></p>
+      <aside class="notes">Čísla jsou stažená z OWID (API indikátorů, verze 2025-12 / data za rok 2024). Gallium: Čína zavedla v srpnu 2023 exportní licence na Ga a Ge a v prosinci 2024 zákaz vývozu do USA. Pro manažery je dodávka gallia (výkonová elektronika, LED) prakticky v rukou jedné země. Pozor na rozdíl těžba × zpracování: u mědi těží Chile nejvíc, ale rafinuje Čína (44 %). Uvidíme v Semináři 3.</aside>
+    </section>
+
+    <!-- 18 CRMA -->
+    <section>
+      <div class="kicker">EU: Nařízení o kritických surovinách (2024)</div>
+      <div class="row">
+        <div class="col">
+          <div class="stat-row">
+            <div class="stat"><b>34</b><span>kritických surovin</span></div>
+            <div class="stat acc"><b>17</b><span>z nich strategických</span></div>
+          </div>
+          <p class="prose tight" style="margin-top:18px;"><b>Kritická</b> = velký ekonomický význam + vysoké riziko dodávek. <b>Strategická</b> = klíčová pro energetiku, digitalizaci a obranu.</p>
+        </div>
+        <div class="col">
+          <div class="tag-label data">Cíle EU do roku 2030 (podíl spotřeby EU)</div>
+          <div class="hbars" style="grid-template-columns:200px 1fr 80px;">
+            <div class="lbl2">těžba v EU</div><div class="track"><div class="fill" style="width:10%; background:var(--primary)"></div></div><div class="val2">10 %</div>
+            <div class="lbl2">zpracování v EU</div><div class="track"><div class="fill" style="width:40%; background:var(--primary)"></div></div><div class="val2">40 %</div>
+            <div class="lbl2">recyklace</div><div class="track"><div class="fill" style="width:25%; background:var(--primary)"></div></div><div class="val2">25 %</div>
+            <div class="lbl2">max. z 1 země</div><div class="track"><div class="fill" style="width:65%; background:var(--danger)"></div></div><div class="val2">65 %</div>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Nařízení (EU) 2024/1252 (Critical Raw Materials Act). Seznam se pravidelně aktualizuje (cca každé 3 roky). Mezi strategické patří mj. lithium, nikl (bateriový), kobalt, grafit, gallium, germanium, měď, vzácné zeminy pro magnety, PGM. Navázání na Českou republiku: lithium na Cínovci (Přednáška 2). Zeptejte se: který z cílů je podle vás nejtěžší splnit a proč? (Často zpracování: chemické závody, energie, povolování.)</aside>
+    </section>
+
+    <!-- 19 data sources -->
+    <section>
+      <div class="kicker">Odkud jsou čísla · zdroje dat k celému bloku</div>
+      <div class="src-grid">
+        <div class="src-item"><b>Our World in Data</b><span>Grafy a data ke stažení (CSV) o emisích, energii, surovinách, plastech, vodě. U každého grafu uvádí původní zdroj.</span><div class="use">začněte tady</div></div>
+        <div class="src-item"><b>USGS Mineral Commodity Summaries</b><span>Americká geologická služba. Každý leden těžba a zásoby ~90 surovin podle zemí.</span><div class="use">primární zdroj o surovinách</div></div>
+        <div class="src-item"><b>Evropská komise: RMIS</b><span>Informační systém EU o surovinách, seznam kritických surovin, profily surovin.</span><div class="use">pohled EU</div></div>
+        <div class="src-item"><b>IEA</b><span>Mezinárodní energetická agentura: Critical Minerals Outlook, data explorery.</span><div class="use">suroviny pro energetiku</div></div>
+      </div>
+      <aside class="notes">Opakujte princip, který budete vyžadovat v projektu: OWID je výborný rozcestník, ale vždy se podívejte do záložky „Sources“, kdo data vytvořil. V Semináři 1 si to studenti vyzkouší na počítači.</aside>
+    </section>
+
+    <!-- 20 summary -->
+    <section>
+      <div class="kicker">Shrnutí</div>
+      <div class="goal-list tight">
+        <div class="item"><span class="dot"></span><span>Prvky vznikly ve hvězdách. Země je uzavřený systém: prvky nemizí, ale mohou se rozptýlit tak, že je nedokážeme získat zpět.</span></div>
+        <div class="item"><span class="dot"></span><span>Kůru tvoří hlavně O, Si, Al, Fe. Většina „technologických“ prvků je dohromady ~2 %.</span></div>
+        <div class="item"><span class="dot"></span><span>Chemie prvku určuje, v jaké rudě ho najdeme a s jakými prvky se vyskytuje.</span></div>
+        <div class="item"><span class="dot"></span><span>Zásoby jsou ekonomický údaj. „Vystačí na X let“ není předpověď konce.</span></div>
+        <div class="item"><span class="dot"></span><span>Kritičnost suroviny = význam × riziko dodávek. Největší riziko je soustředění těžby a zpracování v několika zemích.</span></div>
+      </div>
+    </section>
+
+    <!-- 21 project teaser -->
+    <section>
+      <div class="kicker">Semestrální projekt · „Ověř to v datech“</div>
+      <div class="row">
+        <div class="col">
+          <div class="prose tight">
+            <p>Každý z vás dostane jedno téma navázané na Přednášky 3–6. Najdete k němu data, vytvoříte dva grafy a ověříte jedno tvrzení, které o tématu koluje.</p>
+            <p style="margin:0;">Témata si rozdělíme na <b>semináři 13. 10.</b></p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="slot-card">
+            <div class="slot-id">Zadání</div>
+            <h4>zadani-projektu.html</h4>
+            <p>Témata, termíny, návod k OWID, kostra prezentace a hodnocení.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Projekt nahrazuje dvě odpadlá setkání. Upozorněte, že T1 a T2 prezentují už v Přednášce 3: tato témata jsou záměrně nejsnáze uchopitelná a data jsou hotová v OWID.</aside>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.04, minScale: 0.2, maxScale: 2, controls: true, progress: true, slideNumber: 'c/t', plugins: [ RevealNotes ] });
+</script>
+</body>
+</html>

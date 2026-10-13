@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seminář 4 — Uhlíkový rozpočet v datech</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <section class="cover-slide">
+      <div>
+        <div class="eyebrow">Chemické principy a udržitelnost · Blok 2</div>
+        <h1>Uhlíkový rozpočet v datech</h1>
+        <p class="sub">Kvíz, emise Česka z výroby a ze spotřeby, výpočty (cement, močovina), skupinové úlohy</p>
+      </div>
+      <div class="foot"><div class="bar"></div><span>Seminář 4 · Zdroje prvků na Zemi</span></div>
+      <aside class="notes">Navazuje na prednaska-4.html. Rozvržení (90 min): 8 min kvíz, 7 min fázový diagram CO₂, 20 min datová úloha (OWID), 15 min výpočty, 30 min skupinové úlohy a prezentace, 5 min shrnutí. Notebooky. Připomeňte T5 a T6 termín podkladů.</aside>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="b">
+        <div class="quiz-q"><span class="qn">1</span>Proč nestačí cementárnu převést na obnovitelné palivo?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Obnovitelná paliva nedosáhnou 1450 °C</button>
+          <button class="quiz-opt3" data-key="b">Většina CO₂ vzniká rozkladem vápence CaCO₃ → CaO + CO₂, ne spalováním</button>
+          <button class="quiz-opt3" data-key="c">Cement by pak neztvrdl</button>
+        </div>
+        <div class="quiz-feedback3" hidden>~60 % emisí slínku pochází z reakce suroviny. Řešení: méně slínku, zachytávání CO₂, méně cementu.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="c">
+        <div class="quiz-q"><span class="qn">2</span>Co vzniká při odsíření spalin vápencem a k čemu se to používá?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Kyselina sírová, prodává se chemickým závodům</button>
+          <button class="quiz-opt3" data-key="b">Síra, používá se do pneumatik</button>
+          <button class="quiz-opt3" data-key="c">Sádrovec CaSO₄·2H₂O, vyrábějí se z něj sádrokartonové desky</button>
+        </div>
+        <div class="quiz-feedback3" hidden>„Energosádrovec“ je příklad, kdy se z odpadu stane surovina.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="a">
+        <div class="quiz-q"><span class="qn">3</span>Proč se CO₂ přepravuje potrubím v nadkritickém stavu?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Je hustý jako kapalina (vejde se ho hodně), ale proudí snadno jako plyn</button>
+          <button class="quiz-opt3" data-key="b">Nadkritický CO₂ není skleníkový plyn</button>
+          <button class="quiz-opt3" data-key="c">Je to jediný stav, ve kterém CO₂ nekoroduje</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Nad 31 °C a 7,4 MPa. Pozor na vodu: s ní CO₂ tvoří kyselinu a koroduje potrubí.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="b">
+        <div class="quiz-q"><span class="qn">4</span>Který produkt z CO₂ váže uhlík nejdéle?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="a">Methanol jako palivo</button>
+          <button class="quiz-opt3" data-key="b">Uhličitany v betonu a stavebních materiálech</button>
+          <button class="quiz-opt3" data-key="c">Močovina jako hnojivo</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Uhličitany vydrží staletí. Methanol a močovina uvolní CO₂ zpět do ~půl roku.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quiz-block" data-answer="ne">
+        <div class="quiz-q"><span class="qn">5</span>Tvrzení: „Projekty CCS dnes zachytí asi desetinu světových emisí CO₂.“</div>
+        <div class="quiz-options">
+          <button class="quiz-opt3" data-key="ano">Pravda</button>
+          <button class="quiz-opt3" data-key="ne">Nepravda</button>
+        </div>
+        <div class="quiz-feedback3" hidden>Nepravda. Řádově desítky Mt z ~38 600 Mt, tedy přibližně desetina procenta.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="kicker">Fázový diagram CO₂ · otočte kartu</div>
+      <div class="flip-row">
+        <div class="flip-card" style="height:280px;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><p>Proč suchý led „netaje“, ale rovnou se mění v plyn?</p><div class="hint">klikněte ↻</div></div>
+            <div class="flip-card-back"><p>Za běžného tlaku kapalný CO₂ neexistuje (trojný bod je při ~0,5 MPa). Pevný CO₂ sublimuje při −78 °C.</p></div>
+          </div>
+        </div>
+        <div class="flip-card" style="height:280px;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><p>Co je nadkritická tekutina?</p><div class="hint">klikněte ↻</div></div>
+            <div class="flip-card-back"><p>Stav nad kritickým bodem (31 °C, 7,4 MPa): nerozlišíme kapalinu a plyn. Hustá jako kapalina, proniká jako plyn.</p></div>
+          </div>
+        </div>
+        <div class="flip-card" style="height:280px;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><p>Jak se vyrábí suchý led?</p><div class="hint">klikněte ↻</div></div>
+            <div class="flip-card-back"><p>Kapalný CO₂ pod tlakem se prudce rozepne. Část se odpaří a tím ochladí zbytek, který ztuhne na „sníh“. Ten se lisuje.</p></div>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Úkoly z podkladu 11 (snímek 3). Zdroj CO₂ pro suchý led a nápoje: často vedlejší produkt výroby amoniaku nebo fermentace. Proto byl v roce 2022 při odstávkách výroby hnojiv v Evropě nedostatek CO₂ pro potravinářství.</aside>
+    </section>
+
+    <section class="divider-slide">
+      <div class="num">→</div>
+      <h2>Datová úloha</h2>
+      <p>Kolik CO₂ připadá na Čecha?</p>
+      <aside class="notes">Dvojice, 20 min. OWID grafy: co-emissions-per-capita (emise z výroby na území) a consumption-co2-per-capita (emise ze spotřeby, včetně dovozu).</aside>
+    </section>
+
+    <section>
+      <div class="tag-label data">Our World in Data · emise CO₂ na obyvatele</div>
+      <iframe class="owid-frame" data-src="https://ourworldindata.org/grapher/consumption-co2-per-capita?tab=chart&country=CZE~OWID_WRL~CHN~DEU~FRA" loading="lazy" allow="web-share; clipboard-write" title="OWID: emise CO2 ze spotřeby na obyvatele"></iframe>
+      <p class="owid-link">Ze spotřeby: <a href="https://ourworldindata.org/grapher/consumption-co2-per-capita" target="_blank">consumption-co2-per-capita ↗</a> · z výroby: <a href="https://ourworldindata.org/grapher/co-emissions-per-capita" target="_blank">co-emissions-per-capita ↗</a></p>
+    </section>
+
+    <section>
+      <div class="tag-label data">Úkoly ve dvojicích</div>
+      <div class="data-task">
+        <ol>
+          <li>Kolik t CO₂ na obyvatele mělo Česko v posledním roce podle <b>výroby</b> (na území) a podle <b>spotřeby</b>? Jak se obě čísla změnila od roku 1990?</li>
+          <li>Proč je spotřební číslo vyšší? Kde vznikají „naše“ emise navíc?</li>
+          <li>Srovnejte Česko s průměrem EU a světa. Jedna věta se sdělením + zdroj.</li>
+          <li>Bonus: najděte graf <i>annual-co2-cement</i> a porovnejte vývoj Číny a Česka.</li>
+        </ol>
+      </div>
+      <aside class="notes">Řešení (OWID, Global Carbon Project): Česko z výroby 1990 15,9 t → 2023 7,7 t (2024 7,0 t); ze spotřeby 1990 14,7 t → 2023 9,3 t. Svět ~4,7 t, EU ~5,4 t (2024, z výroby). Spotřební emise jsou vyšší, protože dovážíme zboží vyrobené jinde (často v Číně). Pointa pro manažery: emise dodavatelského řetězce (scope 3) a CBAM. Cement: Čína 2000 0,24 Gt → 2020 0,83 Gt → 2024 0,62 Gt; Česko kolem 1,5–1,9 Mt.</aside>
+    </section>
+
+    <section>
+      <div class="tag-label calc">Výpočty · 15 min</div>
+      <div class="row">
+        <div class="col">
+          <div class="calc-panel">
+            <p class="prose tight"><b>1 · Uhlíkový rozpočet</b></p>
+            <p class="prose tight" style="margin:0;">Do 1,5 °C zbývá ~170 Gt CO₂, světově se ročně vypustí ~42 Gt. (a) Na kolik let? (b) Kolik t CO₂ to je na jednoho z 8,2 mld. lidí? (c) Za kolik let by ho vyčerpal průměrný Čech (7,7 t/rok)?</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="calc-panel">
+            <p class="prose tight"><b>2 · Močovina</b> (CO(NH₂)₂, 60,06 g/mol)</p>
+            <div class="formula" style="background:var(--surface); font-size:21px;">2NH₃ + CO₂ → CO(NH₂)₂ + H₂O</div>
+            <p class="prose tight" style="margin:0;">Kolik t NH₃ a CO₂ spotřebuje výroba 1 t močoviny? (NH₃ 17,03; CO₂ 44,01 g/mol)</p>
+          </div>
+        </div>
+      </div>
+      <div class="calc-panel" style="margin-top:16px; padding:18px 30px;">
+        <p class="prose tight" style="margin:0;"><b>3 · Cement:</b> slínek obsahuje ~65 % CaO. Kolik CO₂ se uvolní z vápence při výrobě 1 t slínku? (CaO 56,08; CO₂ 44,01 g/mol)</p>
+      </div>
+      <aside class="notes">Řešení: 1) (a) 170/42 ≈ 4 roky; (b) 170 000 Mt / 8 200 M lidí ≈ 21 t na osobu; (c) 21/7,7 ≈ 2,7 roku. 2) NH₃ = 2 × 17,03 / 60,06 = 0,567 t; CO₂ = 44,01/60,06 = 0,733 t. Světová výroba ~180–190 Mt močoviny ročně odpovídá ~130 Mt CO₂ (Ramirez-Corredores). Úkol z podkladu 11, snímek 22. 3) 0,65 × 44,01/56,08 = 0,51 t CO₂/t slínku.</aside>
+    </section>
+
+    <section class="divider-slide">
+      <div class="num">→</div>
+      <h2>Skupinová práce</h2>
+      <p>1 scénář na skupinu · 20 min</p>
+    </section>
+
+    <section>
+      <div class="task-slide-head">
+        <div class="task-swatch" style="background:var(--accent)"></div>
+        <div><div class="task-kind">Skupina · Cement</div><h3 style="font-size:34px;">Česká cementárna do roku 2040</h3></div>
+      </div>
+      <p class="scenario-text">Cementárna vyrábí 1 Mt cementu ročně. Cena emisní povolenky v EU ETS roste a bezplatné povolenky se snižují. Vedení chce plán snižování emisí.</p>
+      <ol class="task-steps">
+        <li>Rozdělte emise na procesní a palivové a ke každé části přiřaďte možná opatření.</li>
+        <li>Které opatření je nejlevnější a nejrychlejší? Které jediné řeší procesní emise?</li>
+        <li>Navrhněte pořadí kroků a co by závod potřeboval od státu (infrastruktura pro CO₂, úložiště).</li>
+      </ol>
+      <div class="data-hint2">Podklad: přednáška 4; výpočet 3; OWID annual-co2-cement; projekt Brevik (Norsko).</div>
+    </section>
+
+    <section>
+      <div class="task-slide-head">
+        <div class="task-swatch" style="background:var(--water)"></div>
+        <div><div class="task-kind">Skupina · Greenwashing?</div><h3 style="font-size:34px;">„Uhlíkově neutrální methanol“</h3></div>
+      </div>
+      <p class="scenario-text">Dodavatel nabízí „uhlíkově neutrální methanol vyrobený ze zachyceného CO₂“ jako palivo pro lodě. Vaše rejdařská firma zvažuje, zda ho kupovat a jak to komunikovat zákazníkům.</p>
+      <ol class="task-steps">
+        <li>Kolik CO₂ se uvolní spálením methanolu, který z něj vznikl? Je palivo „neutrální“?</li>
+        <li>Jaké tři otázky musíte dodavateli položit (původ CO₂, původ vodíku a elektřiny…)?</li>
+        <li>Formulujte tvrzení pro zákazníky, které bude pravdivé.</li>
+      </ol>
+      <div class="data-hint2">Podklad: přednáška 4 (methanol, doba vázání); Ramirez-Corredores (2024), Tab. 1.</div>
+    </section>
+
+    <section>
+      <div class="task-slide-head">
+        <div class="task-swatch" style="background:var(--primary)"></div>
+        <div><div class="task-kind">Skupina · Zdroje informací</div><h3 style="font-size:34px;">Rešerše: komu věřit o CCS?</h3></div>
+      </div>
+      <p class="scenario-text">Na webu Fakta o klimatu najděte rešerši „Zachytávání, ukládání a využití uhlíku“ (faktaoklimatu.cz/studie/2022-reserse-ccs).</p>
+      <ol class="task-steps">
+        <li>Z každé kategorie (instituce, studie, aplikace) vyberte jeden odkaz a otevřete ho.</li>
+        <li>Kdo je autor, kdo ho financuje a jaký má zájem? Je to primární, nebo sekundární zdroj?</li>
+        <li>Seřaďte tři zdroje podle důvěryhodnosti a zdůvodněte.</li>
+      </ol>
+      <div class="data-hint2">Úkol z loňské přednášky 11, zkrácený. Stejný postup budete potřebovat v projektu.</div>
+    </section>
+
+    <section>
+      <div class="task-slide-head">
+        <div class="task-swatch" style="background:var(--danger)"></div>
+        <div><div class="task-kind">Skupina · Sklo</div><h3 style="font-size:34px;">Sklárna a střepy</h3></div>
+      </div>
+      <p class="scenario-text">Výrobce obalového skla chce zvýšit podíl střepů ve vsázce z 50 % na 80 %. Problémem je kvalita sběru (keramika, barvy, kovová víčka).</p>
+      <ol class="task-steps">
+        <li>Proč střepy snižují energii i procesní emise? Odhadněte úsporu (pravidlo: 10 % střepů ≈ 2–3 % energie, ~5 % CO₂).</li>
+        <li>Jak zlepšit kvalitu střepů: sběr, třídění, komunikace se spotřebiteli?</li>
+        <li>Kdo v řetězci by měl nést náklady?</li>
+      </ol>
+      <div class="data-hint2">Podklad: přednáška 4 (sklo); data o třídění skla v ČR (EKO-KOM, výroční zprávy).</div>
+    </section>
+
+    <section>
+      <div class="kicker">Shrnutí a projekt</div>
+      <div class="row">
+        <div class="col">
+          <div class="goal-list tight">
+            <div class="item"><span class="dot"></span><span>Emise z výroby a ze spotřeby jsou různé pohledy. U Česka se liší o ~20 %.</span></div>
+            <div class="item"><span class="dot"></span><span>Uhlíkový rozpočet pro 1,5 °C je při dnešních emisích na pár let.</span></div>
+            <div class="item"><span class="dot"></span><span>U každého „zeleného“ tvrzení se ptejte: odkud uhlík, odkud energie, na jak dlouho vázán.</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="slot-card">
+            <div class="slot-id">Příště · Přednáška 5 · 2. 12.</div>
+            <h4>T5 Recyklace plastů · T6 Bioplasty</h4>
+            <p>Podklady nejpozději 2 dny před přednáškou.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.04, minScale: 0.2, maxScale: 2, controls: true, progress: true, slideNumber: 'c/t', plugins: [ RevealNotes ] });
+  document.querySelectorAll('.flip-card').forEach(function (card) {
+    card.addEventListener('click', function () { card.classList.toggle('flipped'); });
+  });
+  document.querySelectorAll('.quiz-block').forEach(function (block) {
+    var answer = block.dataset.answer, feedback = block.querySelector('.quiz-feedback3'), buttons = block.querySelectorAll('.quiz-opt3');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (block.classList.contains('answered')) return;
+        block.classList.add('answered');
+        var chosen = btn.dataset.key;
+        buttons.forEach(function (b) {
+          b.disabled = true;
+          if (b.dataset.key === answer) b.classList.add('correct');
+          else if (b.dataset.key === chosen) b.classList.add('incorrect');
+          else b.classList.add('dim');
+        });
+        if (feedback) feedback.hidden = false;
+      });
+    });
+  });
+</script>
+</body>
+</html>

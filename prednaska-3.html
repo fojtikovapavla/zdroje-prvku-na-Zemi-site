@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Přednáška 3 — Od minerálů k materiálům II</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1 cover -->
+    <section class="cover-slide">
+      <div>
+        <div class="eyebrow">Chemické principy a udržitelnost · Blok 2</div>
+        <h1>Od minerálů k materiálům II</h1>
+        <p class="sub">Železo a ocel · titan · měď · kobalt a nikl · platinové kovy · vzácné zeminy</p>
+      </div>
+      <div class="foot"><div class="bar"></div><span>Přednáška 3 · Zdroje prvků na Zemi</span></div>
+      <aside class="notes">
+        Kovy, na kterých stojí stavebnictví, elektrifikace a baterie. U každého: zdroj → technologie → dopad → riziko dodávek. Výklad ~60 min, pak dvě studentské prezentace (T1 vzácné zeminy, T2 kobalt a nikl), 2 × 15 min. Rovnice ukazujte jako „co se děje“, ne k zapamatování.
+        Zdroje: podklady 08 (Zdroje prvků IV) a 09 (Ocel) z loňska, aktualizované; Our World in Data, Minerals explorer (USGS/BGS, 2024); Moreno-Leiva et al., Renewable energy in copper production (preprint); Geological Society of London, Rare Earth Elements (2011); Jones et al., JACS 2025, 147, 22666.
+      </aside>
+    </section>
+
+    <!-- 2 goals -->
+    <section>
+      <div class="kicker">Cíle přednášky</div>
+      <div class="goal-list">
+        <div class="item"><span class="dot"></span><span>Vysvětlit, proč při výrobě oceli vzniká CO₂ z chemické reakce a co mění vodík</span></div>
+        <div class="item"><span class="dot"></span><span>Vysvětlit, proč klesající obsah kovu v rudě zvyšuje spotřebu energie</span></div>
+        <div class="item"><span class="dot"></span><span>Z dat rozlišit, kdo kov <b>těží</b> a kdo ho <b>zpracovává</b></span></div>
+        <div class="item"><span class="dot"></span><span>Vysvětlit, proč jsou vzácné zeminy „vzácné“, i když vzácné nejsou, a jak pomáhá recyklace</span></div>
+      </div>
+      <aside class="notes">Na začátku ohlaste dvě studentské prezentace na konci. Výklad o REE a Co/Ni je záměrně stručný: studenti ho rozvedou s daty.</aside>
+    </section>
+
+    <!-- 3 divider Fe -->
+    <section class="divider-slide">
+      <div class="num">01</div>
+      <h2>Železo a ocel</h2>
+      <p>Nejvíc vyráběný kov na světě</p>
+      <aside class="notes">Čas: cca 15 minut.</aside>
+    </section>
+
+    <!-- 4 steel data -->
+    <section>
+      <div class="tag-label data">Data · výroba oceli</div>
+      <div class="stat-row">
+        <div class="stat"><b>0,77 Gt</b><span>svět 1990</span></div>
+        <div class="stat"><b>1,9 Gt</b><span>svět 2024 (~240 kg na člověka)</span></div>
+        <div class="stat warn"><b>52 %</b><span>podíl Číny 2024 (1990: 9 %)</span></div>
+        <div class="stat acc"><b>29 %</b><span>průmyslových emisí ČR je z výroby oceli</span></div>
+      </div>
+      <div class="row" style="margin-top:24px;">
+        <div class="col">
+          <div class="panel">
+            <p class="prose tight"><b>Ruda:</b> hematit Fe₂O₃ a magnetit Fe₃O₄. Těží hlavně Austrálie a Brazílie.</p>
+            <p class="prose tight" style="margin:0;">Železa je dost (5,6 % kůry). Problémem oceli není dostupnost, ale <b>energie a CO₂</b>.</p>
+          </div>
+        </div>
+        <div class="col">
+          <p class="src-line" style="margin-top:0;">Zdroj: USGS via Our World in Data (Steel, crude); Fakta o klimatu / ČHMÚ (data 2022). Celosvětově ocel tvoří ~7–11 % emisí CO₂.</p>
+          <p class="owid-link"><a href="https://ourworldindata.org/explorers/minerals?Mineral=Steel&Metric=Production&Type=Processing%2C+crude&Share+of+global=true" target="_blank">ocel v OWID ↗</a></p>
+        </div>
+      </div>
+      <aside class="notes">Podíl Číny na výrobě oceli (OWID): 1990 8,6 %, 2000 15 %, 2010 44,6 %, 2020 59,2 %, 2024 52,1 %. 1,9 Gt / 8,1 mld. lidí ≈ 235 kg. Číslo 29 % pro ČR: infografika Fakta o klimatu „Kde vznikají emise v českém průmyslu“ (ČHMÚ, NIR 2024, data 2022).</aside>
+    </section>
+
+    <!-- 5 blast furnace -->
+    <section>
+      <div class="kicker">Vysoká pec · co se v ní děje</div>
+      <div class="row middle">
+        <div class="col" style="flex:0.9">
+          <div class="diagram-wrap">
+            <svg viewBox="0 0 360 420" role="img" aria-label="Schéma vysoké pece">
+              <path d="M120,20 L240,20 L300,250 L260,400 L100,400 L60,250 Z" fill="var(--surface-2)" stroke="var(--ink-muted)" stroke-width="3"/>
+              <rect x="100" y="330" width="160" height="70" fill="var(--accent-soft)"/>
+              <g font-family="var(--font-body)">
+                <text x="180" y="12" text-anchor="middle" font-size="15" fill="var(--ink-muted)">ruda + koks + vápenec ↓</text>
+                <text x="180" y="110" text-anchor="middle" font-size="18" fill="var(--ink)">CO odebírá železu</text>
+                <text x="180" y="134" text-anchor="middle" font-size="18" fill="var(--ink)">kyslík</text>
+                <text x="180" y="240" text-anchor="middle" font-size="18" fill="var(--ink)">až 2000 °C</text>
+                <text x="180" y="360" text-anchor="middle" font-size="16" fill="var(--ink)">struska</text>
+                <text x="180" y="388" text-anchor="middle" font-size="16" font-weight="700" fill="var(--danger)">surové železo ~4 % C</text>
+                <text x="330" y="300" text-anchor="middle" font-size="15" fill="var(--water)">horký</text>
+                <text x="330" y="318" text-anchor="middle" font-size="15" fill="var(--water)">vzduch ←</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="col" style="flex:1.3">
+          <div class="formula" style="font-size:26px;">
+            2C + O₂ → 2CO<br>
+            Fe₂O₃ + 3CO → 2Fe + 3CO₂<br>
+            CaCO₃ → CaO + CO₂
+          </div>
+          <p class="prose tight">Uhlík (koks) je <b>palivo i redukční činidlo zároveň</b>: bere železu kyslík a odchází jako CO₂. Proto pec nejde „jen přepnout“ na zelenou elektřinu.</p>
+          <p class="prose tight" style="margin:0;">Vápenec váže nečistoty do <b>strusky</b> a sám uvolní další CO₂.</p>
+        </div>
+      </div>
+      <aside class="notes">Zjednodušeno. Ve skutečnosti probíhá redukce postupně (Fe₂O₃ → Fe₃O₄ → FeO → Fe) v různých teplotních zónách (podklad 09). Vstupy na 1 t oceli: ~1,4 t rudy, ~0,8 t uhlí, ~0,27 t vápence. Rozklad vápence je stejná reakce jako při výrobě cementu (Přednáška 4).</aside>
+    </section>
+
+    <!-- 6 routes -->
+    <section>
+      <div class="kicker">Tři cesty k oceli</div>
+      <div class="row">
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Vysoká pec + konvertor</h4><p style="font-size:21px; line-height:1.4; margin:0 0 10px;">V konvertoru kyslík spálí přebytečný uhlík (4 % → 0,1 %). Část vsázky je šrot.</p><p style="font-family:var(--font-mono); font-size:19px; color:var(--danger); margin:0;">~70 % světové výroby</p></div></div>
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Elektrická pec + šrot</h4><p style="font-size:21px; line-height:1.4; margin:0 0 10px;">Elektrický oblouk roztaví šrot (~440 kWh/t). Recyklace oceli.</p><p style="font-family:var(--font-mono); font-size:19px; color:var(--primary-strong); margin:0;">~30 % světové výroby</p></div></div>
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>Přímá redukce + elektrická pec</h4><p style="font-size:21px; line-height:1.4; margin:0 0 10px;">Ruda se redukuje plynem v pevném stavu: zemním plynem, nebo vodíkem.</p><p style="font-family:var(--font-mono); font-size:19px; color:var(--water); margin:0;">cesta k „zelené oceli“</p></div></div>
+      </div>
+      <div class="hbars" style="margin-top:24px; grid-template-columns:300px 1fr 150px;">
+        <div class="lbl2">vysoká pec + konvertor</div><div class="track"><div class="fill" style="width:100%; background:var(--danger)"></div></div><div class="val2">≈ 2,2 t CO₂/t</div>
+        <div class="lbl2">přímá redukce (plyn)</div><div class="track"><div class="fill" style="width:64%; background:var(--ink-muted)"></div></div><div class="val2">1,4 t CO₂/t</div>
+        <div class="lbl2">elektrická pec + šrot</div><div class="track"><div class="fill" style="width:14%; background:var(--primary)"></div></div><div class="val2">0,3 t CO₂/t</div>
+      </div>
+      <aside class="notes">Hodnoty pro šrot a přímou redukci z podkladu 09; vysoká pec je řádový odhad (IEA; worldsteel uvádí světový průměr všech cest ~1,9 t CO₂/t). Emise elektrické pece závisí na elektřině. Šrotu nebude dost: ocel ve stavbách žije desítky let a spotřeba roste. Proto je potřeba i čistší primární výroba.</aside>
+    </section>
+
+    <!-- 7 H2 calc -->
+    <section>
+      <div class="tag-label calc">Odhad</div>
+      <h3 style="font-size:32px; margin-bottom:12px;">Kolik vodíku spotřebuje tuna „zelené“ oceli?</h3>
+      <div class="row">
+        <div class="col">
+          <div class="calc-panel">
+            <div class="formula" style="background:var(--surface); font-size:26px;">Fe₂O₃ + 3H₂ → 2Fe + 3H₂O</div>
+            <p class="prose tight">Na 2 atomy železa 3 molekuly H₂. Při molárních hmotnostech Fe 55,85 a H₂ 2,02 g/mol:</p>
+            <p class="prose tight" style="margin:0;"><b>≈ 54 kg H₂ na 1 t železa</b></p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="example-panel">
+            <p class="prose tight">Vodík z elektrolýzy vody: ~50–55 kWh na 1 kg.</p>
+            <p class="prose tight"><b>→ ~3 MWh elektřiny na tunu železa</b>, jen na vodík.</p>
+            <p class="prose tight" style="margin:0;">Místo CO₂ vzniká voda. Přínos pro klima ale závisí na tom, odkud je elektřina.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Postup: 1 000 000 g / 55,85 = 17 900 mol Fe; × 3/2 = 26 900 mol H₂; × 2,016 = 54 kg. Reálná spotřeba je vyšší. Projekty: Stegra (Boden, Švédsko), HYBRIT (SSAB). Ověřte aktuální stav, projekty se zpožďují. V Semináři 3 to studenti přepočítají na celou ocelárnu.</aside>
+    </section>
+
+    <!-- 8 Ti -->
+    <section>
+      <div class="kicker">Titan · hojný, a přesto drahý</div>
+      <div class="row">
+        <div class="col">
+          <div class="panel">
+            <p class="prose tight"><b>Ilmenit</b> FeTiO₃ a <b>rutil</b> TiO₂, z minerálních písků. Titan je ~9. nejhojnější prvek kůry.</p>
+            <p class="prose tight" style="margin:0;">Přes 90 % titanových minerálů končí jako <b>bílý pigment TiO₂</b> (barvy, plasty, papír), ne jako kov.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="chem-slide-panel">
+            <p class="prose tight">Titan nejde redukovat uhlíkem jako železo: reaguje s C, O i N. Proto se převádí na <b>TiCl₄</b> a redukuje hořčíkem v argonu (Krollův proces).</p>
+            <p class="prose tight" style="margin:0;">Pomalé, vsádkové, energeticky náročné. <b>Cenu dělá chemie zpracování, ne vzácnost.</b></p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">TiO₂ + 2Cl₂ + 2C → TiCl₄ + 2CO; TiCl₄ + 2Mg → Ti + 2MgCl₂. Stejný princip „přes těkavou sloučeninu“ jako u čistého křemíku (Přednáška 2). Pointa pro manažery: hojnost v kůře ≠ dostupnost materiálu.</aside>
+    </section>
+
+    <!-- 9 divider Cu -->
+    <section class="divider-slide">
+      <div class="num">02</div>
+      <h2>Měď</h2>
+      <p>Kov elektrifikace a klesající obsah kovu v rudě</p>
+      <aside class="notes">Čas: cca 10 minut.</aside>
+    </section>
+
+    <!-- 10 Cu energy -->
+    <section>
+      <div class="tag-label data">Práce s daty</div>
+      <h3 style="font-size:32px; margin-bottom:10px;">Kde se spotřebuje energie na tunu mědi (Chile)</h3>
+      <p style="font-size:22px; color:var(--ink-muted); margin-bottom:6px;">Ze sulfidických rud: tavení (pyrometalurgie) · 36,7 GJ/t</p>
+      <div class="stackbar">
+        <div style="flex:9.6; background:var(--ink-muted)"><span class="sv">Těžba 9,6</span></div>
+        <div style="flex:12.8; background:var(--accent)"><span class="sv">Mletí a flotace 12,8</span></div>
+        <div style="flex:8.9; background:var(--danger)"><span class="sv">Tavírna 8,9</span></div>
+        <div style="flex:3.2; background:var(--water)"><span class="sv">3,2</span></div>
+        <div style="flex:2.2; background:var(--line)"><span class="sv" style="color:var(--ink)">2,2</span></div>
+      </div>
+      <p style="font-size:22px; color:var(--ink-muted); margin:18px 0 6px;">Z oxidických rud: loužení kyselinou (hydrometalurgie) · 24,3 GJ/t</p>
+      <div class="stackbar" style="width:66%">
+        <div style="flex:9.6; background:var(--ink-muted)"><span class="sv">Těžba 9,6</span></div>
+        <div style="flex:14.7; background:var(--water)"><span class="sv">Loužení a elektrolýza 14,7</span></div>
+      </div>
+      <div class="data-task" style="margin-top:20px; padding:20px 30px;">
+        <ol style="font-size:24px; margin:0;"><li>Který krok byste nejsnáze převedli na solární elektřinu, a který nejhůř?</li></ol>
+      </div>
+      <aside class="notes">Data: Moreno-Leiva et al., Obr. 4 (Cochilco 2018, průměr Chile 2017). Modrý blok 3,2 = elektrolytická rafinace, šedý 2,2 = voda a služby. Řešení: mletí, flotace a elektrolýza jsou elektrické, takže jdou nejsnáz. Elektrolýza potřebuje stejnosměrný proud, který FV panel přímo dává (Castillo et al. 2015). Nejhůř těžba (dieselové nákladní vozy 2,6 MW) a tavírna (vysoké teploty, paliva).</aside>
+    </section>
+
+    <!-- 11 Cu ore grade + paradox -->
+    <section>
+      <div class="kicker">Měď · víc horniny na stejný kov</div>
+      <div class="row">
+        <div class="col">
+          <div class="calc-panel">
+            <p class="prose tight">Chile: obsah mědi v rudě <b>1,0 % (2008) → 0,8 % (2017)</b>. Energie na úpravu rudy ve stejné době <b>+50 %</b>.</p>
+            <p class="prose tight" style="margin:0;">Při 0,8 % Cu a 85% výtěžnosti: <b>~147 t horniny na 1 t mědi</b>. Téměř vše je odpad (hlušina).</p>
+          </div>
+          <div class="formula" style="font-size:22px; margin-top:16px;">Cu²⁺ + 2e⁻ → Cu <span style="color:var(--ink-muted)">(elektrolýza, katoda 99,99 %)</span></div>
+        </div>
+        <div class="col">
+          <div class="tag-label data">g mědi na kWh vyrobené elektřiny</div>
+          <div class="hbars" style="grid-template-columns:200px 1fr 90px;">
+            <div class="lbl2">fotovoltaika</div><div class="track"><div class="fill" style="width:100%; background:var(--accent)"></div></div><div class="val2">~0,20</div>
+            <div class="lbl2">vítr</div><div class="track"><div class="fill" style="width:28%; background:var(--ink-muted)"></div></div><div class="val2">~0,06</div>
+            <div class="lbl2">plyn, uhlí</div><div class="track"><div class="fill" style="width:5%; background:var(--ink-muted)"></div></div><div class="val2">~0,01</div>
+          </div>
+          <p class="caption">Obnovitelné zdroje potřebují víc mědi. Čistší výroba mědi proto snižuje stopu každého panelu.</p>
+        </div>
+      </div>
+      <aside class="notes">Graf orientačně odečtený z Obr. 1 (Moreno-Leiva et al., data ecoinvent 3). Náhrada elektřiny solární by snížila uhlíkovou stopu chilské mědi o ≥ 60 % (tavení) a ≥ 75 % (loužení). Recyklovaná měď potřebuje o ~85 % méně energie. Z dat OWID: těžba mědi 1990 9,2 Mt → 2024 23 Mt.</aside>
+    </section>
+
+    <!-- 12 divider Co Ni -->
+    <section class="divider-slide">
+      <div class="num">03</div>
+      <h2>Kobalt, nikl, platinové kovy</h2>
+      <p>Baterie, katalyzátory a málo zemí</p>
+      <aside class="notes">Čas: cca 10 minut. Záměrně stručně, detail přinese prezentace T2.</aside>
+    </section>
+
+    <!-- 13 mine vs refine -->
+    <section>
+      <div class="tag-label data">Data · kdo těží a kdo zpracovává</div>
+      <div class="hbars" style="grid-template-columns:420px 1fr 100px; margin-top:14px;">
+        <div class="lbl2">Kobalt, těžba · DR Kongo</div><div class="track"><div class="fill" style="width:75.9%; background:var(--accent)"></div></div><div class="val2">76 %</div>
+        <div class="lbl2">Kobalt, rafinace · Čína (2021)</div><div class="track"><div class="fill" style="width:76.4%; background:var(--danger)"></div></div><div class="val2">76 %</div>
+        <div class="lbl2">Měď, těžba · Chile</div><div class="track"><div class="fill" style="width:23%; background:var(--accent)"></div></div><div class="val2">23 %</div>
+        <div class="lbl2">Měď, rafinace · Čína</div><div class="track"><div class="fill" style="width:44.4%; background:var(--danger)"></div></div><div class="val2">44 %</div>
+        <div class="lbl2">Nikl, těžba · Indonésie (2020)</div><div class="track"><div class="fill" style="width:30.7%; background:var(--ink-muted)"></div></div><div class="val2">31 %</div>
+        <div class="lbl2">Nikl, těžba · Indonésie (2024)</div><div class="track"><div class="fill" style="width:59.5%; background:var(--accent)"></div></div><div class="val2">59 %</div>
+      </div>
+      <p class="src-line">Podíl na světové produkci, 2024, není-li uvedeno jinak. Zdroj: USGS via Our World in Data.</p>
+      <aside class="notes">Kobalt je vedlejší produkt těžby mědi (Kongo) a niklu (Indonésie). Kongo vytěží ~220 kt z 290 kt (2024), ale zpracování probíhá převážně v Číně. Indonésie zdvojnásobila podíl za čtyři roky díky zpracování lateritových rud kyselým loužením za vysokého tlaku (HPAL), s elektřinou z uhelných elektráren. Údaj o emisích HPAL je tvrzení k ověření v prezentaci T2. Podklad 08 měl „ověřte“: oba podíly (> 60 % Co, > 50 % Ni) platí. Pozn.: data o rafinaci kobaltu v OWID končí rokem 2021.</aside>
+    </section>
+
+    <!-- 14 batteries + PGM -->
+    <section>
+      <div class="kicker">Baterie a katalyzátory</div>
+      <div class="row">
+        <div class="col">
+          <div class="compare-panel" style="height:100%">
+            <h4>Chemie katody = volba rizika</h4>
+            <p style="font-size:21px; line-height:1.45; margin:0 0 8px;"><b>NMC, NCA</b>: Li + Ni (+ Co, Mn, Al). Vysoká hustota energie, závislost na Ni a Co.</p>
+            <p style="font-size:21px; line-height:1.45; margin:0;"><b>LFP</b> (LiFePO₄): bez Ni a Co, levnější, stabilnější, rychle roste. Riziko se přesouvá na lithium, grafit a zpracování v Číně.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="compare-panel" style="height:100%">
+            <h4>Platinové kovy (Pt, Pd, Rh, Ir)</h4>
+            <p style="font-size:21px; line-height:1.45; margin:0 0 8px;">Jižní Afrika a Rusko. V rudě jen jednotky gramů na tunu.</p>
+            <p style="font-size:21px; line-height:1.45; margin:0;">Autokatalyzátory, chemická katalýza, <b>elektrolyzéry na vodík</b> (Ir, Pt). Starý katalyzátor je „bohatší ruda“ než ruda, proto se recykluje.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Substituce (LFP místo NMC) je reálná strategie, ale riziko jen přesouvá (GSL 2011: „substituce nemusí vyřešit problém dodávek“). Iridium (těží se jednotky tun ročně) je jedním z omezení pro elektrolyzéry PEM, a tím pro vodík do zelené oceli. Data o PGM v OWID jsou pro rok 2024 neúplná (chybí Jižní Afrika), proto je tu neukazuji. I to je zjištění o kvalitě dat.</aside>
+    </section>
+
+    <!-- 15 divider REE -->
+    <section class="divider-slide">
+      <div class="num">04</div>
+      <h2>Vzácné zeminy</h2>
+      <p>17 prvků, které nejsou vzácné</p>
+      <aside class="notes">Čas: cca 12 minut. T1 navazuje s geopolitikou a daty.</aside>
+    </section>
+
+    <!-- 16 REE flip -->
+    <section>
+      <div class="kicker">Co víte o vzácných zeminách?</div>
+      <div class="flip-row">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><p>Které prvky patří mezi vzácné zeminy?</p><div class="hint">klikněte ↻</div></div>
+            <div class="flip-card-back"><p>15 lanthanoidů (La–Lu) + <b>Y</b> + <b>Sc</b>. Lehké (La–Sm) a těžké (Eu–Lu, Y).</p></div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><p>Je cer vzácnější než měď?</p><div class="hint">klikněte ↻</div></div>
+            <div class="flip-card-back"><p>Ne. Ce <b>43 ppm</b> v kůře, Cu 27 ppm, Li 17 ppm. Jen málokde jsou v těžitelné koncentraci.</p></div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><p>Proč se špatně oddělují jedna od druhé?</p><div class="hint">klikněte ↻</div></div>
+            <div class="flip-card-back"><p>Mají téměř stejnou chemii (všechny tvoří ionty Ln³⁺ podobné velikosti). Oddělení vyžaduje stovky opakovaných kroků.</p></div>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Zdroje: GSL (2011), podklad 08. Těží se z minerálů bastnäsit (CeCO₃F) a monazit (CePO₄), které často obsahují radioaktivní thorium. Na 1 t vyrobených REE vzniká ~75 m³ odpadních vod a ~1 t radioaktivního odpadu (podklad 08). Separace spotřebuje 9–13× víc energie než těžba.</aside>
+    </section>
+
+    <!-- 17 NdFeB -->
+    <section>
+      <div class="kicker">Magnety · lehké zeminy dávají sílu, těžké stabilitu</div>
+      <div class="row middle">
+        <div class="col">
+          <div class="goal-list tight">
+            <div class="item"><span class="dot"></span><span><b>Nd, Pr</b>: silné pole v malém objemu (magnet NdFeB)</span></div>
+            <div class="item"><span class="dot" style="background:var(--water)"></span><span><b>Dy, Tb</b>: magnet nepřijde o sílu za horka (motory elektromobilů)</span></div>
+            <div class="item"><span class="dot" style="background:var(--accent)"></span><span>Velká větrná turbína: až ~2 t magnetů. Elektromobil: 1–2 kg.</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="tag-label data">Co je v magnetu dnešního elektromobilu</div>
+          <div class="stackbar">
+            <div style="flex:90.4; background:var(--water)"><span class="sv">Nd 90 %</span></div>
+            <div style="flex:1.9; background:var(--primary)"></div>
+            <div style="flex:7.8; background:var(--danger)"><span class="sv">Ho</span></div>
+          </div>
+          <p class="caption">Lanthanoidy v magnetu z rotoru elektromobilu: Nd, Tb 1,9 %, <b>holmium 7,8 %</b>, žádné Dy. Výrobci složení nezveřejňují. Jones et al., ÚOCHB, JACS 2025.</p>
+        </div>
+      </div>
+      <aside class="notes">Holmium se zjevně používá jako náhrada dražšího dysprosia. Pro recyklaci to znamená, že je potřeba počítat s dalším prvkem. Lanthanoidy tvoří ~30 % hmotnosti magnetu.</aside>
+    </section>
+
+    <!-- 18 recycling -->
+    <section>
+      <div class="tag-label example">Příklad z praxe · český výzkum</div>
+      <h3 style="font-size:32px; margin-bottom:12px;">Recyklace magnetů ve vodě (ÚOCHB AV ČR)</h3>
+      <div class="row">
+        <div class="col">
+          <div class="example-panel">
+            <p class="prose tight">Speciální molekula (chelátor) „obalí“ ionty vzácných zemin. Větší ionty (Nd) tvoří nerozpustnou sraženinu, menší (Dy, Ho) zůstanou v roztoku.</p>
+            <p class="prose tight" style="margin:0;">Probíhá <b>ve vodě</b>, bez organických rozpouštědel, která používá průmysl. Chelátor se dá použít znovu.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="stat-row" style="flex-direction:column;">
+            <div class="stat"><b>99,7 %</b><span>čistota neodymu z magnetu elektromobilu po 5 opakováních</span></div>
+            <div class="stat acc"><b>67 %</b><span>výtěžek Nd (laboratorní měřítko)</span></div>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Jones, David, …, Polasek, JACS 2025, 147, 22666 (open access). Česká patentová přihláška. Kritický pohled pro studenty: laboratorní měřítko, ekonomika zatím neověřená, ztráty při čištění. Pro magnet stačí často jen upravit poměr prvků, ne je úplně oddělit. Odkazy z podkladu 08: iRozhlas, ČT24.</aside>
+    </section>
+
+    <!-- 19 REE supply -->
+    <section>
+      <div class="tag-label data">Data · podíl Číny na vzácných zeminách</div>
+      <div class="hbars" style="grid-template-columns:320px 1fr 110px; margin-top:12px;">
+        <div class="lbl2">těžba 2009</div><div class="track"><div class="fill" style="width:97%; background:var(--ink-muted)"></div></div><div class="val2">~97 %</div>
+        <div class="lbl2">těžba 2020</div><div class="track"><div class="fill" style="width:58%; background:var(--accent)"></div></div><div class="val2">58 %</div>
+        <div class="lbl2">těžba 2024</div><div class="track"><div class="fill" style="width:69%; background:var(--accent)"></div></div><div class="val2">69 %</div>
+        <div class="lbl2">zásoby 2024</div><div class="track"><div class="fill" style="width:49%; background:var(--water)"></div></div><div class="val2">49 %</div>
+        <div class="lbl2">separace (odhad IEA)</div><div class="track"><div class="fill" style="width:90%; background:var(--danger)"></div></div><div class="val2">~90 %</div>
+      </div>
+      <p class="src-line">GSL (2011) pro 2009; USGS via Our World in Data pro 2020–2024; IEA Global Critical Minerals Outlook pro separaci.</p>
+      <aside class="notes">Most k prezentaci T1. Neprozrazujte víc. Těžba se diverzifikovala (USA Mountain Pass 12 %, Myanmar 8 %, Austrálie Mount Weld), zpracování ne. Čína v dubnu 2025 zavedla licence na vývoz některých těžkých REE a magnetů, což zastavilo část výroby automobilek mimo Čínu. Ověřte aktuální stav.</aside>
+    </section>
+
+    <!-- 20 toxicity bridge -->
+    <section>
+      <div class="tag-label chem">Most k semináři · kovy a zdraví</div>
+      <h3 style="font-size:32px; margin-bottom:12px;">Kovy nekončí jen v materiálech</h3>
+      <div class="row">
+        <div class="col">
+          <div class="chem-slide-panel">
+            <p class="prose tight">Ionty těžkých kovů (Cd²⁺, Hg²⁺, Pb²⁺, Ni²⁺) se vážou na <b>síru v bílkovinách</b> (skupiny –SH aminokyseliny cysteinu). Bílkovina změní tvar a přestane fungovat.</p>
+            <p class="prose tight" style="margin:0;">Tělo se brání látkou <b>glutathion</b>, která má také –SH skupinu a kov „vychytá“.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="example-panel">
+            <p class="prose tight" style="margin:0;"><b>Kde vzniká expozice:</b> prach v dolech (Co), emise z taveb (SO₂, kovy), loužicí roztoky a hlušina, nikl jako alergen. Environmentální dopad těžby není jen CO₂.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Podrobněji v Semináři 3 (podle podkladu 09, toxikologie). Zde jen propojení.</aside>
+    </section>
+
+    <!-- 21 summary -->
+    <section>
+      <div class="kicker">Shrnutí</div>
+      <div class="goal-list tight">
+        <div class="item"><span class="dot"></span><span><b>Ocel:</b> uhlík je redukční činidlo, takže CO₂ vzniká z reakce. Cesty ven: šrot a elektřina, vodík.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Ti a REE:</b> hojné prvky, drahé kvůli náročnému zpracování.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Měď:</b> klesající obsah v rudě znamená víc energie a odpadu. Měď a obnovitelné zdroje se navzájem potřebují.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Co, Ni, REE:</b> těžba v několika zemích, zpracování převážně v Číně.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Strategie:</b> diverzifikace, změna chemie (LFP), recyklace. Působí v různém čase, žádná nestačí sama.</span></div>
+      </div>
+    </section>
+
+    <!-- 22 sources -->
+    <section>
+      <div class="kicker">Zdroje dat dne</div>
+      <div class="src-grid">
+        <div class="src-item"><b>OWID · Minerals explorer</b><span>Těžba vs. rafinace (Mine / Refinery) pro Cu, Co, Ni, ocel, REE.</span><div class="use">seminář 3, T1, T2</div></div>
+        <div class="src-item"><b>Fakta o klimatu</b><span>Česká data o emisích (ČHMÚ) v přehledných infografikách se zdroji.</span><div class="use">ČR</div></div>
+        <div class="src-item"><b>Cochilco</b><span>Chilská komise pro měď: energie a voda v těžbě mědi.</span><div class="use">měď</div></div>
+        <div class="src-item"><b>Odborný článek</b><span>Jones et al., JACS 2025 (open access): primární zdroj k recyklaci magnetů.</span><div class="use">REE</div></div>
+      </div>
+    </section>
+
+    <!-- 23 student presentations -->
+    <section>
+      <div class="kicker">Studentské prezentace · 18. 11.</div>
+      <div class="slot-grid">
+        <div class="slot-card">
+          <div class="slot-id">T1 · 10 + 5 min</div>
+          <h4>Vzácné zeminy: ovládá Čína těžbu, nebo zpracování?</h4>
+          <p>Data OWID 2020–2024 vs. briefing GSL 2011; ověření jednoho tvrzení.</p>
+          <div class="who">prezentuje: ____________</div>
+        </div>
+        <div class="slot-card">
+          <div class="slot-id">T2 · 10 + 5 min</div>
+          <h4>Kobalt a nikl: baterie elektromobilů a dvě země</h4>
+          <p>DR Kongo, Indonésie, prodeje elektromobilů; ověření jednoho tvrzení.</p>
+          <div class="who">prezentuje: ____________</div>
+        </div>
+      </div>
+      <p class="caption" style="margin-top:22px;">Zadání a hodnocení: <a href="zadani-projektu.html">zadani-projektu.html</a></p>
+      <aside class="notes">Hlídejte čas (po 11 min ukončit). Po prezentaci nejdřív otázka prezentujícího pro publikum, pak dotazy. Hodnoťte podle rubriky, hlavně ověření tvrzení a grafy.</aside>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.04, minScale: 0.2, maxScale: 2, controls: true, progress: true, slideNumber: 'c/t', plugins: [ RevealNotes ] });
+  document.querySelectorAll('.flip-card').forEach(function (card) {
+    card.addEventListener('click', function () { card.classList.toggle('flipped'); });
+  });
+</script>
+</body>
+</html>

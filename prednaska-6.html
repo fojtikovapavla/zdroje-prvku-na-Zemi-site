@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Přednáška 6 — Voda a SSbD</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1 cover -->
+    <section class="cover-slide">
+      <div>
+        <div class="eyebrow">Chemické principy a udržitelnost · Blok 2</div>
+        <h1>Voda a bezpečné chemikálie</h1>
+        <p class="sub">Zdroje vody · voda jako zdroj prvků · voda v technologiích · strategie EU pro chemické látky · Safe and Sustainable by Design</p>
+      </div>
+      <div class="foot"><div class="bar"></div><span>Přednáška 6 · Zdroje prvků na Zemi</span></div>
+      <aside class="notes">
+        Poslední přednáška bloku. Výklad ~55 min, prezentace T7 (lithium a voda) a T8 (PFAS), na konci krátké shrnutí celého bloku. Spojuje dvě témata: vodu jako zdroj a médium (a místo, kde končí škodlivé látky) a pravidla EU, která mají zajistit, aby nové chemikálie a materiály byly bezpečné a udržitelné už od návrhu.
+        Zdroje: Our World in Data (FAO AQUASTAT, WHO/UNICEF JMP); Moreno-Leiva et al. (voda v těžbě mědi); Evropská komise, Chemicals Strategy for Sustainability (COM(2020) 667); Doporučení Komise (EU) 2022/2510 (rámec SSbD); JRC; Směrnice (EU) 2020/2184 o pitné vodě; ECHA, návrh omezení PFAS (2023).
+      </aside>
+    </section>
+
+    <!-- 2 goals -->
+    <section>
+      <div class="kicker">Cíle přednášky</div>
+      <div class="goal-list">
+        <div class="item"><span class="dot"></span><span>Popsat, kolik sladké vody je k dispozici a kdo ji spotřebovává (svět × Česko)</span></div>
+        <div class="item"><span class="dot"></span><span>Uvést příklady, kdy je voda zdrojem prvků a kdy nezbytnou součástí technologie</span></div>
+        <div class="item"><span class="dot"></span><span>Vysvětlit cíle evropské strategie pro chemické látky a rozdíl mezi <b>nebezpečností</b> a <b>rizikem</b></span></div>
+        <div class="item"><span class="dot"></span><span>Popsat pět kroků rámce <b>Safe and Sustainable by Design</b> a použít je na příkladu PFAS</span></div>
+      </div>
+    </section>
+
+    <!-- 3 water on Earth -->
+    <section>
+      <div class="tag-label data">Kolik vody máme</div>
+      <p style="font-size:22px; color:var(--ink-muted); margin-bottom:6px;">Veškerá voda na Zemi</p>
+      <div class="stackbar">
+        <div style="flex:97.5; background:var(--water)"><span class="sv">slaná (oceány) 97,5 %</span></div>
+        <div style="flex:2.5; background:var(--primary)"></div>
+      </div>
+      <p style="font-size:22px; color:var(--ink-muted); margin:22px 0 6px;">Sladká voda (2,5 %)</p>
+      <div class="stackbar">
+        <div style="flex:69; background:#BFD7E2"><span class="sv" style="color:var(--ink)">led a sníh ~69 %</span></div>
+        <div style="flex:30; background:var(--water)"><span class="sv">podzemní ~30 %</span></div>
+        <div style="flex:1.2; background:var(--primary)"></div>
+      </div>
+      <p class="prose tight" style="margin-top:22px;">Řeky a jezera, ze kterých bereme většinu vody, jsou asi <b>1 % sladké vody</b>, tedy setiny procenta veškeré vody na Zemi.</p>
+      <aside class="notes">Řádové hodnoty podle USGS (Shiklomanov). Navazuje na hydrologický cyklus z Bloku 1. Voda se „nespotřebuje“ (cyklus), ale může se znečistit, odpařit jinde nebo vyčerpat z podzemí rychleji, než se doplňuje.</aside>
+    </section>
+
+    <!-- 4 divider -->
+    <section class="divider-slide">
+      <div class="num">01</div>
+      <h2>Voda jako zdroj</h2>
+      <p>Kdo ji odebírá a co z ní získáváme</p>
+      <aside class="notes">Čas: cca 15 minut.</aside>
+    </section>
+
+    <!-- 5 withdrawals data -->
+    <section>
+      <div class="tag-label data">Data · na co se voda odebírá</div>
+      <div class="row">
+        <div class="col">
+          <p style="font-size:22px; color:var(--ink-muted); margin-bottom:6px;">Podíl zemědělství na odběrech sladké vody (2022)</p>
+          <div class="hbars" style="grid-template-columns:120px 1fr 80px;">
+            <div class="lbl2">svět</div><div class="track"><div class="fill" style="width:71%; background:var(--accent)"></div></div><div class="val2">71 %</div>
+            <div class="lbl2">Česko</div><div class="track"><div class="fill" style="width:3%; background:var(--accent)"></div></div><div class="val2">3 %</div>
+          </div>
+          <p class="prose tight" style="margin-top:18px;">V Česku se voda odebírá hlavně pro <b>průmysl, chlazení elektráren</b> a vodovody.</p>
+        </div>
+        <div class="col">
+          <div class="stat-row" style="flex-direction:column;">
+            <div class="stat"><b>20 % · 18 %</b><span>vodní stres Česko · svět (odběry jako podíl obnovitelných zdrojů, 2023)</span></div>
+            <div class="stat acc"><b>98 % · 74 %</b><span>lidí s bezpečně zajištěnou pitnou vodou: Česko · svět (2024)</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="src-line">Zdroj: FAO AQUASTAT a WHO/UNICEF JMP via Our World in Data (agricultural-water-as-a-share-of-total-water-withdrawals, freshwater-withdrawals-as-a-share-of-internal-resources, proportion-using-safely-managed-drinking-water).</p>
+      <aside class="notes">Data OWID: zemědělství svět 71 % (2022), Česko 3 % (2022). Vodní stres Česko 20 % (2023; v roce 2000 33 %, pokles díky úsporám v průmyslu), svět 17,6 %, Chile 9 %. Bezpečně zajištěná pitná voda: svět 73,7 %, Česko 98,1 % (2024). Pozor: národní průměry vodního stresu skrývají regionální problémy (sucho na jižní Moravě, poušť Atacama). Proto je v Semináři 6 úloha na místní data.</aside>
+    </section>
+
+    <!-- 6 water as source of elements -->
+    <section>
+      <div class="kicker">Voda jako zdroj prvků</div>
+      <table class="data-table">
+        <thead><tr><th>Prvek / látka</th><th>Odkud</th><th>Poznámka</th></tr></thead>
+        <tbody>
+          <tr><td><b>NaCl</b></td><td>mořská voda, solanky</td><td>sůl, výroba chloru a NaOH (chemický průmysl)</td></tr>
+          <tr><td><b>Li</b></td><td>solanky v Chile a Argentině</td><td>odpařování, srážení Li₂CO₃ (Přednáška 2, T7)</td></tr>
+          <tr><td><b>K, Br, Mg</b></td><td>Mrtvé moře, solanky</td><td>draselná hnojiva, bromové zpomalovače hoření</td></tr>
+          <tr><td><b>U</b></td><td>mořská voda (~3 µg/l)</td><td>obrovské celkové množství, ale tak zředěné, že se nevyplatí</td></tr>
+        </tbody>
+      </table>
+      <div class="panel soft" style="margin-top:18px;">
+        <p class="prose tight" style="margin:0;"><b>Zbytková solanka z odsolování</b> mořské vody je odpad, ale zároveň koncentrát prvků. Výzkum hledá, jak z ní získat Li, Mg nebo Rb.</p>
+      </div>
+      <aside class="notes">Pointa navazující na Přednášku 1: zdroj (resource) vs. zásoba (reserve). V oceánech jsou miliardy tun uranu i lithia, ale koncentrace je tak nízká, že by získání stálo víc energie, než je ekonomické. Koncentrace rozhoduje (srovnej s rudou).</aside>
+    </section>
+
+    <!-- 7 water in technology -->
+    <section>
+      <div class="kicker">Voda jako součást technologií</div>
+      <div class="row">
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>🔥 Chlazení</h4><p style="font-size:21px; line-height:1.4; margin:0;">Tepelné a jaderné elektrárny, chemické závody. Největší průmyslové odběry v Česku. Voda se ohřívá a část odpaří.</p></div></div>
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>💧 Ultračistá voda</h4><p style="font-size:21px; line-height:1.4; margin:0;">Výroba čipů a solárních článků. Voda čistší než destilovaná, ve velkých objemech.</p></div></div>
+      </div>
+      <div class="row" style="margin-top:18px;">
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>⚗️ Rozpouštědlo a reakční prostředí</h4><p style="font-size:21px; line-height:1.4; margin:0;">Loužení mědi kyselinou, flotace, elektrolýza, recyklace magnetů ve vodě (Přednáška 3).</p></div></div>
+        <div class="col"><div class="compare-panel" style="height:100%"><h4>⛰️ Voda pro doly v poušti</h4><p style="font-size:21px; line-height:1.4; margin:0;">Chile: mořská voda se odsoluje a čerpá až do 3000 m n. m. a ~100 km do vnitrozemí. Problém vody se mění na problém energie.</p></div></div>
+      </div>
+      <aside class="notes">Moreno-Leiva et al., kap. 3.1.3 a 4.3: spotřeba elektřiny na odsolování a čerpání vody pro chilské doly má do 10 let vzrůst asi čtyřnásobně. Energie na odsolování je o jeden až dva řády vyšší než na čerpání podzemní nebo povrchové vody (IEA). Spojení voda–energie–suroviny („nexus“).</aside>
+    </section>
+
+    <!-- 8 divider -->
+    <section class="divider-slide">
+      <div class="num">02</div>
+      <h2>Strategie EU pro chemické látky</h2>
+      <p>Prostředí bez toxických látek</p>
+      <aside class="notes">Čas: cca 10 minut.</aside>
+    </section>
+
+    <!-- 9 hazard vs risk -->
+    <section>
+      <div class="kicker">Nebezpečnost × riziko</div>
+      <div class="row middle">
+        <div class="col">
+          <div class="formula" style="font-size:32px; text-align:center;">riziko = nebezpečnost × expozice</div>
+          <p class="prose tight"><b>Nebezpečnost</b> je vlastnost látky (je karcinogenní, toxická, perzistentní). <b>Riziko</b> závisí na tom, kolik látky se k nám nebo do přírody dostane.</p>
+          <p class="prose tight" style="margin:0;">Příklad: chlor je velmi nebezpečný, ale v uzavřené výrobě PVC je riziko malé. Kobalt v baterii je bezpečný, v prachu v dole ne.</p>
+        </div>
+        <div class="col">
+          <div class="panel">
+            <p class="prose tight"><b>REACH</b> (2007): co se v EU vyrábí a dováží, musí být zaregistrováno s daty o vlastnostech.</p>
+            <p class="prose tight"><b>CLP</b>: klasifikace a označení (piktogramy, H-věty).</p>
+            <p class="prose tight" style="margin:0;"><b>Bezpečnostní list</b>: co musí znát každý, kdo s látkou pracuje.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Navazuje na toxikologii ze Semináře 3 (PubChem, H-věty). Pro manažery: rozlišení nebezpečnost/riziko je základ debat o regulaci („zakázat látku“ vs. „řídit expozici“). Strategie EU se u nejškodlivějších látek posouvá k přístupu založenému na nebezpečnosti.</aside>
+    </section>
+
+    <!-- 10 CSS -->
+    <section>
+      <div class="kicker">Chemicals Strategy for Sustainability (2020)</div>
+      <div class="goal-list tight">
+        <div class="item"><span class="dot"></span><span><b>Zakázat nejškodlivější látky</b> (karcinogenní, narušující hormony, perzistentní) ve spotřebitelských výrobcích, pokud nejsou nezbytné</span></div>
+        <div class="item"><span class="dot"></span><span><b>Nezbytné použití</b> (essential use): výjimky jen tam, kde je látka nezbytná pro společnost a nemá náhradu</span></div>
+        <div class="item"><span class="dot"></span><span><b>Regulovat skupiny látek</b>, ne jednotlivé molekuly. Brání to náhradě zakázané látky velmi podobnou látkou</span></div>
+        <div class="item"><span class="dot"></span><span><b>Jedna látka, jedno posouzení</b> napříč předpisy</span></div>
+        <div class="item"><span class="dot"></span><span><b>Bezpečné a udržitelné již od návrhu</b> (SSbD) pro nové chemikálie a materiály</span></div>
+      </div>
+      <aside class="notes">COM(2020) 667, součást Zelené dohody pro Evropu, cíl „zero pollution“. Příklad pro skupinový přístup: bisfenol A zakázán v kojeneckých lahvích → nahrazen bisfenolem S s podobnými účinky („regrettable substitution“). Totéž u PFAS: zakázané PFOA → nahrazeno jinými PFAS. Proto EU navrhuje omezit PFAS jako skupinu.</aside>
+    </section>
+
+    <!-- 11 divider SSbD -->
+    <section class="divider-slide">
+      <div class="num">03</div>
+      <h2>Safe and Sustainable by Design</h2>
+      <p>Bezpečné a udržitelné od návrhu</p>
+      <aside class="notes">Čas: cca 12 minut. V Semináři 6 studenti rámec použijí na výrobek.</aside>
+    </section>
+
+    <!-- 12 SSbD steps -->
+    <section>
+      <div class="kicker">Rámec SSbD · návrh + 5 kroků hodnocení</div>
+      <div class="diagram-wrap" style="padding:18px 22px;">
+        <svg viewBox="0 0 1080 300" role="img" aria-label="Pět kroků SSbD: nebezpečnost, bezpečnost při výrobě, bezpečnost při použití, environmentální udržitelnost, socioekonomická udržitelnost">
+          <g font-family="var(--font-body)">
+            <rect x="10" y="10" width="1060" height="58" rx="12" fill="var(--primary)"/>
+            <text x="540" y="47" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">Fáze návrhu: principy (méně nebezpečných látek, méně energie, recyklovatelnost…)</text>
+            <g>
+              <rect x="10" y="90" width="200" height="190" rx="12" fill="#F6DCD6"/>
+              <text x="110" y="128" text-anchor="middle" font-size="36" font-weight="700" fill="var(--danger)">1</text>
+              <text x="110" y="168" text-anchor="middle" font-size="19" font-weight="700" fill="var(--ink)">Nebezpečnost</text>
+              <text x="110" y="196" text-anchor="middle" font-size="16" fill="var(--ink-soft)">vlastnosti látky</text>
+              <text x="110" y="218" text-anchor="middle" font-size="16" fill="var(--ink-soft)">(toxicita, perzistence)</text>
+            </g>
+            <g>
+              <rect x="225" y="90" width="200" height="190" rx="12" fill="var(--accent-soft)"/>
+              <text x="325" y="128" text-anchor="middle" font-size="36" font-weight="700" fill="var(--accent)">2</text>
+              <text x="325" y="168" text-anchor="middle" font-size="19" font-weight="700" fill="var(--ink)">Výroba</text>
+              <text x="325" y="196" text-anchor="middle" font-size="16" fill="var(--ink-soft)">bezpečnost pracovníků</text>
+              <text x="325" y="218" text-anchor="middle" font-size="16" fill="var(--ink-soft)">při výrobě a zpracování</text>
+            </g>
+            <g>
+              <rect x="440" y="90" width="200" height="190" rx="12" fill="var(--water-soft)"/>
+              <text x="540" y="128" text-anchor="middle" font-size="36" font-weight="700" fill="var(--water)">3</text>
+              <text x="540" y="168" text-anchor="middle" font-size="19" font-weight="700" fill="var(--ink)">Použití</text>
+              <text x="540" y="196" text-anchor="middle" font-size="16" fill="var(--ink-soft)">zdraví a prostředí</text>
+              <text x="540" y="218" text-anchor="middle" font-size="16" fill="var(--ink-soft)">ve finálním výrobku</text>
+            </g>
+            <g>
+              <rect x="655" y="90" width="200" height="190" rx="12" fill="#DCEFE3"/>
+              <text x="755" y="128" text-anchor="middle" font-size="36" font-weight="700" fill="var(--primary)">4</text>
+              <text x="755" y="168" text-anchor="middle" font-size="19" font-weight="700" fill="var(--ink)">Životní prostředí</text>
+              <text x="755" y="196" text-anchor="middle" font-size="16" fill="var(--ink-soft)">LCA: emise, voda,</text>
+              <text x="755" y="218" text-anchor="middle" font-size="16" fill="var(--ink-soft)">suroviny, energie</text>
+            </g>
+            <g>
+              <rect x="870" y="90" width="200" height="190" rx="12" fill="var(--surface-2)" stroke="var(--line)" stroke-dasharray="6 6"/>
+              <text x="970" y="128" text-anchor="middle" font-size="36" font-weight="700" fill="var(--ink-muted)">5</text>
+              <text x="970" y="168" text-anchor="middle" font-size="19" font-weight="700" fill="var(--ink)">Společnost</text>
+              <text x="970" y="196" text-anchor="middle" font-size="16" fill="var(--ink-soft)">ekonomika, přínosy,</text>
+              <text x="970" y="218" text-anchor="middle" font-size="16" fill="var(--ink-soft)">pracovní podmínky</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <p class="prose tight" style="margin-top:16px;">Začíná se v rané fázi vývoje, kdy změna stojí málo. Data se doplňují, jak produkt dozrává.</p>
+      <aside class="notes">Doporučení Komise (EU) 2022/2510. Krok 5 je zatím volitelný, metodika se vyvíjí. Rámec je dobrovolný, ale má se stát standardem pro výzkum financovaný EU (Horizon Europe) a pro průmysl. JRC rámec po testovací fázi reviduje, ověřte aktuální verzi. Propojení s celým blokem: krok 4 je přesně to, co jsme dělali u oceli, hliníku, cementu a plastů (energie, emise, suroviny).</aside>
+    </section>
+
+    <!-- 13 design principles -->
+    <section>
+      <div class="kicker">Příklady principů návrhu z tohoto bloku</div>
+      <div class="row">
+        <div class="col">
+          <div class="goal-list tight">
+            <div class="item"><span class="dot"></span><span><b>Méně kritických surovin:</b> baterie LFP místo NMC, holmium místo dysprosia</span></div>
+            <div class="item"><span class="dot"></span><span><b>Méně energie:</b> recyklovaný hliník, střepy ve skle</span></div>
+            <div class="item"><span class="dot"></span><span><b>Bez organických rozpouštědel:</b> separace zemin ve vodě</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="goal-list tight">
+            <div class="item"><span class="dot" style="background:var(--accent)"></span><span><b>Recyklovatelnost:</b> obaly z jednoho plastu, bez tmavých barviv</span></div>
+            <div class="item"><span class="dot" style="background:var(--accent)"></span><span><b>Delší vázání uhlíku:</b> CO₂ v betonu, ne v palivu</span></div>
+            <div class="item"><span class="dot" style="background:var(--accent)"></span><span><b>Méně nebezpečných látek:</b> náhrada PFAS (další část)</span></div>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Opakovací snímek: studenti by měli poznat příklady z předchozích přednášek. Lze zmínit 12 principů zelené chemie (Anastas a Warner, 1998), ze kterých SSbD vychází.</aside>
+    </section>
+
+    <!-- 14 divider PFAS -->
+    <section class="divider-slide">
+      <div class="num">04</div>
+      <h2>PFAS</h2>
+      <p>Případová studie: věčné chemikálie ve vodě</p>
+      <aside class="notes">Čas: cca 12 minut. Navazuje T8.</aside>
+    </section>
+
+    <!-- 15 PFAS chemistry -->
+    <section>
+      <div class="kicker">PFAS · proč „věčné“</div>
+      <div class="row">
+        <div class="col">
+          <div class="chem-slide-panel">
+            <p class="prose tight"><b>Per- a polyfluorované alkylové látky</b>: uhlíkový řetězec, kde vodík nahradil fluor.</p>
+            <div class="formula" style="font-size:22px;">–CF₂–CF₂–CF₂–CF₃</div>
+            <p class="prose tight" style="margin:0;">Vazba C–F je jedna z nejpevnějších v organické chemii. Proto PFAS odpuzují vodu i tuk a v přírodě se prakticky nerozkládají.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="stat-row" style="flex-direction:column;">
+            <div class="stat"><b>&gt; 10 000</b><span>látek ve skupině PFAS (návrh omezení ECHA, 2023)</span></div>
+          </div>
+          <div class="panel" style="margin-top:14px;">
+            <p class="prose tight" style="margin:0;"><b>Použití:</b> nepromokavé oblečení, nepřilnavé pánve (PTFE), hasicí pěny, obaly od rychlého občerstvení, výroba čipů, chladiva.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Vlastnost, kvůli které jsou PFAS užitečné (stabilita), je zároveň důvod, proč jsou problémem (perzistence). Klasický konflikt, který má SSbD řešit už při návrhu. Některé PFAS se hromadí v těle, souvisí s poškozením jater, imunitního systému, některé jsou podezřelé karcinogeny (PFOA klasifikována IARC v roce 2023 jako karcinogen skupiny 1).</aside>
+    </section>
+
+    <!-- 16 drinking water limits -->
+    <section>
+      <div class="kicker">PFAS v pitné vodě · nové limity EU</div>
+      <div class="stat-row">
+        <div class="stat"><b>12. 1. 2026</b><span>od kdy platí limity směrnice o pitné vodě</span></div>
+        <div class="stat acc"><b>0,1 µg/l</b><span>součet 20 vybraných PFAS</span></div>
+        <div class="stat"><b>0,5 µg/l</b><span>všechny PFAS dohromady</span></div>
+      </div>
+      <div class="row" style="margin-top:22px;">
+        <div class="col">
+          <div class="calc-panel">
+            <p class="prose tight" style="margin:0;">0,1 µg/l = 100 ng/l = <b>jedna desetimiliardtina gramu na mililitr</b>. Měření vyžaduje citlivé analytické metody (LC-MS/MS).</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="panel">
+            <p class="prose tight" style="margin:0;"><b>Úprava vody:</b> aktivní uhlí, iontoměniče, reverzní osmóza. PFAS se tím ale nezničí, jen zachytí. Koncentrát se musí spálit při velmi vysoké teplotě.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="notes">Směrnice (EU) 2020/2184, limity platné od 12. ledna 2026. Některé země (Dánsko, Německo pro některé PFAS) mají přísnější národní limity. Pro obce a vodárny jde o významné investice. Česká data o výskytu: monitoring vodárenských společností, SZÚ, mapa Forever Pollution Project (evropská novinářská spolupráce). Laboratoř environmentální a analytické chemie PřF JU: zmiňte vlastní analytickou zkušenost, pokud je relevantní.</aside>
+    </section>
+
+    <!-- 17 think SSbD PFAS -->
+    <section class="think-slide">
+      <div class="tag-label think">Zamyšlení</div>
+      <p class="question">Výrobce outdoorových bund chce opustit PFAS. Bunda pak bude méně odolná proti špíně a oleji. Je to přijatelná cena za bezpečnost?</p>
+      <p class="facilitate">Projděte krok 1 (nebezpečnost náhrady), krok 3 (použití a praní) a krok 4 (kratší životnost = víc výroby). „Nezbytné použití“: potřebuje turistická bunda stejnou ochranu jako hasičský oblek?</p>
+      <aside class="notes">Řada výrobců outdoorového oblečení již přešla na úpravy bez PFAS (vosky, silikony, uhlovodíky) a přijala nižší odolnost proti oleji. Dobrý příklad koncepce „essential use“. V Semináři 6 studenti tento rozbor provedou podrobněji.</aside>
+    </section>
+
+    <!-- 18 block summary map -->
+    <section>
+      <div class="kicker">Celý blok na jednom snímku</div>
+      <table class="data-table" style="font-size:21px;">
+        <thead><tr><th>Přednáška</th><th>Hlavní myšlenka</th><th>Data, se kterými jsme pracovali</th></tr></thead>
+        <tbody>
+          <tr><td>1 Prvky na Zemi</td><td>zásoby jsou ekonomický údaj, riziko je koncentrace</td><td>OWID Minerals, USGS</td></tr>
+          <tr><td>2 Li, C, Al, Si…</td><td>energie a zpracování rozhodují víc než geologie</td><td>podíl Číny na hliníku</td></tr>
+          <tr><td>3 Fe, Cu, Co, Ni, REE</td><td>CO₂ z reakce; těžba ≠ zpracování</td><td>těžba vs. rafinace</td></tr>
+          <tr><td>4 Sklo, cement, CO₂</td><td>procesní emise; CCS/CCU jsou o tři řády menší</td><td>CO₂ podle zdroje, uhlíkový rozpočet</td></tr>
+          <tr><td>5 Polymery</td><td>recykluje se ~9 %; „bio“ má dva významy</td><td>osud plastového odpadu</td></tr>
+          <tr><td>6 Voda, SSbD</td><td>bezpečnost a udržitelnost se řeší už při návrhu</td><td>odběry vody, přístup k pitné vodě</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 19 summary -->
+    <section>
+      <div class="kicker">Shrnutí</div>
+      <div class="goal-list tight">
+        <div class="item"><span class="dot"></span><span>Přímo využitelná sladká voda je zlomek procenta vody na Zemi. Kdo ji spotřebovává, se mezi zeměmi výrazně liší.</span></div>
+        <div class="item"><span class="dot"></span><span>Voda je zdroj prvků (Li, NaCl, Br) a nezbytné médium technologií: chlazení, rozpouštědlo, ultračistá voda.</span></div>
+        <div class="item"><span class="dot"></span><span>Riziko = nebezpečnost × expozice. EU u nejškodlivějších látek směřuje k zákazu skupin látek.</span></div>
+        <div class="item"><span class="dot"></span><span>SSbD: pět kroků od nebezpečnosti po společnost, začíná se už při návrhu.</span></div>
+        <div class="item"><span class="dot"></span><span>PFAS ukazují, že užitečná vlastnost (stabilita) může být největším problémem.</span></div>
+      </div>
+    </section>
+
+    <!-- 20 sources -->
+    <section>
+      <div class="kicker">Zdroje dat dne</div>
+      <div class="src-grid">
+        <div class="src-item"><b>OWID · Clean Water, Water Use and Stress</b><span>Odběry vody podle sektorů, vodní stres, přístup k pitné vodě. Data FAO AQUASTAT a WHO/UNICEF.</span><div class="use">seminář 6, T7</div></div>
+        <div class="src-item"><b>ECHA</b><span>Evropská agentura pro chemické látky: registrace REACH, klasifikace, návrh omezení PFAS.</span><div class="use">T8</div></div>
+        <div class="src-item"><b>JRC · SSbD</b><span>Společné výzkumné středisko EK: metodika a případové studie SSbD.</span><div class="use">seminář 6</div></div>
+        <div class="src-item"><b>EEA · Forever Pollution Project</b><span>Evropská agentura pro životní prostředí a novinářská mapa výskytu PFAS v Evropě.</span><div class="use">T8</div></div>
+      </div>
+    </section>
+
+    <!-- 21 presentations -->
+    <section>
+      <div class="kicker">Studentské prezentace · 9. 12.</div>
+      <div class="slot-grid">
+        <div class="slot-card">
+          <div class="slot-id">T7 · 10 + 5 min</div>
+          <h4>Lithium a voda: solanky vs. horniny</h4>
+          <p>Kde se lithium těží, kolik vody a energie stojí, ověření tvrzení o spotřebě vody.</p>
+          <div class="who">prezentuje: ____________</div>
+        </div>
+        <div class="slot-card">
+          <div class="slot-id">T8 · 10 + 5 min</div>
+          <h4>PFAS v pitné vodě: „věčné chemikálie“ a nové limity</h4>
+          <p>Limity EU, naměřené hodnoty, co to znamená pro vodárny a firmy.</p>
+          <div class="who">prezentuje: ____________</div>
+        </div>
+      </div>
+      <p class="caption" style="margin-top:22px;">Zadání a hodnocení: <a href="zadani-projektu.html">zadani-projektu.html</a></p>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.04, minScale: 0.2, maxScale: 2, controls: true, progress: true, slideNumber: 'c/t', plugins: [ RevealNotes ] });
+</script>
+</body>
+</html>
