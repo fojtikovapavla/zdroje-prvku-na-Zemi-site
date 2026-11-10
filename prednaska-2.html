@@ -8,6 +8,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/css/theme.css">
+<style>
+  .reveal .terms { margin-top:14px; padding:8px 16px; border-left:4px solid var(--primary); background:var(--surface); border-radius:8px; font-size:17px; line-height:1.38; color:var(--ink-soft); }
+  .reveal .terms b { color:var(--ink); }
+  .reveal .goal-list.goals-long { gap:13px; }
+  .reveal .goal-list.goals-long .item { font-size:25px; line-height:1.3; }
+  .reveal .goal-list.goals-long .dot { margin-top:7px; }
+</style>
 </head>
 <body>
 <div class="reveal">
@@ -18,115 +25,792 @@
       <div>
         <div class="eyebrow">Chemické principy a udržitelnost · Blok 2</div>
         <h1>Od minerálů k materiálům I</h1>
-        <p class="sub">Lithium · uhlík · hliník · křemík · germanium, indium, telur</p>
+        <p class="sub">Lithium · uhlík · hliník · křemík · gallium, germanium, indium, telur</p>
       </div>
       <div class="foot"><div class="bar"></div><span>Přednáška 2 · Zdroje prvků na Zemi</span></div>
       <aside class="notes">
-        Dnešní prvky spojuje energetická a digitální transformace: baterie (Li, grafit), lehké konstrukce a vedení (Al), fotovoltaika a čipy (Si, Ge, In, Te, Ga). U každého prvku stejná kostra: kde je → jak se z něj stane materiál → kolik to stojí energie → kdo ho ovládá.
-        Data: Our World in Data, Minerals explorer (USGS/BGS, 2024). Další zdroje: IEA Global Critical Minerals Outlook; IEA Solar PV Global Supply Chains; Evropská komise, RMIS.
+        Dnešní prvky spojuje energetická a digitální transformace: baterie (Li, grafit), lehké konstrukce a elektrická vedení (Al), fotovoltaika a polovodiče (Si, Ge, In, Te, Ga). U každého prvku stejná kostra: kde je → jak se z něj stane materiál → kolik to stojí energie → kdo ovládá který krok.
+        Struktura: výklad se střídá se seminárními aktivitami (samostatný seminář k této přednášce není); u každého úkolu následuje slide s řešením. V hodině ho ukažte až po diskusi; studentům slouží ke studiu.
+        Data: USGS Mineral Commodity Summaries (MCS 2025, data za 2024); Our World in Data, Minerals explorer (USGS/BGS). Další zdroje: IEA Global Critical Minerals Outlook; IEA Solar PV Global Supply Chains (2022); International Aluminium Institute; EUR-Lex (předpisy EU). Pokud už vyšlo MCS 2026 s daty za 2025, čísla na řešeních se mohou mírně lišit; to je v pořádku a stojí za zmínku.
       </aside>
     </section>
 
     <!-- 2 goals -->
     <section>
       <div class="kicker">Cíle přednášky</div>
-      <div class="goal-list">
-        <div class="item"><span class="dot"></span><span>Popsat dvě cesty k lithiu: z hornin a ze solanek</span></div>
-        <div class="item"><span class="dot"></span><span>Vysvětlit, proč je výroba hliníku a křemíku tak náročná na elektřinu a proč se vyplatí recyklace</span></div>
-        <div class="item"><span class="dot"></span><span>Pochopit pojem <b>vedlejší produkt</b> (Ge, In, Te, Ga) a proč u nich nabídka nereaguje na poptávku</span></div>
-        <div class="item"><span class="dot"></span><span>Číst z dat, jak se během 30 let přesunula výroba materiálů do Číny</span></div>
+      <div class="goal-list goals-long">
+        <div class="item"><span class="dot"></span><span>Popsat cestu <b>od horniny k materiálu</b> (těžba, úprava, chemická přeměna, rafinace) a spočítat, kolik horniny a odpadu připadá na tunu kovu</span></div>
+        <div class="item"><span class="dot"></span><span>Vysvětlit, proč je výroba hliníku a křemíku tak <b>náročná na energii</b> a jak zdroj elektřiny a recyklace mění uhlíkovou stopu materiálu</span></div>
+        <div class="item"><span class="dot"></span><span>Přečíst <b>technologické schéma</b> a najít v něm krok s největší spotřebou energie či vody nebo s největším odpadem</span></div>
+        <div class="item"><span class="dot"></span><span>Popsat, z čeho se skládá lithno-iontová baterie a fotovoltaický modul a jak volba technologie mění <b>surovinová rizika</b></span></div>
+        <div class="item"><span class="dot"></span><span>Vysvětlit pojem <b>vedlejší produkt</b> (Ga, Ge, In, Te) a proč nabídka těchto kovů nereaguje na poptávku</span></div>
+        <div class="item"><span class="dot"></span><span><b>Dohledat v datech</b> (OWID, USGS, IEA), kdo ovládá těžbu a kdo zpracování, a hlídat, co se měří, jednotku, rok a primární zdroj</span></div>
+        <div class="item"><span class="dot"></span><span>Jako <b>manažer/ka udržitelnosti</b> rozložit tvrzení dodavatele na ověřitelné údaje a určit, jaké doklady a předpisy EU k němu patří</span></div>
       </div>
+      <aside class="notes">Cíle odpovídají skutečné stavbě přednášky: obecný řetězec na příkladu mědi, zkrácené lithium (podrobnosti v projektu T7), baterie, hliník, křemík a fotovoltaika, vedlejší produkty, společná datová úloha. Výklad se střídá se seminárními aktivitami, samostatný seminář k této přednášce není.</aside>
+    </section>
+
+    <!-- 2b · zdroje dat -->
+    <section>
+      <div class="kicker">Zdroje dat · s čím dnes budeme pracovat</div>
+      <table class="data-table" style="font-size:18px;">
+        <thead><tr><th>Zdroj</th><th>Co v něm najdete</th><th>K čemu ho použijeme</th></tr></thead>
+        <tbody>
+          <tr><td><b><a href="https://ourworldindata.org/explorers/minerals" target="_blank">OWID · Minerals explorer</a></b></td><td>těžba, zpracování a zásoby surovin podle zemí a let (data USGS a BGS); podíly na světě, mapa, tabulka</td><td>kdo ovládá který krok a jak se to měnilo</td></tr>
+          <tr><td><b><a href="https://www.usgs.gov/centers/national-minerals-information-center/mineral-commodity-summaries" target="_blank">USGS · Mineral Commodity Summaries</a></b></td><td>každoroční přehled po surovinách: těžba a zásoby podle zemí, použití, ceny, recyklace (PDF zdarma)</td><td>zásoby, přesná čísla, primární zdroj</td></tr>
+          <tr><td><b><a href="https://www.iea.org/data-and-statistics/data-tools/critical-minerals-data-explorer" target="_blank">IEA · Critical Minerals</a></b></td><td>podíly zemí na těžbě i rafinaci, výhled poptávky; zvláštní zpráva o řetězci fotovoltaiky</td><td>zpracování a budoucí poptávka</td></tr>
+          <tr><td><b><a href="https://ourworldindata.org/grapher/share-electricity-coal" target="_blank">OWID · Electricity mix</a></b></td><td>podíl uhlí a dalších zdrojů na výrobě elektřiny podle zemí (Ember, Energy Institute)</td><td>uhlíková stopa materiálů</td></tr>
+          <tr><td><b><a href="https://international-aluminium.org/statistics/primary-aluminium-production/" target="_blank">International Aluminium Institute</a></b></td><td>statistiky výroby, spotřeby energie, emisí a recyklace hliníku</td><td>oborová data o hliníku</td></tr>
+          <tr><td><b><a href="https://eur-lex.europa.eu/homepage.html" target="_blank">EUR-Lex</a></b></td><td>úplná znění předpisů EU (baterie, kritické suroviny, obaly, environmentální tvrzení)</td><td>co musí firma splnit a od kdy</td></tr>
+        </tbody>
+      </table>
+      <div class="example-panel" style="padding:12px 20px; margin-top:12px; font-size:19px; line-height:1.36;">
+        <b>Proč to potřebuje manažer/ka udržitelnosti:</b> abyste ověřili tvrzení dodavatele dřív, než ho převezmete; našli riziko v konkrétním kroku řetězce, nejen v zemi těžby; a doložili čísla do reportu a podle předpisů EU.
+      </div>
+      <div class="terms"><b>Těžba</b> (mine production) – vytěžené množství za rok. <b>Zásoby</b> (reserves) – známá ložiska těžitelná se ziskem. <b>Zpracování</b> (refining, smelting) – výroba kovu nebo chemikálií. <b>Primární zdroj</b> – kdo data původně sestavil; v OWID ho uvádí záložka <i>Sources</i>.</div>
+      <aside class="notes">Krátce, asi 3 minuty. Nečíst tabulku po řádcích, spíš ukázat logiku: OWID pro rychlý přehled a grafy, USGS a IEA pro kontrolu a zpracování, EUR-Lex pro povinnosti. U každého čísla si studenti ověřují čtyři věci: co se měří, jednotku, rok a primární zdroj. Těžba, zásoby a zpracování se v médiích často zaměňují. Se zdroji se dnes pracuje u výpočtů, u dat o hliníku a ve společné datové úloze na konci. Úplný přehled zdrojů je na posledním slidu.</aside>
     </section>
 
     <!-- 3 chain -->
     <section>
-      <div class="kicker">Od horniny k materiálu · společná kostra</div>
+      <div class="kicker">Od horniny k materiálu · pět kroků</div>
       <div class="diagram-wrap">
-        <svg viewBox="0 0 1080 200" role="img" aria-label="Těžba, úprava, chemická přeměna, čištění, materiál">
-          <defs><marker id="c2" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker></defs>
+        <svg viewBox="0 0 1080 262" role="img" aria-label="Těžba, úprava, chemická přeměna, rafinace, materiál; příklad měď: ruda 0,6 % Cu, koncentrát 28 % Cu, anodová měď 99,5 %, katodová měď 99,99 %, drát">
+          <defs><marker id="c2" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker></defs>
           <g font-family="var(--font-body)">
             <rect x="10" y="30" width="180" height="100" rx="12" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
             <text x="100" y="72" text-anchor="middle" font-size="22" font-weight="700" fill="var(--ink)">Těžba</text>
-            <text x="100" y="100" text-anchor="middle" font-size="16" fill="var(--ink-muted)">hornina, solanka</text>
+            <text x="100" y="100" text-anchor="middle" font-size="16" fill="var(--ink-muted)">ruda, solanka</text>
             <rect x="230" y="30" width="190" height="100" rx="12" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
             <text x="325" y="72" text-anchor="middle" font-size="22" font-weight="700" fill="var(--ink)">Úprava</text>
-            <text x="325" y="100" text-anchor="middle" font-size="16" fill="var(--ink-muted)">drcení, koncentrát</text>
+            <text x="325" y="100" text-anchor="middle" font-size="16" fill="var(--ink-muted)">drcení, flotace</text>
             <rect x="460" y="30" width="200" height="100" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
-            <text x="560" y="72" text-anchor="middle" font-size="22" font-weight="700" fill="var(--ink)">Chemie</text>
+            <text x="560" y="72" text-anchor="middle" font-size="19" font-weight="700" fill="var(--ink)">Chemická přeměna</text>
             <text x="560" y="100" text-anchor="middle" font-size="16" fill="var(--ink-muted)">redukce, elektrolýza</text>
             <rect x="700" y="30" width="180" height="100" rx="12" fill="var(--water-soft)" stroke="var(--water)" stroke-width="2"/>
-            <text x="790" y="72" text-anchor="middle" font-size="22" font-weight="700" fill="var(--ink)">Čištění</text>
-            <text x="790" y="100" text-anchor="middle" font-size="16" fill="var(--ink-muted)">99 % → 99,9999 %</text>
+            <text x="790" y="72" text-anchor="middle" font-size="22" font-weight="700" fill="var(--ink)">Rafinace</text>
+            <text x="790" y="100" text-anchor="middle" font-size="16" fill="var(--ink-muted)">na 99,99 % a více</text>
             <rect x="920" y="30" width="150" height="100" rx="12" fill="var(--primary)"/>
             <text x="995" y="72" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">Materiál</text>
-            <text x="995" y="100" text-anchor="middle" font-size="16" fill="#D8E6DC">baterie, čip</text>
-            <path d="M190,80 L225,80 M420,80 L455,80 M660,80 L695,80 M880,80 L915,80" stroke="var(--primary)" stroke-width="3" marker-end="url(#c2)"/>
-            <text x="540" y="180" text-anchor="middle" font-size="20" fill="var(--ink-soft)">Nejvíc energie a nejvíc geopolitiky bývá v prostředních krocích, ne v těžbě.</text>
+            <text x="995" y="100" text-anchor="middle" font-size="16" fill="#D8E6DC">katoda, wafer</text>
+            <path d="M190,80 L225,80" stroke="var(--primary)" stroke-width="3" marker-end="url(#c2)"/><path d="M420,80 L455,80" stroke="var(--primary)" stroke-width="3" marker-end="url(#c2)"/><path d="M660,80 L695,80" stroke="var(--primary)" stroke-width="3" marker-end="url(#c2)"/><path d="M880,80 L915,80" stroke="var(--primary)" stroke-width="3" marker-end="url(#c2)"/>
+            <text x="10" y="166" font-size="16" font-weight="700" fill="var(--ink-soft)" letter-spacing="1.5">PŘÍKLAD · MĚĎ</text>
+            <g text-anchor="middle" font-size="16" font-weight="700" fill="var(--primary-strong)">
+              <text x="100" y="192">ruda 0,6 % Cu</text><text x="325" y="192">koncentrát ~28 % Cu</text><text x="560" y="192">anodová Cu 99,5 %</text><text x="790" y="192">katodová Cu 99,99 %</text><text x="995" y="192">drát, kabel</text>
+            </g>
+            <g text-anchor="middle" font-size="16" fill="var(--ink-muted)">
+              <text x="100" y="212">povrchový lom</text><text x="325" y="212">flotace</text><text x="560" y="212">tavení, konvertor</text><text x="790" y="212">elektrolýza</text><text x="995" y="212">tažení drátu</text>
+            </g>
+            <text x="540" y="252" text-anchor="middle" font-size="20" fill="var(--ink-soft)">Největší spotřeba energie i největší geografická koncentrace bývá ve středních krocích, ne v těžbě.</text>
           </g>
         </svg>
       </div>
-      <aside class="notes">Opakování z Přednášky 1 a příprava na dnešní pointu: u Al, Si a grafitu je „úzkým hrdlem“ zpracování (energie, know-how, chemické závody), ne geologie.</aside>
+      <div class="terms"><b>Koncentrát</b> – produkt úpravy s mnohonásobně vyšším obsahem kovu než ruda. <b>Anodová měď</b> – surová měď z hutě, odlitá do desek (anod). <b>Katodová měď</b> – čistá měď vyloučená na katodě při elektrolytické rafinaci. <b>Rafinace</b> – odstranění nečistot z kovu.</div>
+      <aside class="notes">Opakování z Přednášky 1 a příprava na dnešní pointu: u Al, Si a grafitu je „úzkým hrdlem“ zpracování (energie, know-how, chemické závody a jejich povolování), ne geologie. Pro manažera: riziko dodavatelského řetězce je třeba hodnotit pro každý krok zvlášť, nestačí vědět, kde se surovina těží. Na dalších slidech projdeme kroky jednotlivě na příkladu mědi (nejnázornější), včetně výpočtu hmotnostní bilance. Čas na celou část: cca 25 minut; při nedostatku času lze slidy 3a–3g zadat k samostudiu.</aside>
+    </section>
+
+
+    <!-- 3a · krok 1 těžba -->
+    <section>
+      <div class="kicker">Krok 1 · Těžba</div>
+      <h3 style="font-size:28px; margin-bottom:6px;">Jak se surovina dostane na povrch</h3>
+      <div class="diagram-wrap" style="padding:10px 18px;">
+        <svg viewBox="0 0 1080 262" role="img" aria-label="Řezy terénem: povrchový lom, hlubinný důl a čerpání solanky do odpařovacích nádrží">
+          <defs><marker id="m1a" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--ink-soft)"/></marker></defs>
+          <g font-family="var(--font-body)">
+            <text x="170" y="22" text-anchor="middle" font-size="20" font-weight="700" fill="var(--ink)">Povrchový lom</text>
+            <rect x="10" y="70" width="320" height="185" fill="#E9D9CF"/>
+            <rect x="10" y="70" width="320" height="30" fill="#D6C2AF"/>
+            <ellipse cx="150" cy="172" rx="92" ry="40" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <polygon points="50,70 250,70 232,95 212,95 198,118 178,118 166,140 134,140 122,118 102,118 88,95 68,95" fill="var(--surface)" stroke="var(--ink-muted)" stroke-width="1.5"/>
+            <polygon points="262,70 322,70 306,50 278,50" fill="#CDB8A6" stroke="var(--ink-muted)" stroke-width="1.2"/>
+            <text x="292" y="43" text-anchor="middle" font-size="16" fill="var(--ink-soft)">výsypka</text>
+            <text x="292" y="91" text-anchor="middle" font-size="16" fill="var(--ink-soft)">skrývka</text>
+            <text x="225" y="112" font-size="16" fill="var(--ink-soft)">etáže</text>
+            <text x="150" y="188" text-anchor="middle" font-size="18" font-weight="700" fill="var(--ink)">ruda</text>
+            <text x="20" y="245" font-size="16" fill="var(--ink-soft)">okolní hornina</text>
+            <text x="535" y="22" text-anchor="middle" font-size="20" font-weight="700" fill="var(--ink)">Hlubinný důl</text>
+            <rect x="375" y="70" width="320" height="185" fill="#E9D9CF"/>
+            <rect x="375" y="70" width="320" height="14" fill="#D6C2AF"/>
+            <polygon points="575,95 615,95 665,255 625,255" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <rect x="415" y="70" width="10" height="170" fill="var(--surface)" stroke="var(--ink-muted)" stroke-width="1.2"/>
+            <rect x="425" y="150" width="200" height="9" fill="var(--surface)" stroke="var(--ink-muted)" stroke-width="1.2"/>
+            <rect x="425" y="222" width="225" height="9" fill="var(--surface)" stroke="var(--ink-muted)" stroke-width="1.2"/>
+            <path d="M404,70 L420,32 L436,70 M410,56 L430,56" stroke="var(--ink)" stroke-width="3" fill="none"/>
+            <text x="444" y="50" font-size="16" fill="var(--ink-soft)">těžní věž</text>
+            <text x="436" y="112" font-size="16" fill="var(--ink-soft)">jáma (šachta)</text>
+            <text x="436" y="143" font-size="16" fill="var(--ink-soft)">chodby</text>
+            <text x="640" y="88" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">rudní žíla</text>
+            <text x="905" y="22" text-anchor="middle" font-size="20" font-weight="700" fill="var(--ink)">Čerpání solanky</text>
+            <rect x="740" y="70" width="330" height="185" fill="#E9D9CF"/>
+            <rect x="740" y="70" width="330" height="14" fill="#F4F1E8"/>
+            <rect x="740" y="135" width="330" height="80" fill="var(--water-soft)"/>
+            <text x="945" y="181" text-anchor="middle" font-size="16" fill="var(--ink-soft)">solanka (0,1–0,2 % Li)</text>
+            <line x1="775" y1="58" x2="775" y2="200" stroke="var(--ink-muted)" stroke-width="4"/>
+            <line x1="812" y1="58" x2="812" y2="200" stroke="var(--ink-muted)" stroke-width="4"/>
+            <rect x="765" y="48" width="20" height="12" fill="var(--ink-soft)"/>
+            <rect x="802" y="48" width="20" height="12" fill="var(--ink-soft)"/>
+            <path d="M826,54 L856,60" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#m1a)"/>
+            <rect x="862" y="58" width="60" height="12" fill="#6FA8C7"/>
+            <rect x="932" y="58" width="60" height="12" fill="#A9CBDC"/>
+            <rect x="1002" y="58" width="60" height="12" fill="#E3D6A0"/>
+            <text x="962" y="45" text-anchor="middle" font-size="16" fill="var(--ink-soft)">odpařovací nádrže</text>
+            <text x="824" y="112" font-size="16" fill="var(--ink-soft)">vrty</text>
+          </g>
+        </svg>
+      </div>
+      <div class="row" style="gap:18px; margin-top:10px; font-size:18px; line-height:1.36;">
+        <div class="col"><p style="margin:0;"><b>Povrchově:</b> ložisko blízko povrchu, velké a chudé. <i>Př.:</i> Chuquicamata (Cu, Chile), Greenbushes (Li, Austrálie), hnědé uhlí na Mostecku.</p></div>
+        <div class="col"><p style="margin:0;"><b>Hlubinně:</b> ložisko hluboko nebo v úzkých žilách, těží se bohatší ruda. <i>Př.:</i> Kiruna (Fe, Švédsko), Příbram (Pb, Ag, U, historicky).</p></div>
+        <div class="col"><p style="margin:0;"><b>Z roztoků:</b> prvek je rozpuštěný ve vodě. <i>Př.:</i> solanky (Li, K, B), mořská voda (NaCl, Mg, Br).</p></div>
+      </div>
+      <div class="terms"><b>Ruda</b> – hornina, ze které se kov vyplatí získávat. <b>Kovnatost</b> – obsah kovu v rudě (Cu 0,5–1&nbsp;%, Au 1–5&nbsp;g/t). <b>Hlušina</b> – vytěžená hornina bez užitečné složky. <b>Skrývka</b> – nadložní hornina, která se odstraní před povrchovou těžbou. <b>Výsypka</b> – násyp ze skrývky (u hlubinných dolů <b>odval</b> z hlušiny). <b>Etáž</b> – stupeň ve stěně lomu.</div>
+      <aside class="notes">Nákres je schematický (není v měřítku). Poměr skrývky k rudě bývá u velkých lomů 1 : 1 až 4 : 1. Povrchová těžba dnes dominuje (u mědi asi 80 % produkce), protože je levnější na tunu horniny; vyžaduje ale velký zábor krajiny. Chuquicamata od roku 2019 přechází na hlubinnou těžbu, protože lom je příliš hluboký. Cínovec je plánován jako hlubinný důl. Loužení uranu přímo v ložisku (in-situ, Kazachstán) je další způsob těžby z roztoků.</aside>
+    </section>
+
+    <!-- 3a2 · těžba na fotografii -->
+    <section>
+      <div class="kicker">Krok 1 · Čerpání solanky ve skutečnosti</div>
+      <div class="row middle" style="gap:26px;">
+        <div style="flex:1.35; min-width:0;">
+          <img src="obrázky/atacama-odparovaci-nadrze-nasa-2018.jpg" alt="Družicový snímek odpařovacích nádrží lithia v Salar de Atacama; nádrže mají barvy od světle modré po žlutozelenou, měřítko 1 km" style="display:block; width:100%; border-radius:12px;">
+          <p class="src-line" style="font-size:15px; margin-top:6px; line-height:1.35;">Snímek: NASA Earth Observatory, data Landsat 8 OLI (U.S. Geological Survey), pořízeno 4.&nbsp;11.&nbsp;2018. Volné dílo NASA. <a href="https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/144000/144393/salardeatacamazm_oli_2018308.jpg" target="_blank">Odkaz na snímek</a>.</p>
+        </div>
+        <div class="col" style="font-size:19px; line-height:1.4;">
+          <p style="margin:0 0 10px;"><b>Salar de Atacama (Chile):</b> odpařovací nádrže na lithium při pohledu z družice. Podle měřítka (1&nbsp;km) zabírají desítky km².</p>
+          <p style="margin:0 0 10px;"><b>Co je vidět:</b> barva nádrží se mění s tím, jak se solanka odpařuje a mění složení. Postupně krystalizuje NaCl a KCl, nakonec zbude koncentrát lithia (~6&nbsp;%&nbsp;Li).</p>
+          <p style="margin:0;"><b>Pro manažera:</b> takový zábor plochy a odpar vody v jedné z nejsušších oblastí světa jsou podstatou sporů o vodu mezi těžaři a místními komunitami (téma T7).</p>
+        </div>
+      </div>
+      <div class="terms"><b>Salar</b> – solná pánev v bezodtoké oblasti, pod solnou krustou je solanka. <b>Solanka</b> – voda s vysokým obsahem rozpuštěných solí. <b>Krystalizace</b> – vylučování pevné soli z roztoku při odpařování.</div>
+      <aside class="notes">Snímek navazuje na nákres čerpání solanky na předchozím slidu. Nádrže provozují SQM a Albemarle; zbarvení souvisí se stupněm odpaření a složením solanky.
+      Citace: snímek NASA je volné dílo; Earth Observatory žádá uvedení „NASA Earth Observatory“. Původní článek Earth Observatory (záznam 144393) se při kontrole nepodařilo dohledat, údaje jsou převzaty z adresy a názvu souboru (Landsat 8 OLI, 2018, den 308 = 4. 11. 2018).</aside>
+    </section>
+
+    <!-- 3b · krok 2 úprava -->
+    <section>
+      <div class="kicker">Krok 2 · Úprava rudy</div>
+      <h3 style="font-size:28px; margin-bottom:6px;">Z rudy s 0,6&nbsp;%&nbsp;Cu koncentrát s ~28&nbsp;%&nbsp;Cu</h3>
+      <div class="diagram-wrap" style="padding:10px 18px;">
+        <svg viewBox="0 0 1080 150" role="img" aria-label="Ruda, drcení, mletí, flotace, koncentrát; odpad z úpravy do odkaliště">
+          <defs><marker id="m2a" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker>
+          <marker id="m2b" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--danger)"/></marker></defs>
+          <g font-family="var(--font-body)" text-anchor="middle">
+            <rect x="10" y="10" width="170" height="72" rx="12" fill="#E9D9CF"/>
+            <text x="95" y="40" font-size="20" font-weight="700" fill="var(--ink)">Ruda</text>
+            <text x="95" y="65" font-size="16" fill="var(--ink-soft)">0,6 % Cu</text>
+            <rect x="232" y="10" width="170" height="72" rx="12" fill="var(--surface-2)"/>
+            <text x="317" y="40" font-size="20" font-weight="700" fill="var(--ink)">Drcení</text>
+            <text x="317" y="65" font-size="16" fill="var(--ink-soft)">→ kusy v cm</text>
+            <rect x="454" y="10" width="170" height="72" rx="12" fill="var(--surface-2)"/>
+            <text x="539" y="40" font-size="20" font-weight="700" fill="var(--ink)">Mletí</text>
+            <text x="539" y="65" font-size="16" fill="var(--ink-soft)">→ pod 0,2 mm</text>
+            <rect x="676" y="10" width="170" height="72" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="761" y="40" font-size="20" font-weight="700" fill="var(--ink)">Flotace</text>
+            <text x="761" y="65" font-size="16" fill="var(--ink-soft)">sulfidy do pěny</text>
+            <rect x="898" y="10" width="172" height="72" rx="12" fill="var(--primary)"/>
+            <text x="984" y="40" font-size="20" font-weight="700" fill="#fff">Koncentrát</text>
+            <text x="984" y="65" font-size="16" fill="#D8E6DC">~28 % Cu → huť</text>
+            <path d="M180,46 L227,46" stroke="var(--primary)" stroke-width="3" marker-end="url(#m2a)"/>
+            <path d="M402,46 L449,46" stroke="var(--primary)" stroke-width="3" marker-end="url(#m2a)"/>
+            <path d="M624,46 L671,46" stroke="var(--primary)" stroke-width="3" marker-end="url(#m2a)"/>
+            <path d="M846,46 L893,46" stroke="var(--primary)" stroke-width="3" marker-end="url(#m2a)"/>
+            <path d="M761,82 L761,112" stroke="var(--danger)" stroke-width="3" marker-end="url(#m2b)"/>
+            <text x="761" y="140" font-size="17" fill="var(--danger)">odpad z úpravy (~98 % hmotnosti) → odkaliště</text>
+          </g>
+        </svg>
+      </div>
+      <div class="row" style="gap:18px; margin-top:12px; font-size:18px; line-height:1.38;">
+        <div class="col"><p style="margin:0;"><b>Drcení a mletí:</b> zrna chalkopyritu CuFeS₂ jsou „zarostlá“ v hornině. Uvolní se až po rozemletí na desetiny milimetru. Mletí je energeticky nejnáročnější část úpravy.</p></div>
+        <div class="col"><p style="margin:0;"><b>Jiné metody než flotace:</b> magnetická separace (magnetit Fe₃O₄), gravitační podle hustoty (zlato, kasiterit SnO₂), těžké suspenze (spodumen).</p></div>
+        <div class="col"><p style="margin:0;"><b>Pro manažera:</b> protržení hráze odkaliště v Brumadinhu (Brazílie, 2019) zabilo 270 lidí. Od roku 2020 platí mezinárodní standard pro odkaliště (GISTM).</p></div>
+      </div>
+      <div class="terms"><b>Úprava rudy</b> – fyzikální oddělení užitečných minerálů od hlušiny, bez chemické přeměny. <b>Koncentrát</b> – produkt úpravy s mnohonásobně vyšším obsahem kovu. <b>Odpad z úpravy</b> (flotační kal) – jemně mletá hlušina s vodou. <b>Odkaliště</b> – nádrž ohrazená hrází, do které se kal ukládá.</div>
+      <aside class="notes">Úprava (v češtině též úpravnictví) mění jen fyzikální stav a složení směsi minerálů, chemicky zůstává chalkopyrit chalkopyritem. Mletí spotřebuje podle odhadů 2–4 % světové elektřiny. Brumadinho 25. 1. 2019, železnorudný důl firmy Vale; standard GISTM (Global Industry Standard on Tailings Management) vydaly ICMM, UNEP a PRI v srpnu 2020.</aside>
+    </section>
+
+    <!-- 3b2 · flotace -->
+    <section>
+      <div class="kicker">Krok 2 · Flotace: jak se oddělí sulfid od hlušiny</div>
+      <div class="row" style="gap:24px;">
+        <div style="flex:1.1; min-width:0;">
+          <div class="diagram-wrap" style="padding:8px 12px;">
+            <svg viewBox="0 0 480 292" role="img" aria-label="Flotační cela: míchadlo přivádí vzduch, bubliny vynášejí částice sulfidu do pěny, hlušina odchází spodem">
+              <defs><marker id="m2c" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--ink-soft)"/></marker></defs>
+              <g font-family="var(--font-body)">
+                <text x="210" y="15" text-anchor="middle" font-size="17" fill="var(--ink-soft)">vzduch</text>
+                <rect x="70" y="60" width="290" height="190" fill="var(--water-soft)" stroke="var(--ink-muted)" stroke-width="2"/>
+                <rect x="70" y="60" width="290" height="34" fill="#F6F1E3"/>
+                <g fill="#fff" stroke="#BDB39A" stroke-width="1.2">
+                  <circle cx="88" cy="72" r="8"/><circle cx="110" cy="82" r="8"/><circle cx="132" cy="71" r="8"/><circle cx="154" cy="83" r="8"/><circle cx="176" cy="72" r="8"/><circle cx="250" cy="72" r="8"/><circle cx="272" cy="83" r="8"/><circle cx="294" cy="71" r="8"/><circle cx="316" cy="82" r="8"/><circle cx="338" cy="72" r="8"/>
+                </g>
+                <g fill="#2E2E2E">
+                  <circle cx="94" cy="66" r="3.5"/><circle cx="116" cy="77" r="3.5"/><circle cx="138" cy="66" r="3.5"/><circle cx="160" cy="78" r="3.5"/><circle cx="256" cy="66" r="3.5"/><circle cx="278" cy="78" r="3.5"/><circle cx="300" cy="66" r="3.5"/><circle cx="322" cy="77" r="3.5"/><circle cx="344" cy="67" r="3.5"/>
+                </g>
+                <line x1="210" y1="22" x2="210" y2="214" stroke="var(--ink)" stroke-width="4"/>
+                <rect x="186" y="212" width="48" height="10" rx="3" fill="var(--ink)"/>
+                <text x="246" y="236" font-size="15" fill="var(--ink-soft)">míchadlo</text>
+                <g fill="#fff" stroke="var(--water)" stroke-width="1.5">
+                  <circle cx="110" cy="200" r="8"/><circle cx="145" cy="155" r="8"/><circle cx="265" cy="180" r="8"/><circle cx="300" cy="130" r="8"/><circle cx="120" cy="118" r="8"/><circle cx="250" cy="118" r="8"/><circle cx="325" cy="195" r="8"/>
+                </g>
+                <g fill="#2E2E2E">
+                  <circle cx="116" cy="194" r="3.5"/><circle cx="151" cy="149" r="3.5"/><circle cx="271" cy="174" r="3.5"/><circle cx="306" cy="124" r="3.5"/><circle cx="126" cy="112" r="3.5"/><circle cx="256" cy="112" r="3.5"/>
+                </g>
+                <g fill="#A9A39A">
+                  <rect x="82" y="234" width="7" height="7"/><rect x="104" y="238" width="7" height="7"/><rect x="150" y="236" width="7" height="7"/><rect x="300" y="236" width="7" height="7"/><rect x="335" y="237" width="7" height="7"/><rect x="170" y="190" width="7" height="7"/><rect x="290" y="160" width="7" height="7"/><rect x="88" y="150" width="7" height="7"/>
+                </g>
+                <path d="M360,66 L405,66 L405,128" stroke="var(--ink-soft)" stroke-width="3" fill="none" marker-end="url(#m2c)"/>
+                <text x="410" y="152" text-anchor="middle" font-size="17" font-weight="700" fill="var(--primary-strong)">koncentrát</text>
+                <path d="M70,240 L36,240 L36,260" stroke="var(--ink-soft)" stroke-width="3" fill="none" marker-end="url(#m2c)"/>
+                <text x="20" y="284" font-size="17" fill="var(--danger)">odpad (kal) → odkaliště</text>
+                <text x="64" y="83" text-anchor="end" font-size="17" fill="var(--ink-soft)">pěna</text>
+                <text x="64" y="166" text-anchor="end" font-size="17" fill="var(--ink-soft)">rmut</text>
+              </g>
+            </svg>
+          </div>
+          <p class="caption" style="font-size:16px; margin-top:4px;">● sulfid mědi &nbsp;·&nbsp; ■ křemen, živce &nbsp;·&nbsp; ○ vzduchová bublina</p>
+        </div>
+        <div class="col" style="font-size:18px; line-height:1.38;">
+          <p style="margin:0 0 8px;"><b>1 · Sběrač:</b> do rmutu se přidá sběrač (např. xanthogenan). Naváže se jen na povrch sulfidů a udělá ho vodoodpudivým.</p>
+          <p style="margin:0 0 8px;"><b>2 · Vzduch:</b> míchadlo rozptýlí do rmutu bubliny. Vodoodpudivá zrna na nich ulpí a vyplavou nahoru.</p>
+          <p style="margin:0 0 8px;"><b>3 · Pěna:</b> pěnič pěnu stabilizuje; pěna přetéká do žlabu jako koncentrát.</p>
+          <p style="margin:0;"><b>4 · Hlušina:</b> křemen a živce jsou smáčivé, zůstanou ve vodě a odcházejí spodem do odkaliště.</p>
+        </div>
+      </div>
+      <div class="terms"><b>Rmut</b> – směs jemně mleté rudy s vodou. <b>Sběrač</b> (kolektor) – látka, která učiní povrch vybraného minerálu hydrofobním. <b>Pěnič</b> – povrchově aktivní látka, která stabilizuje pěnu. <b>Hydrofobní / hydrofilní</b> – vodu odpuzující / vodou smáčivý.</div>
+      <aside class="notes">Flotace je nejrozšířenější metoda úpravy rud; zpracovávají se jí řádově miliardy tun rudy ročně. Sběrač (např. ethylxanthogenan draselný) má polární „hlavu“, která se váže na sulfid, a nepolární uhlovodíkový „ocas“, který míří do vody a činí povrch hydrofobním. Pěnič (např. alifatický alkohol) stabilizuje pěnu. Princip se využívá i při odstraňování tiskařských barev z papíru při recyklaci (deinking).</aside>
+    </section>
+
+    <!-- 3c · krok 3 chemická přeměna -->
+    <section>
+      <div class="kicker">Krok 3 · Chemická přeměna: proč je potřeba chemie</div>
+      <h3 style="font-size:28px; margin-bottom:8px;">V minerálu je kov vázaný jako kation. Získat kov znamená redukovat ho.</h3>
+      <div class="formula" style="font-size:22px; margin-bottom:12px;">Mⁿ⁺ + n e⁻ → M &nbsp;&nbsp;<span style="color:var(--ink-muted); font-size:18px;">elektrony dodá redukční činidlo nebo elektrický proud</span></div>
+      <table class="data-table" style="font-size:18px;">
+        <thead><tr><th>Surovina</th><th>Kov ve sloučenině</th><th>Čím se redukuje</th><th>Produkt</th></tr></thead>
+        <tbody>
+          <tr><td>hematit Fe₂O₃</td><td>Fe³⁺</td><td>uhlík, oxid uhelnatý (vysoká pec)</td><td>železo</td></tr>
+          <tr><td>chalkocit Cu₂S</td><td>Cu⁺</td><td>sulfid sám: Cu₂S + O₂ → 2 Cu + SO₂</td><td>měď</td></tr>
+          <tr><td>křemen SiO₂</td><td>Si (ox. číslo IV)</td><td>uhlík při ~2&nbsp;000&nbsp;°C</td><td>křemík</td></tr>
+          <tr><td>oxid hlinitý Al₂O₃</td><td>Al³⁺</td><td>elektrický proud (elektrolýza)</td><td>hliník</td></tr>
+          <tr><td>spodumen LiAlSi₂O₆</td><td>Li⁺</td><td><b>neredukuje se</b>, baterie potřebují sloučeninu</td><td>Li₂CO₃, LiOH</td></tr>
+        </tbody>
+      </table>
+      <div class="terms"><b>Oxidace</b> – ztráta elektronů; <b>redukce</b> – přijetí elektronů. <b>Kation</b> – kladně nabitý ion. <b>Oxidační číslo</b> – formální náboj atomu ve sloučenině. <b>Redukční činidlo</b> – látka, která elektrony dodá (C, CO, H₂, Mg).</div>
+      <aside class="notes">V chalkocitu Cu₂S se měď redukuje sulfidovou sírou (S²⁻ se oxiduje na SO₂), kyslík oxiduje síru; proto stačí foukat vzduch do taveniny (konvertor). V chalkopyritu CuFeS₂ je formálně Cu⁺ a Fe³⁺; železo se v huti oxiduje a odchází do strusky. Lithium je výjimka: do baterií se dodává jako sloučenina (Li₂CO₃, LiOH), kovové lithium se vyrábí elektrolýzou taveniny LiCl jen pro speciální použití (primární články, slitiny, nové typy baterií).</aside>
+    </section>
+
+    <!-- 3c2 · tři cesty chemické přeměny -->
+    <section>
+      <div class="kicker">Krok 3 · Tři technologické cesty</div>
+      <div class="row" style="gap:16px; align-items:stretch;">
+        <div class="compare-panel col" style="padding:14px 18px; font-size:18px; line-height:1.38;">
+          <h4 style="font-size:23px; margin-bottom:6px;">Pyrometalurgie</h4>
+          <p style="margin:0 0 6px;">Vysoké teploty, 1&nbsp;000–2&nbsp;000&nbsp;°C.</p>
+          <div class="formula" style="font-size:17px; padding:8px 10px; margin:0 0 8px;">Fe₂O₃ + 3 CO → 2 Fe + 3 CO₂</div>
+          <p style="margin:0 0 6px;"><i>Příklady:</i> železo, měď ze sulfidů, křemík, feroslitiny.</p>
+          <p style="margin:0;"><b>+</b> velké objemy, rychlost<br><b>−</b> CO₂, SO₂, prach, energie</p>
+        </div>
+        <div class="compare-panel col" style="padding:14px 18px; font-size:18px; line-height:1.38;">
+          <h4 style="font-size:23px; margin-bottom:6px;">Hydrometalurgie</h4>
+          <p style="margin:0 0 6px;">Vodné roztoky, 20–250&nbsp;°C.</p>
+          <div class="formula" style="font-size:17px; padding:8px 10px; margin:0 0 8px;">Al(OH)₃ + OH⁻ → [Al(OH)₄]⁻</div>
+          <p style="margin:0 0 6px;"><i>Příklady:</i> oxid hlinitý, lithium, zlato, recyklace baterií.</p>
+          <p style="margin:0;"><b>+</b> i chudé rudy, selektivní<br><b>−</b> kaly, odpadní roztoky, voda</p>
+        </div>
+        <div class="compare-panel col" style="padding:14px 18px; font-size:18px; line-height:1.38;">
+          <h4 style="font-size:23px; margin-bottom:6px;">Elektrometalurgie</h4>
+          <p style="margin:0 0 6px;">Elektrolýza roztoku nebo taveniny.</p>
+          <div class="formula" style="font-size:17px; padding:8px 10px; margin:0 0 8px;">Al³⁺ + 3 e⁻ → Al</div>
+          <p style="margin:0 0 6px;"><i>Příklady:</i> hliník, zinek, lithium (kov), rafinace mědi.</p>
+          <p style="margin:0;"><b>+</b> jediná cesta pro velmi reaktivní kovy<br><b>−</b> velká spotřeba elektřiny</p>
+        </div>
+      </div>
+      <div class="terms"><b>Pražení</b> – zahřívání rudy za přístupu vzduchu (sulfid → oxid). <b>Tavení</b> – zpracování v roztaveném stavu, kov se oddělí od strusky. <b>Loužení</b> – rozpouštění složky z pevné látky roztokem. <b>Tavenina</b> – roztavená sůl nebo oxid. <b>Elektrolýza</b> – rozklad látky elektrickým proudem.</div>
+      <aside class="notes">Pražení sulfidů: 2 ZnS + 3 O₂ → 2 ZnO + 2 SO₂; SO₂ se zachytává a vyrábí se z něj H₂SO₄. Zinek se získává elektrolýzou roztoku ZnSO₄ (elektrolytické vylučování), hliník a lithium se musí vylučovat z taveniny, protože z vodného roztoku by se místo kovu vylučoval vodík. Hydrometalurgie se rychle rozvíjí v recyklaci baterií (loužení tzv. černé hmoty kyselinou).</aside>
+    </section>
+
+    <!-- 3d · reaktivita a energie -->
+    <section>
+      <div class="kicker">Krok 3 · čím reaktivnější kov, tím víc energie</div>
+      <div class="row" style="gap:22px;">
+        <div style="flex:1; min-width:0;">
+          <div class="diagram-wrap" style="padding:10px 14px;">
+            <svg viewBox="0 0 480 400" role="img" aria-label="Řada kovů od ušlechtilých po reaktivní a odpovídající způsob výroby">
+              <defs><marker id="m4a" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--ink-soft)"/></marker></defs>
+              <g font-family="var(--font-body)">
+                <text x="24" y="16" text-anchor="middle" font-size="15" fill="var(--ink-soft)">ušlechtilé</text>
+                <line x1="24" y1="26" x2="24" y2="372" stroke="var(--ink-soft)" stroke-width="3" marker-end="url(#m4a)"/>
+                <text x="24" y="396" text-anchor="middle" font-size="15" fill="var(--ink-soft)">reaktivní</text>
+                <rect x="50" y="28" width="420" height="50" rx="10" fill="var(--surface-2)"/>
+                <text x="64" y="59" font-size="21" font-weight="700" fill="var(--ink)">Au, Ag, Pt</text>
+                <text x="210" y="58" font-size="17" fill="var(--ink-soft)">ryzí kov; gravitace, kyanid</text>
+                <rect x="50" y="86" width="420" height="50" rx="10" fill="var(--surface-2)"/>
+                <text x="64" y="117" font-size="21" font-weight="700" fill="var(--ink)">Cu, Pb</text>
+                <text x="210" y="116" font-size="17" fill="var(--ink-soft)">pražení a tavení sulfidů</text>
+                <rect x="50" y="144" width="420" height="50" rx="10" fill="var(--surface-2)"/>
+                <text x="64" y="175" font-size="21" font-weight="700" fill="var(--ink)">Fe, Zn, Sn</text>
+                <text x="210" y="174" font-size="17" fill="var(--ink-soft)">redukce uhlíkem (koks, CO)</text>
+                <rect x="50" y="202" width="420" height="50" rx="10" fill="var(--accent-soft)"/>
+                <text x="64" y="233" font-size="21" font-weight="700" fill="var(--ink)">Si</text>
+                <text x="210" y="232" font-size="17" fill="var(--ink-soft)">uhlík, ale až při ~2 000 °C</text>
+                <rect x="50" y="260" width="420" height="50" rx="10" fill="var(--accent-soft)"/>
+                <text x="64" y="291" font-size="21" font-weight="700" fill="var(--ink)">Ti</text>
+                <text x="210" y="290" font-size="17" fill="var(--ink-soft)">přes TiCl₄ a redukci hořčíkem</text>
+                <rect x="50" y="318" width="420" height="50" rx="10" fill="#F3D9D2"/>
+                <text x="64" y="349" font-size="21" font-weight="700" fill="var(--ink)">Al, Mg, Li</text>
+                <text x="210" y="348" font-size="17" fill="var(--ink-soft)">elektrolýza taveniny</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div style="flex:1.2; min-width:0;">
+          <div class="diagram-wrap" style="padding:10px 14px;">
+            <svg viewBox="0 0 600 330" role="img" aria-label="Spotřeba primární energie na výrobu kovu v MJ na kg: ocel 23, měď 33, zinek 48, nikl 114, hliník 211, titan 361">
+              <g font-family="var(--font-body)">
+                <g stroke="var(--line)" stroke-width="1">
+                  <line x1="115" y1="10" x2="115" y2="266"/><line x1="230" y1="10" x2="230" y2="266"/><line x1="345" y1="10" x2="345" y2="266"/><line x1="460" y1="10" x2="460" y2="266"/><line x1="575" y1="10" x2="575" y2="266"/>
+                </g>
+                <g font-size="18" fill="var(--ink)" text-anchor="end">
+                  <text x="105" y="40">ocel</text><text x="105" y="82">měď</text><text x="105" y="124">zinek</text><text x="105" y="166">nikl</text><text x="105" y="208">hliník</text><text x="105" y="250">titan</text>
+                </g>
+                <rect x="115" y="20" width="26" height="28" rx="3" fill="var(--primary)"/>
+                <rect x="115" y="62" width="38" height="28" rx="3" fill="var(--primary)"/>
+                <rect x="115" y="104" width="55" height="28" rx="3" fill="var(--primary)"/>
+                <rect x="115" y="146" width="131" height="28" rx="3" fill="var(--primary)"/>
+                <rect x="115" y="188" width="243" height="28" rx="3" fill="var(--accent)"/>
+                <rect x="115" y="230" width="415" height="28" rx="3" fill="var(--accent)"/>
+                <g font-size="17" font-weight="700" fill="var(--ink)">
+                  <text x="147" y="40">23</text><text x="159" y="82">33</text><text x="176" y="124">48</text><text x="252" y="166">114</text><text x="364" y="208">211</text><text x="536" y="250">361</text>
+                </g>
+                <g font-size="17" fill="var(--ink-muted)" text-anchor="middle">
+                  <text x="115" y="286">0</text><text x="230" y="286">100</text><text x="345" y="286">200</text><text x="460" y="286">300</text><text x="575" y="286">400</text>
+                </g>
+                <text x="345" y="318" text-anchor="middle" font-size="17" font-weight="600" fill="var(--ink-soft)">Spotřeba primární energie (MJ na 1 kg kovu)</text>
+              </g>
+            </svg>
+          </div>
+          <p class="src-line" style="font-size:15px; margin-top:4px;">Celý řetězec od těžby po kov; elektřina přepočtena na primární energii. Zdroj: Norgate, Jahanshahi, Rankin (2007), <i>J. Cleaner Production</i> 15, 838–848.</p>
+          <div class="example-panel" style="padding:10px 16px; font-size:18px; line-height:1.36; margin-top:6px;">Měď vychází nízko, i když je v rudě jen ~0,6&nbsp;%: sulfid se redukuje snadno. U hliníku a titanu rozhoduje <b>pevná vazba kov–kyslík</b>.</div>
+        </div>
+      </div>
+      <div class="terms"><b>Ušlechtilý kov</b> – málo reaktivní, v přírodě se vyskytuje i ryzí (v elementárním stavu). <b>Primární energie</b> – energie v palivech a zdrojích; u elektřiny zahrnuje i ztráty v elektrárně. <b>Krollův proces</b> – výroba titanu redukcí TiCl₄ hořčíkem.</div>
+      <aside class="notes">Pořadí v levém schématu odpovídá zhruba stabilitě oxidů (Ellinghamův diagram): čím pevnější vazba kov–kyslík, tím silnější redukční činidlo nebo víc energie je třeba. Titan nelze redukovat uhlíkem (vzniká karbid TiC), proto Krollův proces: TiO₂ + 2 Cl₂ + 2 C → TiCl₄ + 2 CO; TiCl₄ + 2 Mg → Ti + 2 MgCl₂. Titan je 9. nejhojnější prvek zemské kůry, a přesto drahý.
+      Hodnoty z Norgate a kol. 2007 (gross energy requirement): ocel (vysoká pec + konvertor) 22,7; měď (pyrometalurgicky) 33; zinek (elektrolyticky) 48; nikl (pyrometalurgicky) 114; hliník 211; titan 361 MJ/kg. Jsou to typické hodnoty z let kolem 2000; konkrétní závod se může lišit i o desítky procent. Spotřeba energie na měď roste s klesající kovnatostí rud.</aside>
+    </section>
+
+    <!-- 3e · krok 4 rafinace -->
+    <section>
+      <div class="kicker">Krok 4 · Rafinace: z 99,5&nbsp;% na 99,99&nbsp;%</div>
+      <h3 style="font-size:28px; margin-bottom:8px;">Příklad: elektrolytická rafinace mědi</h3>
+      <div class="row" style="gap:22px;">
+        <div style="flex:1.1; min-width:0;">
+          <div class="diagram-wrap" style="padding:10px 14px;">
+            <svg viewBox="0 0 540 335" role="img" aria-label="Elektrolytická rafinace mědi: anoda ze surové mědi se rozpouští, Cu2+ putuje ke katodě, nečistoty padají do anodového kalu">
+              <defs><marker id="m5a" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--water)"/></marker></defs>
+              <g font-family="var(--font-body)">
+                <rect x="200" y="8" width="140" height="36" rx="8" fill="var(--surface-2)" stroke="var(--ink-muted)"/>
+                <text x="270" y="31" text-anchor="middle" font-size="16" fill="var(--ink)">zdroj ss proudu</text>
+                <text x="186" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="var(--danger)">+</text>
+                <text x="354" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="var(--water)">−</text>
+                <path d="M200,26 L150,26 L150,72" stroke="var(--ink)" stroke-width="2.5" fill="none"/>
+                <path d="M340,26 L390,26 L390,72" stroke="var(--ink)" stroke-width="2.5" fill="none"/>
+                <rect x="40" y="92" width="460" height="208" fill="var(--water-soft)" stroke="var(--ink-muted)" stroke-width="2"/>
+                <rect x="138" y="70" width="24" height="200" fill="#9C5428"/>
+                <rect x="384" y="70" width="12" height="200" fill="#D9874A"/>
+                <text x="128" y="60" text-anchor="end" font-size="16" font-weight="700" fill="var(--ink)">anoda</text>
+                <text x="128" y="78" text-anchor="end" font-size="15" fill="var(--ink-soft)">surová Cu 99,5 %</text>
+                <text x="404" y="60" font-size="16" font-weight="700" fill="var(--ink)">katoda</text>
+                <text x="404" y="78" font-size="15" fill="var(--ink-soft)">Cu 99,99 %</text>
+                <g stroke="var(--water)" stroke-width="2.5" marker-end="url(#m5a)">
+                  <line x1="168" y1="140" x2="376" y2="140"/><line x1="168" y1="190" x2="376" y2="190"/><line x1="168" y1="240" x2="376" y2="240"/>
+                </g>
+                <text x="272" y="132" text-anchor="middle" font-size="16" font-weight="700" fill="var(--water)">Cu²⁺</text>
+                <text x="215" y="166" font-size="16" fill="var(--ink-muted)">Ni²⁺</text>
+                <text x="315" y="216" font-size="16" fill="var(--ink-muted)">Fe²⁺</text>
+                <text x="250" y="266" font-size="16" fill="var(--ink-muted)">Zn²⁺</text>
+                <ellipse cx="150" cy="291" rx="55" ry="7" fill="#6B6255"/>
+                <text x="150" y="324" text-anchor="middle" font-size="16" fill="var(--ink-soft)">anodový kal: Ag, Au, Se, Te</text>
+                <text x="492" y="292" text-anchor="end" font-size="15" fill="var(--ink-soft)">CuSO₄ + H₂SO₄, ~60 °C</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="col" style="font-size:18px; line-height:1.38;">
+          <div class="formula" style="font-size:18px; padding:10px 14px; margin-bottom:10px;">anoda: Cu → Cu²⁺ + 2 e⁻<br>katoda: Cu²⁺ + 2 e⁻ → Cu</div>
+          <p style="margin:0 0 7px;"><b>Proč to čistí:</b> ušlechtilejší prvky (Ag, Au, Se, Te) se na anodě neoxidují a padají na dno jako <b>anodový kal</b>. Méně ušlechtilé (Fe, Ni, Zn) se rozpustí, ale na katodě se nevylučují a zůstávají v roztoku.</p>
+          <p style="margin:0 0 7px;"><b>Z kalu</b> se získává stříbro, zlato, selen a telur (viz vedlejší produkty).</p>
+          <p style="margin:0;"><b>Další metody:</b> destilace (Zn; SiHCl₃ u křemíku), zonální tavení (Si a Ge pro polovodiče), opakované srážení a krystalizace (Li₂CO₃ bateriové kvality ≥&nbsp;99,5&nbsp;%), iontoměniče.</p>
+        </div>
+      </div>
+      <div class="terms"><b>Anoda / katoda</b> – elektroda, na které probíhá oxidace / redukce. <b>Elektrolyt</b> – roztok, který vede proud pohybem iontů. <b>Anodový kal</b> – nerozpustný zbytek pod anodami s ušlechtilými kovy. <b>4N, 6N</b> – čistota 99,99&nbsp;% a 99,9999&nbsp;% (počet devítek).</div>
+      <aside class="notes">Rafinační hala obsahuje stovky van zapojených do série; napětí na vaně je jen ~0,3 V, protože se kov pouze přenáší z anody na katodu (nevzniká nová sloučenina). Cyklus anody trvá zhruba 3 týdny. Katodová měď (Cu-CATH-1, ≥ 99,99 %) je standard pro obchod na LME a pro elektrovodné dráty: i stopy nečistot výrazně snižují elektrickou vodivost. Doporučená fotografie: rafinační hala (např. Aurubis, tiskové fotografie).</aside>
+    </section>
+
+    <!-- 3f · úkol měď -->
+    <section>
+      <div class="tag-label data">Práce s výpočtem · měď</div>
+      <h3 style="font-size:30px; margin-bottom:10px;">Kolik horniny se vytěží pro 1&nbsp;tunu mědi?</h3>
+      <div class="row" style="gap:26px;">
+        <div class="col">
+          <div class="panel" style="font-size:19px; line-height:1.42;">
+            <p style="margin:0 0 8px;"><b>Zadání</b></p>
+            <ul style="margin:0; padding-left:1.1em;">
+              <li>ruda obsahuje <b>0,6&nbsp;%&nbsp;Cu</b> (minerál chalkopyrit CuFeS₂),</li>
+              <li>úprava zachytí <b>88&nbsp;%</b> mědi, zbytek odchází s odpadem z úpravy,</li>
+              <li>koncentrát obsahuje <b>28&nbsp;%&nbsp;Cu</b>,</li>
+              <li>ztráty v huti a při rafinaci zanedbejte,</li>
+              <li>na 1&nbsp;t rudy připadají <b>2&nbsp;t skrývky</b>,</li>
+              <li>M(Cu) = 63,55&nbsp;g/mol; M(H₂SO₄) = 98,08&nbsp;g/mol.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="data-task" style="padding:18px 24px;">
+            <div class="tag-label data" style="font-size:17px;">Úkol · 8&nbsp;min ve dvojicích</div>
+            <ol style="font-size:19px; margin-left:1em; line-height:1.38;">
+              <li style="margin-bottom:6px;">Kolik tun <b>rudy</b> je třeba vytěžit na 1&nbsp;t mědi?</li>
+              <li style="margin-bottom:6px;">Kolik tun <b>koncentrátu</b> vznikne a kolik tun <b>odpadu z úpravy</b> skončí v odkališti?</li>
+              <li style="margin-bottom:6px;">Kolik tun horniny se celkem přemístí <b>včetně skrývky</b>?</li>
+              <li style="margin-bottom:6px;">Síra z chalkopyritu se v huti oxiduje na SO₂ a zachytí jako H₂SO₄. Kolik tun kyseliny může vzniknout na 1&nbsp;t Cu?</li>
+              <li style="margin-bottom:0;">Co se stane s odpověďmi 1 a 3, když kovnatost klesne na <b>0,4&nbsp;%</b>? Co to znamená pro energii a emise?</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="terms"><b>Výtěžnost</b> – podíl kovu z rudy, který se při úpravě skutečně zachytí v koncentrátu. <b>Chalkopyrit</b> – sulfid mědi a železa CuFeS₂, nejběžnější měděný minerál. <b>Skrývka</b> – viz krok 1.</div>
+      <aside class="notes">Řešení na dalším slidu. Ve 4. otázce stačí úvaha: v CuFeS₂ připadají na 1 atom Cu 2 atomy S a z každého atomu S vznikne 1 molekula H₂SO₄.</aside>
+    </section>
+
+    <!-- 3g · řešení měď -->
+    <section>
+      <div class="kicker">Řešení · od rudy ke katodě</div>
+      <div class="diagram-wrap" style="padding:10px 16px;">
+        <svg viewBox="0 0 1080 200" role="img" aria-label="Hmotnostní tok: 378 t skrývky a 189 t rudy, 185 t odpadu z úpravy, 3,6 t koncentrátu, 1 t katodové mědi a 3,1 t kyseliny sírové">
+          <defs><marker id="m7a" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker>
+          <marker id="m7b" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--danger)"/></marker></defs>
+          <g font-family="var(--font-body)" text-anchor="middle">
+            <rect x="10" y="4" width="180" height="52" rx="10" fill="#D6C2AF"/>
+            <text x="100" y="28" font-size="17" font-weight="700" fill="var(--ink)">skrývka 378 t</text>
+            <text x="100" y="47" font-size="15" fill="var(--ink-soft)">→ výsypka</text>
+            <rect x="10" y="68" width="180" height="60" rx="10" fill="#E9D9CF"/>
+            <text x="100" y="95" font-size="18" font-weight="700" fill="var(--ink)">ruda 189 t</text>
+            <text x="100" y="116" font-size="15" fill="var(--ink-soft)">0,6 % Cu</text>
+            <rect x="240" y="68" width="180" height="60" rx="10" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="330" y="95" font-size="18" font-weight="700" fill="var(--ink)">úprava</text>
+            <text x="330" y="116" font-size="15" fill="var(--ink-soft)">drcení, mletí, flotace</text>
+            <rect x="470" y="68" width="180" height="60" rx="10" fill="var(--surface-2)"/>
+            <text x="560" y="95" font-size="18" font-weight="700" fill="var(--ink)">koncentrát 3,6 t</text>
+            <text x="560" y="116" font-size="15" fill="var(--ink-soft)">28 % Cu</text>
+            <rect x="700" y="68" width="160" height="60" rx="10" fill="var(--surface-2)"/>
+            <text x="780" y="95" font-size="18" font-weight="700" fill="var(--ink)">huť, rafinace</text>
+            <text x="780" y="116" font-size="15" fill="var(--ink-soft)">tavení, elektrolýza</text>
+            <rect x="910" y="68" width="160" height="60" rx="10" fill="var(--primary)"/>
+            <text x="990" y="95" font-size="18" font-weight="700" fill="#fff">katoda 1 t</text>
+            <text x="990" y="116" font-size="15" fill="#D8E6DC">Cu 99,99 %</text>
+            <path d="M190,98 L235,98" stroke="var(--primary)" stroke-width="3" marker-end="url(#m7a)"/><path d="M420,98 L465,98" stroke="var(--primary)" stroke-width="3" marker-end="url(#m7a)"/><path d="M650,98 L695,98" stroke="var(--primary)" stroke-width="3" marker-end="url(#m7a)"/><path d="M860,98 L905,98" stroke="var(--primary)" stroke-width="3" marker-end="url(#m7a)"/>
+            <path d="M330,128 L330,158" stroke="var(--danger)" stroke-width="3" marker-end="url(#m7b)"/>
+            <text x="330" y="186" font-size="16" fill="var(--danger)">odpad z úpravy 185 t → odkaliště</text>
+            <path d="M780,128 L780,158" stroke="var(--primary)" stroke-width="3" marker-end="url(#m7a)"/>
+            <text x="780" y="186" font-size="16" fill="var(--primary-strong)">3,1 t H₂SO₄ · struska · anodový kal (Ag, Au, Te)</text>
+          </g>
+        </svg>
+      </div>
+      <div class="row" style="gap:18px; margin-top:12px;">
+        <div class="compare-panel col" style="font-size:18px; line-height:1.38; padding:14px 20px;">
+          <p style="margin:0 0 6px;"><b>1 ·</b> 1 / (0,006 × 0,88) ≈ <b>189&nbsp;t rudy</b></p>
+          <p style="margin:0 0 6px;"><b>2 ·</b> koncentrát 1 / 0,28 ≈ <b>3,6&nbsp;t</b>; odpad z úpravy 189 − 3,6 ≈ <b>185&nbsp;t</b>, tedy 98&nbsp;% vytěžené rudy</p>
+          <p style="margin:0;"><b>3 ·</b> skrývka 2 × 189 = 378&nbsp;t; celkem asi <b>570&nbsp;t horniny</b> na 1&nbsp;t Cu</p>
+        </div>
+        <div class="compare-panel col" style="font-size:18px; line-height:1.38; padding:14px 20px;">
+          <p style="margin:0 0 6px;"><b>4 ·</b> CuFeS₂: 1 mol Cu ↔ 2 mol S ↔ 2 mol H₂SO₄. 2 × 98,08 / 63,55 ≈ <b>3,1&nbsp;t H₂SO₄</b> na 1&nbsp;t Cu. Měděná huť je zároveň chemička.</p>
+          <p style="margin:0;"><b>5 ·</b> Při 0,4&nbsp;%: 1 / (0,004 × 0,88) ≈ <b>284&nbsp;t rudy</b>, ~850&nbsp;t horniny, tedy o polovinu víc. Drcení a mletí rostou s množstvím rudy, proto roste energie, emise, voda i odpad na tunu Cu.</p>
+        </div>
+      </div>
+      <div class="terms"><b>Struska</b> – tavenina oxidů (hlavně křemičitanů železa), která se při tavení oddělí od kovu. <b>Výsypka, odkaliště</b> – viz kroky 1 a 2.</div>
+      <aside class="notes">Pointa: nízká kovnatost znamená, že těžba kovu je ve skutečnosti „těžba horniny“. Odpad (hlušina, skrývka) převyšuje produkt o dva až tři řády. Průměrná kovnatost chilských měděných dolů za posledních ~20 let výrazně poklesla (Cochilco), proto roste spotřeba energie a vody na tunu mědi, i když technologie se zlepšují. Kyselina sírová z hutí se prodává mj. k loužení oxidických rud mědi a k výrobě hnojiv. Struska (hlavně křemičitany železa) vzniká z Fe v chalkopyritu a přidaného SiO₂.</aside>
     </section>
 
     <!-- 4 divider Li -->
     <section class="divider-slide">
       <div class="num">01</div>
       <h2>Lithium</h2>
-      <p>Nejlehčí kov a srdce baterií</p>
-      <aside class="notes">Čas: cca 12 minut.</aside>
+      <p>Nejlehčí kov a klíčová surovina katod</p>
+      <aside class="notes">Čas: cca 5 minut. Lithium je téma projektu T7, proto zde jen technologická schémata a zadání příspěvku. Původní slidy (dvě cesty, data, manažerský úkol a řešení) jsou ve zdrojovém kódu zakomentované.</aside>
     </section>
 
-    <!-- 5 Li routes -->
+    <!-- ZAKOMENTOVÁNO · 5 Li routes (lithium zkráceno, téma projektu T7). Pro obnovení smažte tento řádek a řádek se značkou konce komentáře pod slidem.
     <section>
-      <div class="kicker">Dvě cesty k lithiu</div>
+      <div class="kicker">Dvě technologické cesty k lithiu</div>
       <div class="row">
         <div class="col">
-          <div class="compare-panel" style="height:100%">
-            <h4>⛏ Z horniny (spodumen)</h4>
-            <p style="font-size:21px; line-height:1.4; margin:0 0 10px;">Austrálie, Čína, Zimbabwe. Povrchová těžba, koncentrát se praží (~1000 °C) a louží kyselinou sírovou.</p>
-            <p style="font-size:21px; line-height:1.4; margin:0;"><b>+</b> rychlé otevření dolu<br><b>−</b> energie, CO₂, odpad</p>
+          <div class="compare-panel" style="height:100%; font-size:19px; line-height:1.38;">
+            <h4>⛏ Z horniny · spodumen LiAlSi₂O₆</h4>
+            <p style="margin:0 0 8px;">Austrálie, Zimbabwe, Brazílie; v Číně i lepidolit. Povrchový důl, flotací vzniká koncentrát s ~6&nbsp;%&nbsp;Li₂O.</p>
+            <p style="margin:0 0 8px;">Kalcinace při ~1&nbsp;050&nbsp;°C (přeměna α → β-spodumen, který je reaktivnější), pražení s H₂SO₄ (~250&nbsp;°C), loužení vodou → roztok Li₂SO₄ → Li₂CO₃ nebo LiOH.</p>
+            <p style="margin:0;"><b>+</b> rychlejší náběh výroby, ložiska ve stabilních zemích<br><b>−</b> vysoká spotřeba energie, často na uhelnou elektřinu (koncentrát se zpracovává převážně v Číně); hlušina a sírany jako odpad</p>
           </div>
         </div>
         <div class="col">
-          <div class="compare-panel" style="height:100%">
-            <h4>💧 Ze solanky</h4>
-            <p style="font-size:21px; line-height:1.4; margin:0 0 10px;">Chile, Argentina, Bolívie. Slaná podzemní voda se nechá 12–18 měsíců odpařovat na slunci, pak se lithium vysráží.</p>
-            <p style="font-size:21px; line-height:1.4; margin:0;"><b>+</b> málo energie<br><b>−</b> pomalé, odpar vody v poušti</p>
+          <div class="compare-panel" style="height:100%; font-size:19px; line-height:1.38;">
+            <h4>💧 Ze solanky salarů</h4>
+            <p style="margin:0 0 8px;">Chile, Argentina, Bolívie (tzv. lithiový trojúhelník). Podzemní solanka obsahuje řádově 0,1–0,2&nbsp;%&nbsp;Li (Salar de Atacama).</p>
+            <p style="margin:0 0 8px;">Odpařování v nádržích 12–24&nbsp;měsíců, odstranění Mg a B, srážení uhličitanem sodným při ~80–90&nbsp;°C (rozpustnost Li₂CO₃ s teplotou klesá).</p>
+            <p style="margin:0;"><b>+</b> nízká spotřeba energie (pohání ji Slunce)<br><b>−</b> pomalé; odčerpání a odpar solanky v aridní oblasti, dopady na mokřady a místní komunity</p>
           </div>
         </div>
       </div>
-      <div class="formula" style="margin-top:20px;">2LiCl + Na₂CO₃ → Li₂CO₃↓ + 2NaCl &nbsp;&nbsp;<span style="color:var(--ink-muted)">(uhličitan lithný, výchozí látka pro katody)</span></div>
-      <aside class="notes">Lithium se obchoduje jako uhličitan (LCE, lithium carbonate equivalent) nebo hydroxid LiOH. Li₂CO₃ obsahuje 18,8 % Li (2 × 6,94 / 73,89), takže 1 t Li ≈ 5,3 t LCE. Tento výpočet je součástí tématu T7. Nové technologie: přímá extrakce lithia (DLE) sorbenty nebo membránami, bez velkých odpařovacích nádrží. Spory o vodu v poušti Atacama: T7.</aside>
+      <div class="formula" style="margin-top:12px; font-size:22px;">2 LiCl + Na₂CO₃ → Li₂CO₃↓ + 2 NaCl &nbsp;<span style="color:var(--ink-muted); font-size:18px;">(Li₂CO₃: výchozí látka pro katody)</span></div>
+      <div class="terms"><b>Kalcinace</b> – žíhání pevné látky za vysoké teploty, mění se krystalová struktura. <b>Pražení</b> – zahřívání s reaktantem (zde s H₂SO₄). <b>Loužení</b> – rozpouštění složky z pevné látky roztokem. <b>Salar</b> – solná pánev s podzemní solankou.</div>
+      <aside class="notes">Lithium se obchoduje jako uhličitan (LCE, lithium carbonate equivalent) nebo hydroxid LiOH·H₂O. LiOH je preferovaný pro katody s vysokým obsahem niklu (NMC 811), Li₂CO₃ pro LFP. Li₂CO₃ obsahuje 18,8 % Li (2 × 6,94 / 73,89), takže 1 t Li ≈ 5,3 t LCE (počítá se v Semináři 2 a v tématu T7).
+      Solanky: rozhodující je i poměr Mg/Li; čím vyšší, tím složitější separace (proto se bolivijská Uyuni rozvíjí pomalu).
+      Nové technologie: přímá extrakce lithia (DLE) sorbenty, iontoměniči nebo membránami; nevyžaduje velké odpařovací nádrže a solanku lze vracet zpět, ale spotřebuje víc energie a sladké vody. Spory o vodu v poušti Atacama: téma T7.</aside>
     </section>
+    -->
 
-    <!-- 6 Li data -->
+
+    <!-- 5b · Li technologická schémata -->
     <section>
-      <div class="tag-label data">Data · těžba lithia</div>
-      <div class="row middle">
-        <div class="col" style="flex:1.2">
-          <div class="stat-row">
-            <div class="stat"><b>82 kt</b><span>2020</span></div>
-            <div class="stat acc"><b>240 kt</b><span>2024 (~3×)</span></div>
+      <div class="kicker">Lithium · technologická schémata</div>
+      <div class="diagram-wrap" style="padding:12px 16px;">
+        <svg viewBox="0 0 1080 322" role="img" aria-label="Schéma výroby uhličitanu nebo hydroxidu lithného ze spodumenu a ze solanky">
+          <defs><marker id="mLi" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker></defs>
+          <g font-family="var(--font-body)">
+            <text x="10" y="20" font-size="18" font-weight="700" fill="var(--ink)">Spodumen · Austrálie → zpracování převážně v Číně</text>
+            <g text-anchor="middle">
+              <rect x="10" y="32" width="160" height="80" rx="10" fill="#E9D9CF"/>
+              <text x="90" y="60" font-size="17" font-weight="700" fill="var(--ink)">Důl</text>
+              <text x="90" y="82" font-size="15" fill="var(--ink-soft)">pegmatit</text>
+              <text x="90" y="100" font-size="15" fill="var(--ink-soft)">1–1,5 % Li₂O</text>
+              <rect x="192" y="32" width="160" height="80" rx="10" fill="var(--surface-2)"/>
+              <text x="272" y="60" font-size="17" font-weight="700" fill="var(--ink)">Úprava</text>
+              <text x="272" y="82" font-size="15" fill="var(--ink-soft)">drcení, flotace</text>
+              <text x="272" y="100" font-size="15" fill="var(--ink-soft)">koncentrát 6 % Li₂O</text>
+              <rect x="374" y="32" width="160" height="80" rx="10" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+              <text x="454" y="60" font-size="17" font-weight="700" fill="var(--ink)">Kalcinace</text>
+              <text x="454" y="82" font-size="15" fill="var(--ink-soft)">~1 050 °C</text>
+              <text x="454" y="100" font-size="15" fill="var(--ink-soft)">α → β-spodumen</text>
+              <rect x="556" y="32" width="160" height="80" rx="10" fill="var(--surface-2)"/>
+              <text x="636" y="60" font-size="17" font-weight="700" fill="var(--ink)">Pražení s H₂SO₄</text>
+              <text x="636" y="82" font-size="15" fill="var(--ink-soft)">~250 °C</text>
+              <text x="636" y="100" font-size="15" fill="var(--ink-soft)">Li → Li₂SO₄</text>
+              <rect x="738" y="32" width="160" height="80" rx="10" fill="var(--surface-2)"/>
+              <text x="818" y="60" font-size="17" font-weight="700" fill="var(--ink)">Loužení, čištění</text>
+              <text x="818" y="82" font-size="15" fill="var(--ink-soft)">voda; odstranění</text>
+              <text x="818" y="100" font-size="15" fill="var(--ink-soft)">Fe, Al, Mg, Ca</text>
+              <rect x="920" y="32" width="150" height="80" rx="10" fill="var(--primary)"/>
+              <text x="995" y="60" font-size="17" font-weight="700" fill="#fff">Produkt</text>
+              <text x="995" y="82" font-size="15" fill="#D8E6DC">Li₂CO₃ nebo</text>
+              <text x="995" y="100" font-size="15" fill="#D8E6DC">LiOH·H₂O</text>
+            </g>
+            <path d="M170,72 L187,72" stroke="var(--primary)" stroke-width="3" marker-end="url(#mLi)"/><path d="M352,72 L369,72" stroke="var(--primary)" stroke-width="3" marker-end="url(#mLi)"/><path d="M534,72 L551,72" stroke="var(--primary)" stroke-width="3" marker-end="url(#mLi)"/><path d="M716,72 L733,72" stroke="var(--primary)" stroke-width="3" marker-end="url(#mLi)"/><path d="M898,72 L915,72" stroke="var(--primary)" stroke-width="3" marker-end="url(#mLi)"/>
+            <text x="10" y="168" font-size="18" font-weight="700" fill="var(--ink)">Solanka · Chile, Argentina</text>
+            <g text-anchor="middle">
+              <rect x="10" y="180" width="160" height="80" rx="10" fill="var(--surface-2)"/>
+              <text x="90" y="208" font-size="17" font-weight="700" fill="var(--ink)">Vrty</text>
+              <text x="90" y="230" font-size="15" fill="var(--ink-soft)">solanka</text>
+              <text x="90" y="248" font-size="15" fill="var(--ink-soft)">0,1–0,2 % Li</text>
+              <rect x="192" y="180" width="160" height="80" rx="10" fill="var(--water-soft)" stroke="var(--water)" stroke-width="2"/>
+              <text x="272" y="208" font-size="17" font-weight="700" fill="var(--ink)">Odpařování</text>
+              <text x="272" y="230" font-size="15" fill="var(--ink-soft)">12–24 měsíců;</text>
+              <text x="272" y="248" font-size="15" fill="var(--ink-soft)">krystaluje NaCl, KCl</text>
+              <rect x="374" y="180" width="160" height="80" rx="10" fill="var(--surface-2)"/>
+              <text x="454" y="208" font-size="17" font-weight="700" fill="var(--ink)">Koncentrát</text>
+              <text x="454" y="230" font-size="15" fill="var(--ink-soft)">roztok LiCl</text>
+              <text x="454" y="248" font-size="15" fill="var(--ink-soft)">~6 % Li</text>
+              <rect x="556" y="180" width="160" height="80" rx="10" fill="var(--surface-2)"/>
+              <text x="636" y="208" font-size="17" font-weight="700" fill="var(--ink)">Čištění</text>
+              <text x="636" y="230" font-size="15" fill="var(--ink-soft)">extrakce boru,</text>
+              <text x="636" y="248" font-size="15" fill="var(--ink-soft)">Mg jako Mg(OH)₂</text>
+              <rect x="738" y="180" width="160" height="80" rx="10" fill="var(--surface-2)"/>
+              <text x="818" y="208" font-size="17" font-weight="700" fill="var(--ink)">Srážení</text>
+              <text x="818" y="230" font-size="15" fill="var(--ink-soft)">Na₂CO₃, ~85 °C</text>
+              <text x="818" y="248" font-size="15" fill="var(--ink-soft)">Li₂CO₃↓</text>
+              <rect x="920" y="180" width="150" height="80" rx="10" fill="var(--primary)"/>
+              <text x="995" y="208" font-size="17" font-weight="700" fill="#fff">Produkt</text>
+              <text x="995" y="230" font-size="15" fill="#D8E6DC">Li₂CO₃</text>
+              <text x="995" y="248" font-size="15" fill="#D8E6DC">≥ 99,5 %</text>
+            </g>
+            <path d="M170,220 L187,220" stroke="var(--primary)" stroke-width="3" marker-end="url(#mLi)"/><path d="M352,220 L369,220" stroke="var(--primary)" stroke-width="3" marker-end="url(#mLi)"/><path d="M534,220 L551,220" stroke="var(--primary)" stroke-width="3" marker-end="url(#mLi)"/><path d="M716,220 L733,220" stroke="var(--primary)" stroke-width="3" marker-end="url(#mLi)"/><path d="M898,220 L915,220" stroke="var(--primary)" stroke-width="3" marker-end="url(#mLi)"/>
+            <rect x="10" y="296" width="22" height="16" rx="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="42" y="309" font-size="16" fill="var(--ink-soft)">energeticky nejnáročnější krok (palivo, často uhlí)</text>
+            <rect x="470" y="296" width="22" height="16" rx="3" fill="var(--water-soft)" stroke="var(--water)" stroke-width="2"/>
+            <text x="502" y="309" font-size="16" fill="var(--ink-soft)">krok s největším zásahem do vodního režimu</text>
+          </g>
+        </svg>
+      </div>
+      <div class="row" style="gap:18px; margin-top:12px; font-size:18px; line-height:1.38;">
+        <div class="col"><div class="formula" style="font-size:18px; padding:8px 14px; margin:0;">Li₂SO₄ + 2 NaOH → 2 LiOH + Na₂SO₄</div><p style="margin:6px 0 0;">Ze spodumenu lze vyrobit hydroxid přímo; ze solanky vzniká nejdřív uhličitan.</p></div>
+        <div class="col"><p style="margin:0;"><b>Odpady:</b> hlušina a zbytek po loužení (spodumen); NaCl, KCl a Mg(OH)₂ (solanka). KCl se prodává jako hnojivo.</p></div>
+      </div>
+      <div class="terms"><b>Spodumen</b> – lithný minerál LiAlSi₂O₆. <b>Pegmatit</b> – hrubozrnná vyvřelá hornina, ve které se spodumen vyskytuje. <b>Kalcinace</b> – žíhání pevné látky za vysoké teploty. <b>Bateriová kvalita</b> – čistota požadovaná výrobci katod (Li₂CO₃ ≥&nbsp;99,5&nbsp;%). <b>DLE</b> – přímá extrakce lithia: sorbent vybere Li⁺ ze solanky za hodiny místo měsíců, vyžaduje ale víc energie a sladké vody.</div>
+      <aside class="notes">Kalcinace: α-spodumen je hustý a s kyselinou nereaguje, při ~1 050 °C se mění na objemnější β-spodumen, ze kterého H₂SO₄ vytěsní Li⁺ (výměna Li⁺ za H⁺). Solanka: Mg²⁺ se odstraňuje vápnem (vzniká Mg(OH)₂), bor extrakcí rozpouštědlem. Li₂CO₃ se sráží za tepla, protože jeho rozpustnost s teplotou klesá (u většiny solí je to naopak). Bateriová kvalita: ≥ 99,5 % Li₂CO₃, LiOH·H₂O ≥ 56,5 % LiOH. Doporučená fotografie: odpařovací nádrže v Salar de Atacama (NASA Earth Observatory nebo Copernicus Sentinel-2).</aside>
+    </section>
+
+    <!-- 5c · co očekávat od T7 -->
+    <section>
+      <div class="kicker">Lithium · pokračování v projektu T7</div>
+      <h3 style="font-size:28px; margin-bottom:10px;">Co očekáváme od příspěvku „Lithium a voda: solanky vs. horniny“</h3>
+      <div class="row" style="gap:24px;">
+        <div style="flex:2.1; min-width:0;">
+          <div class="goal-list tight" style="margin-top:0; gap:9px;">
+            <div class="item" style="font-size:20px;"><span class="dot"></span><span><b>Klíčová otázka:</b> odkud se lithium bere, kolik vody a energie jeho výroba stojí a jak spolehlivá jsou čísla, která se o tom říkají.</span></div>
+            <div class="item" style="font-size:20px;"><span class="dot"></span><span><b>Chemie vlastními slovy:</b> odpařování solanky a srážení Li₂CO₃ proti pražení a loužení spodumenu, s oporou v dnešních schématech.</span></div>
+            <div class="item" style="font-size:20px;"><span class="dot"></span><span><b>Výpočet:</b> kolik % lithia obsahuje Li₂CO₃, kolik t Li₂CO₃ odpovídá 1&nbsp;t Li a kolik litrů vody by podle tvrzení připadlo na baterii s 8&nbsp;kg Li.</span></div>
+            <div class="item" style="font-size:20px;"><span class="dot"></span><span><b>Dva grafy:</b> z OWID těžba a zásoby lithia s vlastním nastavením, druhý vlastní (např. vodní stres v Chile, Austrálii a Argentině). U obou titulek se sdělením, jednotky, zdroj a rok.</span></div>
+            <div class="item" style="font-size:20px;"><span class="dot"></span><span><b>Ověření tvrzení:</b> „Na 1&nbsp;t lithia se odpaří přibližně 2 miliony litrů vody.“ Je to sladká voda, nebo solanka? Primární zdroj a zdůvodněný verdikt.</span></div>
+            <div class="item" style="font-size:20px;"><span class="dot"></span><span><b>Závěr pro praxi:</b> co z toho plyne pro firmu, obec nebo stát a co víme jistě a co ne; otázka do diskuse.</span></div>
           </div>
-          <div class="hbars" style="grid-template-columns:170px 1fr 90px; margin-top:22px;">
-            <div class="lbl2">Austrálie</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val2">37 %</div>
-            <div class="lbl2">Chile</div><div class="track"><div class="fill" style="width:55%; background:var(--ink-muted)"></div></div><div class="val2">20 %</div>
-            <div class="lbl2">Čína</div><div class="track"><div class="fill" style="width:47%; background:var(--ink-muted)"></div></div><div class="val2">17 %</div>
-            <div class="lbl2">Zimbabwe</div><div class="track"><div class="fill" style="width:25%; background:var(--ink-muted)"></div></div><div class="val2">9 %</div>
-          </div>
-          <p class="src-line">Podíl na těžbě 2024. Zdroj: USGS via Our World in Data.</p>
         </div>
         <div class="col">
-          <div class="example-panel">
-            <p class="prose tight"><b>Česko: Cínovec</b> v Krušných horách, jedno z největších známých ložisek lithia v Evropě (minerál cinvaldit).</p>
-            <p class="prose tight" style="margin:0;">Projekt připravuje společnost Geomet (skupina ČEZ). Těžba ani zpracování zatím neběží.</p>
+          <div class="slot-card" style="padding:16px 20px;">
+            <div class="slot-id">T7 · 9.&nbsp;12. · 10&nbsp;+&nbsp;5&nbsp;min</div>
+            <h4 style="font-size:23px;">Proč na tom záleží</h4>
+            <p style="font-size:18px; margin:0 0 8px;">Další údaje o lithiu dnes neuslyšíte: kdo těží, kdo zpracovává a kolik to stojí vody, přinese až tento příspěvek.</p>
+            <p style="font-size:18px; margin:0 0 8px;">Snímek s hlavním sdělením a 2–3 čísly poslouží všem jako <b>studijní materiál ke zkoušce</b>.</p>
+            <p style="font-size:18px; margin:0;"><b>20 bodů</b> podle rubriky; podklady nejpozději 2 dny předem (7.&nbsp;12.).</p>
+          </div>
+          <p class="src-line" style="font-size:16px; margin-top:8px;">Pro zájemce: přímá extrakce lithia (DLE). Zadání a hodnocení: <a href="zadani-projektu.html">zadani-projektu.html</a></p>
+        </div>
+      </div>
+      <aside class="notes">Vychází ze zadání tématu T7 a z rubriky projektu. Řekněte otevřeně, že lithium je dnes zkrácené právě proto, aby ho třídě vysvětlil autor nebo autorka příspěvku na Přednášce 6 (9. 12.). Dnešní schémata jsou výchozím bodem chemické části příspěvku.</aside>
+    </section>
+
+    <!-- ZAKOMENTOVÁNO · 6 Li data task (lithium zkráceno, téma projektu T7). Pro obnovení smažte tento řádek a řádek se značkou konce komentáře pod slidem.
+    <section>
+      <div class="tag-label data">Práce s daty · dohledejte sami</div>
+      <h3 style="font-size:30px; margin-bottom:10px;">Kdo těží lithium a kde jsou zásoby?</h3>
+      <div class="row" style="gap:28px;">
+        <div class="col">
+          <div class="data-task" style="padding:18px 24px;">
+            <div class="tag-label data" style="font-size:17px;">Úkol · 5&nbsp;min, notebook nebo mobil</div>
+            <ol style="font-size:20px; margin-left:1em; line-height:1.38;">
+              <li style="margin-bottom:8px;">Kolik lithia se na světě vytěžilo v roce <b>2020</b> a v posledním dostupném roce? Kolikrát těžba vzrostla? <b>Pozor na jednotku</b> (t Li, nebo t LCE?).</li>
+              <li style="margin-bottom:8px;">Které čtyři země měly v posledním roce největší podíl na těžbě?</li>
+              <li style="margin-bottom:8px;">Porovnejte podíl Chile na <b>těžbě</b> a na světových <b>zásobách</b>. Co z rozdílu vyvodíte?</li>
+              <li style="margin-bottom:0;">Kde se vytěžené lithium převážně <b>zpracovává</b> na chemikálie pro baterie?</li>
+            </ol>
+          </div>
+        </div>
+        <div class="col">
+          <div class="panel" style="font-size:19px; line-height:1.4;">
+            <p style="margin:0 0 10px;"><b>Kde to najdete</b></p>
+            <p style="margin:0 0 10px;"><b>1, 2:</b> Our World in Data, <i>Minerals explorer</i>: Mineral = <i>Lithium</i>, Metric = <i>Production</i>, Type = <i>Mine</i>. Pro podíly zaškrtněte <i>Share of global</i>. Záložka <i>Table</i> ukáže přesná čísla.</p>
+            <p style="margin:0 0 10px;"><b>3:</b> USGS Mineral Commodity Summaries, kapitola <i>Lithium</i>: tabulka „Mine production and reserves“ (volně ke stažení jako PDF).</p>
+            <p style="margin:0;"><b>4:</b> IEA <i>Global Critical Minerals Outlook</i>: graf podílů zemí na těžbě a rafinaci (<i>refining</i>).</p>
+          </div>
+          <p class="owid-link" style="font-size:17px; margin-top:10px;"><a href="https://ourworldindata.org/explorers/minerals?Mineral=Lithium&Metric=Production&Type=Mine&Share+of+global=false" target="_blank">ourworldindata.org/explorers/minerals ↗</a> · <a href="https://www.usgs.gov/centers/national-minerals-information-center/lithium-statistics-and-information" target="_blank">usgs.gov · Lithium ↗</a></p>
+        </div>
+      </div>
+      <div class="terms"><b>Těžba</b> (mine production) – vytěžené množství za rok. <b>Zásoby</b> (reserves) – známá ložiska těžitelná se ziskem. <b>Rafinace</b> (refining) – výroba chemikálií nebo kovu. <b>LCE</b> – ekvivalent uhličitanu lithného, 1&nbsp;t Li ≈&nbsp;5,3&nbsp;t LCE.</div>
+      <aside class="notes">Studenti pracují samostatně nebo ve dvojicích. Pokud není čas, zadejte jako přípravu na Seminář 2. Řešení je na dalším slidu. Zdůrazněte rozlišení těžba (mine production), zásoby (reserves) a zpracování (refining), které se v médiích často zaměňují.</aside>
+    </section>
+    -->
+
+    <!-- ZAKOMENTOVÁNO · 7 Li data solution (lithium zkráceno, téma projektu T7). Pro obnovení smažte tento řádek a řádek se značkou konce komentáře pod slidem.
+    <section>
+      <div class="kicker">Řešení · lithium v datech</div>
+      <div class="row" style="gap:24px;">
+        <div style="flex:1.25; min-width:0;">
+          <table class="data-table" style="font-size:19px;">
+            <thead><tr><th>Země</th><th>Těžba 2024<br>(kt Li)</th><th>Podíl na<br>těžbě</th><th>Podíl na<br>zásobách</th></tr></thead>
+            <tbody>
+              <tr><td>Austrálie</td><td>88</td><td><b>37&nbsp;%</b></td><td>23&nbsp;%</td></tr>
+              <tr><td>Chile</td><td>49</td><td><b>20&nbsp;%</b></td><td><b>31&nbsp;%</b></td></tr>
+              <tr><td>Čína</td><td>41</td><td><b>17&nbsp;%</b></td><td>10&nbsp;%</td></tr>
+              <tr><td>Zimbabwe</td><td>22</td><td><b>9&nbsp;%</b></td><td>2&nbsp;%</td></tr>
+              <tr><td>Argentina</td><td>18</td><td>8&nbsp;%</td><td>13&nbsp;%</td></tr>
+              <tr><td><b>Svět</b></td><td><b>240</b></td><td>100&nbsp;%</td><td>30&nbsp;Mt Li</td></tr>
+            </tbody>
+          </table>
+          <p class="src-line" style="font-size:16px; margin-top:6px;">Hmotnost uvedena jako obsah lithia (t Li), ne jako LCE. Zdroj: USGS MCS 2025; OWID Minerals explorer.</p>
+        </div>
+        <div class="col" style="font-size:19px; line-height:1.38;">
+          <div class="compare-panel" style="padding:14px 20px; margin-bottom:12px;">
+            <p style="margin:0 0 6px;"><b>1 ·</b> 2020: <b>82&nbsp;kt</b> Li, 2024: <b>240&nbsp;kt</b> Li, tedy asi <b>3×</b> víc za čtyři roky. V t LCE by čísla byla 5,3× vyšší.</p>
+            <p style="margin:0 0 6px;"><b>2 ·</b> Austrálie, Chile, Čína, Zimbabwe (dohromady ~83&nbsp;%).</p>
+            <p style="margin:0 0 6px;"><b>3 ·</b> Chile má větší podíl zásob než těžby: má rezervu pro růst, těžbu ale omezují povolení a vodní limity v Atacamě.</p>
+            <p style="margin:0;"><b>4 ·</b> Na lithiové chemikálie se v Číně zpracovává zhruba 2/3 světového lithia (IEA), včetně australského koncentrátu.</p>
+          </div>
+          <div class="example-panel" style="padding:12px 18px;">
+            <p style="margin:0;"><b>Česko · Cínovec:</b> jedno z největších ložisek lithia v Evropě (cinvaldit v greisenu). Projekt připravuje Geomet (skupina ČEZ), v roce 2025 zařazen mezi strategické projekty EU. Těžba zatím neběží.</p>
           </div>
         </div>
       </div>
-      <aside class="notes">Zásoby (reserves) 2024: Chile 31 %, Austrálie 23 %, Argentina 13 %, Čína 10 %. Těžba lithia v Číně rychle roste. Velká část zpracování na lithiové chemikálie probíhá v Číně, i když se surovina těží jinde (IEA). Cínovec: ověřte stav projektu před přednáškou. Hodí se do diskuse o cíli EU „10 % těžby v EU“.</aside>
+      <div class="terms"><b>Cinvaldit</b> – lithná slída, hlavní lithný minerál Cínovce. <b>Greisen</b> – hornina přeměněná horkými roztoky, typická pro ložiska Sn, W a Li. <b>Strategický projekt EU</b> – projekt podporovaný podle Aktu o kritických surovinách.</div>
+      <aside class="notes">Data USGS MCS 2025 (2024, t Li): Austrálie 88 000, Chile 49 000, Čína 41 000, Zimbabwe 22 000, Argentina 18 000, Brazílie 10 000; svět 240 000. Zásoby: Chile 9,3 Mt, Austrálie 7,0 Mt, Argentina 4,0 Mt, Čína 3,0 Mt; svět 30 Mt. 2020: 82 kt (MCS 2021). Ověřte, zda už není k dispozici MCS 2026 (data za 2025).
+      Pointa ke 3: zásoby říkají, kde těžba může být, těžba, kde skutečně je. Chile v roce 2023 vyhlásilo Národní strategii pro lithium (stát přebírá většinový podíl v nových projektech).
+      Pointa ke 4: koncentrace zpracování je vyšší než koncentrace těžby; proto Akt o kritických surovinách EU (Nařízení 2024/1252) stanoví vedle cíle 10 % těžby i cíl 40 % zpracování v EU a max. 65 % závislosti na jedné třetí zemi v každém kroku.
+      Cínovec: Geomet (ČEZ 51 %, European Metals 49 %). Před přednáškou ověřte aktuální stav (EIA, rozhodnutí o investici).</aside>
     </section>
+    -->
 
-    <!-- 7 divider C -->
+    <!-- ZAKOMENTOVÁNO · 8 Li manager task (lithium zkráceno, téma projektu T7). Pro obnovení smažte tento řádek a řádek se značkou konce komentáře pod slidem.
+    <section>
+      <div class="tag-label data">Manažerský úkol · ověřte tvrzení dodavatele</div>
+      <h3 style="font-size:30px; margin-bottom:8px;">„Naše lithium ze solanky je udržitelnější než lithium z hornin.“</h3>
+      <p style="font-size:20px; color:var(--ink-soft); margin-bottom:14px;">Jste manažer/ka udržitelnosti evropského výrobce bateriových článků. Dodavatel uhličitanu lithného z Chile uvádí tuto větu v nabídce a chce ji použít ve společném marketingu.</p>
+      <div class="row" style="gap:18px; align-items:stretch;">
+        <div class="compare-panel col" style="padding:16px 20px; font-size:19px; line-height:1.38;">
+          <div class="badge-dot" style="background:var(--accent); margin-bottom:8px;">1</div>
+          <p style="margin:0;"><b>Rozložte tvrzení:</b> u kterých ukazatelů (uhlíková stopa, voda, biodiverzita, místní komunity) pravděpodobně platí a u kterých ne?</p>
+        </div>
+        <div class="compare-panel col" style="padding:16px 20px; font-size:19px; line-height:1.38;">
+          <div class="badge-dot" style="background:var(--accent); margin-bottom:8px;">2</div>
+          <p style="margin:0;"><b>Doklady:</b> jaké podklady si od dodavatele vyžádáte, než tvrzení přijmete nebo použijete?</p>
+        </div>
+        <div class="compare-panel col" style="padding:16px 20px; font-size:19px; line-height:1.38;">
+          <div class="badge-dot" style="background:var(--accent); margin-bottom:8px;">3</div>
+          <p style="margin:0;"><b>Regulace:</b> které povinnosti z Nařízení EU o bateriích se vaší firmy týkají v souvislosti s lithiem?</p>
+        </div>
+      </div>
+      <p class="src-line" style="font-size:17px; margin-top:14px; line-height:1.4;"><b>Kde hledat:</b> Nařízení (EU) 2023/1542 o bateriích (EUR-Lex, čl. 7, 8, 48, 71, 77); IEA <i>Global Critical Minerals Outlook</i>; Kelly a kol. (2021), <i>Resources, Conservation &amp; Recycling</i> (LCA lithia); standard IRMA (Initiative for Responsible Mining Assurance).</p>
+      <aside class="notes">Práce ve dvojicích, 5–7 minut. Nepřekrývá se se Seminářem 2 (tam Cínovec z pohledu obce). Řešení na dalším slidu.</aside>
+    </section>
+    -->
+
+    <!-- ZAKOMENTOVÁNO · 9 Li manager solution (lithium zkráceno, téma projektu T7). Pro obnovení smažte tento řádek a řádek se značkou konce komentáře pod slidem.
+    <section>
+      <div class="kicker">Řešení · lithium ze solanky</div>
+      <div class="row" style="gap:20px;">
+        <div class="compare-panel col" style="font-size:18px; line-height:1.36; padding:16px 20px;">
+          <h4 style="font-size:22px; margin-bottom:8px;">1 · Tvrzení podle ukazatelů</h4>
+          <p style="margin:0 0 6px;"><b>Uhlíková stopa: spíše platí.</b> Li₂CO₃ ze solanky ~3&nbsp;kg&nbsp;CO₂e/kg, LiOH ze spodumenu zpracovaného v Číně ~15&nbsp;kg&nbsp;CO₂e/kg.</p>
+          <p style="margin:0 0 6px;"><b>Voda: nejisté.</b> Odpar solanky a čerpání sladké vody v poušti; dopady na laguny a mokřady.</p>
+          <p style="margin:0;"><b>Komunity: rizikové.</b> Spory s původními obyvateli o vodu a podíl na výnosech.</p>
+        </div>
+        <div class="compare-panel col" style="font-size:18px; line-height:1.36; padding:16px 20px;">
+          <h4 style="font-size:22px; margin-bottom:8px;">2 · Co chtít od dodavatele</h4>
+          <ul style="margin:0; padding-left:1.1em;">
+            <li style="margin-bottom:4px;">uhlíkovou stopu podle ISO 14067 (<i>cradle-to-gate</i>, se zdrojem elektřiny),</li>
+            <li style="margin-bottom:4px;">vodní bilanci salaru a monitoring,</li>
+            <li style="margin-bottom:4px;">nezávislý audit (např. IRMA),</li>
+            <li style="margin-bottom:0;">kde se surovina zpracovávala.</li>
+          </ul>
+          <p style="margin:8px 0 0;">Nedoložené <b>„udržitelnější“</b> zakazuje vůči spotřebitelům směrnice (EU) 2024/825.</p>
+        </div>
+        <div class="compare-panel col" style="font-size:18px; line-height:1.36; padding:16px 20px;">
+          <h4 style="font-size:22px; margin-bottom:8px;">3 · Nařízení (EU) 2023/1542</h4>
+          <ul style="margin:0; padding-left:1.1em;">
+            <li style="margin-bottom:4px;"><b>náležitá péče</b> u Li, Co, Ni a grafitu (od 2027),</li>
+            <li style="margin-bottom:4px;"><b>prohlášení o uhlíkové stopě</b> baterií do elektromobilů,</li>
+            <li style="margin-bottom:4px;"><b>bateriový pas</b> od 18.&nbsp;2.&nbsp;2027,</li>
+            <li style="margin-bottom:4px;"><b>min. recyklovaný obsah Li:</b> 6&nbsp;% (2031), 12&nbsp;% (2036),</li>
+            <li style="margin-bottom:0;"><b>získání Li z odpadních baterií:</b> 50&nbsp;% (2027), 80&nbsp;% (2031).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="example-panel" style="padding:10px 22px; margin-top:12px; font-size:19px;">
+        <b>Pointa:</b> neexistuje „udržitelné lithium“ obecně. Každá technologie má jiný profil dopadů a tvrzení je třeba rozložit na měřitelné ukazatele s doloženými daty.
+      </div>
+      <div class="terms"><b>Náležitá péče</b> (due diligence) – povinnost firmy zjišťovat a omezovat rizika v dodavatelském řetězci. <b>Cradle-to-gate</b> – od těžby po bránu závodu. <b>Bateriový pas</b> – elektronický záznam o původu, složení a stopě baterie.</div>
+      <aside class="notes">Čísla uhlíkové stopy jsou orientační (Kelly a kol. 2021, Argonne National Laboratory; podobně IEA): rozdíl je dán hlavně energií pro kalcinaci spodumenu a uhelnou elektřinou v čínských zpracovatelských závodech. Spotřeba vody: rozlišujte solanku (nepitná, ale její odčerpání mění hydrologii salaru) a sladkou vodu.
+      Náležitá péče podle nařízení o bateriích byla balíčkem „stop-the-clock“ (2025) odložena na srpen 2027; prohlášení o uhlíkové stopě se zavádí postupně a prováděcí akty se zpožďují. Před přednáškou ověřte aktuální stav na EUR-Lex.
+      Navazuje na T7 (lithium a voda) a na pravidla pro environmentální tvrzení, která se vrátí u hliníku.</aside>
+    </section>
+    -->
+
+    <!-- 10 divider C -->
     <section class="divider-slide">
       <div class="num">02</div>
       <h2>Uhlík</h2>
@@ -134,221 +818,957 @@
       <aside class="notes">Čas: cca 8 minut.</aside>
     </section>
 
-    <!-- 8 graphite -->
+    <!-- 11 graphite -->
     <section>
       <div class="kicker">Jeden prvek, mnoho materiálů</div>
       <div class="row">
         <div class="col">
-          <div class="panel">
-            <p class="prose tight"><b>Grafit</b>: vrstvy uhlíkových šestiúhelníků. Mezi vrstvy se při nabíjení „schovávají“ ionty Li⁺, proto je grafit <b>anodou</b> téměř každé lithiové baterie.</p>
-            <p class="prose tight" style="margin:0;">Baterie elektromobilu obsahuje řádově desítky kg grafitu, víc než lithia.</p>
+          <div class="panel" style="font-size:20px; line-height:1.4;">
+            <p style="margin:0 0 10px;"><b>Grafit</b>: vrstvy uhlíkových šestiúhelníků vázané slabými mezivrstevnými silami. Při nabíjení se mezi vrstvy vkládají ionty Li⁺ (<b>interkalace</b>, až LiC₆), proto je grafit <b>anodou</b> téměř všech lithno-iontových baterií.</p>
+            <p style="margin:0;">Typická baterie elektromobilu obsahuje kolem <b>65&nbsp;kg grafitu</b>, ale jen asi <b>9&nbsp;kg lithia</b> (IEA).</p>
           </div>
         </div>
         <div class="col">
-          <div class="compare-panel">
+          <div class="compare-panel" style="font-size:20px; line-height:1.4;">
             <h4>Přírodní × syntetický</h4>
-            <p style="font-size:21px; line-height:1.4; margin:0 0 10px;"><b>Přírodní</b> se těží: Čína <b>79 %</b> (2024).</p>
-            <p style="font-size:21px; line-height:1.4; margin:0;"><b>Syntetický</b> se vyrábí z ropného koksu zahřátím na ~3000 °C, takže je energeticky velmi náročný. Výroba anod je také převážně v Číně.</p>
+            <p style="margin:0 0 10px;"><b>Přírodní</b> se těží (Čína <b>79&nbsp;%</b> těžby, 2024). Pro anody se musí zakulatit (sféroidizace) a vyčistit na &gt;&nbsp;99,95&nbsp;%&nbsp;C, často kyselinou fluorovodíkovou.</p>
+            <p style="margin:0;"><b>Syntetický</b> se vyrábí z ropného nebo jehlového koksu grafitizací při 2&nbsp;800–3&nbsp;000&nbsp;°C; cyklus pece trvá týdny, spotřeba elektřiny je velmi vysoká. Výrobu anodových materiálů ovládá Čína z více než 90&nbsp;% (IEA).</p>
           </div>
         </div>
       </div>
-      <p class="prose tight" style="margin-top:20px;">Uhlík jako <b>koks</b> redukuje železnou rudu (Přednáška 3), jako <b>CO₂</b> je emise i surovina (Přednáška 4), jako <b>uhlovodíky</b> stavební kámen plastů (Přednáška 5).</p>
-      <aside class="notes">Data: OWID Minerals explorer, Graphite, mine production 2024: svět 1,6 Mt, Čína 1,27 Mt. Čína od prosince 2023 vyžaduje vývozní licence na některé druhy grafitu. Uhlík je „příběh“ celého bloku, proto ho tady ukazujeme jako most.</aside>
+      <p class="prose tight" style="margin-top:18px; font-size:20px;">Uhlík jako <b>koks</b> redukuje železnou rudu (Přednáška 3), jako <b>CO₂</b> je emise i surovina (Přednáška 4), jako <b>uhlovodíky</b> základ polymerů (Přednáška 5).</p>
+      <div class="terms"><b>Interkalace</b> – vkládání iontů mezi vrstvy krystalové struktury. <b>Sféroidizace</b> – zakulacení částic grafitu. <b>Grafitizace</b> – přeměna uhlíku na grafit zahřátím. <b>Jehlový koks</b> – vysoce uspořádaný koks z ropy nebo dehtu.</div>
+      <aside class="notes">Data: OWID Minerals explorer, Graphite, mine production 2024: svět 1,6 Mt, Čína 1,27 Mt. Složení baterie: IEA, The Role of Critical Minerals in Clean Energy Transitions (2021): typický elektromobil ~66 kg grafitu, ~9 kg Li, ~40 kg Ni, ~13 kg Co (podle chemie katody se liší). Čína od 1. 12. 2023 vyžaduje vývozní licence na vybrané druhy grafitu. Nařízení o bateriích zahrnuje přírodní grafit do povinné náležité péče. Uhlík je „příběh“ celého bloku, proto ho tady ukazujeme jako most.</aside>
     </section>
 
-    <!-- 9 divider Al -->
+
+    <!-- 11b · Li-ion článek -->
+    <section>
+      <div class="kicker">Produkt · jak funguje lithno-iontový článek</div>
+      <div class="row" style="gap:22px;">
+        <div style="flex:1.25; min-width:0;">
+          <div class="diagram-wrap" style="padding:10px 14px;">
+            <svg viewBox="0 0 660 380" role="img" aria-label="Řez lithno-iontovým článkem při vybíjení: měděná fólie, grafitová anoda, elektrolyt, separátor, katoda, hliníková fólie; Li+ putuje z anody ke katodě, elektrony vnějším obvodem">
+              <defs>
+                <marker id="mC1" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--accent)"/></marker>
+                <marker id="mC2" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--water)"/></marker>
+              </defs>
+              <g font-family="var(--font-body)">
+                <path d="M66,110 L66,40 L594,40 L594,110" stroke="var(--ink)" stroke-width="3" fill="none"/>
+                <rect x="290" y="24" width="80" height="32" rx="6" fill="var(--surface-2)" stroke="var(--ink)" stroke-width="2"/>
+                <text x="330" y="45" text-anchor="middle" font-size="16" fill="var(--ink)">spotřebič</text>
+                <path d="M120,30 L200,30" stroke="var(--water)" stroke-width="3" marker-end="url(#mC2)"/>
+                <path d="M450,30 L530,30" stroke="var(--water)" stroke-width="3" marker-end="url(#mC2)"/>
+                <text x="160" y="20" text-anchor="middle" font-size="19" font-weight="700" fill="var(--water)">e⁻</text>
+                <text x="490" y="20" text-anchor="middle" font-size="19" font-weight="700" fill="var(--water)">e⁻</text>
+                <text x="329" y="100" text-anchor="middle" font-size="17" fill="var(--ink-soft)">separátor</text>
+                <rect x="60" y="110" width="12" height="220" fill="#C7773D"/>
+                <rect x="72" y="110" width="170" height="220" fill="#DADADA"/>
+                <g stroke="#555" stroke-width="2">
+                  <line x1="78" y1="130" x2="236" y2="130"/><line x1="78" y1="155" x2="236" y2="155"/><line x1="78" y1="180" x2="236" y2="180"/><line x1="78" y1="205" x2="236" y2="205"/><line x1="78" y1="230" x2="236" y2="230"/><line x1="78" y1="255" x2="236" y2="255"/><line x1="78" y1="280" x2="236" y2="280"/><line x1="78" y1="305" x2="236" y2="305"/>
+                </g>
+                <g fill="var(--accent)">
+                  <circle cx="100" cy="142" r="4.5"/><circle cx="170" cy="142" r="4.5"/><circle cx="130" cy="167" r="4.5"/><circle cx="210" cy="192" r="4.5"/><circle cx="95" cy="217" r="4.5"/><circle cx="160" cy="242" r="4.5"/><circle cx="120" cy="292" r="4.5"/><circle cx="200" cy="267" r="4.5"/>
+                </g>
+                <rect x="242" y="110" width="176" height="220" fill="var(--water-soft)"/>
+                <rect x="322" y="110" width="14" height="220" fill="#fff" stroke="var(--ink-muted)" stroke-width="1.5" stroke-dasharray="5 4"/>
+                <rect x="418" y="110" width="170" height="220" fill="#EFE6D8"/>
+                <g fill="#7C8B97">
+                  <rect x="424" y="124" width="158" height="9"/><rect x="424" y="154" width="158" height="9"/><rect x="424" y="184" width="158" height="9"/><rect x="424" y="214" width="158" height="9"/><rect x="424" y="244" width="158" height="9"/><rect x="424" y="274" width="158" height="9"/><rect x="424" y="304" width="158" height="9"/>
+                </g>
+                <g fill="var(--accent)">
+                  <circle cx="450" cy="144" r="4.5"/><circle cx="500" cy="144" r="4.5"/><circle cx="550" cy="144" r="4.5"/><circle cx="475" cy="174" r="4.5"/><circle cx="525" cy="174" r="4.5"/><circle cx="450" cy="204" r="4.5"/><circle cx="560" cy="234" r="4.5"/><circle cx="490" cy="264" r="4.5"/><circle cx="530" cy="294" r="4.5"/>
+                </g>
+                <rect x="588" y="110" width="12" height="220" fill="#B9BEC4"/>
+                <g stroke="var(--accent)" stroke-width="3" marker-end="url(#mC1)">
+                  <line x1="252" y1="170" x2="410" y2="170"/><line x1="252" y1="220" x2="410" y2="220"/><line x1="252" y1="270" x2="410" y2="270"/>
+                </g>
+                <text x="285" y="160" text-anchor="middle" font-size="19" font-weight="700" fill="var(--accent)">Li⁺</text>
+                <g text-anchor="middle">
+                  <text x="66" y="350" font-size="17" fill="var(--ink-soft)">Cu</text>
+                  <text x="157" y="352" font-size="19" font-weight="700" fill="var(--ink)">anoda (−)</text>
+                  <text x="157" y="370" font-size="17" fill="var(--ink-soft)">grafit</text>
+                  <text x="282" y="352" font-size="19" font-weight="700" fill="var(--ink)">elektrolyt</text>
+                  <text x="282" y="370" font-size="17" fill="var(--ink-soft)">LiPF₆ v karbonátech</text>
+                  <text x="503" y="352" font-size="19" font-weight="700" fill="var(--ink)">katoda (+)</text>
+                  <text x="503" y="370" font-size="17" fill="var(--ink-soft)">NMC nebo LFP</text>
+                  <text x="594" y="350" font-size="17" fill="var(--ink-soft)">Al</text>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <p class="caption" style="font-size:16px; margin-top:4px;">Vybíjení: Li⁺ putuje elektrolytem ke katodě, elektrony vnějším obvodem přes spotřebič.</p>
+        </div>
+        <div class="col" style="font-size:18px; line-height:1.36;">
+          <div class="formula" style="font-size:16px; padding:8px 12px; margin:0 0 10px;">anoda: LiC₆ → C₆ + Li⁺ + e⁻<br>katoda: Li₁₋ₓMO₂ + x Li⁺ + x e⁻ → LiMO₂<br><span style="color:var(--ink-muted);">(M = Ni, Mn, Co; při nabíjení naopak)</span></div>
+          <p style="margin:0 0 7px;"><b>„Houpací křeslo“:</b> ionty Li⁺ se přesouvají mezi dvěma hostitelskými strukturami (vrstvy grafitu, vrstvy oxidu kovů). Kovové lithium v článku není.</p>
+          <p style="margin:0 0 7px;"><b>Proč lithium:</b> nejlehčí kov (6,94&nbsp;g/mol) s velmi záporným elektrodovým potenciálem (−3,04&nbsp;V). Napětí článku je proto 3,2–3,7&nbsp;V a energie na kg vysoká.</p>
+          <p style="margin:0 0 7px;"><b>Proč je článek hořlavý:</b> voda by se při tomto napětí rozložila, elektrolyt je proto v organických rozpouštědlech.</p>
+          <p style="margin:0;"><b>Kde jsou prvky:</b> Li v katodě a elektrolytu, Ni, Mn, Co (nebo Fe, P) v katodě, C v anodě, Cu a Al ve fóliích.</p>
+        </div>
+      </div>
+      <div class="terms"><b>Elektrolyt</b> – prostředí, které vede ionty, ne elektrony. <b>Separátor</b> – porézní fólie, brání zkratu a propouští ionty. <b>Sběrač proudu</b> – kovová fólie, která odvádí elektrony. <b>Anoda / katoda</b> – při vybíjení záporná / kladná elektroda.</div>
+      <aside class="notes">Schéma je zjednodušené: skutečné elektrody jsou vrstvy prášku (částice aktivního materiálu + vodivý uhlík + pojivo PVDF) o tloušťce desítek mikrometrů, navinuté nebo naskládané do stovek vrstev. Elektrolyt: LiPF₆ v ethylenkarbonátu a dimethylkarbonátu. Proč Cu pro anodu a Al pro katodu: hliník by při potenciálu anody tvořil slitinu s lithiem, měď by se při potenciálu katody oxidovala. Na povrchu grafitu vzniká při prvním nabití ochranná vrstva SEI. Doporučená fotografie: rozebraný článek nebo typy článků (Wikimedia Commons).</aside>
+    </section>
+
+    <!-- 11c · od článku k baterii, NMC × LFP -->
+    <section>
+      <div class="kicker">Produkt · od článku k baterii a volba chemie</div>
+      <div class="diagram-wrap" style="padding:10px 16px;">
+        <svg viewBox="0 0 1080 158" role="img" aria-label="Typy článků válcový, pouch a prizmatický; články se skládají do modulů a moduly do bateriového bloku">
+          <defs><marker id="mC3" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker></defs>
+          <g font-family="var(--font-body)" text-anchor="middle">
+            <text x="172" y="11" font-size="16" font-weight="700" fill="var(--ink)">článek (3,2–3,7 V)</text>
+            <rect x="30" y="30" width="44" height="80" rx="8" fill="#C9CED4" stroke="var(--ink-muted)" stroke-width="1.5"/>
+            <ellipse cx="52" cy="30" rx="22" ry="6" fill="#E1E5E9" stroke="var(--ink-muted)" stroke-width="1.5"/>
+            <text x="52" y="134" font-size="16" fill="var(--ink-soft)">válcový</text>
+            <rect x="120" y="28" width="70" height="84" rx="4" fill="#D9DDE3" stroke="var(--ink-muted)" stroke-width="1.5"/>
+            <rect x="132" y="18" width="12" height="12" fill="#C7773D"/><rect x="166" y="18" width="12" height="12" fill="#B9BEC4"/>
+            <text x="155" y="134" font-size="16" fill="var(--ink-soft)">sáčkový (pouch)</text>
+            <rect x="235" y="30" width="80" height="80" rx="4" fill="#AEB6BF" stroke="var(--ink-muted)" stroke-width="1.5"/>
+            <text x="275" y="134" font-size="16" fill="var(--ink-soft)">prizmatický</text>
+            
+            <path d="M335,70 L390,70" stroke="var(--primary)" stroke-width="3" marker-end="url(#mC3)"/>
+            <rect x="410" y="25" width="190" height="90" rx="8" fill="var(--surface-2)" stroke="var(--ink-muted)" stroke-width="1.5"/>
+            <g fill="#AEB6BF">
+              <rect x="420" y="35" width="38" height="32"/><rect x="464" y="35" width="38" height="32"/><rect x="508" y="35" width="38" height="32"/><rect x="552" y="35" width="38" height="32"/>
+              <rect x="420" y="73" width="38" height="32"/><rect x="464" y="73" width="38" height="32"/><rect x="508" y="73" width="38" height="32"/><rect x="552" y="73" width="38" height="32"/>
+            </g>
+            <text x="505" y="134" font-size="16" fill="var(--ink-soft)">modul (desítky článků)</text>
+            
+            <path d="M620,70 L675,70" stroke="var(--primary)" stroke-width="3" marker-end="url(#mC3)"/>
+            <rect x="695" y="15" width="375" height="110" rx="14" fill="var(--primary)"/>
+            <g fill="#D8E6DC">
+              <rect x="712" y="28" width="80" height="38" rx="4"/><rect x="800" y="28" width="80" height="38" rx="4"/><rect x="888" y="28" width="80" height="38" rx="4"/><rect x="976" y="28" width="80" height="38" rx="4"/>
+              <rect x="712" y="74" width="80" height="38" rx="4"/><rect x="800" y="74" width="80" height="38" rx="4"/><rect x="888" y="74" width="80" height="38" rx="4"/><rect x="976" y="74" width="80" height="38" rx="4"/>
+            </g>
+            <text x="882" y="145" font-size="16" fill="var(--ink-soft)">bateriový blok (pack): 50–100 kWh, stovky kg</text>
+          </g>
+        </svg>
+      </div>
+      <div class="row" style="gap:20px; margin-top:12px;">
+        <div style="flex:1.35; min-width:0;">
+          <table class="data-table" style="font-size:18px;">
+            <thead><tr><th></th><th>NMC</th><th>LFP</th></tr></thead>
+            <tbody>
+              <tr><td><b>Katoda</b></td><td>Li(Ni,Mn,Co)O₂</td><td>LiFePO₄</td></tr>
+              <tr><td><b>Kritické prvky</b></td><td>Li, Ni, Co, Mn (+ grafit)</td><td>Li (+ grafit), bez Ni a Co</td></tr>
+              <tr><td><b>Měrná energie</b></td><td>~250–300&nbsp;Wh/kg</td><td>~160–200&nbsp;Wh/kg</td></tr>
+              <tr><td><b>Životnost</b></td><td>~1&nbsp;000–2&nbsp;000 cyklů</td><td>3&nbsp;000 a více cyklů</td></tr>
+              <tr><td><b>Bezpečnost, cena</b></td><td>nižší tepelná stabilita, dražší</td><td>stabilnější, levnější</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col">
+          <div class="example-panel" style="padding:12px 18px; font-size:18px; line-height:1.36;">
+            <p style="margin:0 0 7px;"><b>Pro manažera:</b> volba chemie mění surovinové riziko.</p>
+            <p style="margin:0 0 7px;"><b>NMC:</b> kobalt z více než 70&nbsp;% z DR Kongo (dětská práce v drobné těžbě), nikl hlavně z Indonésie (odlesňování, uhlí).</p>
+            <p style="margin:0;"><b>LFP:</b> tato rizika nemá, ale vyrábí se téměř výhradně v Číně. V roce 2023 tvořila asi 40&nbsp;% baterií nových elektromobilů (IEA).</p>
+          </div>
+        </div>
+      </div>
+      <div class="terms"><b>NMC</b> – katoda z oxidu lithia, niklu, manganu a kobaltu. <b>LFP</b> – katoda z fosforečnanu železnato-lithného. <b>Měrná energie</b> – energie na kg článku (Wh/kg). <b>Cyklus</b> – jedno nabití a vybití.</div>
+      <aside class="notes">Hodnoty jsou orientační (úroveň článku, 2023–2024); závisí na konkrétním typu (NMC 622 × 811, LFP různých výrobců). IEA Global EV Outlook 2024: podíl LFP ve výrobě baterií pro elektromobily kolem 40 %, v Číně přes 60 %. Na trh vstupují sodíko-iontové články (bez lithia, Ni i Co), zatím s nižší hustotou energie. Kobalt: DR Kongo ~70–75 % těžby (USGS); nikl: Indonésie přes polovinu světové těžby (USGS 2024). Nařízení EU o bateriích vyžaduje náležitou péči právě pro Li, Co, Ni a přírodní grafit.</aside>
+    </section>
+
+    <!-- 12 divider Al -->
     <section class="divider-slide">
       <div class="num">03</div>
       <h2>Hliník</h2>
-      <p>Zamražená elektřina</p>
-      <aside class="notes">Čas: cca 15 minut. Hliník je nejlepší příklad, jak energie určuje uhlíkovou stopu materiálu a smysl recyklace.</aside>
+      <p>Zakonzervovaná elektřina</p>
+      <aside class="notes">Čas: cca 35 minut včetně úkolů a výpočtu energie v plechovce. Hliník je nejlepší příklad, jak zdroj elektřiny určuje uhlíkovou stopu materiálu a proč má recyklace smysl.</aside>
     </section>
 
-    <!-- 10 Al process -->
+    <!-- 13 Al process -->
     <section>
       <div class="kicker">Od bauxitu k hliníku</div>
       <div class="diagram-wrap" style="padding:18px 24px;">
         <svg viewBox="0 0 1080 150" role="img" aria-label="4 až 5 tun bauxitu, 2 tuny oxidu hlinitého, 1 tuna hliníku">
-          <defs><marker id="c3" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker></defs>
+          <defs><marker id="c3" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker></defs>
           <g font-family="var(--font-body)">
             <rect x="10" y="20" width="260" height="90" rx="12" fill="#E9D9CF"/>
             <text x="140" y="58" text-anchor="middle" font-size="24" font-weight="700" fill="var(--ink)">4–5 t bauxitu</text>
             <text x="140" y="88" text-anchor="middle" font-size="17" fill="var(--ink-soft)">Guinea, Austrálie, Čína</text>
             <rect x="400" y="20" width="260" height="90" rx="12" fill="var(--surface-2)"/>
-            <text x="530" y="58" text-anchor="middle" font-size="24" font-weight="700" fill="var(--ink)">2 t Al₂O₃</text>
+            <text x="530" y="58" text-anchor="middle" font-size="24" font-weight="700" fill="var(--ink)">~2 t Al₂O₃</text>
             <text x="530" y="88" text-anchor="middle" font-size="17" fill="var(--ink-soft)">Bayerův proces (NaOH)</text>
             <rect x="790" y="20" width="280" height="90" rx="12" fill="var(--primary)"/>
             <text x="930" y="58" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">1 t hliníku</text>
-            <text x="930" y="88" text-anchor="middle" font-size="17" fill="#D8E6DC">elektrolýza, ~14–15 MWh</text>
+            <text x="930" y="88" text-anchor="middle" font-size="17" fill="#D8E6DC">elektrolýza, 13–15 MWh</text>
             <path d="M270,65 L395,65" stroke="var(--primary)" stroke-width="3" marker-end="url(#c3)"/>
             <path d="M660,65 L785,65" stroke="var(--primary)" stroke-width="3" marker-end="url(#c3)"/>
             <text x="333" y="140" text-anchor="middle" font-size="17" fill="var(--danger)">odpad: červený kal</text>
-            <text x="723" y="140" text-anchor="middle" font-size="17" fill="var(--danger)">CO₂ z anod</text>
+            <text x="723" y="140" text-anchor="middle" font-size="17" fill="var(--danger)">CO₂ a perfluorouhlovodíky z anod</text>
           </g>
         </svg>
       </div>
-      <div class="row" style="margin-top:16px;">
+      <div class="row" style="margin-top:14px;">
         <div class="col">
-          <div class="formula" style="font-size:24px;">2Al₂O₃ + 3C → 4Al + 3CO₂</div>
-          <p class="prose tight">Oxid hlinitý rozpuštěný v roztaveném kryolitu (~960 °C), proud ~stovky tisíc ampér. Uhlíkové anody se spalují.</p>
+          <div class="formula" style="font-size:21px;">Al(OH)₃ + NaOH → Na[Al(OH)₄]<br>2 Al₂O₃ + 3 C → 4 Al + 3 CO₂</div>
+          <p class="prose tight" style="font-size:19px;"><b>Bayerův proces:</b> loužení bauxitu NaOH při 150–250&nbsp;°C, z roztoku se vysráží Al(OH)₃ a kalcinuje na Al₂O₃. <b>Elektrolýza:</b> Al₂O₃ rozpuštěný v roztavené kryolitové lázni (Na₃AlF₆, ~960&nbsp;°C), proud 300–600&nbsp;kA na elektrolyzér. Uhlíkové anody se oxidují kyslíkem z oxidu a spotřebují se (~0,4&nbsp;t C na 1&nbsp;t Al).</p>
         </div>
         <div class="col">
-          <div class="example-panel">
-            <p class="prose tight" style="margin:0;"><b>Ajka (Maďarsko), 2010:</b> protržení hráze odkaliště s červeným kalem (silně zásaditý, pH ~13) zaplavilo obce. Zemřelo 10 lidí.</p>
+          <div class="example-panel" style="font-size:19px; line-height:1.4;">
+            <p style="margin:0 0 8px;"><b>Červený kal</b>: nerozpuštěný zbytek bauxitu (oxidy Fe, Ti, Si) s NaOH, pH 10–13; vzniká ~1–1,5&nbsp;t na tunu Al₂O₃.</p>
+            <p style="margin:0;"><b>Ajka (Maďarsko), 4.&nbsp;10.&nbsp;2010:</b> protržení hráze odkaliště uvolnilo asi 1&nbsp;mil.&nbsp;m³ kalu. Zemřelo 10 lidí, přes 100 bylo zraněno.</p>
           </div>
         </div>
       </div>
-      <aside class="notes">Hallův–Héroultův proces (1886). Spotřeba elektřiny moderních elektrolyzérů je řádově 13–15 MWh/t Al. Pro představu: roční spotřeba elektřiny české domácnosti je kolem 3–4 MWh. Hliníkárna je tedy „baterie z elektřiny“. Červený kal: zbytek bauxitu po rozpuštění Al₂O₃ v NaOH (oxidy Fe, Ti, Si), řádově tuna na tunu oxidu hlinitého. Bez skladování v odkalištích se nedá obejít, proto jsou rizikem.</aside>
+      <div class="terms"><b>Bauxit</b> – hornina tvořená hlavně hydroxidy hliníku. <b>Kryolit</b> – Na₃AlF₆, roztavené rozpouštědlo pro Al₂O₃. <b>Elektrolýza</b> – rozklad látky elektrickým proudem. <b>Odkaliště</b> – viz krok 2.</div>
+      <aside class="notes">Hallův–Héroultův proces (1886). Spotřeba elektřiny elektrolyzérů je 13–15 MWh/t Al (světový průměr IAI kolem 14 MWh/t). Pro představu: roční spotřeba elektřiny české domácnosti bez elektrického vytápění je kolem 2–3 MWh, jedna tuna hliníku tedy odpovídá roční spotřebě asi pěti domácností.
+      Přímé procesní emise: oxidace anod (~1,5 t CO₂/t Al) a perfluorouhlovodíky CF₄ a C₂F₆ při tzv. anodovém efektu (GWP v tisících). Celková stopa ale závisí hlavně na zdroji elektřiny (další slidy).
+      Červený kal: celosvětově ~150 Mt ročně, nahromaděno přes 4 mld. t; využití (cement, získávání Fe, Sc) zatím jen v jednotkách procent. Proto se skladuje v odkalištích, která jsou dlouhodobým rizikem. Molární hmotnosti: 2 Al₂O₃ / 4 Al = 203,9 / 107,9 = 1,89 t Al₂O₃ na 1 t Al (výpočet na slidu „Práce s výpočtem · hliník“).</aside>
     </section>
 
-    <!-- 11 Al data chart -->
+
+    <!-- 13b · Bayerův proces -->
     <section>
-      <div class="tag-label data">Data · podíl Číny na světové výrobě hliníku</div>
-      <div class="row middle">
-        <div class="col" style="flex:1.3">
-          <div class="diagram-wrap">
-            <svg viewBox="0 0 600 320" role="img" aria-label="Podíl Číny na výrobě hliníku: 4 % v roce 1990, 39 % v 2010, 60 % v 2024">
-              <line x1="70" y1="280" x2="580" y2="280" stroke="var(--line)" stroke-width="2"/>
-              <line x1="70" y1="208.6" x2="580" y2="208.6" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 6"/>
-              <line x1="70" y1="137.1" x2="580" y2="137.1" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 6"/>
-              <line x1="70" y1="65.7" x2="580" y2="65.7" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 6"/>
-              <g font-family="var(--font-mono)" font-size="18" fill="var(--ink-muted)">
-                <text x="50" y="286" text-anchor="end">0 %</text>
-                <text x="50" y="214" text-anchor="end">20 %</text>
-                <text x="50" y="143" text-anchor="end">40 %</text>
-                <text x="50" y="72" text-anchor="end">60 %</text>
-                <text x="70" y="312" text-anchor="middle">1990</text>
-                <text x="214" y="312" text-anchor="middle">2000</text>
-                <text x="358" y="312" text-anchor="middle">2010</text>
-                <text x="502" y="312" text-anchor="middle">2020</text>
-              </g>
-              <polyline points="70,264.3 214.1,236.1 286.2,192.5 358.2,141.1 430.3,85.4 502.4,76.4 560,66.8" fill="none" stroke="var(--danger)" stroke-width="5" stroke-linejoin="round"/>
-              <circle cx="70" cy="264.3" r="6" fill="var(--danger)"/>
-              <circle cx="560" cy="66.8" r="6" fill="var(--danger)"/>
-              <text x="88" y="255" font-size="20" font-weight="700" fill="var(--danger)" font-family="var(--font-body)">4 %</text>
-              <text x="548" y="50" text-anchor="end" font-size="20" font-weight="700" fill="var(--danger)" font-family="var(--font-body)">60 %</text>
-            </svg>
+      <div class="kicker">Hliník · Bayerův proces: z bauxitu oxid hlinitý</div>
+      <div class="diagram-wrap" style="padding:12px 16px;">
+        <svg viewBox="0 0 1080 262" role="img" aria-label="Bayerův proces: bauxit, loužení NaOH, oddělení červeného kalu, srážení hydroxidu hlinitého, kalcinace, oxid hlinitý; roztok NaOH se vrací">
+          <defs>
+            <marker id="mD1" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker>
+            <marker id="mD2" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--danger)"/></marker>
+            <marker id="mD3" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--water)"/></marker>
+          </defs>
+          <g font-family="var(--font-body)" text-anchor="middle">
+            <rect x="10" y="20" width="160" height="80" rx="10" fill="#E9D9CF"/>
+            <text x="90" y="48" font-size="17" font-weight="700" fill="var(--ink)">Bauxit</text>
+            <text x="90" y="70" font-size="15" fill="var(--ink-soft)">Al(OH)₃, AlO(OH)</text>
+            <text x="90" y="88" font-size="15" fill="var(--ink-soft)">+ Fe₂O₃, SiO₂, TiO₂</text>
+            <rect x="192" y="20" width="160" height="80" rx="10" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="272" y="48" font-size="17" font-weight="700" fill="var(--ink)">Loužení</text>
+            <text x="272" y="70" font-size="15" fill="var(--ink-soft)">NaOH, 150–250 °C,</text>
+            <text x="272" y="88" font-size="15" fill="var(--ink-soft)">pod tlakem</text>
+            <rect x="374" y="20" width="160" height="80" rx="10" fill="var(--surface-2)"/>
+            <text x="454" y="48" font-size="17" font-weight="700" fill="var(--ink)">Oddělení kalu</text>
+            <text x="454" y="70" font-size="15" fill="var(--ink-soft)">usazování,</text>
+            <text x="454" y="88" font-size="15" fill="var(--ink-soft)">filtrace</text>
+            <rect x="556" y="20" width="160" height="80" rx="10" fill="var(--surface-2)"/>
+            <text x="636" y="48" font-size="17" font-weight="700" fill="var(--ink)">Srážení</text>
+            <text x="636" y="70" font-size="15" fill="var(--ink-soft)">ochlazení, očkování</text>
+            <text x="636" y="88" font-size="15" fill="var(--ink-soft)">→ Al(OH)₃↓</text>
+            <rect x="738" y="20" width="160" height="80" rx="10" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="818" y="48" font-size="17" font-weight="700" fill="var(--ink)">Kalcinace</text>
+            <text x="818" y="70" font-size="15" fill="var(--ink-soft)">~1 050 °C,</text>
+            <text x="818" y="88" font-size="15" fill="var(--ink-soft)">odštěpení vody</text>
+            <rect x="920" y="20" width="150" height="80" rx="10" fill="var(--primary)"/>
+            <text x="995" y="48" font-size="17" font-weight="700" fill="#fff">Al₂O₃</text>
+            <text x="995" y="70" font-size="15" fill="#D8E6DC">„alumina“</text>
+            <text x="995" y="88" font-size="15" fill="#D8E6DC">→ elektrolýza</text>
+            <path d="M170,60 L187,60" stroke="var(--primary)" stroke-width="3" marker-end="url(#mD1)"/><path d="M352,60 L369,60" stroke="var(--primary)" stroke-width="3" marker-end="url(#mD1)"/><path d="M534,60 L551,60" stroke="var(--primary)" stroke-width="3" marker-end="url(#mD1)"/><path d="M716,60 L733,60" stroke="var(--primary)" stroke-width="3" marker-end="url(#mD1)"/><path d="M898,60 L915,60" stroke="var(--primary)" stroke-width="3" marker-end="url(#mD1)"/>
+            <path d="M454,100 L454,140" stroke="var(--danger)" stroke-width="3" marker-end="url(#mD2)"/>
+            <text x="454" y="164" font-size="16" fill="var(--danger)">červený kal → odkaliště</text>
+            <path d="M636,100 L636,212 L272,212 L272,106" stroke="var(--water)" stroke-width="3" stroke-dasharray="8 6" fill="none" marker-end="url(#mD3)"/>
+            <text x="454" y="240" font-size="16" fill="var(--water)">roztok NaOH se vrací do loužení · z tohoto roztoku lze zachytit gallium</text>
+          </g>
+        </svg>
+      </div>
+      <div class="row" style="gap:18px; margin-top:12px;">
+        <div class="col">
+          <div class="formula" style="font-size:18px; padding:10px 14px; margin:0;">Al(OH)₃ + NaOH → Na[Al(OH)₄] &nbsp;<span style="color:var(--ink-muted); font-size:15px;">za tepla</span><br>Na[Al(OH)₄] → Al(OH)₃↓ + NaOH &nbsp;<span style="color:var(--ink-muted); font-size:15px;">po ochlazení</span><br>2 Al(OH)₃ → Al₂O₃ + 3 H₂O &nbsp;<span style="color:var(--ink-muted); font-size:15px;">kalcinace</span></div>
+        </div>
+        <div class="col" style="font-size:18px; line-height:1.38;">
+          <p style="margin:0 0 7px;"><b>Chemický princip:</b> Al(OH)₃ je <b>amfoterní</b>, v roztoku hydroxidu se rozpouští. Fe₂O₃ a TiO₂ ne, zůstanou v <b>červeném kalu</b> (spolu se zbytky NaOH a hlinitokřemičitany sodnými).</p>
+          <p style="margin:0;"><b>Energie:</b> řádově 10&nbsp;GJ tepla na tunu Al₂O₃ (pára pro loužení, kalcinace), většinou ze zemního plynu nebo uhlí.</p>
+        </div>
+      </div>
+      <div class="terms"><b>Amfoterní</b> – reaguje s kyselinami i se zásadami. <b>Očkování</b> – přidání krystalků, na kterých roste sraženina. <b>Alumina</b> – hutnický oxid hlinitý Al₂O₃ určený k elektrolýze.</div>
+      <aside class="notes">Rovnováha rozpouštění Al(OH)₃ v NaOH se posouvá s teplotou: za tepla a ve vysoké koncentraci se rozpouští, po ochlazení a přidání krystalků Al(OH)₃ („očkování“) se vysráží. Gallium (Ga³⁺ podobné Al³⁺) se v oběhovém roztoku hromadí a dá se zachytit iontovou výměnou; proto je gallium vedlejším produktem výroby aluminy. Největší producenti aluminy: Čína, Austrálie. V EU funguje několik rafinerií aluminy (např. Irsko, Španělsko, Řecko).</aside>
+    </section>
+
+    <!-- 13c · elektrolyzér -->
+    <section>
+      <div class="kicker">Hliník · Hallův–Héroultův elektrolyzér</div>
+      <div class="diagram-wrap" style="padding:10px 16px;">
+        <svg viewBox="0 0 880 320" style="max-height:290px;" role="img" aria-label="Řez elektrolyzérem: uhlíkové anody shora, kryolitová lázeň s oxidem hlinitým, vrstva roztaveného hliníku na uhlíkovém dně, ocelová vana">
+          <defs><marker id="mD4" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--ink-soft)"/></marker></defs>
+          <g font-family="var(--font-body)">
+            <rect x="100" y="8" width="440" height="12" rx="3" fill="#9AA3AB"/>
+            <rect x="170" y="20" width="10" height="38" fill="#9AA3AB"/><rect x="310" y="20" width="10" height="38" fill="#9AA3AB"/><rect x="450" y="20" width="10" height="38" fill="#9AA3AB"/>
+            <rect x="30" y="112" width="580" height="200" rx="8" fill="#7D8790"/>
+            <rect x="44" y="122" width="552" height="180" fill="#C9B8A5"/>
+            <rect x="60" y="256" width="520" height="40" fill="#3E3E3E"/>
+            <rect x="60" y="226" width="520" height="30" fill="#C8CDD3"/>
+            <rect x="60" y="160" width="520" height="66" fill="#F2A65A"/>
+            <rect x="60" y="146" width="520" height="14" fill="#E5DCC9"/>
+            <rect x="120" y="58" width="110" height="146" rx="4" fill="#2F2F2F"/>
+            <rect x="260" y="58" width="110" height="146" rx="4" fill="#2F2F2F"/>
+            <rect x="400" y="58" width="110" height="146" rx="4" fill="#2F2F2F"/>
+            <g fill="#fff" stroke="#999" stroke-width="1">
+              <circle cx="236" cy="196" r="4"/><circle cx="240" cy="180" r="3.5"/><circle cx="377" cy="198" r="4"/><circle cx="380" cy="182" r="3.5"/><circle cx="114" cy="196" r="4"/><circle cx="517" cy="194" r="4"/>
+            </g>
+            <path d="M245,140 L245,66" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#mD4)"/>
+            <text x="245" y="52" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">CO₂</text>
+            <path d="M385,40 L385,140" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#mD4)"/>
+            <text x="385" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">Al₂O₃</text>
+            <g stroke="var(--ink-muted)" stroke-width="1.2">
+              <line x1="540" y1="14" x2="625" y2="14"/><line x1="510" y1="90" x2="625" y2="90"/><line x1="580" y1="153" x2="625" y2="153"/><line x1="580" y1="192" x2="625" y2="192"/><line x1="580" y1="241" x2="625" y2="241"/><line x1="580" y1="276" x2="625" y2="276"/>
+            </g>
+            <g font-size="16" fill="var(--ink)">
+              <text x="632" y="19">anodová sběrnice (+)</text>
+              <text x="632" y="88">uhlíkové anody</text>
+              <text x="632" y="106" font-size="15" fill="var(--ink-soft)">výměna po ~4 týdnech</text>
+              <text x="632" y="158">ztuhlá kůra lázně</text>
+              <text x="632" y="190">kryolitová lázeň + Al₂O₃</text>
+              <text x="632" y="208" font-size="15" fill="var(--ink-soft)">Na₃AlF₆, ~960 °C</text>
+              <text x="632" y="246">roztavený hliník (−)</text>
+              <text x="632" y="281">uhlíkové dno (katoda)</text>
+              <text x="632" y="299" font-size="15" fill="var(--ink-soft)">v ocelové vaně s izolací</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="row" style="gap:18px; margin-top:12px;">
+        <div class="col">
+          <div class="formula" style="font-size:17px; padding:10px 14px; margin:0;">katoda: Al³⁺ + 3 e⁻ → Al<br>anoda: C + 2 O²⁻ → CO₂ + 4 e⁻<br>celkem: 2 Al₂O₃ + 3 C → 4 Al + 3 CO₂</div>
+        </div>
+        <div class="col" style="font-size:18px; line-height:1.36;">
+          <p style="margin:0 0 6px;"><b>Kryolit</b> snižuje teplotu tavení z 2&nbsp;050&nbsp;°C na ~960&nbsp;°C. Roztavený Al je hustší než lázeň, hromadí se na dně.</p>
+          <p style="margin:0;"><b>Provoz:</b> ~4&nbsp;V, 300–600&nbsp;kA. <b>Inovace:</b> inertní anody by místo CO₂ uvolňovaly O₂.</p>
+        </div>
+      </div>
+      <div class="terms"><b>Elektrolyzér</b> – vana, ve které probíhá elektrolýza. <b>Sběrnice</b> – mohutný vodič přivádějící proud. <b>Anodový efekt</b> – porucha při nedostatku Al₂O₃, vznikají CF₄ a C₂F₆ (silné skleníkové plyny). <b>Inertní anoda</b> – anoda, která se nespotřebovává.</div>
+      <aside class="notes">Rovnice jsou zjednodušené; v lázni jsou ve skutečnosti fluorohlinitanové a oxofluorohlinitanové komplexy. Hustota: roztavený Al ~2,3 g/cm³, lázeň ~2,1 g/cm³. Anodový efekt: při nedostatku Al₂O₃ v lázni reaguje fluor z kryolitu s anodou a vznikají CF₄ a C₂F₆ (GWP tisíce až desítky tisíc). Elektrolyzér musí běžet nepřetržitě; výpadek proudu na několik hodin znamená ztuhnutí lázně a nákladnou opravu. Proto huti ladí výkon s cenou elektřiny jen omezeně. ELYSIS: společný podnik Alcoa a Rio Tinto; inertní anoda zatím ve fázi demonstrace. Doporučená fotografie: elektrolýzní hala (Wikimedia Commons nebo tiskové fotografie Norsk Hydro).</aside>
+    </section>
+
+    <!-- 14 Al data task -->
+    <section>
+      <div class="tag-label data">Práce s daty · dohledejte sami</div>
+      <h3 style="font-size:30px; margin-bottom:10px;">Čína vyrábí většinu hliníku. Má i většinu bauxitu?</h3>
+      <div class="row" style="gap:28px;">
+        <div class="col">
+          <div class="data-task" style="padding:18px 24px;">
+            <div class="tag-label data" style="font-size:17px;">Úkol · 6&nbsp;min ve dvojicích</div>
+            <ol style="font-size:20px; margin-left:1em; line-height:1.38;">
+              <li style="margin-bottom:8px;">Jaký podíl měla Čína na světové výrobě <b>primárního hliníku</b> v roce 1990 a v posledním dostupném roce? Kdy poprvé překročila 50&nbsp;%?</li>
+              <li style="margin-bottom:8px;">Jaký podíl má Čína na světové <b>těžbě bauxitu</b>? Které dvě země těží víc?</li>
+              <li style="margin-bottom:8px;">Jak je možný rozdíl mezi odpověďmi 1 a 2?</li>
+              <li style="margin-bottom:0;">Jaký podíl elektřiny v Číně se vyrábí z uhlí? Co to znamená pro uhlíkovou stopu hliníku v evropských výrobcích?</li>
+            </ol>
           </div>
-          <p class="src-line">Výroba primárního hliníku (huti). Zdroj: USGS/BGS via Our World in Data.</p>
         </div>
         <div class="col">
-          <div class="data-task">
-            <ol>
-              <li>Čína má jen ~21 % světové těžby bauxitu, ale vyrábí 60 % hliníku. Jak je to možné?</li>
-              <li>Z jaké elektřiny se v Číně hliník převážně vyrábí? Co to znamená pro uhlíkovou stopu hliníku v našich výrobcích?</li>
+          <div class="panel" style="font-size:19px; line-height:1.4;">
+            <p style="margin:0 0 10px;"><b>Kde to najdete</b></p>
+            <p style="margin:0 0 10px;"><b>1:</b> OWID <i>Minerals explorer</i>: Mineral = <i>Aluminum</i>, Type = <i>Smelter</i> (výroba v hutích), zaškrtněte <i>Share of global</i>, vyberte Čínu.</p>
+            <p style="margin:0 0 10px;"><b>2:</b> tamtéž, Mineral = <i>Bauxite</i>, Type = <i>Mine</i>. Pro srovnání zemí přepněte na záložku <i>Map</i> nebo <i>Table</i>.</p>
+            <p style="margin:0;"><b>4:</b> OWID, graf <i>Share of electricity production from coal</i> (data Ember a Energy Institute). Porovnejte Čínu, Norsko a Island.</p>
+          </div>
+          <p class="owid-link" style="font-size:17px; margin-top:10px;"><a href="https://ourworldindata.org/explorers/minerals?Mineral=Aluminum&Metric=Production&Type=Smelter&Share+of+global=true" target="_blank">OWID · Aluminum, Smelter ↗</a> · <a href="https://ourworldindata.org/grapher/share-electricity-coal" target="_blank">OWID · elektřina z uhlí ↗</a></p>
+        </div>
+      </div>
+      <aside class="notes">Řešení na dalším slidu. Pokud studenti nemají připojení, ukažte OWID projekcí a nechte je odečítat. Zdůrazněte rozdíl primární hliník (z oxidu, elektrolýzou) × sekundární hliník (z šrotu); OWID/USGS „smelter production“ je pouze primární.</aside>
+    </section>
+
+    <!-- 15 Al data solution -->
+    <section>
+      <div class="kicker">Řešení · hliník a bauxit v datech</div>
+      <div class="row middle" style="gap:24px;">
+        <div style="flex:1.2; min-width:0;">
+          <div class="diagram-wrap" style="padding:10px 14px 4px;">
+            <svg viewBox="0 0 640 370" role="img" aria-label="Podíl Číny na světové výrobě primárního hliníku 1990–2024: 4 % v roce 1990, 12 % v 2000, 39 % v 2010, 55 % v 2015, 60 % v 2024">
+              <g font-family="var(--font-body)">
+                <line x1="90" y1="300" x2="610" y2="300" stroke="var(--ink-muted)" stroke-width="1.5"/>
+                <line x1="90" y1="220" x2="610" y2="220" stroke="var(--line)" stroke-width="1"/>
+                <line x1="90" y1="140" x2="610" y2="140" stroke="var(--line)" stroke-width="1"/>
+                <line x1="90" y1="60" x2="610" y2="60" stroke="var(--line)" stroke-width="1"/>
+                <line x1="90" y1="100" x2="610" y2="100" stroke="var(--ink-soft)" stroke-width="1.5" stroke-dasharray="6 6"/>
+                <text x="100" y="93" font-size="17" fill="var(--ink-soft)">50 % světové výroby</text>
+                <g font-size="18" fill="var(--ink-muted)">
+                  <text x="80" y="306" text-anchor="end">0</text>
+                  <text x="80" y="226" text-anchor="end">20</text>
+                  <text x="80" y="146" text-anchor="end">40</text>
+                  <text x="80" y="66" text-anchor="end">60</text>
+                  <text x="90" y="324" text-anchor="middle">1990</text>
+                  <text x="240" y="324" text-anchor="middle">2000</text>
+                  <text x="390" y="324" text-anchor="middle">2010</text>
+                  <text x="540" y="324" text-anchor="middle">2020</text>
+                </g>
+                <text x="350" y="356" text-anchor="middle" font-size="18" font-weight="600" fill="var(--ink-soft)">Rok</text>
+                <text transform="translate(26,180) rotate(-90)" text-anchor="middle" font-size="18" font-weight="600" fill="var(--ink-soft)">Podíl Číny (%)</text>
+                <polyline points="90,282.4 240,250.8 315,202 390,144.4 465,82 540,72 600,61.2" fill="none" stroke="var(--danger)" stroke-width="4" stroke-linejoin="round"/>
+                <g fill="var(--danger)">
+                  <circle cx="90" cy="282.4" r="5"/><circle cx="240" cy="250.8" r="5"/><circle cx="315" cy="202" r="5"/><circle cx="390" cy="144.4" r="5"/><circle cx="465" cy="82" r="5"/><circle cx="540" cy="72" r="5"/><circle cx="600" cy="61.2" r="6"/>
+                </g>
+                <g font-size="17" font-weight="700" fill="var(--danger)" stroke="#fff" stroke-width="4" paint-order="stroke">
+                  <text x="100" y="272">4 %</text>
+                  <text x="250" y="243">12 %</text>
+                  <text x="400" y="160">39 %</text>
+                  <text x="600" y="44" text-anchor="end">60 %</text>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <p class="src-line" style="font-size:16px; margin-top:4px;">Výroba primárního hliníku v hutích, podíl Číny na světovém úhrnu. Zdroj: USGS/BGS via Our World in Data, Minerals explorer.</p>
+        </div>
+        <div class="col" style="font-size:19px; line-height:1.38;">
+          <div class="compare-panel" style="padding:14px 20px;">
+            <p style="margin:0 0 7px;"><b>1 ·</b> 1990: ~<b>4&nbsp;%</b>, 2024: ~<b>60&nbsp;%</b> (svět 72&nbsp;Mt). Hranici 50&nbsp;% Čína překročila kolem roku <b>2013–2014</b>.</p>
+            <p style="margin:0 0 7px;"><b>2 ·</b> Bauxit 2024: Guinea ~29&nbsp;%, Austrálie ~22&nbsp;%, <b>Čína ~21&nbsp;%</b>.</p>
+            <p style="margin:0 0 7px;"><b>3 ·</b> Čína bauxit <b>dováží</b> (hlavně z Guiney). Výhodou není geologie, ale <b>zpracování</b>: levná elektřina, vybudované kapacity, státní podpora.</p>
+            <p style="margin:0;"><b>4 ·</b> Z uhlí v Číně pochází asi <b>60&nbsp;%</b> elektřiny (2010:&nbsp;~75&nbsp;%); mnohé huti mají vlastní uhelné elektrárny. Norsko a Island vyrábějí elektřinu téměř bez uhlí. Hliník „stejné kvality“ tak může mít několikanásobně jinou uhlíkovou stopu.</p>
+          </div>
+        </div>
+      </div>
+      <div class="terms"><b>Primární hliník</b> – vyrobený elektrolýzou z oxidu hlinitého; <b>sekundární</b> – přetavením šrotu. <b>Huť</b> – závod na výrobu kovu.</div>
+      <aside class="notes">Data (OWID, Aluminum, Smelter, share of global): 1990 4,4 %; 2000 12,3 %; 2005 24,5 %; 2010 38,9 %; 2015 54,5 %; 2020 57 %; 2024 59,7 %. Svět 2024: 72 Mt. Bauxit 2024 (USGS): svět ~450 Mt; Guinea ~130 Mt, Austrálie ~100 Mt, Čína ~93 Mt.
+      Orientační uhlíková stopa primárního hliníku (cradle-to-gate, IAI a literatura): huť na uhelnou elektřinu 15–20 t CO₂e/t, na vodní elektřinu ~4 t CO₂e/t, recyklovaný hliník pod 1 t CO₂e/t. Výrobci od roku 2021 posouvají část kapacit do provincie Yunnan (vodní elektřina).
+      Na hliník se vztahuje CBAM (mechanismus uhlíkového vyrovnání na hranicích, „uhlíkové clo“), definitivní fáze od 1. 1. 2026.</aside>
+    </section>
+
+    <!-- 16 recycling -->
+    <section>
+      <div class="kicker">Recyklace hliníku · chemie i její limity</div>
+      <div class="row middle">
+        <div class="col">
+          <div class="stat-row">
+            <div class="stat"><b>100&nbsp;%</b><span>energie na primární hliník</span></div>
+            <div class="stat acc"><b>~5&nbsp;%</b><span>energie na přetavení šrotu</span></div>
+          </div>
+          <p class="prose tight" style="margin-top:18px; font-size:20px;">Při recyklaci se už nerozkládá oxid (vazba Al–O); kov se jen přetaví (teplota tání 660&nbsp;°C). Kovová struktura se po ztuhnutí obnoví, hliník proto přetavením „nestárne“. Asi <b>75&nbsp;%</b> všeho kdy vyrobeného hliníku je stále v užívání (IAI).</p>
+        </div>
+        <div class="col">
+          <div class="panel" style="font-size:20px; line-height:1.4;">
+            <p style="margin:0 0 10px;"><b>Háček: slitiny.</b> Plechovka (Al–Mn, Al–Mg), okenní profil (Al–Mg–Si) a blok motoru (Al–Si–Cu) mají různé složení.</p>
+            <p style="margin:0 0 10px;"><b>Legující prvky</b> jsou přísady, které kovu dávají potřebné vlastnosti. Z taveniny je prakticky <b>neodstraníme</b>: hliník má k kyslíku větší afinitu než Si, Fe nebo Cu, takže při oxidační rafinaci by se oxidoval dřív hliník než nečistoty.</p>
+            <p style="margin:0;">Smíšený šrot proto končí jako slévárenská slitina s vysokým obsahem Si (<b>downcycling</b>). Hodnotu šrotu určuje <b>třídění</b>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="terms"><b>Slitina</b> – kov s přísadou dalších prvků. <b>Legující prvky</b> – prvky záměrně přidané do kovu, obvykle v množství do několika procent, aby zlepšily pevnost, odolnost proti korozi nebo slévatelnost (u hliníku Mg, Si, Mn, Cu, Zn). <b>Tvářená slitina</b> – zpracovává se válcováním a lisováním (plechy, profily); <b>slévárenská</b> – odlévá se do forem. <b>Downcycling</b> – recyklace na materiál nižší kvality.</div>
+      <aside class="notes">Legující prvky u hliníku: hořčík zpevňuje a zlepšuje odolnost proti korozi, křemík snižuje teplotu tání a zlepšuje slévatelnost, mangan zpevňuje plechy, měď a zinek výrazně zvyšují pevnost. Čistý hliník je pro většinu konstrukčních použití příliš měkký.
+      Úspora energie při recyklaci se běžně uvádí „až 95 %“ (International Aluminium Institute, European Aluminium). Ztráty při přetavení: oxidace povrchu na Al₂O₃ (stěr, angl. dross), typicky jednotky procent, u tenkých a lakovaných materiálů víc; laky a potisk se musí před tavením odstranit (odlakování).
+      Kontrast s mědí: Cu je ušlechtilejší než většina nečistot, proto ji lze elektrolyticky rafinovat na 99,99 %; u hliníku to v praxi nejde. Proto je u Al klíčové oddělené sbírání podle slitin (např. plechovka → plechovka, tzv. uzavřená smyčka).
+      Téma třídění a kvality recyklátu se vrátí u oceli (Přednáška 3) a plastů (Přednáška 5).</aside>
+    </section>
+
+    <!-- 16b · úkol energie v plechovce -->
+    <section>
+      <div class="tag-label data">Práce s výpočtem · hliník</div>
+      <h3 style="font-size:30px; margin-bottom:10px;">Kolik energie je schováno v jedné plechovce?</h3>
+      <div class="row" style="gap:26px;">
+        <div class="col">
+          <div class="panel" style="font-size:19px; line-height:1.42;">
+            <p style="margin:0 0 8px;"><b>Zadání</b></p>
+            <div class="formula" style="font-size:19px; padding:8px 12px; margin:0 0 10px;">2 Al₂O₃ + 3 C → 4 Al + 3 CO₂</div>
+            <ul style="margin:0; padding-left:1.1em;">
+              <li>elektrolýza spotřebuje <b>~14&nbsp;kWh</b> na 1&nbsp;kg Al,</li>
+              <li>recyklace potřebuje <b>~5&nbsp;%</b> této energie,</li>
+              <li>plechovka obsahuje <b>~13&nbsp;g</b> hliníku,</li>
+              <li>jedno nabití mobilu ≈ <b>0,015&nbsp;kWh</b>,</li>
+              <li>M(Al) = 26,98&nbsp;g/mol; M(Al₂O₃) = 101,96&nbsp;g/mol.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="data-task" style="padding:18px 24px;">
+            <div class="tag-label data" style="font-size:17px;">Úkol · 8&nbsp;min ve dvojicích</div>
+            <ol style="font-size:20px; margin-left:1em; line-height:1.38;">
+              <li style="margin-bottom:8px;">Kolik tun <b>Al₂O₃</b> je potřeba na 1&nbsp;t hliníku?</li>
+              <li style="margin-bottom:8px;">Kolik kWh je „schováno“ v jedné plechovce z <b>primárního</b> a z <b>recyklovaného</b> hliníku?</li>
+              <li style="margin-bottom:0;">Kolikrát byste energií jedné plechovky <b>nabili mobil</b>?</li>
             </ol>
           </div>
         </div>
       </div>
-      <aside class="notes">Data (OWID, Aluminum, Smelter, share of global): 1990 4,4 %; 2000 12,3 %; 2005 24,5 %; 2010 38,9 %; 2015 54,5 %; 2020 57 %; 2024 59,7 %. Svět 2024: 72 Mt. Řešení: bauxit se dováží (hlavně z Guiney a Austrálie). Hodnota je ve zpracování a to rozhoduje levná elektřina, v Číně dlouho převážně z uhlí. Uhlíková stopa hliníku proto silně závisí na zemi původu: huti na Islandu nebo v Norsku jedou na vodní a geotermální elektřinu. Pro firmy: CBAM (uhlíkové clo EU) se na hliník vztahuje.</aside>
+      <div class="terms"><b>Kilowatthodina</b> (kWh) – jednotka energie, 1&nbsp;kWh = 3,6&nbsp;MJ. <b>Primární / recyklovaný hliník</b> – vyrobený elektrolýzou z oxidu / přetavením šrotu.</div>
+      <aside class="notes">Řešení na dalším slidu. Molární hmotnost O je 16,00 g/mol, pokud si studenti chtějí M(Al₂O₃) ověřit. Výpočet zahrnuje jen elektrolýzu, ne Bayerův proces, anody ani dopravu.</aside>
     </section>
 
-    <!-- 12 recycling -->
+    <!-- 16c · řešení energie v plechovce -->
     <section>
-      <div class="kicker">Recyklace hliníku</div>
-      <div class="row middle">
-        <div class="col">
-          <div class="stat-row">
-            <div class="stat"><b>100 %</b><span>energie na primární hliník</span></div>
-            <div class="stat acc"><b>~5 %</b><span>energie na přetavení šrotu</span></div>
-          </div>
-          <p class="prose tight" style="margin-top:20px;">Chemickou vazbu Al–O už nemusíme rozbíjet znovu. Recyklace jen přetaví kov.</p>
+      <div class="kicker">Řešení · energie v plechovce</div>
+      <div class="stat-row" style="margin-bottom:14px;">
+        <div class="stat"><b>≈&nbsp;12 nabití</b><span>mobilu odpovídá energie jedné plechovky z primárního hliníku</span></div>
+        <div class="stat acc"><b>≈&nbsp;0,6 nabití</b><span>mobilu odpovídá energie jedné plechovky z recyklovaného hliníku</span></div>
+      </div>
+      <div class="row" style="gap:18px; align-items:stretch;">
+        <div class="compare-panel col" style="font-size:19px; line-height:1.38; padding:14px 20px;">
+          <p style="margin:0;"><b>1 ·</b> (2 × 101,96) / (4 × 26,98) = 203,9 / 107,9 ≈ <b>1,89&nbsp;t Al₂O₃</b> na 1&nbsp;t Al. Odpovídá přibližně 2&nbsp;t oxidu ze schématu.</p>
         </div>
-        <div class="col">
-          <div class="panel">
-            <p class="prose tight"><b>Háček:</b> slitiny. Plechovka, okenní rám a blok motoru mají jiné složení. Smícháním vzniká horší slitina (<b>downcycling</b>).</p>
-            <p class="prose tight" style="margin:0;">Hodnota šrotu proto závisí na <b>třídění</b>, stejně jako u oceli a plastů.</p>
-          </div>
+        <div class="compare-panel col" style="font-size:19px; line-height:1.38; padding:14px 20px;">
+          <p style="margin:0;"><b>2 ·</b> Primární: 0,013&nbsp;kg × 14&nbsp;kWh/kg ≈ <b>0,18&nbsp;kWh</b>. Recyklovaný: 0,18 × 0,05 ≈ <b>0,009&nbsp;kWh</b>.</p>
+        </div>
+        <div class="compare-panel col" style="font-size:19px; line-height:1.38; padding:14px 20px;">
+          <p style="margin:0;"><b>3 ·</b> 0,18 / 0,015 ≈ <b>12 nabití</b>; recyklovaný hliník 0,009 / 0,015 ≈ <b>0,6 nabití</b>.</p>
         </div>
       </div>
-      <aside class="notes">Úspora energie při recyklaci hliníku se běžně uvádí kolem 95 % (International Aluminium Institute, European Aluminium). Téma třídění a kvality recyklátu se vrátí u oceli (Přednáška 3) a plastů (Přednáška 5).</aside>
+      <div class="example-panel" style="padding:12px 22px; margin-top:14px; font-size:19px;">
+        <b>Pointa:</b> čísla na úrovni jedné plechovky si lidé představí lépe než MWh na tunu. V komunikaci firmy je to užitečný převod, pokud je jasné, co je v čísle započítané.
+      </div>
+      <aside class="notes">Počítáme jen elektrolýzu; celá výroba včetně Bayerova procesu a anod je náročnější. Navazuje na další úkol: tvrzení na plechovce. Pointa pro komunikaci: u podobných převodů vždy uvést hranice výpočtu.</aside>
     </section>
 
-    <!-- 13 divider Si -->
+    <!-- 17 Al manager task -->
+    <section>
+      <div class="tag-label data">Manažerský úkol · environmentální tvrzení</div>
+      <h3 style="font-size:30px; margin-bottom:8px;">„100% recyklovatelná plechovka, šetrná k planetě“</h3>
+      <p style="font-size:20px; color:var(--ink-soft); margin-bottom:14px;">Jste manažer/ka udržitelnosti výrobce nápojů. Marketing chce tento text natisknout na nové plechovky v roce 2027. Vaším úkolem je text posoudit dřív, než půjde do tisku.</p>
+      <div class="row" style="gap:18px; align-items:stretch;">
+        <div class="compare-panel col" style="padding:16px 20px; font-size:19px; line-height:1.38;">
+          <div class="badge-dot" style="background:var(--accent); margin-bottom:8px;">1</div>
+          <p style="margin:0;"><b>Chemie:</b> co je na tvrzení pravda a kde je zjednodušené? Myslete na slitiny, ztráty při tavení a lak.</p>
+        </div>
+        <div class="compare-panel col" style="padding:16px 20px; font-size:19px; line-height:1.38;">
+          <div class="badge-dot" style="background:var(--accent); margin-bottom:8px;">2</div>
+          <p style="margin:0;"><b>Pojmy:</b> jaký je rozdíl mezi „recyklovatelné“, „skutečně recyklované“ a „obsahuje recyklát“? Který údaj rozhoduje o uhlíkové stopě plechovky?</p>
+        </div>
+        <div class="compare-panel col" style="padding:16px 20px; font-size:19px; line-height:1.38;">
+          <div class="badge-dot" style="background:var(--accent); margin-bottom:8px;">3</div>
+          <p style="margin:0;"><b>Regulace:</b> obstojí text podle pravidel EU platných od roku 2026? Navrhněte přesnější formulaci.</p>
+        </div>
+      </div>
+      <p class="src-line" style="font-size:17px; margin-top:14px; line-height:1.4;"><b>Kde hledat:</b> Směrnice (EU) 2024/825 o posílení postavení spotřebitelů v zájmu ekologické transformace (EUR-Lex); Nařízení (EU) 2025/40 o obalech (PPWR); Metal Packaging Europe a European Aluminium (míra recyklace plechovek); International Aluminium Institute.</p>
+      <aside class="notes">Práce ve dvojicích, 5–7 minut. Úkol cílí na rozlišení recyklovatelnosti, míry recyklace a obsahu recyklátu, které firmy v reportech i v marketingu často zaměňují. Řešení na dalším slidu.</aside>
+    </section>
+
+    <!-- 18 Al manager solution -->
+    <section>
+      <div class="kicker">Řešení · tvrzení na plechovce</div>
+      <div class="row" style="gap:20px;">
+        <div class="compare-panel col" style="font-size:18px; line-height:1.36; padding:16px 20px;">
+          <h4 style="font-size:22px; margin-bottom:8px;">1 · Co platí chemicky</h4>
+          <p style="margin:0 0 6px;"><b>Pravda:</b> hliník se přetavením nedegraduje a lze ho recyklovat opakovaně.</p>
+          <p style="margin:0 0 6px;"><b>Zjednodušení:</b> „100&nbsp;%“ v praxi nikdy. Část kovu se při tavení oxiduje na Al₂O₃, lak se spálí, tělo a víčko plechovky jsou z různých slitin.</p>
+          <p style="margin:0;">Z plechovky vznikne opět plechovka jen při <b>odděleném sběru</b>, jinak downcycling.</p>
+        </div>
+        <div class="compare-panel col" style="font-size:18px; line-height:1.36; padding:16px 20px;">
+          <h4 style="font-size:22px; margin-bottom:8px;">2 · Tři různé údaje</h4>
+          <ul style="margin:0; padding-left:1.1em;">
+            <li style="margin-bottom:5px;"><b>Recyklovatelné:</b> technicky možné. Neříká, zda se to děje.</li>
+            <li style="margin-bottom:5px;"><b>Míra recyklace:</b> kolik plechovek se skutečně vrátí do oběhu; v EU zhruba tři čtvrtiny, mezi státy velké rozdíly.</li>
+            <li style="margin-bottom:0;"><b>Obsah recyklátu:</b> podíl šrotu v kovu. <b>Ten rozhoduje o uhlíkové stopě</b>: primární Al 15–20&nbsp;kg&nbsp;CO₂e/kg z uhelné elektřiny, recyklát pod 1&nbsp;kg&nbsp;CO₂e/kg.</li>
+          </ul>
+          <p style="margin:8px 0 0;">Do reportu (ESRS E5) patří podíl recyklovaných vstupů.</p>
+        </div>
+        <div class="compare-panel col" style="font-size:18px; line-height:1.36; padding:16px 20px;">
+          <h4 style="font-size:22px; margin-bottom:8px;">3 · Regulace a lepší text</h4>
+          <p style="margin:0 0 6px;">Směrnice 2024/825 od <b>27.&nbsp;9.&nbsp;2026</b> zakazuje <b>obecná</b> environmentální tvrzení („šetrné k planetě“) bez prokázaného vynikajícího environmentálního profilu. PPWR zavádí hodnocení recyklovatelnosti obalů podle kritérií (třídy od roku 2030).</p>
+          <div class="example-panel" style="padding:10px 14px; margin:0; font-style:italic;">„Plechovka obsahuje 68&nbsp;% recyklovaného hliníku (ověřeno …, 2026). Hliník lze opakovaně recyklovat. Vhoďte ji do kontejneru na kovy.“</div>
+        </div>
+      </div>
+      <aside class="notes">Hodnota 68 % ve vzorovém textu je ilustrační, firma musí uvést vlastní doložený údaj. Míra recyklace plechovek v EU: Metal Packaging Europe uvádí kolem 75 % (ověřte aktuální rok). Ve vzorové formulaci je tvrzení konkrétní, měřitelné a ověřené třetí stranou; to je směr, kterým jdou pravidla EU. Podrobnější pravidla pro doložení tvrzení (návrh směrnice o ekologických tvrzeních, Green Claims) se v roce 2025 zastavila; ověřte aktuální stav.
+      ESRS E5 (Využívání zdrojů a oběhové hospodářství) vyžaduje u materiálových vstupů uvést mj. podíl recyklovaných a druhotných materiálů. Firmy pod CSRD po balíčku Omnibus: ověřte aktuální rozsah.</aside>
+    </section>
+
+    <!-- 19 divider Si -->
     <section class="divider-slide">
       <div class="num">04</div>
       <h2>Křemík</h2>
-      <p>Z písku do solárních panelů a čipů</p>
-      <aside class="notes">Čas: cca 10 minut.</aside>
+      <p>Z křemene do solárních článků a čipů</p>
+      <aside class="notes">Čas: cca 18 minut včetně úkolu.</aside>
     </section>
 
-    <!-- 14 Si -->
+    <!-- 20 Si -->
     <section>
-      <div class="kicker">Křemík · čistota je všechno</div>
+      <div class="kicker">Křemík · rozhoduje čistota</div>
       <div class="row">
         <div class="col">
-          <div class="tag-label chem">1 · Metalurgický křemík (~99 %)</div>
-          <div class="formula" style="font-size:24px;">SiO₂ + 2C → Si + 2CO <span style="color:var(--ink-muted)">(~2000 °C)</span></div>
-          <p class="prose tight">Křemen + uhlík v elektrické obloukové peci. Použití: slitiny hliníku, silikony.</p>
-          <div class="tag-label chem" style="margin-top:8px;">2 · Polykrystalický křemík (99,9999 %+)</div>
-          <div class="formula" style="font-size:22px;">Si + 3HCl → SiHCl₃ + H₂<br>SiHCl₃ + H₂ → Si + 3HCl</div>
-          <p class="prose tight" style="margin:0;">Přes těkavou sloučeninu, kterou lze destilací vyčistit.</p>
+          <div class="tag-label chem">1 · Metalurgický křemík (~98–99&nbsp;%&nbsp;Si)</div>
+          <div class="formula" style="font-size:23px;">SiO₂ + 2 C → Si + 2 CO <span style="color:var(--ink-muted)">(~2&nbsp;000&nbsp;°C)</span></div>
+          <p class="prose tight" style="font-size:19px;">Redukce uhlíkem v elektrické obloukové peci, ~11–13&nbsp;MWh/t. Použití: slitiny Al, silikony, polysilikon.</p>
+          <div class="tag-label chem" style="margin-top:8px;">2 · Polykrystalický křemík (99,9999&nbsp;% a více)</div>
+          <div class="formula" style="font-size:21px;">Si + 3 HCl → SiHCl₃ + H₂ <span style="color:var(--ink-muted); font-size:17px;">(~300&nbsp;°C)</span><br>SiHCl₃ + H₂ → Si + 3 HCl <span style="color:var(--ink-muted); font-size:17px;">(~1&nbsp;100&nbsp;°C)</span></div>
+          <p class="prose tight" style="margin:0; font-size:19px;">Siemensův proces: těkavý trichlorsilan (var 32&nbsp;°C) se vyčistí destilací a rozloží na tyčích čistého Si.</p>
         </div>
         <div class="col">
           <div class="stat-row" style="flex-direction:column;">
-            <div class="stat"><b>68 %</b><span>křemíku vyrábí Čína (2022, OWID)</span></div>
-            <div class="stat warn"><b>&gt; 80 %</b><span>podíl Číny v každém kroku výroby FV panelů (IEA)</span></div>
+            <div class="stat"><b>68&nbsp;%</b><span>světové výroby křemíku a ferosilicia připadá na Čínu (2022, USGS via OWID)</span></div>
+            <div class="stat warn"><b>&gt;&nbsp;80&nbsp;%</b><span>podíl Číny na výrobních kapacitách v každém kroku řetězce FV panelů; u waferů ~97&nbsp;% (IEA 2022)</span></div>
+          </div>
+          <p class="prose tight" style="font-size:18px; margin-top:12px;"><b>Čistota:</b> solární křemík 6N–9N (99,9999–99,9999999&nbsp;%), elektronický až 11N. Jeden atom nečistoty na miliardu atomů Si zhoršuje vlastnosti polovodiče.</p>
+        </div>
+      </div>
+      <div class="terms"><b>Metalurgický křemík</b> – technický Si (98–99&nbsp;%). <b>Polykrystalický křemík</b> (polysilikon) – velmi čistý Si z mnoha drobných krystalů. <b>Trichlorsilan</b> – SiHCl₃, těkavá kapalina. <b>Ferosilicium</b> – slitina Fe a Si pro ocelářství.</div>
+      <aside class="notes">Princip čištění přes těkavou sloučeninu: pevný Si nelze vyčistit destilací, kapalný SiHCl₃ ano. Siemensův proces je energeticky velmi náročný (řádově desítky kWh na kg polysilikonu), proto se polysilikon vyrábí tam, kde je levná elektřina; v Číně převážně z uhlí. Alternativa: reaktory s fluidním ložem a silanem SiH₄ (nižší spotřeba energie).
+      IEA (Solar PV Global Supply Chains, 2022): podíl Číny přes 80 % ve všech hlavních výrobních krocích (polysilikon, ingoty, wafery, články, moduly), u waferů 97 %; s výhledem přes 95 %. Ověřte aktuální vydání (IEA Renewables).
+      Údaj 68 % (USGS 2022: Čína ~6,0 Mt z ~8,8 Mt) je v hrubé hmotnosti a zahrnuje ferosilicium pro ocelářství.</aside>
+    </section>
+
+
+    <!-- 20b · FV řetězec -->
+    <section>
+      <div class="kicker">Fotovoltaika · od křemene k modulu</div>
+      <div class="diagram-wrap" style="padding:12px 16px;">
+        <svg viewBox="0 0 1080 205" role="img" aria-label="Výrobní řetězec FV modulu: křemen, metalurgický křemík, polysilikon, ingot, wafer, článek, modul">
+          <defs><marker id="mE1" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--primary)"/></marker></defs>
+          <g font-family="var(--font-body)" text-anchor="middle">
+            <rect x="10" y="10" width="134" height="112" rx="10" fill="#E9D9CF"/>
+            <text x="77" y="36" font-size="17" font-weight="700" fill="var(--ink)">Křemen</text>
+            <text x="77" y="60" font-size="15" fill="var(--ink-soft)">SiO₂</text>
+            <text x="77" y="78" font-size="15" fill="var(--ink-soft)">čistý křemenec</text>
+            <rect x="164" y="10" width="134" height="112" rx="10" fill="var(--surface-2)"/>
+            <text x="231" y="36" font-size="17" font-weight="700" fill="var(--ink)">Metalurg. Si</text>
+            <text x="231" y="60" font-size="15" fill="var(--ink-soft)">98–99 %</text>
+            <text x="231" y="78" font-size="15" fill="var(--ink-soft)">oblouková pec</text>
+            <text x="231" y="96" font-size="15" fill="var(--ink-soft)">~2 000 °C</text>
+            <rect x="318" y="10" width="134" height="112" rx="10" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="385" y="36" font-size="17" font-weight="700" fill="var(--ink)">Polysilikon</text>
+            <text x="385" y="60" font-size="15" fill="var(--ink-soft)">9N</text>
+            <text x="385" y="78" font-size="15" fill="var(--ink-soft)">Siemensův proces</text>
+            <text x="385" y="96" font-size="15" fill="var(--ink-soft)">nejvíc energie</text>
+            <rect x="472" y="10" width="134" height="112" rx="10" fill="var(--surface-2)"/>
+            <text x="539" y="36" font-size="17" font-weight="700" fill="var(--ink)">Ingot</text>
+            <text x="539" y="60" font-size="15" fill="var(--ink-soft)">monokrystal</text>
+            <text x="539" y="78" font-size="15" fill="var(--ink-soft)">tažený z taveniny</text>
+            <text x="539" y="96" font-size="15" fill="var(--ink-soft)">1 414 °C, dopování</text>
+            <rect x="626" y="10" width="134" height="112" rx="10" fill="var(--surface-2)"/>
+            <text x="693" y="36" font-size="17" font-weight="700" fill="var(--ink)">Wafer</text>
+            <text x="693" y="60" font-size="15" fill="var(--ink-soft)">tloušťka ~130 µm</text>
+            <text x="693" y="78" font-size="15" fill="var(--ink-soft)">diamantový drát</text>
+            <text x="693" y="96" font-size="15" fill="var(--ink-soft)">ztráta řezem</text>
+            <rect x="780" y="10" width="134" height="112" rx="10" fill="var(--surface-2)"/>
+            <text x="847" y="36" font-size="17" font-weight="700" fill="var(--ink)">Článek</text>
+            <text x="847" y="60" font-size="15" fill="var(--ink-soft)">p-n přechod</text>
+            <text x="847" y="78" font-size="15" fill="var(--ink-soft)">antireflex SiNₓ</text>
+            <text x="847" y="96" font-size="15" fill="var(--ink-soft)">Ag kontakty</text>
+            <rect x="934" y="10" width="136" height="112" rx="10" fill="var(--primary)"/>
+            <text x="1002" y="36" font-size="17" font-weight="700" fill="#fff">Modul</text>
+            <text x="1002" y="60" font-size="15" fill="#D8E6DC">sklo, EVA,</text>
+            <text x="1002" y="78" font-size="15" fill="#D8E6DC">články, Al rám</text>
+            <path d="M144,66 L159,66" stroke="var(--primary)" stroke-width="3" marker-end="url(#mE1)"/><path d="M298,66 L313,66" stroke="var(--primary)" stroke-width="3" marker-end="url(#mE1)"/><path d="M452,66 L467,66" stroke="var(--primary)" stroke-width="3" marker-end="url(#mE1)"/><path d="M606,66 L621,66" stroke="var(--primary)" stroke-width="3" marker-end="url(#mE1)"/><path d="M760,66 L775,66" stroke="var(--primary)" stroke-width="3" marker-end="url(#mE1)"/><path d="M914,66 L929,66" stroke="var(--primary)" stroke-width="3" marker-end="url(#mE1)"/>
+            <path d="M318,140 L318,150 L1070,150 L1070,140" stroke="var(--danger)" stroke-width="2" fill="none"/>
+            <text x="694" y="175" font-size="17" fill="var(--danger)">Čína: přes 80 % výrobních kapacit v každém kroku, u ingotů a waferů ~97 % (IEA 2022)</text>
+            <text x="694" y="197" font-size="16" fill="var(--ink-soft)">EU: polysilikon (Wacker, Německo), malé kapacity článků a modulů</text>
+          </g>
+        </svg>
+      </div>
+      <div class="row" style="gap:16px; margin-top:12px; font-size:18px; line-height:1.36;">
+        <div class="col"><p style="margin:0;"><b>Czochralského metoda:</b> zárodečný krystal se pomalu otáčí a vytahuje z taveniny křemíku; vyroste válcový monokrystal až ~2 m dlouhý. Do taveniny se přidá příměs (B, Ga nebo P).</p></div>
+        <div class="col"><p style="margin:0;"><b>Úspora materiálu:</b> tenčí wafery a tenčí drát snížily spotřebu křemíku z ~16&nbsp;g/W (2004) pod 3&nbsp;g/W (Fraunhofer ISE). Až třetina ingotu ale stále odchází jako řezný odpad.</p></div>
+        <div class="col"><p style="margin:0;"><b>Stříbro:</b> kontakty článků spotřebují zhruba šestinu světové poptávky po stříbře (Silver Institute). Výrobci proto přecházejí na měď.</p></div>
+      </div>
+      <div class="terms"><b>Ingot</b> – válcový monokrystal křemíku. <b>Wafer</b> (křemíkový plátek) – tenký plátek nařezaný z ingotu. <b>Dopování</b> – řízené přidání příměsi (B, P), která určí typ vodivosti. <b>9N</b> – čistota 99,9999999&nbsp;%.</div>
+      <aside class="notes">Křemen pro výrobu Si musí být velmi čistý (nízký obsah Fe, Al, B, P); vhodná ložiska jsou omezená, nejčistší křemen pro kelímky (Spruce Pine, USA) je samostatné úzké hrdlo řetězce. Ingoty: dnes téměř výhradně monokrystalické; dříve také multikrystalické (lité bloky). Typ wafer: od roku 2024 převládají n-typové wafery (dopované P) pro články TOPCon. Silver Institute (World Silver Survey 2024): fotovoltaika ~190 mil. uncí z ~1 200 mil. uncí celkové poptávky v roce 2023. Údaje IEA: Solar PV Global Supply Chains (2022); ověřte aktuální vydání. Doporučené fotografie: ingot a wafery, tyče polysilikonu (Wikimedia Commons, tiskové fotografie Wacker).</aside>
+    </section>
+
+    <!-- 20c · FV článek -->
+    <section>
+      <div class="kicker">Fotovoltaika · jak funguje křemíkový článek</div>
+      <div class="row" style="gap:22px;">
+        <div style="flex:1.7; min-width:0;">
+          <div class="diagram-wrap" style="padding:10px 14px;">
+            <svg viewBox="0 0 720 320" role="img" aria-label="Řez FV článkem: stříbrné kontakty, antireflexní vrstva, n vrstva, p-n přechod, p báze, hliníkový zadní kontakt; foton vytvoří pár elektron-díra, elektrony jdou k přednímu kontaktu, díry k zadnímu, proud teče spotřebičem">
+              <defs>
+                <marker id="mE2" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#D9A400"/></marker>
+                <marker id="mE3" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--water)"/></marker>
+                <marker id="mE4" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--danger)"/></marker>
+              </defs>
+              <g font-family="var(--font-body)">
+                <path d="M507,78 L507,40 L620,40 L620,289 L560,289" stroke="var(--ink)" stroke-width="2.5" fill="none"/>
+                <rect x="608" y="140" width="24" height="60" rx="4" fill="var(--surface-2)" stroke="var(--ink)" stroke-width="2"/>
+                <text x="642" y="175" font-size="16" fill="var(--ink)">spotřebič</text>
+                <rect x="130" y="100" width="430" height="30" fill="#9FC3E6"/>
+                <rect x="130" y="130" width="430" height="150" fill="#D7D9E8"/>
+                <rect x="130" y="90" width="430" height="10" fill="#3C5E9C"/>
+                <rect x="130" y="280" width="430" height="18" fill="#9AA3AB"/>
+                <g fill="#B8BCC2" stroke="var(--ink-muted)" stroke-width="1">
+                  <rect x="170" y="76" width="14" height="14"/><rect x="280" y="76" width="14" height="14"/><rect x="390" y="76" width="14" height="14"/><rect x="500" y="76" width="14" height="14"/>
+                </g>
+                <line x1="130" y1="130" x2="560" y2="130" stroke="var(--danger)" stroke-width="2" stroke-dasharray="6 4"/>
+                <text x="550" y="148" text-anchor="end" font-size="15" fill="var(--danger)">p-n přechod: vnitřní elektrické pole</text>
+                <path d="M222,14 L256,188" stroke="#D9A400" stroke-width="4" marker-end="url(#mE2)"/>
+                <text x="212" y="18" text-anchor="end" font-size="16" fill="var(--ink)">světlo (foton)</text>
+                <circle cx="262" cy="206" r="11" fill="var(--water)"/>
+                <text x="262" y="211" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">−</text>
+                <circle cx="292" cy="214" r="11" fill="var(--danger)"/>
+                <text x="292" y="219" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">+</text>
+                <path d="M262,193 L262,112" stroke="var(--water)" stroke-width="3" marker-end="url(#mE3)"/>
+                <path d="M292,227 L292,274" stroke="var(--danger)" stroke-width="3" marker-end="url(#mE4)"/>
+                <text x="315" y="240" font-size="15" fill="var(--ink-soft)">pár elektron–díra</text>
+                <g font-size="15" fill="var(--ink)" text-anchor="end">
+                  <text x="122" y="87">Ag kontakt</text>
+                  <text x="122" y="100">SiNₓ</text>
+                  <text x="122" y="120">n⁺ (P)</text>
+                  <text x="122" y="210">p (B), ~130 µm</text>
+                  <text x="122" y="294">Al kontakt</text>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="col" style="font-size:18px; line-height:1.34;">
+          <p style="margin:0 0 7px;"><b>1 · Absorpce:</b> foton s energií nad 1,1&nbsp;eV (šířka zakázaného pásu Si) uvolní elektron z vazby; vznikne pár elektron–díra.</p>
+          <p style="margin:0 0 7px;"><b>2 · Oddělení:</b> elektrické pole p-n přechodu pošle elektrony do n vrstvy a k přednímu kontaktu, díry k zadnímu. Vnějším obvodem teče proud.</p>
+          <p style="margin:0 0 7px;"><b>3 · Dopování:</b> P (5 valenčních elektronů) dává typ n, B (3) typ p. V bázi stačí řádově 1 atom B na miliony atomů Si, proto musí být výchozí křemík extrémně čistý.</p>
+          <p style="margin:0;"><b>4 · Parametry:</b> napětí článku ~0,6–0,7&nbsp;V, účinnost komerčních článků ~22–25&nbsp;%. Modul spojuje do série 60–72 celých nebo 120–144 půlených článků.</p>
+        </div>
+      </div>
+      <div class="terms"><b>Zakázaný pás</b> – energie potřebná k uvolnění elektronu z vazby. <b>Díra</b> – chybějící elektron, chová se jako kladný náboj. <b>Typ n / typ p</b> – převažují volné elektrony / díry. <b>p-n přechod</b> – rozhraní obou vrstev s vnitřním elektrickým polem.</div>
+      <aside class="notes">Schéma ukazuje klasický článek na p-typovém waferu (princip Al-BSF a PERC). Dnes převládají články TOPCon na n-typových waferech a heteropřechodové články (HJT); princip oddělení nábojů p-n přechodem je stejný, liší se pasivační vrstvy a kontakty. Antireflexní vrstva SiNₓ dává článkům typickou tmavomodrou barvu a zároveň pasivuje povrch. Povrch waferu je navíc leptán do pyramid (texturace), aby odrážel méně světla. Ztráty účinnosti: fotony s energií pod 1,1 eV se neabsorbují, přebytek energie u fotonů s vyšší energií se mění na teplo.</aside>
+    </section>
+
+    <!-- 20d · FV modul a materiály -->
+    <section>
+      <div class="kicker">Fotovoltaika · z čeho je modul a co s ním na konci životnosti</div>
+      <div class="row" style="gap:22px;">
+        <div style="flex:1.1; min-width:0;">
+          <div class="diagram-wrap" style="padding:10px 14px;">
+            <svg viewBox="0 0 650 330" role="img" aria-label="Rozložený pohled na FV modul: sklo, EVA, články s měděnými pásky, EVA, zadní fólie, hliníkový rám a připojovací krabice">
+              <g font-family="var(--font-body)">
+                <polygon points="40,20 340,20 420,60 120,60" fill="#D6EAF5" stroke="#7FA7BF" stroke-width="1.5" opacity="0.95"/>
+                <polygon points="40,70 340,70 420,110 120,110" fill="#F4F1E8" stroke="#BDB39A" stroke-width="1.2"/>
+                <polygon points="40,120 340,120 420,160 120,160" fill="#2C3E73" stroke="#1E2B52" stroke-width="1.5"/>
+                <g stroke="#8FA3D1" stroke-width="1">
+                  <line x1="115" y1="120" x2="195" y2="160"/><line x1="190" y1="120" x2="270" y2="160"/><line x1="265" y1="120" x2="345" y2="160"/>
+                  <line x1="60" y1="130" x2="360" y2="130"/><line x1="80" y1="140" x2="380" y2="140"/><line x1="100" y1="150" x2="400" y2="150"/>
+                </g>
+                <g stroke="#C7773D" stroke-width="2.5">
+                  <line x1="90" y1="120" x2="170" y2="160"/><line x1="230" y1="120" x2="310" y2="160"/>
+                </g>
+                <polygon points="40,170 340,170 420,210 120,210" fill="#F4F1E8" stroke="#BDB39A" stroke-width="1.2"/>
+                <polygon points="40,220 340,220 420,260 120,260" fill="#FFFFFF" stroke="var(--ink-muted)" stroke-width="1.2"/>
+                <rect x="250" y="232" width="34" height="16" fill="#3E3E3E"/>
+                <polygon points="40,275 340,275 420,315 120,315" fill="none" stroke="#9AA3AB" stroke-width="7"/>
+                <g stroke="var(--ink-muted)" stroke-width="1">
+                  <line x1="400" y1="40" x2="440" y2="40"/><line x1="400" y1="90" x2="440" y2="90"/><line x1="400" y1="140" x2="440" y2="140"/><line x1="400" y1="190" x2="440" y2="190"/><line x1="400" y1="240" x2="440" y2="240"/><line x1="400" y1="295" x2="440" y2="295"/>
+                </g>
+                <g font-size="19" fill="var(--ink)">
+                  <text x="448" y="45">solární sklo (~3 mm)</text>
+                  <text x="448" y="95">EVA (zapouzdření)</text>
+                  <text x="448" y="137">články + Cu pásky</text>
+                  <text x="448" y="154" font-size="16" fill="var(--ink-soft)">(pájené Sn, Pb, Ag)</text>
+                  <text x="448" y="195">EVA</text>
+                  <text x="448" y="237">zadní fólie (polymer)</text>
+                  <text x="448" y="254" font-size="16" fill="var(--ink-soft)">+ připojovací krabice</text>
+                  <text x="448" y="300">hliníkový rám</text>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="col">
+          <table class="data-table" style="font-size:17px;">
+            <thead><tr><th>Materiál</th><th>Podíl hmotnosti</th><th>Recyklace</th></tr></thead>
+            <tbody>
+              <tr><td>sklo</td><td>~76&nbsp;%</td><td>snadná, nízká hodnota</td></tr>
+              <tr><td>polymery (EVA, fólie)</td><td>~10&nbsp;%</td><td>většinou spálení</td></tr>
+              <tr><td>hliník (rám)</td><td>~8&nbsp;%</td><td>snadná</td></tr>
+              <tr><td>křemík</td><td>~5&nbsp;%</td><td>obtížná, ztráta čistoty</td></tr>
+              <tr><td>kovy (Cu, Ag, Sn, Pb)</td><td>~1&nbsp;%</td><td>Cu a Ag cenné, Pb nebezpečné</td></tr>
+            </tbody>
+          </table>
+          <p class="src-line" style="font-size:15px; margin-top:4px;">Typický modul z krystalického Si. Zdroj: IRENA a IEA-PVPS (2016), <i>End-of-Life Management: Solar Photovoltaic Panels</i>.</p>
+          <div class="example-panel" style="padding:10px 16px; font-size:18px; line-height:1.34; margin-top:8px;"><b>Pro manažera:</b> FV panely jsou v EU elektroodpad (směrnice WEEE); zpětný odběr financuje výrobce nebo dovozce. Do roku 2050 až 60–78&nbsp;mil.&nbsp;t odpadních panelů (IRENA).</div>
+        </div>
+      </div>
+      <div class="terms"><b>EVA</b> – ethylen-vinylacetát, průhledný polymer, který zalije články. <b>Zadní fólie</b> – polymerní vrstva chránící modul zezadu. <b>WEEE</b> – směrnice EU o odpadních elektrických a elektronických zařízeních.</div>
+      <aside class="notes">Složení se liší podle typu modulu: novější moduly sklo–sklo nemají polymerní zadní fólii, mají tenčí rámy a méně stříbra; u bezolovnatých pájek odpadá Pb. Recyklace v praxi: hliníkový rám a kabely se oddělí mechanicky, sklo se drtí; laminát (EVA + články) se dělí obtížně (tepelně, chemicky). Z hlediska hodnoty jsou nejzajímavější Ag, Cu a Si, z hlediska hmotnosti sklo. Odhad IRENA 2016: 60–78 mil. t kumulativního odpadu do roku 2050 (podle scénáře). Životnost modulu 25–30 let, výrobci garantují ~80–90 % výkonu po 25–30 letech.</aside>
+    </section>
+
+    <!-- 21 Si manager task -->
+    <section>
+      <div class="tag-label data">Manažerský úkol · lidská práva v dodavatelském řetězci</div>
+      <h3 style="font-size:30px; margin-bottom:8px;">Fotovoltaika na střechy skladů: odkud je polysilikon?</h3>
+      <p style="font-size:20px; color:var(--ink-soft); margin-bottom:14px;">Jste manažer/ka udržitelnosti logistické firmy. Na střechy skladů se má instalovat FV elektrárna 2&nbsp;MWp. Nejlevnější nabídka uvádí jen výrobce modulů (Vietnam), původ článků a polysilikonu neuvádí.</p>
+      <div class="row" style="gap:18px; align-items:stretch;">
+        <div class="compare-panel col" style="padding:16px 20px; font-size:19px; line-height:1.38;">
+          <div class="badge-dot" style="background:var(--accent); margin-bottom:8px;">1</div>
+          <p style="margin:0;"><b>Řetězec:</b> proč vám země výroby modulu nestačí? Který krok výroby je z hlediska lidských práv a uhlíkové stopy nejrizikovější?</p>
+        </div>
+        <div class="compare-panel col" style="padding:16px 20px; font-size:19px; line-height:1.38;">
+          <div class="badge-dot" style="background:var(--accent); margin-bottom:8px;">2</div>
+          <p style="margin:0;"><b>Výběrové řízení:</b> jaké tři požadavky na dodavatele doplníte do zadání?</p>
+        </div>
+        <div class="compare-panel col" style="padding:16px 20px; font-size:19px; line-height:1.38;">
+          <div class="badge-dot" style="background:var(--accent); margin-bottom:8px;">3</div>
+          <p style="margin:0;"><b>Regulace:</b> které předpisy EU budou nákup podobného zboží v příštích letech ovlivňovat?</p>
+        </div>
+      </div>
+      <p class="src-line" style="font-size:17px; margin-top:14px; line-height:1.4;"><b>Kde hledat:</b> IEA <i>Solar PV Global Supply Chains</i> (2022); OHCHR, hodnocení situace v Sin-ťiangu (2022); Nařízení (EU) 2024/3015 o zákazu výrobků z nucené práce; Solar Stewardship Initiative (certifikace dohledatelnosti).</p>
+      <aside class="notes">Práce ve dvojicích, 5–7 minut. Úkol propojuje chemii (kde v řetězci je energeticky nejnáročnější krok) se sociálním pilířem udržitelnosti (S2 v ESRS). Řešení na dalším slidu.</aside>
+    </section>
+
+    <!-- 22 Si manager solution -->
+    <section>
+      <div class="kicker">Řešení · fotovoltaika a polysilikon</div>
+      <div class="row" style="gap:20px;">
+        <div class="compare-panel col" style="font-size:18px; line-height:1.36; padding:16px 20px;">
+          <h4 style="font-size:22px; margin-bottom:8px;">1 · Rizikový krok: polysilikon</h4>
+          <p style="margin:0 0 6px;">Modul smontovaný ve Vietnamu může obsahovat čínský <b>polysilikon</b> i wafery.</p>
+          <p style="margin:0 0 6px;"><b>Lidská práva:</b> třetina až necelá polovina polysilikonu (odhady 2020–2022) pocházela ze Sin-ťiangu, kde OSN (OHCHR 2022) popsala riziko nucené práce Ujgurů.</p>
+          <p style="margin:0;"><b>Uhlíková stopa:</b> nejnáročnější krok, v Číně hlavně z uhlí.</p>
+        </div>
+        <div class="compare-panel col" style="font-size:18px; line-height:1.36; padding:16px 20px;">
+          <h4 style="font-size:22px; margin-bottom:8px;">2 · Požadavky do zadání</h4>
+          <ul style="margin:0; padding-left:1.1em;">
+            <li style="margin-bottom:5px;"><b>mapování řetězce</b> až k výrobci a závodu polysilikonu,</li>
+            <li style="margin-bottom:5px;">smluvní <b>právo na audit</b> a odstoupení,</li>
+            <li style="margin-bottom:5px;"><b>certifikace dohledatelnosti</b> (např. Solar Stewardship Initiative),</li>
+            <li style="margin-bottom:0;"><b>EPD</b> nebo uhlíková stopa modulu (kg&nbsp;CO₂e/kWp).</li>
+          </ul>
+        </div>
+        <div class="compare-panel col" style="font-size:18px; line-height:1.36; padding:16px 20px;">
+          <h4 style="font-size:22px; margin-bottom:8px;">3 · Předpisy</h4>
+          <ul style="margin:0; padding-left:1.1em;">
+            <li style="margin-bottom:5px;"><b>Nařízení (EU) 2024/3015:</b> zákaz výrobků z nucené práce na trhu EU od <b>14.&nbsp;12.&nbsp;2027</b>,</li>
+            <li style="margin-bottom:5px;"><b>CSDDD (2024/1760):</b> náležitá péče velkých firem (upraveno balíčkem Omnibus),</li>
+            <li style="margin-bottom:0;"><b>CSRD, ESRS S2:</b> reporting o pracovnících v hodnotovém řetězci.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="example-panel" style="padding:10px 22px; margin-top:12px; font-size:19px;">
+        <b>Pointa:</b> nejlevnější nabídka může nést skryté riziko: zablokování zboží, reputační škody, nesoulad s reportingem.
+      </div>
+      <div class="terms"><b>EPD</b> – environmentální prohlášení o produktu (ověřená data o dopadech). <b>Náležitá péče</b> – povinnost firmy zjišťovat a omezovat rizika v dodavatelském řetězci. <b>CSDDD</b> – směrnice EU o náležité péči v oblasti udržitelnosti. <b>Ujgurové</b> – turkická muslimská menšina v Sin-ťiangu (severozápad Číny).</div>
+      <aside class="notes">Polysilikon mimo Čínu vyrábí např. Wacker (Německo), Hemlock (USA), OCI (Malajsie); moduly s ním jsou dražší. V USA platí od roku 2022 zákon UFLPA, podle kterého celní správa zadržuje dovozy s vazbou na Sin-ťiang. Podíl Sin-ťiangu na polysilikonu: Sheffield Hallam University, In Broad Daylight (2021) uvádí kolem 45 % (2020); novější odhady (2022–2023) nižší, kolem třetiny, s přesunem kapacit do jiných provincií. Čísla jsou odhady, přesná oficiální data neexistují; to je samo o sobě problém dohledatelnosti.
+      OHCHR Assessment of human rights concerns in the Xinjiang Uyghur Autonomous Region (31. 8. 2022). Nařízení 2024/3015 se použije od 14. 12. 2027. CSDDD: balíček Omnibus I (2025) zúžil rozsah a posunul termíny; ověřte aktuální stav. Pro veřejné zadavatele navíc Akt o průmyslu pro nulové čisté emise (NZIA, 2024/1735) zavádí necenová kritéria odolnosti v aukcích.</aside>
+    </section>
+
+    <!-- 23 divider byproducts -->
+    <section class="divider-slide">
+      <div class="num">05</div>
+      <h2>Ga, Ge, In, Te</h2>
+      <p>Kovy, které se netěží kvůli nim samotným</p>
+      <aside class="notes">Čas: cca 12 minut. Klíčový koncept: vedlejší produkt (by-product, companion metal).</aside>
+    </section>
+
+    <!-- 24 byproduct table -->
+    <section>
+      <div class="kicker">Vedlejší produkty · „pasažéři“ hlavních kovů</div>
+      <table class="data-table" style="font-size:20px;">
+        <thead><tr><th>Prvek</th><th>Hostitelský kov · kde se získává</th><th>Použití</th></tr></thead>
+        <tbody>
+          <tr><td><b>Gallium</b> Ga</td><td>Al · z hlinitanového roztoku v Bayerově procesu (bauxit obsahuje ~50&nbsp;ppm Ga)</td><td>LED, výkonová elektronika a 5G (GaN, GaAs)</td></tr>
+          <tr><td><b>Germanium</b> Ge</td><td>Zn · ze zinkových koncentrátů; také z popílku uhelných elektráren</td><td>optická vlákna, infračervená optika, články pro satelity</td></tr>
+          <tr><td><b>Indium</b> In</td><td>Zn · ze sfaleritu ZnS při výrobě zinku</td><td>průhledná vodivá vrstva ITO (oxid india a cínu) v displejích</td></tr>
+          <tr><td><b>Telur</b> Te</td><td>Cu · z anodových kalů po elektrolytické rafinaci mědi</td><td>tenkovrstvé FV panely CdTe, termoelektrika</td></tr>
+        </tbody>
+      </table>
+      <div class="panel soft" style="margin-top:18px; font-size:20px; line-height:1.4;">
+        <p style="margin:0;"><b>Důsledek:</b> nabídka vedlejšího produktu je <b>cenově málo pružná</b>. Když stoupne poptávka po indiu, nikdo neotevře nový zinkový důl kvůli indiu: indium tvoří nepatrný zlomek tržeb zinkové hutě. Nabídka závisí na trhu se zinkem.</p>
+      </div>
+      <div class="terms"><b>Vedlejší produkt</b> – kov získávaný jen spolu s jiným, hlavním (hostitelským) kovem. <b>Hlinitanový roztok</b> – roztok Na[Al(OH)₄] z Bayerova procesu. <b>ITO</b> – oxid india a cínu, průhledný a vodivý.</div>
+      <aside class="notes">Ga, Ge, In, Te se získávají téměř výhradně jako vedlejší produkty (Nassar, Graedel a Harper, Science Advances 2015). Navázání na Goldschmidtovu klasifikaci z Přednášky 1: tyto prvky se vyskytují s „hostitelskými“ kovy, protože mají podobný iontový poloměr a chemické chování (Ga³⁺ zastupuje Al³⁺, In a Ge vstupují do sfaleritu).
+      Koncentrace (OWID/USGS): gallium Čína ~99 % (2024), germanium ~68 % (2021). Čína v srpnu 2023 zavedla vývozní licence na Ga a Ge, v prosinci 2024 zakázala jejich vývoz do USA; v listopadu 2025 zákaz vůči USA dočasně pozastavila, licenční režim trvá. Ověřte aktuální stav.
+      Navíc se z hostitelských rud vedlejší kov získává jen zčásti: velká část Ga v bauxitu skončí v červeném kalu. Potenciál existuje, ale vyžaduje investici do zařízení a dlouhodobý odbyt.</aside>
+    </section>
+
+    <!-- 25 think -->
+    <section class="think-slide">
+      <div class="tag-label think">Zamyšlení · 3&nbsp;min ve dvojicích</div>
+      <p class="question">Cena germania se za rok zdvojnásobila. Proč se ho nezačne hned vyrábět víc a co může udělat výrobce infračervené optiky?</p>
+      <p class="facilitate">Najděte alespoň tři strategie. Nápověda: zásoby, recyklace výrobního odpadu, náhrada materiálu, nové zdroje mimo Čínu. Pro každou odhadněte, zda pomůže do 6&nbsp;měsíců, nebo až za několik let.</p>
+      <aside class="notes">Diskuse ve dvojicích (3 min), pak 2–3 odpovědi nahlas. Řešení na dalším slidu.</aside>
+    </section>
+
+    <!-- 26 think solution -->
+    <section>
+      <div class="kicker">Řešení · germanium</div>
+      <div class="row" style="gap:22px;">
+        <div class="compare-panel col" style="font-size:19px; line-height:1.38; padding:16px 22px;">
+          <h4 style="font-size:23px; margin-bottom:10px;">Proč výroba nevzroste hned</h4>
+          <ul style="margin:0; padding-left:1.1em;">
+            <li style="margin-bottom:6px;">Germanium je <b>vedlejší produkt</b> zinku a popílku. O objemu těžby rozhoduje trh se zinkem.</li>
+            <li style="margin-bottom:6px;">Zařízení na zachycování Ge v zinkové huti se buduje <b>roky</b> a investor potřebuje jistotu odbytu i po poklesu ceny.</li>
+            <li style="margin-bottom:0;">Výroba je soustředěná (Čína ~68&nbsp;%) a vývoz podléhá licencím.</li>
+          </ul>
+        </div>
+        <div class="compare-panel col" style="font-size:19px; line-height:1.38; padding:16px 22px;">
+          <h4 style="font-size:23px; margin-bottom:10px;">Strategie výrobce</h4>
+          <div class="hbars" style="grid-template-columns:150px 1fr; row-gap:12px; column-gap:14px; font-size:18px; align-items:start;">
+            <div class="lbl2" style="font-size:18px;"><b>do 6&nbsp;měsíců</b></div><div>skladové zásoby; dlouhodobé kontrakty s více dodavateli; recyklace výrobního odpadu (třísky, kaly z broušení)</div>
+            <div class="lbl2" style="font-size:18px;"><b>1–3&nbsp;roky</b></div><div>náhrada materiálu tam, kde to optika dovolí (chalkogenidová skla, ZnSe); úspornější konstrukce čoček</div>
+            <div class="lbl2" style="font-size:18px;"><b>3 a více let</b></div><div>nové zdroje: zachycování Ge v zinkových hutích a z popílku v EU a USA; společné projekty s odběrateli</div>
           </div>
         </div>
       </div>
-      <aside class="notes">Princip čištění přes těkavou látku: Si převedeme na kapalný trichlorsilan (var ~32 °C), vyčistíme ho destilací jako alkohol a zpátky rozložíme na velmi čistý Si (Siemensův proces). Je to energeticky velmi náročné, proto se polysilikon vyrábí tam, kde je levná elektřina. IEA (Solar PV Global Supply Chains, 2022) uvádí podíl Číny přes 80 % ve všech výrobních krocích, u polysilikonu a waferů ještě výš. Ověřte aktuální vydání.</aside>
+      <div class="example-panel" style="padding:10px 22px; margin-top:14px; font-size:19px;">
+        <b>Pointa:</b> u vedlejších produktů nefunguje „vyšší cena → víc těžby“. Firma musí riziko řídit sama: zásobami, recyklací a diverzifikací dodavatelů.
+      </div>
+      <div class="terms"><b>Substituce</b> – náhrada materiálu jiným. <b>Chalkogenidová skla</b> – skla ze sloučenin síry, selenu a teluru, propustná pro infračervené záření. <b>Diverzifikace</b> – rozložení nákupu mezi více dodavatelů.</div>
+      <aside class="notes">Podle USGS (MCS) pochází z recyklovaného materiálu zhruba 30 % světové spotřeby germania, převážně z výrobního odpadu optiky a vláken. V Evropě germanium rafinuje a recykluje např. Umicore (Belgie). Strategické zásoby pro kritické suroviny zmiňuje i Akt o kritických surovinách EU (Nařízení 2024/1252; společné nákupy a koordinace zásob).</aside>
     </section>
 
-    <!-- 15 divider byproducts -->
-    <section class="divider-slide">
-      <div class="num">05</div>
-      <h2>Ge, In, Te, Ga</h2>
-      <p>Kovy, které nikdo netěží kvůli nim samotným</p>
-      <aside class="notes">Čas: cca 10 minut. Klíčový koncept: vedlejší produkt.</aside>
-    </section>
-
-    <!-- 16 byproduct table -->
+    <!-- 26b · datová úloha: nástroj -->
     <section>
-      <div class="kicker">Vedlejší produkty · „pasažéři“ jiných kovů</div>
-      <table class="data-table">
-        <thead><tr><th>Prvek</th><th>Získává se z…</th><th>K čemu</th></tr></thead>
+      <div class="tag-label data">Práce s daty · Our World in Data, Minerals explorer</div>
+      <iframe class="owid-frame" data-src="https://ourworldindata.org/explorers/minerals?Mineral=Aluminum&Metric=Production&Type=Smelter&Share+of+global=true" loading="lazy" allow="web-share; clipboard-write" title="OWID Minerals explorer: hliník"></iframe>
+      <p class="owid-link">Otevřít: <a href="https://ourworldindata.org/explorers/minerals?Mineral=Aluminum&Metric=Production&Type=Smelter&Share+of+global=true" target="_blank">ourworldindata.org/explorers/minerals ↗</a></p>
+      <aside class="notes">Společná datová úloha na závěr: spojuje všechny dnešní suroviny. Ukažte přepínání Mineral = Bauxite (Type Mine) a Aluminum (Type Smelter) se zaškrtnutým Share of global; nahoře graf, záložka Map pro mapu, Table pro přesná čísla, Sources pro původ dat. Studenti potřebují notebooky nebo mobily.</aside>
+    </section>
+
+    <!-- 26c · datová úloha: zadání -->
+    <section>
+      <div class="tag-label data">Práce s daty · skupinová úloha</div>
+      <h3 style="font-size:30px; margin-bottom:10px;">Těžba, nebo zpracování: kde je moc?</h3>
+      <div class="row" style="gap:28px;">
+        <div class="col">
+          <div class="data-task" style="padding:18px 24px;">
+            <div class="tag-label data" style="font-size:17px;">Úkol · 20&nbsp;min ve skupinách</div>
+            <ol style="font-size:20px; margin-left:1em; line-height:1.38;">
+              <li style="margin-bottom:8px;">Najděte podíl tří největších zemí (<b>top 3</b>) na těžbě a na zpracování vaší suroviny v posledním roce.</li>
+              <li style="margin-bottom:8px;">Která země vede v těžbě a která ve zpracování? Je to stejná země?</li>
+              <li style="margin-bottom:8px;">Jak se podíl hlavní země změnil od nejstaršího dostupného roku?</li>
+              <li style="margin-bottom:0;">Napište jednu větu se sdělením („titulek grafu“) a zdroj.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="col">
+          <table class="data-table" style="font-size:18px;">
+            <thead><tr><th>Skupina</th><th>Těžba</th><th>Zpracování</th></tr></thead>
+            <tbody>
+              <tr><td><b>A</b></td><td>Nickel · Mine</td><td>Nickel · Processing</td></tr>
+              <tr><td><b>B</b></td><td>Copper · Mine</td><td>Copper · Refinery</td></tr>
+              <tr><td><b>C</b></td><td>Cobalt · Mine</td><td>Cobalt · Refinery</td></tr>
+              <tr><td><b>D</b></td><td>Graphite · Mine</td><td>Gallium · Processing</td></tr>
+            </tbody>
+          </table>
+          <div class="panel" style="font-size:18px; line-height:1.38; padding:12px 18px; margin-top:12px;">
+            <p style="margin:0;"><b>Kde to najdete:</b> OWID <i>Minerals explorer</i>, Metric = <i>Production</i>, zaškrtněte <i>Share of global</i>. Přesná čísla jsou v záložce <i>Table</i>, původ dat v <i>Sources</i>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="terms"><b>Mine</b> – těžba. <b>Refinery</b> – rafinace. <b>Processing</b> – zpracování na kov, u gallia jeho získání jako vedlejšího produktu. <b>Share of global</b> – podíl na světovém úhrnu.</div>
+      <aside class="notes">Skupina na každou surovinu, při osmi studentech dvojice. U niklu je v datech i položka Other (ostatní země), do top 3 ji nepočítejte. Řešení na dalším slidu.</aside>
+    </section>
+
+    <!-- 26d · datová úloha: řešení -->
+    <section>
+      <div class="kicker">Řešení · těžba, nebo zpracování</div>
+      <table class="data-table" style="font-size:18px;">
+        <thead><tr><th>Skupina</th><th>Těžba</th><th>Zpracování</th><th>Vývoj podílu</th></tr></thead>
         <tbody>
-          <tr><td><b>Gallium</b> Ga</td><td>výroby oxidu hlinitého z bauxitu</td><td>LED, výkonová elektronika (GaN), čipy</td></tr>
-          <tr><td><b>Germanium</b> Ge</td><td>zinkových rud, uhelného popílku</td><td>optická vlákna, infračervená optika, satelitní FV</td></tr>
-          <tr><td><b>Indium</b> In</td><td>zinkových rud (sfalerit ZnS)</td><td>průhledná vodivá vrstva ITO v displejích</td></tr>
-          <tr><td><b>Telur</b> Te</td><td>kalů po elektrolytické rafinaci mědi</td><td>tenkovrstvé FV panely CdTe</td></tr>
+          <tr><td><b>A</b> nikl</td><td>Indonésie&nbsp;60&nbsp;%, Filipíny&nbsp;9&nbsp;%, Rusko&nbsp;6&nbsp;%<br><b>top 3: 74&nbsp;%</b></td><td>Indonésie&nbsp;41&nbsp;%, Čína&nbsp;28&nbsp;%, Rusko&nbsp;5&nbsp;% <b>(2023)</b><br><b>top 3: 74&nbsp;%</b></td><td>Indonésie ve zpracování: 1&nbsp;% (2000) → 41&nbsp;% (2023)</td></tr>
+          <tr><td><b>B</b> měď</td><td>Chile&nbsp;23&nbsp;%, DR Kongo&nbsp;14&nbsp;%, Peru&nbsp;11&nbsp;%<br><b>top 3: 49&nbsp;%</b></td><td>Čína&nbsp;44&nbsp;%, DR Kongo&nbsp;9&nbsp;%, Chile&nbsp;7&nbsp;%<br><b>top 3: 61&nbsp;%</b></td><td>Chile v těžbě: 35&nbsp;% (2000) → 23&nbsp;% (2024)</td></tr>
+          <tr><td><b>C</b> kobalt</td><td>DR Kongo&nbsp;76&nbsp;%, Indonésie&nbsp;10&nbsp;%, Rusko&nbsp;3&nbsp;%<br><b>top 3: 89&nbsp;%</b></td><td>Čína&nbsp;76&nbsp;%, Finsko&nbsp;10&nbsp;%, Kanada&nbsp;4&nbsp;% <b>(2021)</b><br><b>top 3: 90&nbsp;%</b></td><td>Čína v rafinaci: 3&nbsp;% (2000) → 76&nbsp;% (2021)</td></tr>
+          <tr><td><b>D</b> grafit, gallium</td><td>grafit: Čína&nbsp;79&nbsp;%, Madagaskar&nbsp;6&nbsp;%, Mosambik&nbsp;5&nbsp;%<br><b>top 3: 90&nbsp;%</b></td><td>gallium: Čína&nbsp;99&nbsp;%, Rusko&nbsp;1&nbsp;%<br><b>top 3: ~100&nbsp;%</b></td><td>Čína v galliu: 97&nbsp;% (2020) → 99&nbsp;% (2024)</td></tr>
         </tbody>
       </table>
-      <div class="panel soft" style="margin-top:20px;">
-        <p class="prose tight" style="margin:0;"><b>Důsledek:</b> když stoupne poptávka po india, nikdo neotevře nový zinkový důl kvůli indiu. Nabídka závisí na trhu se zinkem, ne s indiem.</p>
+      <p class="src-line" style="font-size:15px; margin-top:4px;">Podíly na světové produkci, rok 2024, není-li uvedeno jinak. Zdroj: USGS/BGS via Our World in Data, Minerals explorer.</p>
+      <div class="example-panel" style="padding:12px 22px; margin-top:8px; font-size:19px; line-height:1.36;">
+        <b>Pointa:</b> těžba a zpracování často leží v jiných zemích a u mědi, kobaltu a gallia zpracování vede Čína. Nikl ukazuje opačný tah: Indonésie zakázala vývoz rudy (2020) a zpracování přitáhla k sobě. Proto EU v Aktu o kritických surovinách stanovuje vedle cíle 10&nbsp;% těžby i cíl 40&nbsp;% zpracování v EU.
       </div>
-      <aside class="notes">Čína v srpnu 2023 zavedla vývozní licence na Ga a Ge, v prosinci 2024 zákaz vývozu do USA. Gallium: Čína ~99 % (OWID 2024), germanium ~68 % (2021). Navázání na Goldschmidtovu klasifikaci z Přednášky 1: In, Ge, Ga, Te se vyskytují s „hostitelskými“ kovy (Zn, Cu, Al), protože mají podobnou chemii.</aside>
+      <div class="terms"><b>Pozor na data:</b> rafinace kobaltu v OWID končí rokem 2021, zpracování niklu rokem 2023 a u rafinace mědi a gallia začíná řada až rokem 2020. I chybějící roky jsou zjištění o datech a patří do poznámky pod grafem.</div>
+      <aside class="notes">Data ověřena v OWID (API indikátorů, data za rok 2024, kobalt rafinace 2021). Hodnoty: nikl těžba 59,5 / 8,9 / 5,7 % (bez položky Other, 8,1 %); zpracování 2023 41,0 / 28,2 / 4,5 %; měď těžba 23,0 / 14,3 / 11,3 %; rafinace 44,4 / 9,3 / 7,0 %; kobalt těžba 75,9 / 9,7 / 3,0 %; rafinace 76,4 / 9,7 / 4,1 %; grafit 79,4 / 5,6 / 4,7 %; gallium 98,7 / 0,8 %. Řada Chile v mědi: 2000 34,6 %, 2024 23,0 %. Čína v rafinaci mědi: 2020 39,5 %, 2024 44,4 %. Indonésie ve zpracování niklu: 2000 0,9 %, 2020 24,7 %, 2023 41,0 %; v těžbě (řada od 2020): 30,7 % → 59,5 %. Velkou část indonéských kapacit vlastní čínské firmy, ověřte aktuální podíl. Podíl Číny na grafitu je v OWID dostupný až od 2020 (78,9 → 79,4 %), podíl DR Kongo na těžbě kobaltu rovněž (69,0 → 75,9 %); u těchto řad je „nejstarší dostupný rok“ právě 2020. Akt o kritických surovinách (Nařízení 2024/1252): do roku 2030 cíl 10 % těžby, 40 % zpracování, 25 % recyklace a nejvýše 65 % závislosti na jedné třetí zemi v každém kroku.</aside>
     </section>
 
-    <!-- 17 think -->
-    <section class="think-slide">
-      <div class="tag-label think">Zamyšlení</div>
-      <p class="question">Cena germania se za rok zdvojnásobila. Proč se ho nezačne hned těžit víc, a co může udělat výrobce optiky?</p>
-      <p class="facilitate">Zkuste najít alespoň tři strategie: zásoby (skladování), recyklace výrobního odpadu, náhrada materiálu, nové zdroje (popílek, zinkové huti v EU).</p>
-      <aside class="notes">Diskuse ve dvojicích (3 min). Dobré odpovědi: dlouhodobé kontrakty, strategické zásoby, recyklace výrobního odpadu (u germania se recykluje velká část odpadu z výroby), alternativní zdroje (popílek z uhelných elektráren, zinkové huti mimo Čínu), substituce. Navazuje na Seminář 2.</aside>
-    </section>
-
-    <!-- 18 summary -->
+    <!-- 27 summary -->
     <section>
       <div class="kicker">Shrnutí</div>
       <div class="goal-list tight">
-        <div class="item"><span class="dot"></span><span><b>Lithium:</b> z hornin (rychle, energeticky náročně) nebo ze solanek (pomalu, s odparem vody). Těžba se za 4 roky ztrojnásobila.</span></div>
-        <div class="item"><span class="dot"></span><span><b>Grafit:</b> anoda baterií. Přírodní i syntetický je převážně z Číny.</span></div>
-        <div class="item"><span class="dot"></span><span><b>Hliník:</b> „zamražená elektřina“. Uhlíková stopa závisí na zdroji elektřiny, recyklace ušetří ~95 % energie.</span></div>
-        <div class="item"><span class="dot"></span><span><b>Křemík:</b> drahá je čistota, ne surovina. Písku je dost, polysilikonu z jiných zemí než z Číny málo.</span></div>
-        <div class="item"><span class="dot"></span><span><b>Ge, In, Te, Ga:</b> vedlejší produkty. Jejich nabídka nereaguje na poptávku.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Lithium:</b> dvě technologické cesty, z hornin (energeticky náročná) a ze solanek (zásah do vodního režimu). Data a dopady přinese projekt T7.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Grafit:</b> anoda lithno-iontových baterií. Těžba přírodního i výroba syntetického a anodových materiálů je převážně v Číně.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Hliník:</b> zakonzervovaná elektřina. Uhlíková stopa závisí na zdroji elektřiny; recyklace ušetří až 95&nbsp;% energie, ale vyžaduje třídění podle slitin. Rozlišujte recyklovatelnost, míru recyklace a obsah recyklátu.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Křemík:</b> drahá je čistota, ne surovina. U FV je klíčový původ polysilikonu: energie i lidská práva.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Ga, Ge, In, Te:</b> vedlejší produkty, jejichž nabídka nereaguje na cenu. Riziko řídí zásoby, recyklace a diverzifikace.</span></div>
+        <div class="item"><span class="dot"></span><span><b>Data:</b> těžba a zpracování často leží v jiných zemích, zpracování se nejčastěji soustředí v Číně. U každého čísla kontrolujte, co se měří, jednotku, rok a primární zdroj.</span></div>
       </div>
     </section>
 
-    <!-- 19 sources -->
+    <!-- 28 sources -->
     <section>
-      <div class="kicker">Zdroje dat dne</div>
+      <div class="kicker">Zdroje dat a předpisů</div>
       <div class="src-grid">
-        <div class="src-item"><b>OWID · Minerals explorer</b><span>Těžba a zpracování Li, Al, bauxitu, grafitu, Si, Ga, Ge podle zemí. Přepínač „Share of global“.</span><div class="use">seminář 2</div></div>
-        <div class="src-item"><b>IEA · Global Critical Minerals Outlook</b><span>Podíly zemí na těžbě i zpracování, výhled poptávky.</span><div class="use">zpracování</div></div>
-        <div class="src-item"><b>IEA · Solar PV Global Supply Chains</b><span>Kdo vyrábí polysilikon, wafery, články a moduly.</span><div class="use">fotovoltaika</div></div>
-        <div class="src-item"><b>International Aluminium Institute</b><span>Statistiky výroby, spotřeby energie a recyklace hliníku.</span><div class="use">hliník</div></div>
+        <div class="src-item"><b>OWID · Minerals explorer</b><span>Těžba a zpracování Li, Al, bauxitu, Cu, Co, grafitu, Si, Ga, Ge podle zemí; přepínač „Share of global“, záložky Map a Table.</span><div class="use">grafy, podíly zemí</div></div>
+        <div class="src-item"><b>USGS · Mineral Commodity Summaries</b><span>Každoroční přehled těžby a zásob podle zemí, kapitoly pro jednotlivé suroviny (PDF zdarma).</span><div class="use">zásoby, přesná čísla</div></div>
+        <div class="src-item"><b>IEA · Global Critical Minerals Outlook</b><span>Podíly zemí na těžbě i rafinaci, výhled poptávky; <i>Solar PV Global Supply Chains</i> pro fotovoltaiku.</span><div class="use">zpracování</div></div>
+        <div class="src-item"><b>International Aluminium Institute</b><span>Statistiky výroby, spotřeby energie, emisí a recyklace hliníku.</span><div class="use">hliník</div></div>
+        <div class="src-item"><b>EUR-Lex</b><span>Nařízení o bateriích 2023/1542, CRMA 2024/1252, směrnice 2024/825, PPWR 2025/40, nařízení 2024/3015.</span><div class="use">regulace</div></div>
+        <div class="src-item"><b>OWID · Electricity mix</b><span>Podíl uhlí a dalších zdrojů na výrobě elektřiny podle zemí (Ember, Energy Institute).</span><div class="use">uhlíková stopa</div></div>
       </div>
+      <aside class="notes">Termíny a rozsah předpisů EU se v letech 2025–2026 několikrát měnily (balíčky Omnibus). Před přednáškou ověřte aktuální znění na EUR-Lex.</aside>
     </section>
 
   </div>
