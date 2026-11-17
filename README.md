@@ -11,6 +11,7 @@ nahrává se na GitHub Pages.
 index.html             rozcestník Bloku 2
 zadani-projektu.html   semestrální projekt „Ověř to v datech“ (8 témat, rubrika 20 b)
 prednaska-1..6.html    přednášky 1–6
+prednaska-1..3-poznamky.html  samostatné poznámky pro vyučující k přednáškám 1–3
 seminar-1..6.html      semináře 1–6
 assets/css/theme.css   sdílený vzhled (z Bloku 1 + .slot-card, .owid-frame, .src-grid, .stat)
 ```
@@ -26,6 +27,9 @@ assets/css/theme.css   sdílený vzhled (z Bloku 1 + .slot-card, .owid-frame, .s
 
 Úroveň: chemie ze střední školy. Rovnice jsou jen tam, kde nesou pointu.
 Podrobnosti a řešení úloh jsou v poznámkách pro přednášející (klávesa `S`).
+K přednáškám 1–3 jsou navíc samostatné poznámkové bloky pro vyučující
+(`prednaska-1..3-poznamky.html`, z přednášek se na ně neodkazuje); obsahuje
+výklad ke každému slidu, postupy výpočtů a doporučení k diskusi.
 
 ## Data
 

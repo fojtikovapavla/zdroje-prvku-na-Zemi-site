@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Přednáška 2 — poznámky pro vyučující</title>
+<link rel="stylesheet" href="assets/css/theme.css">
+<style>
+  body { max-width: 1000px; margin: 0 auto; padding: 32px 28px 64px; color: var(--ink); font: 20px/1.6 var(--font-body); }
+  h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; }
+  h1 { font-size: 42px; margin-bottom: 8px; }
+  h2 { font-size: 30px; margin: 42px 0 12px; padding-bottom: 8px; border-bottom: 2px solid var(--line); }
+  h3 { font-size: 24px; margin: 28px 0 8px; }
+  p, li { max-width: 78ch; }
+  li { margin-bottom: 6px; }
+  .lead { color: var(--ink-soft); font-size: 22px; }
+  .back { display: inline-block; margin: 8px 0 24px; font-weight: 700; }
+  .callout { padding: 16px 22px; background: var(--surface-2); border-left: 6px solid var(--primary); border-radius: 0 12px 12px 0; }
+  .answer { padding: 16px 22px; background: var(--water-soft); border-radius: 12px; }
+  .warn { padding: 14px 20px; background: var(--accent-soft); border-radius: 12px; }
+  .meta { color: var(--ink-muted); }
+  .slide-no { font-family: var(--font-mono); font-size: 20px; color: var(--ink-muted); margin-right: 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: 20px; }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-family: var(--font-mono); font-size: 18px; text-transform: uppercase; color: var(--ink-muted); }
+  @media print { body { max-width: none; padding: 0; } .back { display: none; } }
+</style>
+</head>
+<body>
+<a class="back" href="prednaska-2.html">← Přednáška 2</a>
+<h1>Přednáška 2 — poznámky pro vyučující</h1>
+<p class="lead">Od minerálů k materiálům I: lithium, uhlík, hliník, křemík, gallium, germanium, indium, telur. Samostatný výkladový podklad: časová osa, výklad ke každému slidu, řešení úloh, upozornění na data a doporučení k diskusi. Aktualizováno 17. 11. 2026.</p>
+
+<div class="callout">
+  <b>Jak pracovat s úkoly:</b> výklad se střídá se seminárními aktivitami (samostatný seminář k této přednášce není). U každého úkolu nejdřív promítněte zadání, nechte studenty pracovat a teprve potom přejděte na slide s řešením. Slidy s řešením slouží studentům i ke studiu. Pro úlohy s OWID (slidy 31, 50–51) potřebují studenti notebook nebo mobil. Přednáška je nastavena na 1280&nbsp;× 720&nbsp;px. Krátké poznámky jsou i přímo v přednášce (klávesa S).
+</div>
+
+<h2>Časová osa</h2>
+<table>
+  <tr><th>Blok</th><th>Slidy</th><th>Čas</th></tr>
+  <tr><td>Úvod, cíle, zdroje dat</td><td>1–3</td><td>5&nbsp;min</td></tr>
+  <tr><td>Od horniny k materiálu (pět kroků, výpočet mědi)</td><td>4–17</td><td>25&nbsp;min</td></tr>
+  <tr><td>01 Lithium (schémata, zadání T7)</td><td>18–21</td><td>5&nbsp;min</td></tr>
+  <tr><td>02 Uhlík a baterie</td><td>22–26</td><td>8&nbsp;min</td></tr>
+  <tr><td>03 Hliník (data, recyklace, výpočet, tvrzení)</td><td>27–37</td><td>35&nbsp;min</td></tr>
+  <tr><td>04 Křemík a fotovoltaika</td><td>38–45</td><td>18&nbsp;min</td></tr>
+  <tr><td>05 Ga, Ge, In, Te</td><td>46–49</td><td>12&nbsp;min</td></tr>
+  <tr><td>Skupinová datová úloha, shrnutí, zdroje</td><td>50–53</td><td>25&nbsp;min</td></tr>
+</table>
+<p>Celkem asi 135 minut (přednáška se seminářem). Pokud je k dispozici jen 90 minut: kroky 1–4 (slidy 5–15) zadejte k samostudiu a ponechte jen výpočet mědi (16–17), u hliníku vynechte slidy 29–30 (podrobná chemie) a datovou úlohu na konci zkraťte na jednu surovinu pro celou třídu.</p>
+
+<h2>Osnova a hlavní sdělení</h2>
+<ol>
+  <li><b>Řetězec od horniny k materiálu:</b> těžba → úprava → chemická přeměna → rafinace → materiál. Riziko se hodnotí pro každý krok zvlášť; úzkým hrdlem bývá zpracování, ne geologie.</li>
+  <li><b>Chemie redukce:</b> čím pevnější vazba kov–kyslík (čím zápornější potenciál), tím víc energie výroba stojí. Proto je hliník „zakonzervovaná elektřina“.</li>
+  <li><b>Lithium a grafit:</b> dvě cesty k lithiu (spodumen × solanka); grafit je v baterii hmotnostně víc než lithium a jeho zpracování ovládá Čína.</li>
+  <li><b>Baterie:</b> volba chemie katody (NMC × LFP) je volbou surovinového rizika.</li>
+  <li><b>Hliník:</b> uhlíková stopa závisí na zdroji elektřiny; recyklace ušetří ~95&nbsp;% energie, ale vyžaduje třídění podle slitin. Recyklovatelnost ≠ míra recyklace ≠ obsah recyklátu.</li>
+  <li><b>Křemík a FV:</b> drahá je čistota, ne surovina. U FV rozhoduje původ polysilikonu (energie i lidská práva).</li>
+  <li><b>Vedlejší produkty:</b> nabídka Ga, Ge, In, Te nereaguje na cenu; riziko řídí zásoby, recyklace a diverzifikace.</li>
+  <li><b>Data:</b> těžba a zpracování často leží v jiných zemích. U každého čísla: co se měří, jednotka, rok, primární zdroj.</li>
+</ol>
+
+<h2>Výklad k jednotlivým slidům</h2>
+
+<h3><span class="slide-no">1</span>Úvodní slide</h3>
+<p>Dnešní prvky spojuje energetická a digitální transformace: baterie (Li, grafit), lehké konstrukce a vedení (Al), fotovoltaika a polovodiče (Si, Ga, Ge, In, Te). U každého prvku stejná kostra: <b>kde je → jak se z něj stane materiál → kolik to stojí energie → kdo ovládá který krok</b>. Kostru napište na tabuli. Pokud se konají krátké studentské prezentace z volitelného úkolu z Přednášky 1, zařaďte je na začátek.</p>
+
+<h3><span class="slide-no">2</span>Cíle přednášky</h3>
+<p>Cíle odpovídají stavbě přednášky: obecný řetězec na příkladu mědi, zkrácené lithium (podrobnosti přinese projekt T7), baterie, hliník, křemík a FV, vedlejší produkty, datová úloha. Upozorněte, že poslední cíl (rozložit tvrzení dodavatele na ověřitelné údaje) je dovednost, kterou budou potřebovat v projektu i v praxi.</p>
+
+<h3><span class="slide-no">3</span>Zdroje dat</h3>
+<p>Krátce, asi 3 minuty. Nečtěte tabulku po řádcích, ukažte logiku: OWID pro rychlý přehled a grafy, USGS a IEA pro kontrolu a zpracování, EUR-Lex pro povinnosti. U každého čísla čtyři otázky: co se měří, jednotka, rok, primární zdroj. Těžba, zásoby a zpracování se v médiích často zaměňují.</p>
+
+<h3><span class="slide-no">4</span>Od horniny k materiálu: pět kroků</h3>
+<p>Opakování z Přednášky 1 a příprava na pointu dne: u Al, Si a grafitu je úzkým hrdlem zpracování (energie, know-how, chemické závody a jejich povolování), ne geologie. Pro manažera: riziko dodavatelského řetězce je třeba hodnotit pro každý krok zvlášť. Kroky projdeme na příkladu mědi, protože je nejnázornější.</p>
+
+<h3><span class="slide-no">5</span>Krok 1: Těžba</h3>
+<p>Tři způsoby: povrchově (velká chudá ložiska; Chuquicamata, Greenbushes, Mostecko), hlubinně (bohatší ruda v hloubce nebo v žilách; Kiruna, historicky Příbram), z roztoků (solanky, mořská voda; in-situ loužení uranu v Kazachstánu). Povrchová těžba dominuje (u mědi ~80&nbsp;%), je levnější na tunu horniny, ale zabírá krajinu. Poměr skrývky k rudě bývá 1 : 1 až 4 : 1. Chuquicamata od roku 2019 přechází na hlubinnou těžbu, Cínovec je plánován jako hlubinný důl.</p>
+<p><b>Otázka:</b> Proč je pro ČR a EU podstatný rozdíl mezi povrchovou a hlubinnou těžbou? (Zábor krajiny, prach, hluk, přijatelnost pro obce.)</p>
+
+<h3><span class="slide-no">6</span>Čerpání solanky: Salar de Atacama</h3>
+<p>Družicový snímek NASA (Landsat 8, 4. 11. 2018). Barva nádrží se mění s odpařováním: postupně krystalizuje NaCl a KCl, zbude koncentrát ~6&nbsp;% Li. Nádrže provozují SQM a Albemarle. Odpařování trvá měsíce až přes rok. Zábor ploch a odpar vody v jedné z nejsušších oblastí světa jsou podstatou sporů s místními komunitami (téma T7, nepředbíhejte). Snímek NASA je volné dílo, uvádějte „NASA Earth Observatory“.</p>
+
+<h3><span class="slide-no">7</span>Krok 2: Úprava rudy</h3>
+<p>Úprava mění jen fyzikální stav směsi minerálů; chalkopyrit zůstává chalkopyritem. Mletí na desetiny milimetru je energeticky nejnáročnější část úpravy; mletí rud celosvětově spotřebuje podle odhadů 2–4&nbsp;% elektřiny. Z rudy s 0,6&nbsp;% Cu vznikne koncentrát s ~28&nbsp;% Cu. Další metody: magnetická separace (magnetit), gravitační dělení (zlato, kasiterit), těžká suspenze (spodumen).</p>
+<p><b>Odkaliště:</b> Brumadinho (Brazílie, 25. 1. 2019, důl firmy Vale): protržení hráze zabilo 270&nbsp;lidí. Od srpna 2020 platí mezinárodní standard GISTM (ICMM, UNEP, PRI).</p>
+
+<h3><span class="slide-no">8</span>Flotace</h3>
+<p>Nejrozšířenější metoda úpravy rud (miliardy tun ročně). Princip na úrovni střední školy: sběrač (např. ethylxanthogenan draselný) má polární „hlavu“, která se váže na sulfid, a nepolární „ocas“, který činí povrch hydrofobním. Hydrofobní zrna ulpí na bublinách a vyplavou do pěny, smáčivý křemen a živce zůstanou ve vodě. Pěnič (alifatický alkohol) stabilizuje pěnu. Stejný princip se používá při odstraňování tiskových barev z papíru (deinking). Navažte na Blok 1: povrchově aktivní látky.</p>
+
+<h3><span class="slide-no">9</span>Krok 3: Chemická přeměna</h3>
+<p>Kov je v minerálu jako kation, získat kov znamená redukovat ho: Mⁿ⁺ + n e⁻ → M. Elektrony dodá redukční činidlo (C, CO, H₂, Mg) nebo proud. Příklady v tabulce: Fe₂O₃ uhlíkem, Cu₂S „sám sebou“ (S²⁻ se oxiduje na SO₂, proto stačí foukat vzduch do taveniny), SiO₂ uhlíkem při ~2&nbsp;000&nbsp;°C, Al₂O₃ jen elektrolýzou. Lithium je výjimka: baterie potřebují sloučeninu (Li₂CO₃, LiOH), kovové Li se vyrábí elektrolýzou taveniny LiCl jen pro speciální použití.</p>
+<p><b>Častá chyba studentů:</b> zaměňují redukci (přijetí elektronů) s „odebráním kyslíku“; obojí platí, ale obecná definice je přes elektrony.</p>
+
+<h3><span class="slide-no">10</span>Tři technologické cesty</h3>
+<ul>
+  <li><b>Pyrometalurgie</b> (1&nbsp;000–2&nbsp;000&nbsp;°C): Fe, Cu ze sulfidů, Si; rychlá a velkoobjemová, ale CO₂, SO₂, prach. Pražení: 2 ZnS + 3 O₂ → 2 ZnO + 2 SO₂; z SO₂ se vyrábí H₂SO₄.</li>
+  <li><b>Hydrometalurgie</b> (20–250&nbsp;°C): oxidické rudy Cu se loužou H₂SO₄ na haldách, měď se přečistí extrakcí a vyloučí elektrolýzou (SX-EW, asi pětina světové mědi); dále Au, Li, alumina, recyklace baterií (loužení „černé hmoty“).</li>
+  <li><b>Elektrometalurgie</b>: Al, Zn, Li, rafinace Cu. Al a Li se musí vylučovat z taveniny, z vodného roztoku by se vylučoval vodík.</li>
+</ul>
+
+<h3><span class="slide-no">11–12</span>Čím reaktivnější kov, tím víc energie</h3>
+<p>Hodnoty Norgate, Jahanshahi, Rankin (2007), primární energie na celý řetězec: ocel 22,7; měď 33; zinek 48; nikl 114; hliník 211; titan 361&nbsp;MJ/kg. Pořadí odpovídá stabilitě oxidů (Ellinghamův diagram). Měď vychází nízko, přestože je v rudě jen ~0,6&nbsp;%: sulfid se redukuje snadno. Titan nelze redukovat uhlíkem (vzniká TiC), proto Krollův proces: TiO₂ + 2 Cl₂ + 2 C → TiCl₄ + 2 CO; TiCl₄ + 2 Mg → Ti + 2 MgCl₂ (podrobně v Přednášce 3). Hodnoty jsou typické z doby kolem roku 2000, konkrétní závody se liší o desítky procent; energie na měď roste s klesající kovnatostí.</p>
+
+<h3><span class="slide-no">13–14</span>Elektrodový potenciál</h3>
+<p>E° (V): Li −3,04; Na −2,71; Mg −2,37; Al −1,66; Zn −0,76; Fe −0,44; Cu +0,34; Ag +0,80; Au +1,50. Měřeno vůči standardní vodíkové elektrodě při 25&nbsp;°C a jednotkové aktivitě. Čím zápornější E°, tím snáz se kov oxiduje a tím hůř se z iontů získává.</p>
+<ul>
+  <li>Cementace Fe + Cu²⁺ → Fe²⁺ + Cu: historicky u důlních vod (Rio Tinto), dnes stejným principem odstraňuje zinkový prach Cu a Cd z roztoků v zinkovnách.</li>
+  <li>Hliník „by měl“ rychle korodovat, chrání ho vrstva Al₂O₃ (pasivace).</li>
+  <li>Obětované anody ze Zn a Mg (lodě, potrubí, bojlery); zinkování oceli funguje stejně.</li>
+  <li>Hořčík se dnes vyrábí hlavně Pidgeonovým procesem v Číně (redukce MgO ferosiliciem).</li>
+</ul>
+<p>Řada napětí platí pro vodné roztoky při 25&nbsp;°C; výroba kovů z oxidů za vysokých teplot se řídí stabilitou oxidů. Hodnota −3,04 V se vrátí u lithno-iontového článku (slide 24).</p>
+
+<h3><span class="slide-no">15</span>Krok 4: Rafinace mědi</h3>
+<p>Anoda (99,5&nbsp;% Cu) se rozpouští, na katodě se vylučuje čistá měď (≥&nbsp;99,99&nbsp;%, standard Cu-CATH-1 pro LME). Napětí na vaně jen ~0,3 V, protože se kov pouze přenáší; hala má stovky van, cyklus anody ~3 týdny. Ušlechtilejší prvky (Ag, Au, Se, Te) padají do anodového kalu, méně ušlechtilé (Fe, Ni, Zn) zůstávají v roztoku. Z kalu se získává Ag, Au, Se a Te (navazuje slide 47). Proč tak čistá měď: i stopy nečistot výrazně snižují elektrickou vodivost.</p>
+
+<h3><span class="slide-no">16</span>Práce s výpočtem: měď (8&nbsp;min ve dvojicích)</h3>
+<p>Ve 4. otázce stačí úvaha: v CuFeS₂ připadají na 1 atom Cu 2 atomy S a z každého atomu S vznikne 1 molekula H₂SO₄. Nejčastější chyba: studenti zapomenou na výtěžnost (88&nbsp;%) nebo ji násobí místo dělení.</p>
+
+<h3><span class="slide-no">17</span>Řešení: od rudy ke katodě</h3>
+<div class="answer">
+  <p>1) Ruda: 1&nbsp;t ÷ (0,006&nbsp;× 0,88) ≈ <b>189&nbsp;t rudy</b> na 1&nbsp;t Cu.</p>
+  <p>2) Koncentrát: 1&nbsp;t ÷ 0,28 ≈ <b>3,6&nbsp;t</b>; odpad z úpravy 189 − 3,6 ≈ <b>185&nbsp;t</b> (98&nbsp;% vytěžené rudy).</p>
+  <p>3) Skrývka 2&nbsp;× 189 = 378&nbsp;t; celkem asi <b>570&nbsp;t horniny</b> na 1&nbsp;t Cu.</p>
+  <p>4) 1&nbsp;mol Cu ↔ 2&nbsp;mol S ↔ 2&nbsp;mol H₂SO₄: 2&nbsp;× 98,08 ÷ 63,55 ≈ <b>3,1&nbsp;t H₂SO₄</b> na 1&nbsp;t Cu.</p>
+  <p>5) Při 0,4&nbsp;%: 1 ÷ (0,004&nbsp;× 0,88) ≈ <b>284&nbsp;t rudy</b>, ~850&nbsp;t horniny, tedy o polovinu víc. Úměrně roste energie na mletí, voda i odpad.</p>
+</div>
+<p><b>Pointa:</b> těžba kovu je ve skutečnosti „těžba horniny“; odpad převyšuje produkt o dva až tři řády. Měděná huť je zároveň chemička: kyselina se prodává k loužení oxidických rud a k výrobě hnojiv. V Přednášce 3 se k mědi vrátíme s daty Cochilco (kovnatost a energie v Chile).</p>
+
+<h3><span class="slide-no">18</span>Oddíl 01: Lithium</h3>
+<p>Cca 5 minut. Lithium je téma projektu T7, proto tu jsou jen technologická schémata a zadání příspěvku. Původní slidy (dvě cesty, data, manažerský úkol) jsou ve zdrojovém kódu zakomentované.</p>
+
+<h3><span class="slide-no">19–20</span>Lithium: technologická schémata</h3>
+<ul>
+  <li><b>Spodumen</b> LiAlSi₂O₆ (pegmatity, hlavně Austrálie): α-spodumen se při ~1&nbsp;050&nbsp;°C kalcinuje na objemnější β-spodumen, z něhož H₂SO₄ vytěsní Li⁺ (výměna Li⁺ za H⁺). Li₂SO₄ + 2 NaOH → 2 LiOH + Na₂SO₄. Energeticky náročné (kalcinace), většinou se zpracovává v Číně.</li>
+  <li><b>Solanka</b> (Chile, Argentina): odpaření, odstranění Mg²⁺ vápnem a boru extrakcí, srážení Li₂CO₃ sodou za tepla (rozpustnost Li₂CO₃ s teplotou klesá, u většiny solí je to naopak).</li>
+  <li><b>DLE</b> (přímá extrakce): sorbent vybere Li⁺ za hodiny místo měsíců, potřebuje ale víc energie a sladké vody.</li>
+</ul>
+<p>Bateriová kvalita: Li₂CO₃ ≥&nbsp;99,5&nbsp;%, LiOH·H₂O ≥&nbsp;56,5&nbsp;% LiOH. Cínovec: lithium je v cinvalditu (lithná slída), nikoli ve spodumenu; zpracování bude jiné (plánováno v Prunéřově).</p>
+
+<h3><span class="slide-no">21</span>Lithium: pokračování v projektu T7</h3>
+<p>Vychází ze zadání tématu T7 a z rubriky projektu. Řekněte otevřeně, že lithium je dnes zkrácené právě proto, aby ho třídě vysvětlil autor nebo autorka příspěvku na Přednášce 6 (9. 12.). Dnešní schémata jsou výchozím bodem chemické části příspěvku.</p>
+
+<h3><span class="slide-no">22</span>Oddíl 02: Uhlík</h3>
+<p>Cca 8 minut. Uhlík je „příběh“ celého bloku: grafit v baterii, koks v oceli (Přednáška 3), CO₂ jako emise i surovina (4), uhlovodíky v polymerech (5).</p>
+
+<h3><span class="slide-no">23</span>Grafit: jeden prvek, mnoho materiálů</h3>
+<p>Grafit tvoří vrstvy šestiúhelníků vázané slabými silami, mezi vrstvy se při nabíjení vkládají ionty Li⁺ (interkalace, až LiC₆). Typický elektromobil: ~66&nbsp;kg grafitu, ~9&nbsp;kg Li, ~40&nbsp;kg Ni, ~13&nbsp;kg Co (IEA 2021, podle chemie katody). Studenty obvykle překvapí, že grafitu je v baterii mnohem víc než lithia.</p>
+<p>Přírodní grafit: Čína 79&nbsp;% těžby (2024: svět 1,6&nbsp;Mt, Čína 1,27&nbsp;Mt); pro anody se zakulacuje a čistí na &gt; 99,95&nbsp;% C, často kyselinou fluorovodíkovou. Syntetický grafit z ropného nebo jehlového koksu při 2&nbsp;800–3&nbsp;000&nbsp;°C, cyklus pece týdny, velmi vysoká spotřeba elektřiny. Anodové materiály ovládá Čína z více než 90&nbsp;% (IEA). Čína od 1. 12. 2023 vyžaduje vývozní licence na vybrané druhy grafitu; ověřte aktuální stav dalších omezení. Nařízení EU o bateriích zahrnuje přírodní grafit do povinné náležité péče.</p>
+
+<h3><span class="slide-no">24–25</span>Jak funguje lithno-iontový článek</h3>
+<p>Princip „houpacího křesla“: ionty Li⁺ se přesouvají mezi dvěma hostitelskými strukturami, kovové lithium v článku není. Vybíjení: anoda LiₓC₆ → C₆ + x Li⁺ + x e⁻, katoda Li₁₋ₓMO₂ + x Li⁺ + x e⁻ → LiMO₂. Napětí 3,2–3,7 V díky velmi zápornému potenciálu Li (navazuje slide 13). Voda by se při tomto napětí rozložila, proto organický elektrolyt (LiPF₆ v ethylenkarbonátu a dimethylkarbonátu), a proto je článek hořlavý.</p>
+<p>Detail pro zvídavé: Cu fólie u anody (Al by s Li tvořil slitinu), Al fólie u katody (Cu by se oxidovala). Při prvním nabití vzniká na grafitu ochranná vrstva SEI. Skutečné elektrody jsou vrstvy prášku o tloušťce desítek µm.</p>
+
+<h3><span class="slide-no">26</span>Od článku k baterii a volba chemie</h3>
+<p>NMC: vyšší měrná energie (~250–300 Wh/kg článku), Li, Ni, Mn, Co. LFP: ~160–200 Wh/kg, bez Ni a Co, levnější, stabilnější, 3&nbsp;000 a více cyklů. Hodnoty jsou orientační (2023–2024).</p>
+<p><b>Podíl LFP</b> (na slidu aktualizováno; v roce 2023 ještě ~40&nbsp;%): podle IEA Global EV Outlook 2025 tvořily LFP v roce 2024 téměř polovinu baterií elektromobilů (Čína ~75&nbsp;%, EU přes 10&nbsp;%), podle GEVO 2026 v roce 2025 přes 55&nbsp;%. Trend je dobrý příklad, jak rychle zastarávají čísla v této oblasti. Na trh vstupují sodíko-iontové články (bez Li, Ni i Co).</p>
+<p><b>Pro manažera:</b> NMC nese riziko kobaltu (DR Kongo ~76&nbsp;% těžby, dětská práce v drobné těžbě; od 2025 vývozní kvóty Konga) a niklu (Indonésie ~60&nbsp;%, odlesňování, uhelná elektřina). LFP tato rizika nemá, ale vyrábí se téměř výhradně v Číně. Nařízení EU o bateriích (2023/1542) vyžaduje náležitou péči pro Li, Co, Ni a přírodní grafit a zavádí bateriový pas (od 2027).</p>
+
+<h3><span class="slide-no">27</span>Oddíl 03: Hliník</h3>
+<p>Cca 35 minut včetně úkolů. Hliník je nejlepší příklad, jak zdroj elektřiny určuje uhlíkovou stopu materiálu a proč má recyklace smysl. Hliník je třetí nejhojnější prvek kůry (8&nbsp;%), a přesto se ho do konce 19. století vyrobilo jen málo: problémem byla chemie, ne surovina.</p>
+
+<h3><span class="slide-no">28</span>Od bauxitu k hliníku</h3>
+<p>Celkový přehled: bauxit → (Bayerův proces) → Al₂O₃ → (Hallova–Héroultova elektrolýza) → Al. Na 1&nbsp;t Al ~2&nbsp;t aluminy, ~4–5&nbsp;t bauxitu. Elektrolýza spotřebuje 13–15&nbsp;MWh/t Al (světový průměr IAI ~14&nbsp;MWh/t), tedy roční spotřebu asi pěti českých domácností bez elektrického vytápění. Přímé emise: oxidace uhlíkových anod (~1,5&nbsp;t CO₂/t Al) a perfluorouhlovodíky CF₄ a C₂F₆ při anodovém efektu.</p>
+<p><b>Červený kal:</b> ~1–1,5&nbsp;t na tunu aluminy, celosvětově ~150&nbsp;Mt ročně, nahromaděno přes 4&nbsp;mld. t; využívá se jen v jednotkách procent. Ajka (Maďarsko, 4. 10. 2010): protržení hráze, ~1&nbsp;mil. m³ kalu, 10 mrtvých, přes 100 zraněných.</p>
+
+<h3><span class="slide-no">29</span>Bayerův proces</h3>
+<p>Al(OH)₃ je amfoterní: za tepla a v koncentrovaném NaOH se rozpouští na Na[Al(OH)₄], Fe₂O₃ a TiO₂ ne (zůstanou v červeném kalu). Po ochlazení a „očkování“ krystalky se Al(OH)₃ vysráží, kalcinací vznikne Al₂O₃. Energie řádově 10&nbsp;GJ tepla na tunu aluminy, většinou ze zemního plynu nebo uhlí. Gallium (Ga³⁺ podobné Al³⁺) se hromadí v oběhovém roztoku, proto je vedlejším produktem výroby aluminy (slide 47). Největší producenti aluminy: Čína, Austrálie; v EU např. Irsko, Španělsko, Řecko.</p>
+
+<h3><span class="slide-no">30</span>Hallův–Héroultův elektrolyzér</h3>
+<p>Katoda: Al³⁺ + 3 e⁻ → Al; anoda: C + 2 O²⁻ → CO₂ + 4 e⁻; celkem 2 Al₂O₃ + 3 C → 4 Al + 3 CO₂ (zjednodušeno, v lázni jsou fluorohlinitanové komplexy). Kryolit snižuje teplotu z 2&nbsp;050&nbsp;°C na ~960&nbsp;°C. Roztavený Al (~2,3&nbsp;g/cm³) je hustší než lázeň (~2,1&nbsp;g/cm³), hromadí se na dně. ~4 V, 300–600 kA.</p>
+<p>Elektrolyzér musí běžet nepřetržitě; výpadek na několik hodin znamená ztuhnutí lázně a nákladnou opravu. Inovace: inertní anody (ELYSIS, Alcoa a Rio Tinto) by místo CO₂ uvolňovaly O₂; zatím ve fázi demonstrace.</p>
+
+<h3><span class="slide-no">31</span>Práce s daty: Čína a hliník (6&nbsp;min)</h3>
+<p>Pokud studenti nemají připojení, ukažte OWID projekcí a nechte je odečítat. Zdůrazněte rozdíl primární hliník (z oxidu, elektrolýzou) × sekundární (ze šrotu); OWID/USGS „smelter production“ je jen primární.</p>
+
+<h3><span class="slide-no">32</span>Řešení: hliník a bauxit v datech</h3>
+<div class="answer">
+  <p>1) Podíl Číny na primárním hliníku: 1990 4,4&nbsp;%, 2000 12,3&nbsp;%, 2010 38,9&nbsp;%, 2015 54,5&nbsp;%, 2024 59,7&nbsp;% (svět 72&nbsp;Mt). Hranici 50&nbsp;% překročila kolem 2013–2014.</p>
+  <p>2) Bauxit 2024 (USGS, svět ~450&nbsp;Mt): Guinea ~29&nbsp;%, Austrálie ~22&nbsp;%, Čína ~21&nbsp;%.</p>
+  <p>3) Čína bauxit dováží (hlavně z Guiney); výhodou je zpracování: levná elektřina, kapacity, státní podpora.</p>
+  <p>4) Z uhlí v Číně pochází asi 60&nbsp;% elektřiny (2010 ~75&nbsp;%); Norsko a Island téměř bez uhlí.</p>
+</div>
+<p>Uhlíková stopa primárního hliníku (cradle-to-gate): uhelná elektřina 15–20&nbsp;t CO₂e/t, vodní ~4&nbsp;t CO₂e/t, recyklát pod 1&nbsp;t CO₂e/t. Čínští výrobci přesouvají kapacity do provincie Yunnan (vodní elektřina). Na hliník se vztahuje CBAM, finanční povinnost od 1. 1. 2026.</p>
+
+<h3><span class="slide-no">33</span>Recyklace hliníku: chemie i limity</h3>
+<p>Přetavení (660&nbsp;°C) potřebuje ~5&nbsp;% energie primární výroby, protože se nerozkládá vazba Al–O. Asi 75&nbsp;% všeho kdy vyrobeného hliníku je stále v užívání (IAI). Háček jsou slitiny: legující prvky (Mg, Si, Mn, Cu, Zn) z taveniny prakticky neodstraníme, protože hliník má ke kyslíku větší afinitu než nečistoty (při oxidační rafinaci by shořel dřív hliník). Smíšený šrot končí jako slévárenská slitina s vysokým Si (downcycling). Kontrast s mědí: tu lze elektrolyticky vyčistit na 99,99&nbsp;%.</p>
+<p>Ztráty při tavení: oxidace na Al₂O₃ (stěr, dross), jednotky procent, u tenkých a lakovaných materiálů víc; laky se musí odstranit. Klíčový je oddělený sběr podle slitin (plechovka → plechovka). Téma kvality recyklátu se vrátí u oceli (P3) a plastů (P5).</p>
+
+<h3><span class="slide-no">34</span>Práce s výpočtem: energie v plechovce (8&nbsp;min)</h3>
+<p>Výpočet zahrnuje jen elektrolýzu, ne Bayerův proces, anody ani dopravu. M(O) = 16,00&nbsp;g/mol, pokud si studenti chtějí M(Al₂O₃) ověřit.</p>
+
+<h3><span class="slide-no">35</span>Řešení: energie v plechovce</h3>
+<div class="answer">
+  <p>1) (2&nbsp;× 101,96) ÷ (4&nbsp;× 26,98) = 203,9 ÷ 107,9 ≈ <b>1,89&nbsp;t Al₂O₃</b> na 1&nbsp;t Al.</p>
+  <p>2) Primární: 0,013&nbsp;kg × 14&nbsp;kWh/kg ≈ <b>0,18&nbsp;kWh</b>; recyklovaný: 0,18&nbsp;× 0,05 ≈ <b>0,009&nbsp;kWh</b>.</p>
+  <p>3) 0,18 ÷ 0,015 ≈ <b>12 nabití mobilu</b>; recyklovaný hliník ≈&nbsp;0,6 nabití.</p>
+</div>
+<p><b>Pointa pro komunikaci:</b> převody na „nabití mobilu“ jsou srozumitelné, ale vždy je třeba uvést hranice výpočtu (co je a co není započítáno).</p>
+
+<h3><span class="slide-no">36</span>Manažerský úkol: tvrzení na plechovce</h3>
+<p>Práce ve dvojicích, 5–7 minut. Cíl: rozlišit recyklovatelnost, míru recyklace a obsah recyklátu, které firmy v reportech i marketingu zaměňují.</p>
+
+<h3><span class="slide-no">37</span>Řešení: tvrzení na plechovce</h3>
+<div class="answer">
+  <p>1) Chemicky pravda: hliník se přetavením nedegraduje. Zjednodušení: „100&nbsp;%“ nikdy (oxidace, lak, různé slitiny těla a víčka), plechovka z plechovky jen při odděleném sběru.</p>
+  <p>2) Recyklovatelné = technicky možné; míra recyklace = kolik se skutečně vrátí (EU zhruba tři čtvrtiny, ověřte aktuální údaj Metal Packaging Europe); obsah recyklátu = podíl šrotu v kovu, ten rozhoduje o uhlíkové stopě. Do reportu (ESRS E5) patří podíl recyklovaných vstupů.</p>
+  <p>3) Směrnice (EU) 2024/825 se použije od 27. 9. 2026 a zakazuje obecná environmentální tvrzení („šetrné k planetě“) bez prokázaného vynikajícího environmentálního profilu. Lepší text je konkrétní, měřitelný a ověřený třetí stranou (např. „plechovka obsahuje X % recyklovaného hliníku, ověřeno …“).</p>
+</div>
+<p>Hodnota 68&nbsp;% ve vzorovém textu na slidu je ilustrační. Návrh směrnice o ekologických tvrzeních (Green Claims) se v roce 2025 zastavil; rozsah CSRD po balíčku Omnibus ověřte. Pozn.: směrnice 2024/825 se už uplatňuje, takže příklad je pro studenty aktuální.</p>
+
+<h3><span class="slide-no">38</span>Oddíl 04: Křemík</h3>
+<p>Cca 18 minut včetně úkolu. Křemík je druhý nejhojnější prvek kůry; drahá je čistota, ne surovina.</p>
+
+<h3><span class="slide-no">39</span>Křemík: rozhoduje čistota</h3>
+<p>Metalurgický Si (98–99&nbsp;%): SiO₂ + 2 C → Si + 2 CO při ~2&nbsp;000&nbsp;°C v obloukové peci, ~11–13&nbsp;MWh/t. Polysilikon (6N a více): Siemensův proces přes těkavý trichlorsilan (var 32&nbsp;°C), který se vyčistí destilací a rozloží na tyčích čistého Si. Stejný princip „přes těkavou sloučeninu“ jako u titanu (P3). Siemensův proces spotřebuje řádově desítky kWh na kg; vyrábí se tam, kde je levná elektřina, v Číně převážně z uhlí. Alternativa: fluidní reaktory se silanem SiH₄.</p>
+<p>Data: Čína 68&nbsp;% výroby křemíku a ferosilicia (USGS 2022, hrubá hmotnost, zahrnuje ferosilicium pro ocelářství); podíl Číny v krocích řetězce FV přes 80&nbsp;%, u waferů ~97&nbsp;% (IEA 2022). Novější vydání IEA uvádějí ještě vyšší koncentraci (přes 90&nbsp;% u většiny kroků); ověřte aktuální data.</p>
+
+<h3><span class="slide-no">40</span>Fotovoltaika: od křemene k modulu</h3>
+<p>Czochralského metoda: monokrystal až ~2&nbsp;m vytahovaný z taveniny s příměsí (B, Ga nebo P). Spotřeba křemíku klesla z ~16&nbsp;g/W (2004) pod 3&nbsp;g/W (Fraunhofer ISE), až třetina ingotu ale odchází jako řezný odpad. Stříbro v kontaktech: FV spotřebuje zhruba šestinu světové poptávky po stříbře (~190 z ~1&nbsp;200&nbsp;mil. uncí, 2023), proto přechod na měď.</p>
+<p>Úzké hrdlo navíc: velmi čistý křemen pro kelímky (Spruce Pine, USA). Od roku 2024 převládají n-typové wafery (dopované P) pro články TOPCon.</p>
+
+<h3><span class="slide-no">41</span>Jak funguje křemíkový článek</h3>
+<p>Foton nad 1,1 eV vytvoří pár elektron–díra, pole p-n přechodu je oddělí. Dopování: P (5 valenčních elektronů) typ n, B (3) typ p; v bázi stačí 1 atom B na miliony atomů Si, proto musí být výchozí Si extrémně čistý. Napětí článku ~0,6–0,7 V, účinnost komerčních článků ~22–25&nbsp;%. Ztráty: fotony pod 1,1 eV se neabsorbují, přebytek energie se mění na teplo. Schéma ukazuje klasický p-typový článek; dnes převládají TOPCon a HJT, princip je stejný. Modrou barvu dává antireflexní vrstva SiNₓ.</p>
+
+<h3><span class="slide-no">42–43</span>Z čeho je modul a co s ním na konci</h3>
+<p>Sklo ~76&nbsp;%, polymery ~10&nbsp;%, hliník ~8&nbsp;%, křemík ~5&nbsp;%, kovy ~1&nbsp;% (IRENA a IEA-PVPS 2016). Hmotnostně dominuje sklo, hodnotou Ag, Cu a Si. Rám a kabely se oddělí snadno, laminát (EVA + články) obtížně. FV panely jsou v EU elektroodpad (WEEE), zpětný odběr financuje výrobce nebo dovozce. Odhad IRENA: 60–78&nbsp;mil. t odpadních panelů do roku 2050. Životnost 25–30&nbsp;let, záruka ~80–90&nbsp;% výkonu.</p>
+
+<h3><span class="slide-no">44</span>Manažerský úkol: odkud je polysilikon?</h3>
+<p>Práce ve dvojicích, 5–7 minut. Úkol propojuje chemii (nejnáročnější krok řetězce) se sociálním pilířem udržitelnosti (ESRS S2).</p>
+
+<h3><span class="slide-no">45</span>Řešení: fotovoltaika a polysilikon</h3>
+<div class="answer">
+  <p>1) Rizikový krok je polysilikon: modul z Vietnamu může obsahovat čínský polysilikon i wafery. Podíl Sin-ťiangu: ~45&nbsp;% (2020, Sheffield Hallam University, In Broad Daylight), novější odhady kolem třetiny; přesná oficiální data neexistují. OHCHR (31. 8. 2022) popsala riziko nucené práce. Zároveň energeticky nejnáročnější krok, v Číně hlavně z uhlí.</p>
+  <p>2) Požadavky: mapování řetězce až k závodu polysilikonu, právo na audit a odstoupení, certifikace dohledatelnosti (Solar Stewardship Initiative), EPD nebo uhlíková stopa modulu (kg CO₂e/kWp).</p>
+  <p>3) Nařízení (EU) 2024/3015 o zákazu výrobků z nucené práce (od 14. 12. 2027), CSDDD 2024/1760 (upraveno balíčkem Omnibus I), CSRD a ESRS S2; pro veřejné zadavatele NZIA (2024/1735) s necenovými kritérii odolnosti.</p>
+</div>
+<p>Polysilikon mimo Čínu: Wacker (Německo), Hemlock (USA), OCI (Malajsie); moduly s ním jsou dražší. V USA od 2022 zákon UFLPA (zadržování dovozů s vazbou na Sin-ťiang). Rozsah CSDDD po Omnibusu ověřte.</p>
+
+<h3><span class="slide-no">46</span>Oddíl 05: Ga, Ge, In, Te</h3>
+<p>Cca 12 minut. Klíčový koncept: vedlejší produkt (by-product, companion metal).</p>
+
+<h3><span class="slide-no">47</span>Vedlejší produkty</h3>
+<p>Ga z hlinitanového roztoku v Bayerově procesu; Ge ze zinkových koncentrátů a z popílku; In ze sfaleritu při výrobě zinku; Te z anodových kalů po rafinaci mědi (navazuje slide 15). Ga, Ge, In, Te se získávají téměř výhradně jako vedlejší produkty (Nassar, Graedel, Harper, Science Advances 2015). Navázání na Goldschmidta (P1): podobný iontový poloměr a chování (Ga³⁺ zastupuje Al³⁺, In a Ge vstupují do sfaleritu).</p>
+<p>Koncentrace (OWID/USGS): gallium Čína ~99&nbsp;% (2024), germanium ~68&nbsp;% (2021). Čína zavedla v srpnu 2023 vývozní licence na Ga a Ge, v prosinci 2024 zákaz vývozu do USA, v listopadu 2025 ho dočasně pozastavila; licenční režim trvá. Ověřte aktuální stav. Velká část Ga v bauxitu končí v červeném kalu: potenciál existuje, ale vyžaduje investici a jistotu odbytu.</p>
+
+<h3><span class="slide-no">48</span>Zamyšlení: germanium (3&nbsp;min)</h3>
+<p>Diskuse ve dvojicích, pak 2–3 odpovědi nahlas. Nechte studenty rozdělit strategie podle časového horizontu.</p>
+
+<h3><span class="slide-no">49</span>Řešení: germanium</h3>
+<div class="answer">
+  <p>Výroba nevzroste hned: Ge je vedlejší produkt zinku a popílku, o objemu rozhoduje trh se zinkem; zařízení se staví roky a investor potřebuje jistotu odbytu i po poklesu ceny; výroba je soustředěná a vývoz licencovaný.</p>
+  <p>Do 6 měsíců: zásoby, dlouhodobé kontrakty s více dodavateli. 1–3 roky: recyklace výrobního odpadu, náhrada materiálu (chalkogenidová skla, ZnSe), úspornější konstrukce. 3 a více let: nové zdroje v EU a USA.</p>
+</div>
+<p>Podle USGS pochází z recyklace zhruba 30&nbsp;% spotřeby germania, hlavně z výrobního odpadu optiky a vláken; v Evropě recykluje např. Umicore (Belgie). CRMA zmiňuje koordinaci strategických zásob a společné nákupy.</p>
+
+<h3><span class="slide-no">50</span>Práce s daty: OWID Minerals explorer</h3>
+<p>Ukažte projekcí přepínání Mineral = Bauxite (Type Mine) a Aluminum (Type Smelter) se zaškrtnutým Share of global; záložky Chart, Map, Table a Sources. Studenti potřebují notebooky nebo mobily.</p>
+
+<h3><span class="slide-no">51</span>Skupinová úloha: těžba, nebo zpracování? (20&nbsp;min)</h3>
+<p>Skupina na každou surovinu, při osmi studentech dvojice. U niklu je v datech položka Other, do top 3 ji nepočítejte. Na závěr nechte každou skupinu přečíst svůj „titulek grafu“ a zdroj. Slide s řešením je v přednášce zakomentovaný; výsledky porovnejte u tabule podle řešení níže.</p>
+
+<h3><span class="slide-no">—</span>Řešení: těžba, nebo zpracování (slide je v přednášce zakomentovaný)</h3>
+<div class="answer">
+  <p><b>Nikl:</b> těžba Indonésie 59,5&nbsp;%, Filipíny 8,9&nbsp;%, Rusko 5,7&nbsp;%; zpracování (2023) Indonésie 41,0&nbsp;%, Čína 28,2&nbsp;%, Rusko 4,5&nbsp;%. Indonésie ve zpracování 0,9&nbsp;% (2000) → 41&nbsp;% (2023).</p>
+  <p><b>Měď:</b> těžba Chile 23,0&nbsp;%, DR Kongo 14,3&nbsp;%, Peru 11,3&nbsp;%; rafinace Čína 44,4&nbsp;%, DR Kongo 9,3&nbsp;%, Chile 7,0&nbsp;%. Chile v těžbě 34,6&nbsp;% (2000) → 23&nbsp;% (2024).</p>
+  <p><b>Kobalt:</b> těžba DR Kongo 75,9&nbsp;%, Indonésie 9,7&nbsp;%, Rusko 3,0&nbsp;%; rafinace (2021) Čína 76,4&nbsp;%, Finsko 9,7&nbsp;%, Kanada 4,1&nbsp;%.</p>
+  <p><b>Grafit a gallium:</b> grafit Čína 79,4&nbsp;%, Madagaskar 5,6&nbsp;%, Mosambik 4,7&nbsp;%; gallium Čína 98,7&nbsp;%, Rusko 0,8&nbsp;%.</p>
+</div>
+<p>U grafitu a kobaltu (těžba) začínají řady v OWID až rokem 2020, „nejstarší dostupný rok“ je tedy 2020. Velkou část indonéských niklových kapacit vlastní čínské firmy. Propojte s CRMA: cíl nejvýše 65&nbsp;% z jedné třetí země je u Co, grafitu a Ga daleko.</p>
+
+<h3><span class="slide-no">52</span>Shrnutí</h3>
+<p>Projděte body a vraťte se ke kostře ze slidu 1. Závěrečná otázka: „U kterého z dnešních materiálů je největší rozdíl mezi tím, kde se těží, a tím, kde se zpracovává?“ (Bauxit × hliník, kobalt, nikl, polysilikon.)</p>
+
+<h3><span class="slide-no">53</span>Zdroje dat a předpisů</h3>
+<p>Termíny a rozsah předpisů EU se v letech 2025–2026 několikrát měnily (balíčky Omnibus). Před přednáškou ověřte aktuální znění na EUR-Lex. Upozorněte studenty, že pro projekt mají citovat primární zdroj, ne OWID samotný.</p>
+
+<h2>Práce s daty a upozornění</h2>
+<ul>
+  <li>Data na slidech jsou za rok 2024 (USGS MCS 2025, OWID), u rafinace kobaltu 2021 a u zpracování niklu 2023. MCS 2026 s daty za 2025 už vyšel; drobné rozdíly jsou v pořádku a stojí za zmínku.</li>
+  <li>Podíl LFP na slidu 26 je aktualizován podle IEA (2024 téměř polovina, 2025 přes 55&nbsp;%); trh se mění rychle, před výukou ověřte nejnovější Global EV Outlook.</li>
+  <li>Energetické hodnoty (Norgate 2007, IAI) jsou typické, ne pro konkrétní závod. Uhlíková stopa hliníku závisí hlavně na zdroji elektřiny.</li>
+  <li>Údaje o Sin-ťiangu jsou odhady bez oficiálních dat; to je samo o sobě problém dohledatelnosti.</li>
+  <li>Vývozní omezení Číny (Ga, Ge, grafit) a rozsah předpisů EU (CSDDD, CSRD, Green Claims) se mění. Před výukou ověřte aktuální stav.</li>
+</ul>
+
+<h2>Doporučené zdroje</h2>
+<ul>
+  <li><a href="https://ourworldindata.org/explorers/minerals" target="_blank" rel="noreferrer">Our World in Data — Minerals explorer</a> (data USGS/BGS).</li>
+  <li><a href="https://www.usgs.gov/publications/mineral-commodity-summaries-2026" target="_blank" rel="noreferrer">USGS — Mineral Commodity Summaries 2026</a> (data 2025).</li>
+  <li><a href="https://www.iea.org/reports/global-ev-outlook-2025/electric-vehicle-batteries" target="_blank" rel="noreferrer">IEA — Global EV Outlook 2025, Electric vehicle batteries</a>.</li>
+  <li>IEA — Solar PV Global Supply Chains (2022) a Global Critical Minerals Outlook.</li>
+  <li><a href="https://international-aluminium.org/" target="_blank" rel="noreferrer">International Aluminium Institute</a> — statistiky energie, emisí a recyklace.</li>
+  <li>Norgate, Jahanshahi, Rankin: Assessing the environmental impact of metal production processes, J. Cleaner Production 15 (2007) 838–848.</li>
+  <li>Nassar, Graedel, Harper: By-product metals are technologically essential but have problematic supply, Science Advances 2015.</li>
+  <li>IRENA a IEA-PVPS: End-of-Life Management: Solar Photovoltaic Panels (2016).</li>
+  <li>EUR-Lex: nařízení 2023/1542 (baterie), 2024/1252 (CRMA), 2024/3015 (nucená práce), 2025/40 (PPWR); směrnice 2024/825.</li>
+</ul>
+<p class="meta">Poznámky k přednášce 2 · určeno pro samostatné otevření nebo tisk.</p>
+</body>
+</html>
