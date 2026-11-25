@@ -11,7 +11,7 @@ nahrává se na GitHub Pages.
 index.html             rozcestník Bloku 2
 zadani-projektu.html   semestrální projekt „Ověř to v datech“ (8 témat, rubrika 20 b)
 prednaska-1..6.html    přednášky 1–6
-prednaska-1..3-poznamky.html  samostatné poznámky pro vyučující k přednáškám 1–3
+prednaska-1..4-poznamky.html  samostatné poznámky pro vyučující k přednáškám 1–4
 seminar-1..6.html      semináře 1–6
 assets/css/theme.css   sdílený vzhled (z Bloku 1 + .slot-card, .owid-frame, .src-grid, .stat)
 ```
@@ -21,14 +21,14 @@ assets/css/theme.css   sdílený vzhled (z Bloku 1 + .slot-card, .owid-frame, .s
 | 1 | Prvky na Zemi (původ, transmutace, složení, zdroje × zásoby, kritické suroviny) | Workshop Our World in Data, rozdělení témat | — |
 | 2 | Li, C, Al, Si, Ge, In, Te | Koncentrace těžby × zpracování v datech | — |
 | 3 | Fe, Ti, Cu, Co, Ni, PGM, vzácné zeminy | Elektromobily v datech, výpočty k oceli, toxicita kovů | T1, T2 |
-| 4 | Sklo, cement, odpadní plyny, CO₂ (CCS/CCU) | Uhlíkový rozpočet, emise ČR výroba × spotřeba | T3, T4 |
+| 4 | Sklo, cement, odpadní plyny, CO₂ (CCS/CCU) | Uhlíkový rozpočet, emise ČR výroba × spotřeba (úlohy zařazeny přímo do přednášky 4) | T3, T4 |
 | 5 | Petrochemie, polymery, recyklace, bioplasty | Recyklační kódy, osud plastů v datech | T5, T6 |
 | 6 | Voda, strategie EU pro chemické látky, SSbD, PFAS | Vodní stres, hodnocení výrobku podle SSbD, závěr | T7, T8 |
 
 Úroveň: chemie ze střední školy. Rovnice jsou jen tam, kde nesou pointu.
 Podrobnosti a řešení úloh jsou v poznámkách pro přednášející (klávesa `S`).
-K přednáškám 1–3 jsou navíc samostatné poznámkové bloky pro vyučující
-(`prednaska-1..3-poznamky.html`, z přednášek se na ně neodkazuje); obsahuje
+K přednáškám 1–4 jsou navíc samostatné poznámkové bloky pro vyučující
+(`prednaska-1..4-poznamky.html`, z přednášek se na ně neodkazuje); obsahuje
 výklad ke každému slidu, postupy výpočtů a doporučení k diskusi.
 
 ## Data
